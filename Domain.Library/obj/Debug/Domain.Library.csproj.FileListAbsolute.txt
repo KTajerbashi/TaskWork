@@ -1,0 +1,6 @@
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Domain.Library\bin\Debug\Domain.Library.dll
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Domain.Library\bin\Debug\Domain.Library.pdb
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Domain.Library\obj\Debug\Domain.Library.csproj.AssemblyReference.cache
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Domain.Library\obj\Debug\Domain.Library.csproj.CoreCompileInputs.cache
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Domain.Library\obj\Debug\Domain.Library.dll
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Domain.Library\obj\Debug\Domain.Library.pdb

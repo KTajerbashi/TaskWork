@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "87gztOcKY1dcqj+lgTp1j3sykGTjlUxiPVFzw4Z9bbVka5FCc6nmqI924QW99sw0UcY2K2Xg4fNOoNYsSUQ4kw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\tajer-k\\Desktop\\Ticket\\Ticket\\BEE\\BEE.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\tajer-k\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\tajer-k\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\tajer-k\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
