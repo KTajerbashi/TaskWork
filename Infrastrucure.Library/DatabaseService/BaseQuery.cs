@@ -32,6 +32,8 @@ namespace Infrastrucure.Library.DatabaseService
             var commondbuilder = new SqlCommandBuilder(sqladapter);
             var result = new DataSet();
             sqladapter.Fill(result);
+            _con.Close();
+            _con.Dispose();
             return result.Tables[0];
         }
 

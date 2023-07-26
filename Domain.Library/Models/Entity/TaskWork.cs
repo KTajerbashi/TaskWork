@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Domain.Model
 {
-    [Table("TaskWorks", Schema = "BES")]
+    [Table("TaskWorks", Schema = "BUS")]
     public class TaskWork : GeneralEntity
     {
         public string Title { get; set; }

@@ -24,7 +24,11 @@ namespace TicketApplication.UserControls
         private void TaskList_Load(object sender, EventArgs e)
         {
             TaskWorkService taskWorkService= new TaskWorkService();
-            ListTasks.DataSource = _baseDatabase.Execute(@"SELECT * FROM BES.TaskWork");
+            ListTasks.DataSource = _baseDatabase.Execute(@"
+SELECT        BUS.TaskWorks.Title AS تسک, BUS.TaskWorks.Description AS توضیحات, BUS.TaskWorks.CreateDate AS [تاریخ ثبت], BUS.Samanehs.Name AS سامانه, BUS.Samanehs.Title AS عنوان
+FROM            BUS.TaskWorks INNER JOIN
+                         BUS.Samanehs ON BUS.TaskWorks.SamanaID = BUS.Samanehs.ID
+");
 
         }
 

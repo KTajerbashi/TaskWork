@@ -15,3 +15,4 @@ C:\Users\tajer-k\Desktop\Ticket\Ticket\Infrastrucure.Library\bin\Debug\EntityFra
 C:\Users\tajer-k\Desktop\Ticket\Ticket\Infrastrucure.Library\obj\Debug\Infrastrucure.Library.csproj.CopyComplete
 C:\Users\tajer-k\Desktop\Ticket\Ticket\Infrastrucure.Library\obj\Debug\Infrastrucure.Library.dll
 C:\Users\tajer-k\Desktop\Ticket\Ticket\Infrastrucure.Library\obj\Debug\Infrastrucure.Library.pdb
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Infrastrucure.Library\obj\Debug\Infrastrucure.Library.Migrations.SamanehChange.resources
