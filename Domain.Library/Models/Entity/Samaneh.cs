@@ -4,8 +4,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Domain.Model
 {
-    [Table("Samana", Schema = "BES")]
-    public class Samana : GeneralEntity
+    [Table("Samanehs", Schema = "BES")]
+    public class Samaneh : GeneralEntity
     {
         public string Name { get; set; }
 

@@ -24,10 +24,13 @@ namespace TicketApplication.UserControls
         private void TaskList_Load(object sender, EventArgs e)
         {
             TaskWorkService taskWorkService= new TaskWorkService();
-            ListTasks.DataSource = _baseDatabase.Execute(@"SELECT * FROM BES.TaskWorks");
+            ListTasks.DataSource = _baseDatabase.Execute(@"SELECT * FROM BES.TaskWork");
 
         }
 
+        private void SearchBtn_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

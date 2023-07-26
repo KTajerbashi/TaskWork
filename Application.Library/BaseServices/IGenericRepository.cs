@@ -15,7 +15,7 @@ namespace BusinessLogic.Library
     }
     public class GenericRepository<T> : IGenericRepository<T> where T : class
     {
-        private DatabaseContext _context = null;
+        protected DatabaseContext _context = null;
 
         private DbSet<T> table = null;
         public GenericRepository()

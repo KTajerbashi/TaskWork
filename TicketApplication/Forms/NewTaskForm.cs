@@ -1,6 +1,7 @@
 ﻿using BusinessLogic.Library;
 using Domain.Model;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
@@ -53,18 +54,24 @@ namespace TicketApplication.Forms
         private void SaveBtn_Click(object sender, EventArgs e)
         {
             TaskWorkService service = new TaskWorkService();
+
+            var SID =((ComboboxItem)comboBox1.SelectedItem).Value;
+
             TaskWork entity = new TaskWork();
-
-
-            SamanaService samana = new SamanaService();
-            Samana sam =  samana.GetAll().Where(c => c.Name == AppName.Text).FirstOrDefault();
-
-
             entity.Title = TitleTaskTxt.Text;
             entity.Description = DetailsTaskTxt.Text;
-            entity.Samana = sam;
+            entity.SamanaID = SID;
+
+            entity.Created = DateTime.Now;
+            entity.CreateDate = DateTime.Now;
+            entity.CreatedByUserRoleID = 1;
+            entity.IsActive = true;
+            entity.IsDeleted = false;
+            entity.IsPassed = false;
+            entity.IsDeliver = false;
+
             service.Insert(entity);
-            sam.TaskWorks.Add(entity);
+
             service.Save();
 
             this.Close();
@@ -72,10 +79,28 @@ namespace TicketApplication.Forms
 
         private void NewTaskForm_Load(object sender, EventArgs e)
         {
-            SamanaService samana = new SamanaService();
+            SamanehService samana = new SamanehService();
+            comboBox1.Items.Clear();
             var items = samana.GetAll();
+            foreach (var item in items)
+            {
+                comboBox1.Items.Add(new ComboboxItem()
+                {
+                    Text = item.Title,
+                    Value = item.ID
+                });
+            }
+        }
+        public class ComboboxItem
+        {
+            public string Text { get; set; }
+            public long Value { get; set; }
+
+            public override string ToString()
+            {
+                return Text;
+            }
         }
 
-        
     }
 }

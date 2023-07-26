@@ -35,7 +35,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.AppName = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // ExitBtn
@@ -113,20 +113,14 @@
             this.label3.Text = "سامانه";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // AppName
+            // comboBox1
             // 
-            this.AppName.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.AppName.FormattingEnabled = true;
-            this.AppName.Items.AddRange(new object[] {
-            "کمیسیون بند 20",
-            "سراج",
-            "میز کار مشهد",
-            "BPMS",
-            "املاک"});
-            this.AppName.Location = new System.Drawing.Point(35, 48);
-            this.AppName.Name = "AppName";
-            this.AppName.Size = new System.Drawing.Size(564, 30);
-            this.AppName.TabIndex = 8;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.comboBox1.Location = new System.Drawing.Point(35, 48);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(564, 30);
+            this.comboBox1.TabIndex = 8;
             // 
             // NewTaskForm
             // 
@@ -134,7 +128,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(634, 340);
-            this.Controls.Add(this.AppName);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -165,6 +159,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox AppName;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

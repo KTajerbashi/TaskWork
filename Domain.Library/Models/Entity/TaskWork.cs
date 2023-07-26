@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Domain.Model
 {
-    [Table("TaskWork", Schema = "BES")]
+    [Table("TaskWorks", Schema = "BES")]
     public class TaskWork : GeneralEntity
     {
         public string Title { get; set; }
@@ -20,8 +20,8 @@ namespace Domain.Model
         public bool IsDeliver { get; set; }
 
 
-        [ForeignKey("Samana")]
+        [ForeignKey(nameof(Samaneh))]
         public long SamanaID { get; set; }
-        public Samana Samana { get; set; }
+        public Samaneh Samaneh { get; set; }
     }
 }

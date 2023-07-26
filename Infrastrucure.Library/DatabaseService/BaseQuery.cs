@@ -19,13 +19,10 @@ namespace Infrastrucure.Library.DatabaseService
         public BaseQuery()
         {
             _con = new SqlConnection(@"
-    Server=rhg-database\dev;
-    Database=RG_TaskWorkDB;
-    User ID=sa; 
-    Password=soft157703ware; 
-    MultipleActiveResultSets=true;
-    Integrated Security=true;
-");
+                Data Source=172.20.1.20\DEV;
+                Initial Catalog=RG_TaskWorkDB;
+                User ID=sa; Password=soft157703ware;
+                ");
         }
         public DataTable Execute(string query)
         {

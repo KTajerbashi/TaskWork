@@ -16,5 +16,10 @@ namespace TicketApplication.UserControls
         {
             InitializeComponent();
         }
+
+        private void SearchBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -10,7 +10,7 @@ namespace DAL.DatabaseContext
         }
 
         public DbSet<TaskWork> Tasks { get; set; }
-        public DbSet<Samana> Samanas { get; set; }
+        public DbSet<Samaneh> Samanehs { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Role> Roles { get; set; }
         public DbSet<UserRole> UserRoles { get; set; }
@@ -18,7 +18,7 @@ namespace DAL.DatabaseContext
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            modelBuilder.Entity<Samana>().HasIndex(c => c.Title).IsUnique();
+            //modelBuilder.Entity<Samana>().HasIndex(c => c.Title).IsUnique();
         }
 
     }
