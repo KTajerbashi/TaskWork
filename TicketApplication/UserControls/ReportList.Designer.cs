@@ -47,7 +47,7 @@
             this.ListReports.BackgroundColor = System.Drawing.Color.White;
             this.ListReports.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ListReports.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ListReports.Location = new System.Drawing.Point(6, 73);
+            this.ListReports.Location = new System.Drawing.Point(3, 70);
             this.ListReports.Name = "ListReports";
             this.ListReports.Size = new System.Drawing.Size(1249, 587);
             this.ListReports.TabIndex = 1;
@@ -77,7 +77,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.Font = new System.Drawing.Font("IRANSansWeb", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label1.Location = new System.Drawing.Point(431, 22);
+            this.label1.Location = new System.Drawing.Point(442, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(73, 29);
             this.label1.TabIndex = 9;
@@ -113,7 +113,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(785, 21);
+            this.button4.Location = new System.Drawing.Point(676, 20);
             this.button4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(57, 30);
@@ -123,21 +123,19 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(1041, 23);
+            this.textBox1.Location = new System.Drawing.Point(1000, 23);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(108, 27);
+            this.textBox1.Size = new System.Drawing.Size(153, 27);
             this.textBox1.TabIndex = 10;
-            this.textBox1.Text = "1402/01/01";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox1.Text = "جستجو ...";
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(848, 23);
+            this.textBox2.Location = new System.Drawing.Point(740, 23);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(108, 27);
+            this.textBox2.Size = new System.Drawing.Size(153, 27);
             this.textBox2.TabIndex = 11;
-            this.textBox2.Text = "1402/12/30";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox2.Text = "جستجو ...";
             // 
             // label2
             // 
@@ -146,7 +144,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.Font = new System.Drawing.Font("IRANSansWeb", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label2.Location = new System.Drawing.Point(1155, 22);
+            this.label2.Location = new System.Drawing.Point(1170, 22);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 29);
             this.label2.TabIndex = 12;
@@ -160,11 +158,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.Font = new System.Drawing.Font("IRANSansWeb", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label3.Location = new System.Drawing.Point(962, 22);
+            this.label3.Location = new System.Drawing.Point(910, 22);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 29);
             this.label3.TabIndex = 13;
-            this.label3.Text = "تا تاریخ";
+            this.label3.Text = "از تاریخ";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ReportList
