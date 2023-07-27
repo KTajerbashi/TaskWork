@@ -96,6 +96,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="UserControls\ReportList.resx">
       <DependentUpon>ReportList.cs</DependentUpon>
@@ -126,6 +127,9 @@
       <Project>{7C9E93BC-5043-43EF-9363-C8B0BCD7767B}</Project>
       <Name>Domain.Library</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1486504369-change-edit-options-pencil-settings-tools-write_81307.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

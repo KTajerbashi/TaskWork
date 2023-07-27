@@ -11,8 +11,6 @@ namespace Domain.Model
         public string Title { get; set; }
         public string Description { get; set; }
 
-        public DateTime Created { get; set; }
-
         [DefaultValue(false)]
         public bool IsPassed { get; set; }
 

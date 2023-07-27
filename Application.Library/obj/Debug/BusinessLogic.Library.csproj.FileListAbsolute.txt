@@ -15,3 +15,20 @@ C:\Users\tajer-k\Desktop\Ticket\Ticket\Application.Library\bin\Debug\EntityFrame
 C:\Users\tajer-k\Desktop\Ticket\Ticket\Application.Library\obj\Debug\BusinessLogic.Library.csproj.CopyComplete
 C:\Users\tajer-k\Desktop\Ticket\Ticket\Application.Library\obj\Debug\Application.Library.dll
 C:\Users\tajer-k\Desktop\Ticket\Ticket\Application.Library\obj\Debug\Application.Library.pdb
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\Application.Library\bin\Debug\Application.Library.dll.config
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\Application.Library\bin\Debug\Application.Library.dll
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\Application.Library\bin\Debug\Application.Library.pdb
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\Application.Library\bin\Debug\Domain.Library.dll
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\Application.Library\bin\Debug\EntityFramework.dll
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\Application.Library\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\Application.Library\bin\Debug\Infrastrucure.Library.dll
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\Application.Library\bin\Debug\Domain.Library.pdb
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\Application.Library\bin\Debug\Infrastrucure.Library.pdb
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\Application.Library\bin\Debug\Infrastrucure.Library.dll.config
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\Application.Library\bin\Debug\EntityFramework.xml
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\Application.Library\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\Application.Library\obj\Debug\BusinessLogic.Library.csproj.AssemblyReference.cache
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\Application.Library\obj\Debug\BusinessLogic.Library.csproj.CoreCompileInputs.cache
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\Application.Library\obj\Debug\BusinessLogic.Library.csproj.CopyComplete
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\Application.Library\obj\Debug\Application.Library.dll
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\Application.Library\obj\Debug\Application.Library.pdb

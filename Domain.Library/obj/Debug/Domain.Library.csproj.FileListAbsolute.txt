@@ -4,3 +4,9 @@ C:\Users\tajer-k\Desktop\Ticket\Ticket\Domain.Library\obj\Debug\Domain.Library.c
 C:\Users\tajer-k\Desktop\Ticket\Ticket\Domain.Library\obj\Debug\Domain.Library.csproj.CoreCompileInputs.cache
 C:\Users\tajer-k\Desktop\Ticket\Ticket\Domain.Library\obj\Debug\Domain.Library.dll
 C:\Users\tajer-k\Desktop\Ticket\Ticket\Domain.Library\obj\Debug\Domain.Library.pdb
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\Domain.Library\bin\Debug\Domain.Library.dll
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\Domain.Library\bin\Debug\Domain.Library.pdb
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\Domain.Library\obj\Debug\Domain.Library.csproj.AssemblyReference.cache
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\Domain.Library\obj\Debug\Domain.Library.csproj.CoreCompileInputs.cache
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\Domain.Library\obj\Debug\Domain.Library.dll
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\Domain.Library\obj\Debug\Domain.Library.pdb

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using TicketApplication.UserControls;
 
 namespace TicketApplication.Forms
 {
@@ -54,26 +55,22 @@ namespace TicketApplication.Forms
         private void SaveBtn_Click(object sender, EventArgs e)
         {
             TaskWorkService service = new TaskWorkService();
-
             var SID =((ComboboxItem)comboBox1.SelectedItem).Value;
 
             TaskWork entity = new TaskWork();
             entity.Title = TitleTaskTxt.Text;
             entity.Description = DetailsTaskTxt.Text;
             entity.SamanaID = SID;
-
-            entity.Created = DateTime.Now;
-            entity.CreateDate = DateTime.Now;
             entity.CreatedByUserRoleID = 1;
-            entity.IsActive = true;
-            entity.IsDeleted = false;
-            entity.IsPassed = false;
-            entity.IsDeliver = false;
-
-            service.Insert(entity);
-
+            if (ID.Text == "0")
+            {
+                service.Insert(entity);
+            }
+            else
+            {
+               service.Update(entity);
+            }
             service.Save();
-
             this.Close();
         }
 

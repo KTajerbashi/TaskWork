@@ -25,3 +25,30 @@ C:\Users\tajer-k\Desktop\Ticket\Ticket\TicketApplication\bin\Debug\Infrastrucure
 C:\Users\tajer-k\Desktop\Ticket\Ticket\TicketApplication\obj\Debug\TicketApplication.csproj.CopyComplete
 C:\Users\tajer-k\Desktop\Ticket\Ticket\TicketApplication\obj\Debug\TicketApplication.exe
 C:\Users\tajer-k\Desktop\Ticket\Ticket\TicketApplication\obj\Debug\TicketApplication.pdb
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\TicketApplication\bin\Debug\TicketApplication.exe.config
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\TicketApplication\bin\Debug\TicketApplication.exe
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\TicketApplication\bin\Debug\TicketApplication.pdb
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\TicketApplication\bin\Debug\Application.Library.dll
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\TicketApplication\bin\Debug\Domain.Library.dll
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\TicketApplication\bin\Debug\EntityFramework.dll
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\TicketApplication\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\TicketApplication\bin\Debug\Infrastrucure.Library.dll
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\TicketApplication\bin\Debug\Application.Library.pdb
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\TicketApplication\bin\Debug\Application.Library.dll.config
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\TicketApplication\bin\Debug\Domain.Library.pdb
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\TicketApplication\bin\Debug\EntityFramework.xml
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\TicketApplication\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\TicketApplication\bin\Debug\Infrastrucure.Library.pdb
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\TicketApplication\bin\Debug\Infrastrucure.Library.dll.config
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\TicketApplication\obj\Debug\TicketApplication.csproj.AssemblyReference.cache
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\TicketApplication\obj\Debug\TicketApplication.csproj.SuggestedBindingRedirects.cache
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\TicketApplication\obj\Debug\TicketApplication.Forms.NewTaskForm.resources
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\TicketApplication\obj\Debug\TicketApplication.Main.resources
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\TicketApplication\obj\Debug\TicketApplication.Properties.Resources.resources
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\TicketApplication\obj\Debug\TicketApplication.UserControls.ReportList.resources
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\TicketApplication\obj\Debug\TicketApplication.UserControls.TaskList.resources
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\TicketApplication\obj\Debug\TicketApplication.csproj.GenerateResource.cache
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\TicketApplication\obj\Debug\TicketApplication.csproj.CoreCompileInputs.cache
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\TicketApplication\obj\Debug\TicketApplication.csproj.CopyComplete
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\TicketApplication\obj\Debug\TicketApplication.exe
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\TicketApplication\obj\Debug\TicketApplication.pdb

@@ -7,13 +7,13 @@ namespace Infrastrucure.Library.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class SamanehChange : IMigrationMetadata
+    public sealed partial class BUS : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(SamanehChange));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(BUS));
         
         string IMigrationMetadata.Id
         {
-            get { return "202307261509339_SamanehChange"; }
+            get { return "202307271959565_BUS"; }
         }
         
         string IMigrationMetadata.Source

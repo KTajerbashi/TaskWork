@@ -28,37 +28,51 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TaskList));
             this.ListTasks = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.SearchBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.SearchTxt = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.AlphabetBtn = new System.Windows.Forms.Button();
+            this.NotPassBtn = new System.Windows.Forms.Button();
+            this.PassedBtn = new System.Windows.Forms.Button();
             this.NewTaskBtn = new System.Windows.Forms.Button();
-            this.SearchBtn = new System.Windows.Forms.Button();
+            this.StripMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.تغییروضعیتپاسToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.تغییروضعیتتحویلToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.حذفToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ویرایشToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.ListTasks)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.StripMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // ListTasks
             // 
+            this.ListTasks.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ListTasks.BackgroundColor = System.Drawing.Color.White;
             this.ListTasks.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ListTasks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ListTasks.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.ListTasks.Location = new System.Drawing.Point(3, 70);
             this.ListTasks.Name = "ListTasks";
+            this.ListTasks.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            this.ListTasks.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.ListTasks.Size = new System.Drawing.Size(1249, 587);
             this.ListTasks.TabIndex = 0;
+            this.ListTasks.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ListTasks_CellClick);
+            this.ListTasks.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.ListTasks_CellMouseClick);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.SearchBtn);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.SearchTxt);
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.AlphabetBtn);
+            this.groupBox1.Controls.Add(this.NotPassBtn);
+            this.groupBox1.Controls.Add(this.PassedBtn);
             this.groupBox1.Controls.Add(this.NewTaskBtn);
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
@@ -67,6 +81,21 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "فیلتر";
+            // 
+            // SearchBtn
+            // 
+            this.SearchBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(79)))), ((int)(((byte)(235)))));
+            this.SearchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.SearchBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchBtn.ForeColor = System.Drawing.Color.White;
+            this.SearchBtn.Location = new System.Drawing.Point(7, 22);
+            this.SearchBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.SearchBtn.Name = "SearchBtn";
+            this.SearchBtn.Size = new System.Drawing.Size(119, 30);
+            this.SearchBtn.TabIndex = 10;
+            this.SearchBtn.Text = "جستجو";
+            this.SearchBtn.UseVisualStyleBackColor = false;
+            this.SearchBtn.Click += new System.EventHandler(this.SearchBtn_Click);
             // 
             // label1
             // 
@@ -84,53 +113,56 @@
             // 
             // SearchTxt
             // 
-            this.SearchTxt.Location = new System.Drawing.Point(127, 23);
+            this.SearchTxt.Location = new System.Drawing.Point(129, 24);
             this.SearchTxt.Name = "SearchTxt";
             this.SearchTxt.Size = new System.Drawing.Size(354, 27);
             this.SearchTxt.TabIndex = 8;
             this.SearchTxt.Text = "جستجو ...";
             // 
-            // button3
+            // AlphabetBtn
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(79)))), ((int)(((byte)(235)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(742, 23);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(119, 30);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "به ترتیب الفبا";
-            this.button3.UseVisualStyleBackColor = false;
+            this.AlphabetBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(79)))), ((int)(((byte)(235)))));
+            this.AlphabetBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AlphabetBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AlphabetBtn.ForeColor = System.Drawing.Color.White;
+            this.AlphabetBtn.Location = new System.Drawing.Point(742, 23);
+            this.AlphabetBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.AlphabetBtn.Name = "AlphabetBtn";
+            this.AlphabetBtn.Size = new System.Drawing.Size(119, 30);
+            this.AlphabetBtn.TabIndex = 5;
+            this.AlphabetBtn.Text = "به ترتیب الفبا";
+            this.AlphabetBtn.UseVisualStyleBackColor = false;
+            this.AlphabetBtn.Click += new System.EventHandler(this.AlphabetBtn_Click);
             // 
-            // button2
+            // NotPassBtn
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(79)))), ((int)(((byte)(235)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(869, 23);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(119, 30);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "نا تمام";
-            this.button2.UseVisualStyleBackColor = false;
+            this.NotPassBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(79)))), ((int)(((byte)(235)))));
+            this.NotPassBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.NotPassBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NotPassBtn.ForeColor = System.Drawing.Color.White;
+            this.NotPassBtn.Location = new System.Drawing.Point(869, 23);
+            this.NotPassBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.NotPassBtn.Name = "NotPassBtn";
+            this.NotPassBtn.Size = new System.Drawing.Size(119, 30);
+            this.NotPassBtn.TabIndex = 4;
+            this.NotPassBtn.Text = "نا تمام";
+            this.NotPassBtn.UseVisualStyleBackColor = false;
+            this.NotPassBtn.Click += new System.EventHandler(this.NotPassBtn_Click);
             // 
-            // button1
+            // PassedBtn
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(79)))), ((int)(((byte)(235)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(996, 23);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(119, 30);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "پاس شده";
-            this.button1.UseVisualStyleBackColor = false;
+            this.PassedBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(79)))), ((int)(((byte)(235)))));
+            this.PassedBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.PassedBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PassedBtn.ForeColor = System.Drawing.Color.White;
+            this.PassedBtn.Location = new System.Drawing.Point(996, 23);
+            this.PassedBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.PassedBtn.Name = "PassedBtn";
+            this.PassedBtn.Size = new System.Drawing.Size(119, 30);
+            this.PassedBtn.TabIndex = 3;
+            this.PassedBtn.Text = "پاس شده";
+            this.PassedBtn.UseVisualStyleBackColor = false;
+            this.PassedBtn.Click += new System.EventHandler(this.PassedBtn_Click);
             // 
             // NewTaskBtn
             // 
@@ -145,21 +177,50 @@
             this.NewTaskBtn.TabIndex = 2;
             this.NewTaskBtn.Text = "جدیدترین";
             this.NewTaskBtn.UseVisualStyleBackColor = false;
+            this.NewTaskBtn.Click += new System.EventHandler(this.NewTaskBtn_Click);
             // 
-            // SearchBtn
+            // StripMenu
             // 
-            this.SearchBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(79)))), ((int)(((byte)(235)))));
-            this.SearchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.SearchBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchBtn.ForeColor = System.Drawing.Color.White;
-            this.SearchBtn.Location = new System.Drawing.Point(7, 22);
-            this.SearchBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.SearchBtn.Name = "SearchBtn";
-            this.SearchBtn.Size = new System.Drawing.Size(119, 30);
-            this.SearchBtn.TabIndex = 10;
-            this.SearchBtn.Text = "جستجو";
-            this.SearchBtn.UseVisualStyleBackColor = false;
-            this.SearchBtn.Click += new System.EventHandler(this.SearchBtn_Click);
+            this.StripMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.تغییروضعیتپاسToolStripMenuItem,
+            this.تغییروضعیتتحویلToolStripMenuItem,
+            this.حذفToolStripMenuItem,
+            this.ویرایشToolStripMenuItem});
+            this.StripMenu.Name = "StripMenu";
+            this.StripMenu.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.StripMenu.Size = new System.Drawing.Size(181, 114);
+            // 
+            // تغییروضعیتپاسToolStripMenuItem
+            // 
+            this.تغییروضعیتپاسToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("تغییروضعیتپاسToolStripMenuItem.Image")));
+            this.تغییروضعیتپاسToolStripMenuItem.Name = "تغییروضعیتپاسToolStripMenuItem";
+            this.تغییروضعیتپاسToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.تغییروضعیتپاسToolStripMenuItem.Text = "تغییر وضعیت پاس";
+            this.تغییروضعیتپاسToolStripMenuItem.Click += new System.EventHandler(this.تغییروضعیتپاسToolStripMenuItem_Click);
+            // 
+            // تغییروضعیتتحویلToolStripMenuItem
+            // 
+            this.تغییروضعیتتحویلToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("تغییروضعیتتحویلToolStripMenuItem.Image")));
+            this.تغییروضعیتتحویلToolStripMenuItem.Name = "تغییروضعیتتحویلToolStripMenuItem";
+            this.تغییروضعیتتحویلToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.تغییروضعیتتحویلToolStripMenuItem.Text = "تغییر وضعیت تحویل";
+            this.تغییروضعیتتحویلToolStripMenuItem.Click += new System.EventHandler(this.تغییروضعیتتحویلToolStripMenuItem_Click);
+            // 
+            // حذفToolStripMenuItem
+            // 
+            this.حذفToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("حذفToolStripMenuItem.Image")));
+            this.حذفToolStripMenuItem.Name = "حذفToolStripMenuItem";
+            this.حذفToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.حذفToolStripMenuItem.Text = "حذف";
+            this.حذفToolStripMenuItem.Click += new System.EventHandler(this.حذفToolStripMenuItem_Click);
+            // 
+            // ویرایشToolStripMenuItem
+            // 
+            this.ویرایشToolStripMenuItem.Image = global::TicketApplication.Properties.Resources._1486504369_change_edit_options_pencil_settings_tools_write_81307;
+            this.ویرایشToolStripMenuItem.Name = "ویرایشToolStripMenuItem";
+            this.ویرایشToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ویرایشToolStripMenuItem.Text = "ویرایش";
+            this.ویرایشToolStripMenuItem.Click += new System.EventHandler(this.ویرایشToolStripMenuItem_Click);
             // 
             // TaskList
             // 
@@ -176,20 +237,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.ListTasks)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.StripMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView ListTasks;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox SearchTxt;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button AlphabetBtn;
+        private System.Windows.Forms.Button NotPassBtn;
+        private System.Windows.Forms.Button PassedBtn;
         private System.Windows.Forms.Button NewTaskBtn;
         private System.Windows.Forms.Button SearchBtn;
+        private System.Windows.Forms.ContextMenuStrip StripMenu;
+        private System.Windows.Forms.ToolStripMenuItem تغییروضعیتپاسToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem تغییروضعیتتحویلToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem حذفToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ویرایشToolStripMenuItem;
+        public System.Windows.Forms.DataGridView ListTasks;
     }
 }

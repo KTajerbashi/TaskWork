@@ -61,9 +61,13 @@
     <Compile Include="Migrations\202307261405062_RoleConfig.designer.cs">
       <DependentUpon>202307261405062_RoleConfig.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202307261509339_SamanehChange.cs" />
-    <Compile Include="Migrations\202307261509339_SamanehChange.designer.cs">
-      <DependentUpon>202307261509339_SamanehChange.cs</DependentUpon>
+    <Compile Include="Migrations\202307271959565_BUS.cs" />
+    <Compile Include="Migrations\202307271959565_BUS.designer.cs">
+      <DependentUpon>202307271959565_BUS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202307272021369_FieldChange.cs" />
+    <Compile Include="Migrations\202307272021369_FieldChange.designer.cs">
+      <DependentUpon>202307272021369_FieldChange.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -87,8 +91,11 @@
     <EmbeddedResource Include="Migrations\202307261405062_RoleConfig.resx">
       <DependentUpon>202307261405062_RoleConfig.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202307261509339_SamanehChange.resx">
-      <DependentUpon>202307261509339_SamanehChange.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202307271959565_BUS.resx">
+      <DependentUpon>202307271959565_BUS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202307272021369_FieldChange.resx">
+      <DependentUpon>202307272021369_FieldChange.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -13,19 +13,18 @@ namespace Domain.Base
         public TKey ID { get; set; }
 
         [Description("فعال بودن")]
-        [DefaultValue(true)]
-        public bool IsActive { get; set; }
+        public bool IsActive { get; set; } = true;
 
         [Description("حذف شده")]
-        [DefaultValue(false)]
-        public bool IsDeleted { get; set; }
+        public bool IsDeleted { get; set; } = false;
 
         [Description("آخرین تاریخ و زمان ویرایش")]
-        public DateTime? UpdateDate { get; set; }
+        public DateTime? UpdateDate { get; set; } = DateTime.Now;
 
         [Description("آخرین کاربر ویرایش کننده")]
         public long? UpdateBy { get; set; }
-        public DateTime CreateDate { set; get; }
+
+        public DateTime CreateDate { set; get; } = DateTime.Now;
         public TKey CreatedByUserRoleID { set; get; }
     }
     public abstract class BaseEntity : BaseEntity<long>
