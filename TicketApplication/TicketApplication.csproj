@@ -48,6 +48,9 @@
     <Reference Include="GlassButton">
       <HintPath>..\..\..\..\..\HDD\Ico\cp (Www.SourceBaran.Com)\GlassButton.dll</HintPath>
     </Reference>
+    <Reference Include="MD.PersianDateTime, Version=4.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MD.PersianDateTime.4.5.0\lib\net20\MD.PersianDateTime.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />

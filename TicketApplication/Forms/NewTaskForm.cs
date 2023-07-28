@@ -74,17 +74,25 @@ namespace TicketApplication.Forms
                     TaskWorkService service = new TaskWorkService();
                     var SID =((ComboboxItem)comboBox1.SelectedItem).Value;
 
-                    TaskWork entity = new TaskWork();
-                    entity.Title = TitleTaskTxt.Text;
-                    entity.Description = DetailsTaskTxt.Text;
-                    entity.SamanaID = SID;
-                    entity.CreatedByUserRoleID = 1;
+                    
                     if (ID.Text == "0")
                     {
+                        TaskWork entity = new TaskWork();
+                        entity.Title = TitleTaskTxt.Text;
+                        entity.Description = DetailsTaskTxt.Text;
+                        entity.SamanaID = SID;
+                        entity.CreatedByUserRoleID = 1;
                         service.Insert(entity);
                     }
                     else
                     {
+                        TaskWork entity = service.GetById(long.Parse(ID.Text));
+                        entity.Title = TitleTaskTxt.Text;
+                        entity.Description = DetailsTaskTxt.Text;
+                        entity.SamanaID = SID;
+                        entity.CreatedByUserRoleID = 1;
+                        entity.UpdateBy = 1;
+                        entity.UpdateDate = DateTime.Now;
                         service.Update(entity);
                     }
                     service.Save();

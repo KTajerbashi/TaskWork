@@ -1,5 +1,7 @@
 ﻿using Domain.Model;
+using MD.PersianDateTime;
 using System;
+using System.Globalization;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using TicketApplication.Forms;
@@ -92,5 +94,12 @@ namespace TicketApplication
             form.ShowDialog();
         }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+            PersianDateTime persianDateTime = new PersianDateTime(DateTime.Now);
+            Console.WriteLine(persianDateTime);
+            DateTimeLBL.Text = persianDateTime.ToString();
+        }
     }
 }

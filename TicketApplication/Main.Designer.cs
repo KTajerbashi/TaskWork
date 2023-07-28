@@ -45,12 +45,16 @@
             this.label5 = new System.Windows.Forms.Label();
             this.MainPanel = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.DateTimeLBL = new System.Windows.Forms.Label();
             this.AsidePanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // AsidePanel
             // 
             this.AsidePanel.BackColor = System.Drawing.Color.MidnightBlue;
+            this.AsidePanel.Controls.Add(this.DateTimeLBL);
+            this.AsidePanel.Controls.Add(this.progressBar1);
             this.AsidePanel.Controls.Add(this.BLUE1);
             this.AsidePanel.Controls.Add(this.REG1);
             this.AsidePanel.Controls.Add(this.BLACK);
@@ -130,7 +134,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.Font = new System.Drawing.Font("Algerian", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label1.Location = new System.Drawing.Point(4, 519);
+            this.label1.Location = new System.Drawing.Point(4, 417);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(155, 93);
             this.label1.TabIndex = 7;
@@ -142,7 +146,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.Font = new System.Drawing.Font("Parchment", 60F);
             this.label2.ForeColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(4, 421);
+            this.label2.Location = new System.Drawing.Point(4, 319);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(155, 98);
             this.label2.TabIndex = 6;
@@ -155,7 +159,7 @@
             this.TasksListBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.TasksListBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TasksListBtn.ForeColor = System.Drawing.Color.White;
-            this.TasksListBtn.Location = new System.Drawing.Point(21, 271);
+            this.TasksListBtn.Location = new System.Drawing.Point(21, 169);
             this.TasksListBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TasksListBtn.Name = "TasksListBtn";
             this.TasksListBtn.Size = new System.Drawing.Size(119, 30);
@@ -170,7 +174,7 @@
             this.ReportBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ReportBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ReportBtn.ForeColor = System.Drawing.Color.White;
-            this.ReportBtn.Location = new System.Drawing.Point(21, 351);
+            this.ReportBtn.Location = new System.Drawing.Point(21, 249);
             this.ReportBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ReportBtn.Name = "ReportBtn";
             this.ReportBtn.Size = new System.Drawing.Size(119, 30);
@@ -185,7 +189,7 @@
             this.NewTaskBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.NewTaskBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NewTaskBtn.ForeColor = System.Drawing.Color.White;
-            this.NewTaskBtn.Location = new System.Drawing.Point(21, 311);
+            this.NewTaskBtn.Location = new System.Drawing.Point(21, 209);
             this.NewTaskBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.NewTaskBtn.Name = "NewTaskBtn";
             this.NewTaskBtn.Size = new System.Drawing.Size(119, 30);
@@ -231,6 +235,31 @@
             this.MainPanel.Size = new System.Drawing.Size(1255, 660);
             this.MainPanel.TabIndex = 2;
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(-1, 535);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(164, 5);
+            this.progressBar1.TabIndex = 51;
+            this.progressBar1.Value = 99;
+            // 
+            // DateTimeLBL
+            // 
+            this.DateTimeLBL.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.DateTimeLBL.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DateTimeLBL.ForeColor = System.Drawing.Color.Transparent;
+            this.DateTimeLBL.Location = new System.Drawing.Point(4, 543);
+            this.DateTimeLBL.Name = "DateTimeLBL";
+            this.DateTimeLBL.Size = new System.Drawing.Size(155, 68);
+            this.DateTimeLBL.TabIndex = 52;
+            this.DateTimeLBL.Text = "1402/01/01 12:00:00";
+            this.DateTimeLBL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 20F);
@@ -269,6 +298,8 @@
         private System.Windows.Forms.ProgressBar BLUE1;
         private System.Windows.Forms.ProgressBar REG1;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label DateTimeLBL;
+        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }
 
