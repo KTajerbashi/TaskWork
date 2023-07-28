@@ -52,3 +52,6 @@ C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\TicketAp
 C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\TicketApplication\obj\Debug\TicketApplication.csproj.CopyComplete
 C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\TicketApplication\obj\Debug\TicketApplication.exe
 C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\TicketApplication\obj\Debug\TicketApplication.pdb
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\TicketApplication\bin\Debug\DateTimeSelector.dll
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\TicketApplication\bin\Debug\DateTimeSelector.pdb
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\TicketApplication\bin\Debug\GlassButton.dll

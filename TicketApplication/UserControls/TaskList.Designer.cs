@@ -44,6 +44,10 @@
             this.تغییروضعیتتحویلToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.حذفToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ویرایشToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.NextBtn = new Glass.GlassButton();
+            this.PrevBtn = new Glass.GlassButton();
+            this.Reloding = new Glass.GlassButton();
+            this.DeliverBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ListTasks)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.StripMenu.SuspendLayout();
@@ -51,6 +55,7 @@
             // 
             // ListTasks
             // 
+            this.ListTasks.AllowUserToAddRows = false;
             this.ListTasks.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ListTasks.BackgroundColor = System.Drawing.Color.White;
             this.ListTasks.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -60,13 +65,14 @@
             this.ListTasks.Name = "ListTasks";
             this.ListTasks.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.ListTasks.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.ListTasks.Size = new System.Drawing.Size(1249, 587);
+            this.ListTasks.Size = new System.Drawing.Size(1250, 545);
             this.ListTasks.TabIndex = 0;
             this.ListTasks.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ListTasks_CellClick);
             this.ListTasks.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.ListTasks_CellMouseClick);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.DeliverBtn);
             this.groupBox1.Controls.Add(this.SearchBtn);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.SearchTxt);
@@ -188,13 +194,13 @@
             this.ویرایشToolStripMenuItem});
             this.StripMenu.Name = "StripMenu";
             this.StripMenu.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.StripMenu.Size = new System.Drawing.Size(181, 114);
+            this.StripMenu.Size = new System.Drawing.Size(175, 92);
             // 
             // تغییروضعیتپاسToolStripMenuItem
             // 
             this.تغییروضعیتپاسToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("تغییروضعیتپاسToolStripMenuItem.Image")));
             this.تغییروضعیتپاسToolStripMenuItem.Name = "تغییروضعیتپاسToolStripMenuItem";
-            this.تغییروضعیتپاسToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.تغییروضعیتپاسToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.تغییروضعیتپاسToolStripMenuItem.Text = "تغییر وضعیت پاس";
             this.تغییروضعیتپاسToolStripMenuItem.Click += new System.EventHandler(this.تغییروضعیتپاسToolStripMenuItem_Click);
             // 
@@ -202,7 +208,7 @@
             // 
             this.تغییروضعیتتحویلToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("تغییروضعیتتحویلToolStripMenuItem.Image")));
             this.تغییروضعیتتحویلToolStripMenuItem.Name = "تغییروضعیتتحویلToolStripMenuItem";
-            this.تغییروضعیتتحویلToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.تغییروضعیتتحویلToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.تغییروضعیتتحویلToolStripMenuItem.Text = "تغییر وضعیت تحویل";
             this.تغییروضعیتتحویلToolStripMenuItem.Click += new System.EventHandler(this.تغییروضعیتتحویلToolStripMenuItem_Click);
             // 
@@ -210,7 +216,7 @@
             // 
             this.حذفToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("حذفToolStripMenuItem.Image")));
             this.حذفToolStripMenuItem.Name = "حذفToolStripMenuItem";
-            this.حذفToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.حذفToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.حذفToolStripMenuItem.Text = "حذف";
             this.حذفToolStripMenuItem.Click += new System.EventHandler(this.حذفToolStripMenuItem_Click);
             // 
@@ -218,15 +224,60 @@
             // 
             this.ویرایشToolStripMenuItem.Image = global::TicketApplication.Properties.Resources._1486504369_change_edit_options_pencil_settings_tools_write_81307;
             this.ویرایشToolStripMenuItem.Name = "ویرایشToolStripMenuItem";
-            this.ویرایشToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ویرایشToolStripMenuItem.Size = new System.Drawing.Size(174, 22);
             this.ویرایشToolStripMenuItem.Text = "ویرایش";
             this.ویرایشToolStripMenuItem.Click += new System.EventHandler(this.ویرایشToolStripMenuItem_Click);
+            // 
+            // NextBtn
+            // 
+            this.NextBtn.Location = new System.Drawing.Point(3, 617);
+            this.NextBtn.Name = "NextBtn";
+            this.NextBtn.Size = new System.Drawing.Size(40, 40);
+            this.NextBtn.TabIndex = 7;
+            this.NextBtn.Text = "بعد";
+            this.NextBtn.Click += new System.EventHandler(this.NextBtn_Click);
+            // 
+            // PrevBtn
+            // 
+            this.PrevBtn.Location = new System.Drawing.Point(49, 617);
+            this.PrevBtn.Name = "PrevBtn";
+            this.PrevBtn.Size = new System.Drawing.Size(40, 40);
+            this.PrevBtn.TabIndex = 6;
+            this.PrevBtn.Text = "قبل";
+            this.PrevBtn.Click += new System.EventHandler(this.PrevBtn_Click);
+            // 
+            // Reloding
+            // 
+            this.Reloding.Location = new System.Drawing.Point(1212, 617);
+            this.Reloding.Name = "Reloding";
+            this.Reloding.Size = new System.Drawing.Size(40, 40);
+            this.Reloding.TabIndex = 8;
+            this.Reloding.Text = "تازه";
+            this.Reloding.Click += new System.EventHandler(this.Reloding_Click);
+            // 
+            // DeliverBtn
+            // 
+            this.DeliverBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(79)))), ((int)(((byte)(235)))));
+            this.DeliverBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.DeliverBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeliverBtn.ForeColor = System.Drawing.Color.White;
+            this.DeliverBtn.Location = new System.Drawing.Point(615, 23);
+            this.DeliverBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.DeliverBtn.Name = "DeliverBtn";
+            this.DeliverBtn.Size = new System.Drawing.Size(119, 30);
+            this.DeliverBtn.TabIndex = 11;
+            this.DeliverBtn.Text = "تحویل شده";
+            this.DeliverBtn.UseVisualStyleBackColor = false;
+            this.DeliverBtn.Click += new System.EventHandler(this.DeliverBtn_Click);
             // 
             // TaskList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.RosyBrown;
+            this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.Reloding);
+            this.Controls.Add(this.NextBtn);
+            this.Controls.Add(this.PrevBtn);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.ListTasks);
             this.Font = new System.Drawing.Font("IRANSansWeb", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -257,5 +308,9 @@
         private System.Windows.Forms.ToolStripMenuItem حذفToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ویرایشToolStripMenuItem;
         public System.Windows.Forms.DataGridView ListTasks;
+        private Glass.GlassButton NextBtn;
+        private Glass.GlassButton PrevBtn;
+        private Glass.GlassButton Reloding;
+        private System.Windows.Forms.Button DeliverBtn;
     }
 }

@@ -37,6 +37,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.ID = new System.Windows.Forms.Label();
+            this.ERR = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // ExitBtn
@@ -135,12 +136,25 @@
             this.ID.Text = "0";
             this.ID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // ERR
+            // 
+            this.ERR.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ERR.Font = new System.Drawing.Font("IRANSansWeb", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ERR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.ERR.Location = new System.Drawing.Point(205, 289);
+            this.ERR.Name = "ERR";
+            this.ERR.Size = new System.Drawing.Size(394, 29);
+            this.ERR.TabIndex = 10;
+            this.ERR.Text = "سامانه";
+            this.ERR.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // NewTaskForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ClientSize = new System.Drawing.Size(634, 340);
+            this.Controls.Add(this.ERR);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -175,5 +189,6 @@
         public System.Windows.Forms.RichTextBox DetailsTaskTxt;
         public System.Windows.Forms.ComboBox comboBox1;
         public System.Windows.Forms.Label ID;
+        private System.Windows.Forms.Label ERR;
     }
 }

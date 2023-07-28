@@ -54,24 +54,48 @@ namespace TicketApplication.Forms
 
         private void SaveBtn_Click(object sender, EventArgs e)
         {
-            TaskWorkService service = new TaskWorkService();
-            var SID =((ComboboxItem)comboBox1.SelectedItem).Value;
+            try
+            {
+                if (comboBox1.SelectedItem == null)
+                {
+                    ERR.Text = "سامانه را انتخاب کنید";
+                }
+                else if (TitleTaskTxt.Text.Trim() == "")
+                {
+                    ERR.Text = "عنوان را وارد کنید";
+                }
+                else if (DetailsTaskTxt.Text.Trim() == "")
+                {
+                    ERR.Text = "توضیحات وارد کنید";
+                }
+                else
+                {
 
-            TaskWork entity = new TaskWork();
-            entity.Title = TitleTaskTxt.Text;
-            entity.Description = DetailsTaskTxt.Text;
-            entity.SamanaID = SID;
-            entity.CreatedByUserRoleID = 1;
-            if (ID.Text == "0")
-            {
-                service.Insert(entity);
+                    TaskWorkService service = new TaskWorkService();
+                    var SID =((ComboboxItem)comboBox1.SelectedItem).Value;
+
+                    TaskWork entity = new TaskWork();
+                    entity.Title = TitleTaskTxt.Text;
+                    entity.Description = DetailsTaskTxt.Text;
+                    entity.SamanaID = SID;
+                    entity.CreatedByUserRoleID = 1;
+                    if (ID.Text == "0")
+                    {
+                        service.Insert(entity);
+                    }
+                    else
+                    {
+                        service.Update(entity);
+                    }
+                    service.Save();
+                    ERR.Text = "با موفقیت ذخیره شد";
+                    this.Close();
+                }
             }
-            else
+            catch
             {
-               service.Update(entity);
+                ERR.Text = "خطای ورودی ها : ذخیره نشد";
             }
-            service.Save();
-            this.Close();
         }
 
         private void NewTaskForm_Load(object sender, EventArgs e)

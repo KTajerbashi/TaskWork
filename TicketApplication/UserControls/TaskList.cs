@@ -1,15 +1,8 @@
 ﻿using BusinessLogic.Library;
 using Domain.Model;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using TicketApplication.Common;
 using TicketApplication.Forms;
 
 namespace TicketApplication.UserControls
@@ -18,10 +11,14 @@ namespace TicketApplication.UserControls
     {
         private readonly IBaseDatabaseRepository _baseDatabase;
         TaskWorkService _taskWork;
+        Paging Paging;
+        TaskWorkShowGird Show;
         public TaskList()
         {
             InitializeComponent();
+            Paging = new Paging();
             _baseDatabase = new BaseDatabaseRepository();
+            Show = new TaskWorkShowGird();
         }
         private long ID;
 
@@ -29,65 +26,45 @@ namespace TicketApplication.UserControls
         {
             _taskWork = new TaskWorkService();
             string QUERY;
-            string ORDER = " ORDER BY BUS.TaskWorks.ID DESC ";
-            string WHERE = "WHERE (BUS.TaskWorks.IsActive = 1) AND (BUS.TaskWorks.IsDeleted = 0)";
             switch (type)
             {
                 case 0: // الفبا
                     {
-                        ORDER = " ORDER BY BUS.TaskWorks.Title ";
+                        QUERY = Show.ShowAlphabet();
                         break;
                     }
                 case 1: // تمام شده
                     {
-                        WHERE = "WHERE (BUS.TaskWorks.IsActive = 1) AND (BUS.TaskWorks.IsDeleted = 0) AND (BUS.TaskWorks.IsPassed = 1)";
+                        QUERY = Show.ShowPassed();
                         break;
                     }
                 case 2: // تمام نشده
                     {
-                        WHERE = "WHERE (BUS.TaskWorks.IsActive = 1) AND (BUS.TaskWorks.IsDeleted = 0) AND (BUS.TaskWorks.IsPassed = 0)";
+                        QUERY = Show.ShowNotPassed();
                         break;
                     }
                 case 3: // جستجو
                     {
-                        WHERE = $@"
-WHERE 
-    (BUS.TaskWorks.IsActive = 1) 
-AND (BUS.TaskWorks.IsDeleted = 0)
-AND (BUS.TaskWorks.Title LIKE N'%{SearchTxt.Text}%')
-";
+                        QUERY = Show.ShowSearchDate(SearchTxt.Text);
+                        break;
+                    }
+                case 4: // تحویل شده
+                    {
+                        QUERY = Show.ShowDeliver();
                         break;
                     }
                 default: // جدید ترین
                     {
-                        ORDER = " ORDER BY BUS.TaskWorks.ID DESC ";
+                        QUERY = Show.ShowAll(Paging.Order(Paging.Page));
                         break;
                     }
             }
-            QUERY = $@"
-                    SELECT			BUS.TaskWorks.ID AS [آیدی], BUS.TaskWorks.Title AS [عنوان تسک],
-                    				BUS.TaskWorks.Description AS [توضیحات تسک],
-                    				format(BUS.TaskWorks.CreateDate,'yyyy/MM/dd hh:mm','fa-ir') AS [تاریخ ثبت],
-                    				CASE 
-                    					WHEN BUS.TaskWorks.IsPassed = 0 THEN N'نخیر'
-                    					ELSE N'بلی'
-                    				END [پاس شده؟], 
-                    				CASE 
-                    					WHEN BUS.TaskWorks.IsDeliver = 0 THEN N'نخیر'
-                    					ELSE N'بلی'
-                    				END [تحویل شده؟], 
-                    				BUS.Samanehs.Title AS سامانه
-                    FROM            BUS.TaskWorks INNER JOIN
-                                             BUS.Samanehs ON BUS.TaskWorks.SamanaID = BUS.Samanehs.ID
-                    {WHERE}
-                    {ORDER}
-                   ";
             ListTasks.DataSource = _baseDatabase.Execute(QUERY);
 
         }
         private void TaskList_Load(object sender, EventArgs e)
         {
-            ShowDataGridView(4);
+            ShowDataGridView(99);
         }
 
         private void SearchBtn_Click(object sender, EventArgs e)
@@ -97,7 +74,7 @@ AND (BUS.TaskWorks.Title LIKE N'%{SearchTxt.Text}%')
 
         private void NewTaskBtn_Click(object sender, EventArgs e)
         {
-            ShowDataGridView(4);
+            ShowDataGridView(99);
         }
 
         private void ListTasks_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -134,7 +111,7 @@ AND (BUS.TaskWorks.Title LIKE N'%{SearchTxt.Text}%')
             TaskWork entity= _taskWork.GetById(ID);
             entity.IsPassed = entity.IsPassed ? false : true;
             _taskWork.Save();
-            ShowDataGridView(4);
+            ShowDataGridView(99);
         }
 
         private void تغییروضعیتتحویلToolStripMenuItem_Click(object sender, EventArgs e)
@@ -142,7 +119,7 @@ AND (BUS.TaskWorks.Title LIKE N'%{SearchTxt.Text}%')
             TaskWork entity= _taskWork.GetById(ID);
             entity.IsDeliver = entity.IsDeliver ? false : true;
             _taskWork.Save();
-            ShowDataGridView(4);
+            ShowDataGridView(99);
         }
 
         private void حذفToolStripMenuItem_Click(object sender, EventArgs e)
@@ -150,7 +127,7 @@ AND (BUS.TaskWorks.Title LIKE N'%{SearchTxt.Text}%')
             TaskWork entity= _taskWork.GetById(ID);
             entity.IsDeleted = true;
             _taskWork.Save();
-            ShowDataGridView(4);
+            ShowDataGridView(99);
         }
 
         private void ویرایشToolStripMenuItem_Click(object sender, EventArgs e)
@@ -165,8 +142,30 @@ AND (BUS.TaskWorks.Title LIKE N'%{SearchTxt.Text}%')
                 form.DetailsTaskTxt.Text = model.Description;
                 form.ID.Text = model.ID.ToString();
                 form.ShowDialog();
-                ShowDataGridView(4);
+                ShowDataGridView(99);
             }
+        }
+
+        private void PrevBtn_Click(object sender, EventArgs e)
+        {
+            Paging.Prev();
+            ShowDataGridView(99);
+        }
+
+        private void NextBtn_Click(object sender, EventArgs e)
+        {
+            Paging.Next();
+            ShowDataGridView(99);
+        }
+
+        private void Reloding_Click(object sender, EventArgs e)
+        {
+            ShowDataGridView(99);
+        }
+
+        private void DeliverBtn_Click(object sender, EventArgs e)
+        {
+            ShowDataGridView(4);
         }
     }
 }

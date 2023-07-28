@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Domain.Model;
+using System;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using TicketApplication.Forms;
 using TicketApplication.UserControls;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace TicketApplication
 {
@@ -27,6 +29,8 @@ namespace TicketApplication
         public static extern bool ReleaseCapture();
         TaskList taskList;
         ReportList reportList;
+        Timer timer = new Timer();
+
         public Main()
         {
 
@@ -62,11 +66,6 @@ namespace TicketApplication
             }
         }
 
-        private void MainPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void Main_Load(object sender, EventArgs e)
         {
             taskList = new TaskList();
@@ -92,5 +91,6 @@ namespace TicketApplication
             NewTaskForm form = new NewTaskForm();
             form.ShowDialog();
         }
+
     }
 }

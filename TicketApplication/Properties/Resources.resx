@@ -121,4 +121,7 @@
   <data name="1486504369-change-edit-options-pencil-settings-tools-write_81307" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1486504369-change-edit-options-pencil-settings-tools-write_81307.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="twocirclingarrows_120593" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\twocirclingarrows_120593.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
