@@ -18,18 +18,18 @@ namespace Infrastrucure.Library.DatabaseService
         SqlConnection _con;
         public BaseQuery()
         {
-            //_con = new SqlConnection(@"
-            //    Data Source=172.20.1.20\DEV;
-            //    Initial Catalog=RG_TaskWorkDB;
-            //    User ID=sa; Password=soft157703ware;
-            //    ");
-
             _con = new SqlConnection(@"
-                Data Source=DESKTOP-9EC7HCL;
+                Data Source=172.20.1.20\DEV;
                 Initial Catalog=RG_TaskWorkDB;
-                User ID=sa;
-                Password=123123;
+                User ID=sa; Password=soft157703ware;
                 ");
+
+            //_con = new SqlConnection(@"
+            //    Data Source=DESKTOP-9EC7HCL;
+            //    Initial Catalog=RG_TaskWorkDB;
+            //    User ID=sa;
+            //    Password=123123;
+            //    ");
         }
         public DataTable Execute(string query)
         {

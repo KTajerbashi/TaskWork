@@ -53,21 +53,9 @@
   <ItemGroup>
     <Compile Include="DatabaseContext\DatabaseContext.cs" />
     <Compile Include="DatabaseService\BaseQuery.cs" />
-    <Compile Include="Migrations\202307261325116_InitialDatabase.cs" />
-    <Compile Include="Migrations\202307261325116_InitialDatabase.designer.cs">
-      <DependentUpon>202307261325116_InitialDatabase.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202307261405062_RoleConfig.cs" />
-    <Compile Include="Migrations\202307261405062_RoleConfig.designer.cs">
-      <DependentUpon>202307261405062_RoleConfig.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202307271959565_BUS.cs" />
-    <Compile Include="Migrations\202307271959565_BUS.designer.cs">
-      <DependentUpon>202307271959565_BUS.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202307272021369_FieldChange.cs" />
-    <Compile Include="Migrations\202307272021369_FieldChange.designer.cs">
-      <DependentUpon>202307272021369_FieldChange.cs</DependentUpon>
+    <Compile Include="Migrations\202307290648141_InitialDatabase.cs" />
+    <Compile Include="Migrations\202307290648141_InitialDatabase.designer.cs">
+      <DependentUpon>202307290648141_InitialDatabase.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -85,17 +73,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202307261325116_InitialDatabase.resx">
-      <DependentUpon>202307261325116_InitialDatabase.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202307261405062_RoleConfig.resx">
-      <DependentUpon>202307261405062_RoleConfig.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202307271959565_BUS.resx">
-      <DependentUpon>202307271959565_BUS.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202307272021369_FieldChange.resx">
-      <DependentUpon>202307272021369_FieldChange.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202307290648141_InitialDatabase.resx">
+      <DependentUpon>202307290648141_InitialDatabase.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

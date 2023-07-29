@@ -58,3 +58,7 @@ C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\TicketAp
 C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\TicketApplication\bin\Debug\MD.PersianDateTime.dll
 C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\TicketApplication\bin\Debug\MD.PersianDateTime.pdb
 C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\TicketApplication\bin\Debug\MD.PersianDateTime.xml
+C:\Users\tajer-k\Desktop\Ticket\Ticket\TicketApplication\bin\Debug\MD.PersianDateTime.dll
+C:\Users\tajer-k\Desktop\Ticket\Ticket\TicketApplication\bin\Debug\DateTimeSelector.pdb
+C:\Users\tajer-k\Desktop\Ticket\Ticket\TicketApplication\bin\Debug\MD.PersianDateTime.pdb
+C:\Users\tajer-k\Desktop\Ticket\Ticket\TicketApplication\bin\Debug\MD.PersianDateTime.xml

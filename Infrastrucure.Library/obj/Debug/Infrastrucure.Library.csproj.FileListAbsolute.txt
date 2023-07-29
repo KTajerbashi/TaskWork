@@ -1,7 +1,4 @@
 C:\Users\tajer-k\Desktop\Ticket\Ticket\Infrastrucure.Library\obj\Debug\Infrastrucure.Library.csproj.AssemblyReference.cache
-C:\Users\tajer-k\Desktop\Ticket\Ticket\Infrastrucure.Library\obj\Debug\Infrastrucure.Library.Migrations.InitialDatabase.resources
-C:\Users\tajer-k\Desktop\Ticket\Ticket\Infrastrucure.Library\obj\Debug\Infrastrucure.Library.Migrations.RoleConfig.resources
-C:\Users\tajer-k\Desktop\Ticket\Ticket\Infrastrucure.Library\obj\Debug\Infrastrucure.Library.csproj.GenerateResource.cache
 C:\Users\tajer-k\Desktop\Ticket\Ticket\Infrastrucure.Library\obj\Debug\Infrastrucure.Library.csproj.CoreCompileInputs.cache
 C:\Users\tajer-k\Desktop\Ticket\Ticket\Infrastrucure.Library\bin\Debug\Infrastrucure.Library.dll.config
 C:\Users\tajer-k\Desktop\Ticket\Ticket\Infrastrucure.Library\bin\Debug\Infrastrucure.Library.dll
@@ -15,7 +12,6 @@ C:\Users\tajer-k\Desktop\Ticket\Ticket\Infrastrucure.Library\bin\Debug\EntityFra
 C:\Users\tajer-k\Desktop\Ticket\Ticket\Infrastrucure.Library\obj\Debug\Infrastrucure.Library.csproj.CopyComplete
 C:\Users\tajer-k\Desktop\Ticket\Ticket\Infrastrucure.Library\obj\Debug\Infrastrucure.Library.dll
 C:\Users\tajer-k\Desktop\Ticket\Ticket\Infrastrucure.Library\obj\Debug\Infrastrucure.Library.pdb
-C:\Users\tajer-k\Desktop\Ticket\Ticket\Infrastrucure.Library\obj\Debug\Infrastrucure.Library.Migrations.SamanehChange.resources
 C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\Infrastrucure.Library\bin\Debug\Infrastrucure.Library.dll.config
 C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\Infrastrucure.Library\bin\Debug\Infrastrucure.Library.dll
 C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\Infrastrucure.Library\bin\Debug\Infrastrucure.Library.pdb
@@ -35,3 +31,5 @@ C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\Infrastr
 C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\Infrastrucure.Library\obj\Debug\Infrastrucure.Library.pdb
 C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\Infrastrucure.Library\obj\Debug\Infrastrucure.Library.Migrations.BUS.resources
 C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\Infrastrucure.Library\obj\Debug\Infrastrucure.Library.Migrations.FieldChange.resources
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Infrastrucure.Library\obj\Debug\Infrastrucure.Library.Migrations.InitialDatabase.resources
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Infrastrucure.Library\obj\Debug\Infrastrucure.Library.csproj.GenerateResource.cache

@@ -29,7 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.AsidePanel = new System.Windows.Forms.Panel();
+            this.DateTimeLBL = new System.Windows.Forms.Label();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.BLUE1 = new System.Windows.Forms.ProgressBar();
             this.REG1 = new System.Windows.Forms.ProgressBar();
             this.BLACK = new System.Windows.Forms.ProgressBar();
@@ -45,8 +48,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.MainPanel = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.DateTimeLBL = new System.Windows.Forms.Label();
             this.AsidePanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,6 +75,26 @@
             this.AsidePanel.Size = new System.Drawing.Size(163, 660);
             this.AsidePanel.TabIndex = 1;
             this.AsidePanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AsidePanel_MouseDown);
+            // 
+            // DateTimeLBL
+            // 
+            this.DateTimeLBL.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.DateTimeLBL.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DateTimeLBL.ForeColor = System.Drawing.Color.Transparent;
+            this.DateTimeLBL.Location = new System.Drawing.Point(4, 543);
+            this.DateTimeLBL.Name = "DateTimeLBL";
+            this.DateTimeLBL.Size = new System.Drawing.Size(155, 68);
+            this.DateTimeLBL.TabIndex = 52;
+            this.DateTimeLBL.Text = "1402/01/01 12:00:00";
+            this.DateTimeLBL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(-1, 535);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(164, 5);
+            this.progressBar1.TabIndex = 51;
+            this.progressBar1.Value = 99;
             // 
             // BLUE1
             // 
@@ -240,26 +261,6 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(-1, 535);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(164, 5);
-            this.progressBar1.TabIndex = 51;
-            this.progressBar1.Value = 99;
-            // 
-            // DateTimeLBL
-            // 
-            this.DateTimeLBL.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.DateTimeLBL.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DateTimeLBL.ForeColor = System.Drawing.Color.Transparent;
-            this.DateTimeLBL.Location = new System.Drawing.Point(4, 543);
-            this.DateTimeLBL.Name = "DateTimeLBL";
-            this.DateTimeLBL.Size = new System.Drawing.Size(155, 68);
-            this.DateTimeLBL.TabIndex = 52;
-            this.DateTimeLBL.Text = "1402/01/01 12:00:00";
-            this.DateTimeLBL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 20F);
@@ -269,6 +270,7 @@
             this.Controls.Add(this.AsidePanel);
             this.Font = new System.Drawing.Font("IRANSansWeb", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Main";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;

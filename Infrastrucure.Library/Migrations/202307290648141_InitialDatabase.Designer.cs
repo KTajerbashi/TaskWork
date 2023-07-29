@@ -13,7 +13,7 @@ namespace Infrastrucure.Library.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202307261325116_InitialDatabase"; }
+            get { return "202307290648141_InitialDatabase"; }
         }
         
         string IMigrationMetadata.Source

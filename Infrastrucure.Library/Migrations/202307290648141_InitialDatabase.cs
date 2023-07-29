@@ -3,16 +3,16 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class RoleConfig : DbMigration
+    public partial class InitialDatabase : DbMigration
     {
         public override void Up()
         {
-            DropIndex("BES.Samana", new[] { "Title" });
+            DropColumn("BUS.TaskWorks", "Created");
         }
         
         public override void Down()
         {
-            CreateIndex("BES.Samana", "Title", unique: true);
+            AddColumn("BUS.TaskWorks", "Created", c => c.DateTime(nullable: false));
         }
     }
 }

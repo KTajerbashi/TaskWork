@@ -5,8 +5,8 @@ namespace DAL.DatabaseContext
 {
     public class DatabaseContext : DbContext
     {
-        //public DatabaseContext() : base("Data Source=172.20.1.20\\DEV;Initial Catalog=RG_TaskWorkDB; User ID=sa; Password=soft157703ware;")
-        public DatabaseContext() : base("Data Source=DESKTOP-9EC7HCL;Initial Catalog=RG_TaskWorkDB; User ID=sa; Password=123123;")
+        public DatabaseContext() : base("Data Source=172.20.1.20\\DEV;Initial Catalog=RG_TaskWorkDB; User ID=sa; Password=soft157703ware;")
+        //public DatabaseContext() : base("Data Source=DESKTOP-9EC7HCL;Initial Catalog=RG_TaskWorkDB; User ID=sa; Password=123123;")
         {
         }
 

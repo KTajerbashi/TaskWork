@@ -108,18 +108,24 @@ namespace TicketApplication.UserControls
         private void تغییروضعیتپاسToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //string query = $@"Update BUS.TaskWorks SET IsPassed = 0 WHERE ID = 1";
-            TaskWork entity= _taskWork.GetById(ID);
-            entity.IsPassed = entity.IsPassed ? false : true;
-            _taskWork.Save();
-            ShowDataGridView(99);
+            if (ID > 0)
+            {
+                TaskWork entity= _taskWork.GetById(ID);
+                entity.IsPassed = entity.IsPassed ? false : true;
+                _taskWork.Save();
+                ShowDataGridView(99);
+            }
         }
 
         private void تغییروضعیتتحویلToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            TaskWork entity= _taskWork.GetById(ID);
-            entity.IsDeliver = entity.IsDeliver ? false : true;
-            _taskWork.Save();
-            ShowDataGridView(99);
+            if (ID > 0)
+            {
+                TaskWork entity= _taskWork.GetById(ID);
+                entity.IsDeliver = entity.IsDeliver ? false : true;
+                _taskWork.Save();
+                ShowDataGridView(99);
+            }
         }
 
         private void حذفToolStripMenuItem_Click(object sender, EventArgs e)
