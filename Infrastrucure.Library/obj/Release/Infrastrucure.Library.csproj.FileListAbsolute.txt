@@ -1,0 +1,16 @@
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Infrastrucure.Library\bin\Release\Infrastrucure.Library.dll.config
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Infrastrucure.Library\bin\Release\Infrastrucure.Library.dll
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Infrastrucure.Library\bin\Release\Infrastrucure.Library.pdb
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Infrastrucure.Library\bin\Release\Domain.Library.dll
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Infrastrucure.Library\bin\Release\EntityFramework.dll
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Infrastrucure.Library\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Infrastrucure.Library\bin\Release\Domain.Library.pdb
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Infrastrucure.Library\bin\Release\EntityFramework.xml
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Infrastrucure.Library\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Infrastrucure.Library\obj\Release\Infrastrucure.Library.csproj.AssemblyReference.cache
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Infrastrucure.Library\obj\Release\Infrastrucure.Library.Migrations.InitialDatabase.resources
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Infrastrucure.Library\obj\Release\Infrastrucure.Library.csproj.GenerateResource.cache
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Infrastrucure.Library\obj\Release\Infrastrucure.Library.csproj.CoreCompileInputs.cache
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Infrastrucure.Library\obj\Release\Infrastrucure.Library.csproj.CopyComplete
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Infrastrucure.Library\obj\Release\Infrastrucure.Library.dll
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Infrastrucure.Library\obj\Release\Infrastrucure.Library.pdb
