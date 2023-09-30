@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TaskList));
             this.ListTasks = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.DeliverBtn = new System.Windows.Forms.Button();
             this.SearchBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.SearchTxt = new System.Windows.Forms.TextBox();
@@ -47,7 +48,6 @@
             this.NextBtn = new Glass.GlassButton();
             this.PrevBtn = new Glass.GlassButton();
             this.Reloding = new Glass.GlassButton();
-            this.DeliverBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ListTasks)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.StripMenu.SuspendLayout();
@@ -88,9 +88,24 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "فیلتر";
             // 
+            // DeliverBtn
+            // 
+            this.DeliverBtn.BackColor = System.Drawing.Color.DodgerBlue;
+            this.DeliverBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.DeliverBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeliverBtn.ForeColor = System.Drawing.Color.White;
+            this.DeliverBtn.Location = new System.Drawing.Point(615, 23);
+            this.DeliverBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.DeliverBtn.Name = "DeliverBtn";
+            this.DeliverBtn.Size = new System.Drawing.Size(119, 30);
+            this.DeliverBtn.TabIndex = 11;
+            this.DeliverBtn.Text = "تحویل شده";
+            this.DeliverBtn.UseVisualStyleBackColor = false;
+            this.DeliverBtn.Click += new System.EventHandler(this.DeliverBtn_Click);
+            // 
             // SearchBtn
             // 
-            this.SearchBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(79)))), ((int)(((byte)(235)))));
+            this.SearchBtn.BackColor = System.Drawing.Color.DodgerBlue;
             this.SearchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.SearchBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SearchBtn.ForeColor = System.Drawing.Color.White;
@@ -127,7 +142,7 @@
             // 
             // AlphabetBtn
             // 
-            this.AlphabetBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(79)))), ((int)(((byte)(235)))));
+            this.AlphabetBtn.BackColor = System.Drawing.Color.DodgerBlue;
             this.AlphabetBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.AlphabetBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AlphabetBtn.ForeColor = System.Drawing.Color.White;
@@ -142,7 +157,7 @@
             // 
             // NotPassBtn
             // 
-            this.NotPassBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(79)))), ((int)(((byte)(235)))));
+            this.NotPassBtn.BackColor = System.Drawing.Color.DodgerBlue;
             this.NotPassBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.NotPassBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NotPassBtn.ForeColor = System.Drawing.Color.White;
@@ -157,7 +172,7 @@
             // 
             // PassedBtn
             // 
-            this.PassedBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(79)))), ((int)(((byte)(235)))));
+            this.PassedBtn.BackColor = System.Drawing.Color.DodgerBlue;
             this.PassedBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.PassedBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PassedBtn.ForeColor = System.Drawing.Color.White;
@@ -172,7 +187,7 @@
             // 
             // NewTaskBtn
             // 
-            this.NewTaskBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(79)))), ((int)(((byte)(235)))));
+            this.NewTaskBtn.BackColor = System.Drawing.Color.DodgerBlue;
             this.NewTaskBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.NewTaskBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NewTaskBtn.ForeColor = System.Drawing.Color.White;
@@ -254,21 +269,6 @@
             this.Reloding.TabIndex = 8;
             this.Reloding.Text = "تازه";
             this.Reloding.Click += new System.EventHandler(this.Reloding_Click);
-            // 
-            // DeliverBtn
-            // 
-            this.DeliverBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(79)))), ((int)(((byte)(235)))));
-            this.DeliverBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.DeliverBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeliverBtn.ForeColor = System.Drawing.Color.White;
-            this.DeliverBtn.Location = new System.Drawing.Point(615, 23);
-            this.DeliverBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.DeliverBtn.Name = "DeliverBtn";
-            this.DeliverBtn.Size = new System.Drawing.Size(119, 30);
-            this.DeliverBtn.TabIndex = 11;
-            this.DeliverBtn.Text = "تحویل شده";
-            this.DeliverBtn.UseVisualStyleBackColor = false;
-            this.DeliverBtn.Click += new System.EventHandler(this.DeliverBtn_Click);
             // 
             // TaskList
             // 

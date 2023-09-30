@@ -8,14 +8,13 @@ namespace Domain.Model
     [Table("TaskWorks", Schema = "BUS")]
     public class TaskWork : GeneralEntity
     {
-        public string Title { get; set; }
-        public string Description { get; set; }
-
         [DefaultValue(false)]
         public bool IsPassed { get; set; }
 
         [DefaultValue(false)]
         public bool IsDeliver { get; set; }
+
+        public string Answer { get; set; }
 
 
         [ForeignKey(nameof(Samaneh))]

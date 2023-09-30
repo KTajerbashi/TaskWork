@@ -33,3 +33,20 @@ C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\Infrastr
 C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\Infrastrucure.Library\obj\Debug\Infrastrucure.Library.Migrations.FieldChange.resources
 C:\Users\tajer-k\Desktop\Ticket\Ticket\Infrastrucure.Library\obj\Debug\Infrastrucure.Library.Migrations.InitialDatabase.resources
 C:\Users\tajer-k\Desktop\Ticket\Ticket\Infrastrucure.Library\obj\Debug\Infrastrucure.Library.csproj.GenerateResource.cache
+D:\Visual Studio\GitProject\TaskWork\Infrastrucure.Library\bin\Debug\Infrastrucure.Library.dll.config
+D:\Visual Studio\GitProject\TaskWork\Infrastrucure.Library\bin\Debug\Infrastrucure.Library.dll
+D:\Visual Studio\GitProject\TaskWork\Infrastrucure.Library\bin\Debug\Infrastrucure.Library.pdb
+D:\Visual Studio\GitProject\TaskWork\Infrastrucure.Library\bin\Debug\Domain.Library.dll
+D:\Visual Studio\GitProject\TaskWork\Infrastrucure.Library\bin\Debug\EntityFramework.dll
+D:\Visual Studio\GitProject\TaskWork\Infrastrucure.Library\bin\Debug\EntityFramework.SqlServer.dll
+D:\Visual Studio\GitProject\TaskWork\Infrastrucure.Library\bin\Debug\Domain.Library.pdb
+D:\Visual Studio\GitProject\TaskWork\Infrastrucure.Library\bin\Debug\EntityFramework.xml
+D:\Visual Studio\GitProject\TaskWork\Infrastrucure.Library\bin\Debug\EntityFramework.SqlServer.xml
+D:\Visual Studio\GitProject\TaskWork\Infrastrucure.Library\obj\Debug\Infrastrucure.Library.csproj.AssemblyReference.cache
+D:\Visual Studio\GitProject\TaskWork\Infrastrucure.Library\obj\Debug\Infrastrucure.Library.Migrations.InitialDatabase.resources
+D:\Visual Studio\GitProject\TaskWork\Infrastrucure.Library\obj\Debug\Infrastrucure.Library.csproj.GenerateResource.cache
+D:\Visual Studio\GitProject\TaskWork\Infrastrucure.Library\obj\Debug\Infrastrucure.Library.csproj.CoreCompileInputs.cache
+D:\Visual Studio\GitProject\TaskWork\Infrastrucure.Library\obj\Debug\Infrastrucure.Library.csproj.CopyComplete
+D:\Visual Studio\GitProject\TaskWork\Infrastrucure.Library\obj\Debug\Infrastrucure.Library.dll
+D:\Visual Studio\GitProject\TaskWork\Infrastrucure.Library\obj\Debug\Infrastrucure.Library.pdb
+D:\Visual Studio\GitProject\TaskWork\Infrastrucure.Library\obj\Debug\Infrastrucure.Library.Migrations.Saamaneh_Change.resources

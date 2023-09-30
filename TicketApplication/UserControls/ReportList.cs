@@ -9,7 +9,7 @@ namespace TicketApplication.UserControls
     {
         private readonly IBaseDatabaseRepository _baseDatabase;
         Paging Paging;
-        TaskWorkShowGird Show;
+        private readonly TaskWorkShowGird Show;
         public ReportList()
         {
             InitializeComponent();

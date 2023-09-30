@@ -31,6 +31,8 @@ namespace TicketApplication
         public static extern bool ReleaseCapture();
         TaskList taskList;
         ReportList reportList;
+        SaamanehPanel saamaneh;
+        CartablePanel cartable;
         Timer timer = new Timer();
 
         public Main()
@@ -100,6 +102,26 @@ namespace TicketApplication
             PersianDateTime persianDateTime = new PersianDateTime(DateTime.Now);
             Console.WriteLine(persianDateTime);
             DateTimeLBL.Text = persianDateTime.ToString();
+        }
+
+        private void SaamanehBtn_Click(object sender, EventArgs e)
+        {
+            saamaneh = new SaamanehPanel();
+            if (MainPanel.Controls.Count > 0)
+            {
+                MainPanel.Controls[0].Dispose();
+            }
+            MainPanel.Controls.Add(saamaneh);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            cartable = new CartablePanel();
+            if (MainPanel.Controls.Count > 0)
+            {
+                MainPanel.Controls[0].Dispose();
+            }
+            MainPanel.Controls.Add(cartable);
         }
     }
 }

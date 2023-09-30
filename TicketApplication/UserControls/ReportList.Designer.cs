@@ -129,7 +129,7 @@
             // 
             // SearchBtn
             // 
-            this.SearchBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(79)))), ((int)(((byte)(235)))));
+            this.SearchBtn.BackColor = System.Drawing.Color.DodgerBlue;
             this.SearchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.SearchBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SearchBtn.ForeColor = System.Drawing.Color.White;
@@ -144,7 +144,7 @@
             // 
             // FTDateBtn
             // 
-            this.FTDateBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(79)))), ((int)(((byte)(235)))));
+            this.FTDateBtn.BackColor = System.Drawing.Color.DodgerBlue;
             this.FTDateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.FTDateBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FTDateBtn.ForeColor = System.Drawing.Color.White;

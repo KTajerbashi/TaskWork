@@ -68,6 +68,10 @@ namespace TicketApplication.Forms
                 {
                     ERR.Text = "توضیحات وارد کنید";
                 }
+                else if (AnswerTaskTxt.Text.Trim() == "")
+                {
+                    ERR.Text = "پاسخ را وارد کنید";
+                }
                 else
                 {
 
@@ -79,6 +83,7 @@ namespace TicketApplication.Forms
                     {
                         TaskWork entity = new TaskWork();
                         entity.Title = TitleTaskTxt.Text;
+                        entity.Answer = AnswerTaskTxt.Text;
                         entity.Description = DetailsTaskTxt.Text;
                         entity.SamanaID = SID;
                         entity.CreatedByUserRoleID = 1;
@@ -89,6 +94,7 @@ namespace TicketApplication.Forms
                         TaskWork entity = service.GetById(long.Parse(ID.Text));
                         entity.Title = TitleTaskTxt.Text;
                         entity.Description = DetailsTaskTxt.Text;
+                        entity.Answer = AnswerTaskTxt.Text;
                         entity.SamanaID = SID;
                         entity.CreatedByUserRoleID = 1;
                         entity.UpdateBy = 1;

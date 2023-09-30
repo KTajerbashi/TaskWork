@@ -12,7 +12,7 @@ namespace TicketApplication.UserControls
         private readonly IBaseDatabaseRepository _baseDatabase;
         TaskWorkService _taskWork;
         Paging Paging;
-        TaskWorkShowGird Show;
+        private readonly TaskWorkShowGird Show;
         public TaskList()
         {
             InitializeComponent();
@@ -145,6 +145,7 @@ namespace TicketApplication.UserControls
                 NewTaskForm form = new NewTaskForm();
                 form.comboBox1.SelectedValue = model.SamanaID;
                 form.TitleTaskTxt.Text = model.Title;
+                form.AnswerTaskTxt.Text = model.Answer;
                 form.DetailsTaskTxt.Text = model.Description;
                 form.ID.Text = model.ID.ToString();
                 form.ShowDialog();

@@ -73,6 +73,16 @@ namespace TicketApplication.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Gakuseisean_Ivista_2_Alarm_Error_256 {
+            get {
+                object obj = ResourceManager.GetObject("Gakuseisean-Ivista-2-Alarm-Error.256", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap twocirclingarrows_120593 {
             get {
                 object obj = ResourceManager.GetObject("twocirclingarrows_120593", resourceCulture);

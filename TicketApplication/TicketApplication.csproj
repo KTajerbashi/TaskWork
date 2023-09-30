@@ -70,6 +70,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\Paging.cs" />
+    <Compile Include="Common\SaamanehShowGrid.cs" />
     <Compile Include="Common\TaskWorkShowGird.cs" />
     <Compile Include="Forms\NewTaskForm.cs">
       <SubType>Form</SubType>
@@ -85,11 +86,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\CartablePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\CartablePanel.Designer.cs">
+      <DependentUpon>CartablePanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ReportList.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\ReportList.Designer.cs">
       <DependentUpon>ReportList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SaamanehPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\SaamanehPanel.Designer.cs">
+      <DependentUpon>SaamanehPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\TaskList.cs">
       <SubType>UserControl</SubType>
@@ -113,8 +126,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserControls\CartablePanel.resx">
+      <DependentUpon>CartablePanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ReportList.resx">
       <DependentUpon>ReportList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\SaamanehPanel.resx">
+      <DependentUpon>SaamanehPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\TaskList.resx">
       <DependentUpon>TaskList.cs</DependentUpon>
@@ -150,6 +169,7 @@
     <None Include="Resources\twocirclingarrows_120593.ico" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Gakuseisean-Ivista-2-Alarm-Error.256.png" />
     <Content Include="task_document_paper_descending_priority_tasks_documents_icon_142254 %281%29.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

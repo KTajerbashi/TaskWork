@@ -62,3 +62,36 @@ C:\Users\tajer-k\Desktop\Ticket\Ticket\TicketApplication\bin\Debug\MD.PersianDat
 C:\Users\tajer-k\Desktop\Ticket\Ticket\TicketApplication\bin\Debug\DateTimeSelector.pdb
 C:\Users\tajer-k\Desktop\Ticket\Ticket\TicketApplication\bin\Debug\MD.PersianDateTime.pdb
 C:\Users\tajer-k\Desktop\Ticket\Ticket\TicketApplication\bin\Debug\MD.PersianDateTime.xml
+D:\Visual Studio\GitProject\TaskWork\TicketApplication\bin\Debug\TicketApplication.exe.config
+D:\Visual Studio\GitProject\TaskWork\TicketApplication\bin\Debug\TicketApplication.exe
+D:\Visual Studio\GitProject\TaskWork\TicketApplication\bin\Debug\TicketApplication.pdb
+D:\Visual Studio\GitProject\TaskWork\TicketApplication\bin\Debug\Application.Library.dll
+D:\Visual Studio\GitProject\TaskWork\TicketApplication\bin\Debug\Domain.Library.dll
+D:\Visual Studio\GitProject\TaskWork\TicketApplication\bin\Debug\EntityFramework.dll
+D:\Visual Studio\GitProject\TaskWork\TicketApplication\bin\Debug\EntityFramework.SqlServer.dll
+D:\Visual Studio\GitProject\TaskWork\TicketApplication\bin\Debug\MD.PersianDateTime.dll
+D:\Visual Studio\GitProject\TaskWork\TicketApplication\bin\Debug\Infrastrucure.Library.dll
+D:\Visual Studio\GitProject\TaskWork\TicketApplication\bin\Debug\Application.Library.pdb
+D:\Visual Studio\GitProject\TaskWork\TicketApplication\bin\Debug\Application.Library.dll.config
+D:\Visual Studio\GitProject\TaskWork\TicketApplication\bin\Debug\Domain.Library.pdb
+D:\Visual Studio\GitProject\TaskWork\TicketApplication\bin\Debug\DateTimeSelector.pdb
+D:\Visual Studio\GitProject\TaskWork\TicketApplication\bin\Debug\EntityFramework.xml
+D:\Visual Studio\GitProject\TaskWork\TicketApplication\bin\Debug\EntityFramework.SqlServer.xml
+D:\Visual Studio\GitProject\TaskWork\TicketApplication\bin\Debug\MD.PersianDateTime.pdb
+D:\Visual Studio\GitProject\TaskWork\TicketApplication\bin\Debug\MD.PersianDateTime.xml
+D:\Visual Studio\GitProject\TaskWork\TicketApplication\bin\Debug\Infrastrucure.Library.pdb
+D:\Visual Studio\GitProject\TaskWork\TicketApplication\bin\Debug\Infrastrucure.Library.dll.config
+D:\Visual Studio\GitProject\TaskWork\TicketApplication\obj\Debug\TicketApplication.csproj.AssemblyReference.cache
+D:\Visual Studio\GitProject\TaskWork\TicketApplication\obj\Debug\TicketApplication.csproj.SuggestedBindingRedirects.cache
+D:\Visual Studio\GitProject\TaskWork\TicketApplication\obj\Debug\TicketApplication.Forms.NewTaskForm.resources
+D:\Visual Studio\GitProject\TaskWork\TicketApplication\obj\Debug\TicketApplication.Main.resources
+D:\Visual Studio\GitProject\TaskWork\TicketApplication\obj\Debug\TicketApplication.Properties.Resources.resources
+D:\Visual Studio\GitProject\TaskWork\TicketApplication\obj\Debug\TicketApplication.UserControls.ReportList.resources
+D:\Visual Studio\GitProject\TaskWork\TicketApplication\obj\Debug\TicketApplication.UserControls.TaskList.resources
+D:\Visual Studio\GitProject\TaskWork\TicketApplication\obj\Debug\TicketApplication.csproj.GenerateResource.cache
+D:\Visual Studio\GitProject\TaskWork\TicketApplication\obj\Debug\TicketApplication.csproj.CoreCompileInputs.cache
+D:\Visual Studio\GitProject\TaskWork\TicketApplication\obj\Debug\TicketApplication.csproj.CopyComplete
+D:\Visual Studio\GitProject\TaskWork\TicketApplication\obj\Debug\TicketApplication.exe
+D:\Visual Studio\GitProject\TaskWork\TicketApplication\obj\Debug\TicketApplication.pdb
+D:\Visual Studio\GitProject\TaskWork\TicketApplication\obj\Debug\TicketApplication.UserControls.SaamanehPanel.resources
+D:\Visual Studio\GitProject\TaskWork\TicketApplication\obj\Debug\TicketApplication.UserControls.CartablePanel.resources

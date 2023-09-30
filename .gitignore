@@ -1,0 +1,10 @@
+Domain.Library/bin
+Domain.Library/obj
+
+Application.Library/bin
+Application.Library/obj
+
+TicketApplication/bin
+TicketApplication/obj
+
+.vs
