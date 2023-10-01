@@ -39,8 +39,8 @@
             this.FTDateBtn = new System.Windows.Forms.Button();
             this.PrevBtn = new Glass.GlassButton();
             this.NextBtn = new Glass.GlassButton();
-            this.ListTasks = new System.Windows.Forms.DataGridView();
             this.Reloding = new Glass.GlassButton();
+            this.ListTasks = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ListTasks)).BeginInit();
             this.SuspendLayout();
@@ -175,22 +175,6 @@
             this.NextBtn.Text = "بعد";
             this.NextBtn.Click += new System.EventHandler(this.NextBtn_Click);
             // 
-            // ListTasks
-            // 
-            this.ListTasks.AllowUserToAddRows = false;
-            this.ListTasks.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.ListTasks.BackgroundColor = System.Drawing.Color.White;
-            this.ListTasks.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.ListTasks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ListTasks.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.ListTasks.EnableHeadersVisualStyles = false;
-            this.ListTasks.Location = new System.Drawing.Point(2, 73);
-            this.ListTasks.Name = "ListTasks";
-            this.ListTasks.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            this.ListTasks.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.ListTasks.Size = new System.Drawing.Size(1250, 540);
-            this.ListTasks.TabIndex = 6;
-            // 
             // Reloding
             // 
             this.Reloding.Location = new System.Drawing.Point(1210, 615);
@@ -200,13 +184,28 @@
             this.Reloding.Text = "تازه";
             this.Reloding.Click += new System.EventHandler(this.Reloding_Click);
             // 
+            // ListTasks
+            // 
+            this.ListTasks.AllowUserToAddRows = false;
+            this.ListTasks.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.ListTasks.BackgroundColor = System.Drawing.Color.White;
+            this.ListTasks.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ListTasks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ListTasks.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.ListTasks.Location = new System.Drawing.Point(2, 58);
+            this.ListTasks.Name = "ListTasks";
+            this.ListTasks.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            this.ListTasks.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.ListTasks.Size = new System.Drawing.Size(1250, 545);
+            this.ListTasks.TabIndex = 8;
+            // 
             // ReportList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.Controls.Add(this.Reloding);
             this.Controls.Add(this.ListTasks);
+            this.Controls.Add(this.Reloding);
             this.Controls.Add(this.NextBtn);
             this.Controls.Add(this.PrevBtn);
             this.Controls.Add(this.groupBox1);
@@ -234,7 +233,7 @@
         private Atf.UI.DateTimeSelector FromDate;
         private Glass.GlassButton PrevBtn;
         private Glass.GlassButton NextBtn;
-        public System.Windows.Forms.DataGridView ListTasks;
         private Glass.GlassButton Reloding;
+        public System.Windows.Forms.DataGridView ListTasks;
     }
 }
