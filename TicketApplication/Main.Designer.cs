@@ -31,6 +31,10 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.AsidePanel = new System.Windows.Forms.Panel();
+            this.progressBar3 = new System.Windows.Forms.ProgressBar();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.progressBar2 = new System.Windows.Forms.ProgressBar();
             this.SaamanehBtn = new System.Windows.Forms.Button();
             this.DateTimeLBL = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
@@ -46,10 +50,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.MainPanel = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.progressBar2 = new System.Windows.Forms.ProgressBar();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.progressBar3 = new System.Windows.Forms.ProgressBar();
             this.AsidePanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -80,6 +80,49 @@
             this.AsidePanel.TabIndex = 1;
             this.AsidePanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AsidePanel_MouseDown);
             // 
+            // progressBar3
+            // 
+            this.progressBar3.Location = new System.Drawing.Point(-1, 161);
+            this.progressBar3.Name = "progressBar3";
+            this.progressBar3.Size = new System.Drawing.Size(188, 10);
+            this.progressBar3.TabIndex = 57;
+            this.progressBar3.Value = 99;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.RoyalBlue;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(22, 233);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(119, 30);
+            this.button1.TabIndex = 56;
+            this.button1.Text = "کارتابل";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.AliceBlue;
+            this.label2.Location = new System.Drawing.Point(4, 17);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(155, 17);
+            this.label2.TabIndex = 55;
+            this.label2.Text = "TASK WROK";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // progressBar2
+            // 
+            this.progressBar2.Location = new System.Drawing.Point(-1, 534);
+            this.progressBar2.Name = "progressBar2";
+            this.progressBar2.Size = new System.Drawing.Size(188, 10);
+            this.progressBar2.TabIndex = 54;
+            this.progressBar2.Value = 99;
+            // 
             // SaamanehBtn
             // 
             this.SaamanehBtn.BackColor = System.Drawing.Color.DodgerBlue;
@@ -109,9 +152,9 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(-1, 535);
+            this.progressBar1.Location = new System.Drawing.Point(-1, 519);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(164, 5);
+            this.progressBar1.Size = new System.Drawing.Size(188, 10);
             this.progressBar1.TabIndex = 51;
             this.progressBar1.Value = 99;
             // 
@@ -251,49 +294,6 @@
             // 
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // progressBar2
-            // 
-            this.progressBar2.Location = new System.Drawing.Point(-1, 524);
-            this.progressBar2.Name = "progressBar2";
-            this.progressBar2.Size = new System.Drawing.Size(164, 5);
-            this.progressBar2.TabIndex = 54;
-            this.progressBar2.Value = 99;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label2.Location = new System.Drawing.Point(4, 17);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(155, 17);
-            this.label2.TabIndex = 55;
-            this.label2.Text = "TASK WROK";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(9, 233);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(144, 30);
-            this.button1.TabIndex = 56;
-            this.button1.Text = "کارتابل";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // progressBar3
-            // 
-            this.progressBar3.Location = new System.Drawing.Point(-1, 161);
-            this.progressBar3.Name = "progressBar3";
-            this.progressBar3.Size = new System.Drawing.Size(164, 5);
-            this.progressBar3.TabIndex = 57;
-            this.progressBar3.Value = 99;
             // 
             // Main
             // 

@@ -34,7 +34,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.DeliverBtn = new System.Windows.Forms.Button();
             this.SearchBtn = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.SearchTxt = new System.Windows.Forms.TextBox();
             this.AlphabetBtn = new System.Windows.Forms.Button();
             this.NotPassBtn = new System.Windows.Forms.Button();
@@ -48,6 +47,8 @@
             this.NextBtn = new Glass.GlassButton();
             this.PrevBtn = new Glass.GlassButton();
             this.Reloding = new Glass.GlassButton();
+            this.NotDeliverBtn = new System.Windows.Forms.Button();
+            this.SortDateBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ListTasks)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.StripMenu.SuspendLayout();
@@ -72,9 +73,10 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.SortDateBtn);
+            this.groupBox1.Controls.Add(this.NotDeliverBtn);
             this.groupBox1.Controls.Add(this.DeliverBtn);
             this.groupBox1.Controls.Add(this.SearchBtn);
-            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.SearchTxt);
             this.groupBox1.Controls.Add(this.AlphabetBtn);
             this.groupBox1.Controls.Add(this.NotPassBtn);
@@ -84,7 +86,7 @@
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.groupBox1.Size = new System.Drawing.Size(1249, 61);
-            this.groupBox1.TabIndex = 4;
+            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "فیلتر";
             // 
@@ -94,11 +96,11 @@
             this.DeliverBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.DeliverBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeliverBtn.ForeColor = System.Drawing.Color.White;
-            this.DeliverBtn.Location = new System.Drawing.Point(615, 23);
+            this.DeliverBtn.Location = new System.Drawing.Point(742, 23);
             this.DeliverBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DeliverBtn.Name = "DeliverBtn";
             this.DeliverBtn.Size = new System.Drawing.Size(119, 30);
-            this.DeliverBtn.TabIndex = 11;
+            this.DeliverBtn.TabIndex = 4;
             this.DeliverBtn.Text = "تحویل شده";
             this.DeliverBtn.UseVisualStyleBackColor = false;
             this.DeliverBtn.Click += new System.EventHandler(this.DeliverBtn_Click);
@@ -113,30 +115,16 @@
             this.SearchBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SearchBtn.Name = "SearchBtn";
             this.SearchBtn.Size = new System.Drawing.Size(119, 30);
-            this.SearchBtn.TabIndex = 10;
+            this.SearchBtn.TabIndex = 0;
             this.SearchBtn.Text = "جستجو";
             this.SearchBtn.UseVisualStyleBackColor = false;
             this.SearchBtn.Click += new System.EventHandler(this.SearchBtn_Click);
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.Font = new System.Drawing.Font("IRANSansWeb", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label1.Location = new System.Drawing.Point(487, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 29);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "جستجو :";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // SearchTxt
             // 
             this.SearchTxt.Location = new System.Drawing.Point(129, 24);
             this.SearchTxt.Name = "SearchTxt";
-            this.SearchTxt.Size = new System.Drawing.Size(354, 27);
+            this.SearchTxt.Size = new System.Drawing.Size(204, 27);
             this.SearchTxt.TabIndex = 8;
             this.SearchTxt.Text = "جستجو ...";
             // 
@@ -146,11 +134,11 @@
             this.AlphabetBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.AlphabetBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AlphabetBtn.ForeColor = System.Drawing.Color.White;
-            this.AlphabetBtn.Location = new System.Drawing.Point(742, 23);
+            this.AlphabetBtn.Location = new System.Drawing.Point(488, 23);
             this.AlphabetBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.AlphabetBtn.Name = "AlphabetBtn";
             this.AlphabetBtn.Size = new System.Drawing.Size(119, 30);
-            this.AlphabetBtn.TabIndex = 5;
+            this.AlphabetBtn.TabIndex = 6;
             this.AlphabetBtn.Text = "به ترتیب الفبا";
             this.AlphabetBtn.UseVisualStyleBackColor = false;
             this.AlphabetBtn.Click += new System.EventHandler(this.AlphabetBtn_Click);
@@ -165,8 +153,8 @@
             this.NotPassBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.NotPassBtn.Name = "NotPassBtn";
             this.NotPassBtn.Size = new System.Drawing.Size(119, 30);
-            this.NotPassBtn.TabIndex = 4;
-            this.NotPassBtn.Text = "نا تمام";
+            this.NotPassBtn.TabIndex = 3;
+            this.NotPassBtn.Text = "پاس نشده";
             this.NotPassBtn.UseVisualStyleBackColor = false;
             this.NotPassBtn.Click += new System.EventHandler(this.NotPassBtn_Click);
             // 
@@ -180,7 +168,7 @@
             this.PassedBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.PassedBtn.Name = "PassedBtn";
             this.PassedBtn.Size = new System.Drawing.Size(119, 30);
-            this.PassedBtn.TabIndex = 3;
+            this.PassedBtn.TabIndex = 2;
             this.PassedBtn.Text = "پاس شده";
             this.PassedBtn.UseVisualStyleBackColor = false;
             this.PassedBtn.Click += new System.EventHandler(this.PassedBtn_Click);
@@ -195,7 +183,7 @@
             this.NewTaskBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.NewTaskBtn.Name = "NewTaskBtn";
             this.NewTaskBtn.Size = new System.Drawing.Size(119, 30);
-            this.NewTaskBtn.TabIndex = 2;
+            this.NewTaskBtn.TabIndex = 1;
             this.NewTaskBtn.Text = "جدیدترین";
             this.NewTaskBtn.UseVisualStyleBackColor = false;
             this.NewTaskBtn.Click += new System.EventHandler(this.NewTaskBtn_Click);
@@ -248,7 +236,7 @@
             this.NextBtn.Location = new System.Drawing.Point(3, 617);
             this.NextBtn.Name = "NextBtn";
             this.NextBtn.Size = new System.Drawing.Size(40, 40);
-            this.NextBtn.TabIndex = 7;
+            this.NextBtn.TabIndex = 2;
             this.NextBtn.Text = "بعد";
             this.NextBtn.Click += new System.EventHandler(this.NextBtn_Click);
             // 
@@ -257,7 +245,7 @@
             this.PrevBtn.Location = new System.Drawing.Point(49, 617);
             this.PrevBtn.Name = "PrevBtn";
             this.PrevBtn.Size = new System.Drawing.Size(40, 40);
-            this.PrevBtn.TabIndex = 6;
+            this.PrevBtn.TabIndex = 1;
             this.PrevBtn.Text = "قبل";
             this.PrevBtn.Click += new System.EventHandler(this.PrevBtn_Click);
             // 
@@ -266,9 +254,37 @@
             this.Reloding.Location = new System.Drawing.Point(1212, 617);
             this.Reloding.Name = "Reloding";
             this.Reloding.Size = new System.Drawing.Size(40, 40);
-            this.Reloding.TabIndex = 8;
+            this.Reloding.TabIndex = 0;
             this.Reloding.Text = "تازه";
             this.Reloding.Click += new System.EventHandler(this.Reloding_Click);
+            // 
+            // NotDeliverBtn
+            // 
+            this.NotDeliverBtn.BackColor = System.Drawing.Color.DodgerBlue;
+            this.NotDeliverBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.NotDeliverBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NotDeliverBtn.ForeColor = System.Drawing.Color.White;
+            this.NotDeliverBtn.Location = new System.Drawing.Point(615, 23);
+            this.NotDeliverBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.NotDeliverBtn.Name = "NotDeliverBtn";
+            this.NotDeliverBtn.Size = new System.Drawing.Size(119, 30);
+            this.NotDeliverBtn.TabIndex = 5;
+            this.NotDeliverBtn.Text = "تحویل نشده";
+            this.NotDeliverBtn.UseVisualStyleBackColor = false;
+            // 
+            // SortDateBtn
+            // 
+            this.SortDateBtn.BackColor = System.Drawing.Color.DodgerBlue;
+            this.SortDateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.SortDateBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SortDateBtn.ForeColor = System.Drawing.Color.White;
+            this.SortDateBtn.Location = new System.Drawing.Point(361, 23);
+            this.SortDateBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.SortDateBtn.Name = "SortDateBtn";
+            this.SortDateBtn.Size = new System.Drawing.Size(119, 30);
+            this.SortDateBtn.TabIndex = 7;
+            this.SortDateBtn.Text = "به ترتیب الفبا";
+            this.SortDateBtn.UseVisualStyleBackColor = false;
             // 
             // TaskList
             // 
@@ -295,7 +311,6 @@
 
         #endregion
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox SearchTxt;
         private System.Windows.Forms.Button AlphabetBtn;
         private System.Windows.Forms.Button NotPassBtn;
@@ -312,5 +327,7 @@
         private Glass.GlassButton PrevBtn;
         private Glass.GlassButton Reloding;
         private System.Windows.Forms.Button DeliverBtn;
+        private System.Windows.Forms.Button SortDateBtn;
+        private System.Windows.Forms.Button NotDeliverBtn;
     }
 }

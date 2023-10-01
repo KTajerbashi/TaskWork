@@ -50,7 +50,7 @@
             this.ExitBtn.Location = new System.Drawing.Point(32, 429);
             this.ExitBtn.Name = "ExitBtn";
             this.ExitBtn.Size = new System.Drawing.Size(75, 33);
-            this.ExitBtn.TabIndex = 0;
+            this.ExitBtn.TabIndex = 5;
             this.ExitBtn.Text = "خروج";
             this.ExitBtn.UseVisualStyleBackColor = false;
             this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
@@ -62,7 +62,7 @@
             this.SaveBtn.Location = new System.Drawing.Point(114, 429);
             this.SaveBtn.Name = "SaveBtn";
             this.SaveBtn.Size = new System.Drawing.Size(75, 33);
-            this.SaveBtn.TabIndex = 1;
+            this.SaveBtn.TabIndex = 4;
             this.SaveBtn.Text = "ثبت";
             this.SaveBtn.UseVisualStyleBackColor = false;
             this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
@@ -72,14 +72,14 @@
             this.TitleTaskTxt.Location = new System.Drawing.Point(35, 113);
             this.TitleTaskTxt.Name = "TitleTaskTxt";
             this.TitleTaskTxt.Size = new System.Drawing.Size(564, 29);
-            this.TitleTaskTxt.TabIndex = 2;
+            this.TitleTaskTxt.TabIndex = 1;
             // 
             // DetailsTaskTxt
             // 
             this.DetailsTaskTxt.Location = new System.Drawing.Point(32, 177);
             this.DetailsTaskTxt.Name = "DetailsTaskTxt";
             this.DetailsTaskTxt.Size = new System.Drawing.Size(567, 101);
-            this.DetailsTaskTxt.TabIndex = 3;
+            this.DetailsTaskTxt.TabIndex = 2;
             this.DetailsTaskTxt.Text = "";
             // 
             // label1
@@ -125,7 +125,7 @@
             this.comboBox1.Location = new System.Drawing.Point(35, 48);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(564, 30);
-            this.comboBox1.TabIndex = 8;
+            this.comboBox1.TabIndex = 0;
             // 
             // ID
             // 
@@ -156,7 +156,7 @@
             this.AnswerTaskTxt.Location = new System.Drawing.Point(32, 313);
             this.AnswerTaskTxt.Name = "AnswerTaskTxt";
             this.AnswerTaskTxt.Size = new System.Drawing.Size(567, 101);
-            this.AnswerTaskTxt.TabIndex = 11;
+            this.AnswerTaskTxt.TabIndex = 3;
             this.AnswerTaskTxt.Text = "";
             // 
             // label4

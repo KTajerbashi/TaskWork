@@ -21,7 +21,6 @@ namespace DAL.DatabaseContext
             base.OnModelCreating(modelBuilder);
             //modelBuilder.Entity<Samana>().HasIndex(c => c.Title).IsUnique();
         }
-
     }
 
 

@@ -88,7 +88,7 @@
             this.TaskAnswerBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TaskAnswerBtn.Name = "TaskAnswerBtn";
             this.TaskAnswerBtn.Size = new System.Drawing.Size(416, 30);
-            this.TaskAnswerBtn.TabIndex = 59;
+            this.TaskAnswerBtn.TabIndex = 0;
             this.TaskAnswerBtn.Text = "ارایه پاسخ";
             this.TaskAnswerBtn.UseVisualStyleBackColor = false;
             this.TaskAnswerBtn.Click += new System.EventHandler(this.TaskAnswerBtn_Click);
@@ -126,7 +126,7 @@
             this.TaskAddDescBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TaskAddDescBtn.Name = "TaskAddDescBtn";
             this.TaskAddDescBtn.Size = new System.Drawing.Size(469, 30);
-            this.TaskAddDescBtn.TabIndex = 58;
+            this.TaskAddDescBtn.TabIndex = 0;
             this.TaskAddDescBtn.Text = "افزودن یادداشت";
             this.TaskAddDescBtn.UseVisualStyleBackColor = false;
             this.TaskAddDescBtn.Click += new System.EventHandler(this.TaskAddDescBtn_Click);

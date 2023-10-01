@@ -116,7 +116,7 @@ namespace TicketApplication.Forms
         {
             SamanehService samana = new SamanehService();
             comboBox1.Items.Clear();
-            var items = samana.GetAll();
+            var items = samana.GetAll().Where(x => !x.IsDeleted).ToList();
             foreach (var item in items)
             {
                 comboBox1.Items.Add(new ComboboxItem()
