@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SaamanehPanel));
             this.group1 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -49,6 +51,8 @@
             this.DescriptionSTxt = new System.Windows.Forms.RichTextBox();
             this.ID = new System.Windows.Forms.Label();
             this.group2 = new System.Windows.Forms.GroupBox();
+            this.CountLBL = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.Reloding = new Glass.GlassButton();
             this.NextBtn = new Glass.GlassButton();
             this.PrevBtn = new Glass.GlassButton();
@@ -69,6 +73,7 @@
             // 
             this.group1.Controls.Add(this.groupBox3);
             this.group1.Controls.Add(this.groupBox2);
+            this.group1.ForeColor = System.Drawing.Color.White;
             this.group1.Location = new System.Drawing.Point(948, 3);
             this.group1.Name = "group1";
             this.group1.Size = new System.Drawing.Size(304, 654);
@@ -85,6 +90,7 @@
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.SearchBtn);
+            this.groupBox3.ForeColor = System.Drawing.Color.White;
             this.groupBox3.Location = new System.Drawing.Point(6, 353);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(292, 295);
@@ -94,10 +100,11 @@
             // 
             // SearchDateBtn
             // 
-            this.SearchDateBtn.BackColor = System.Drawing.Color.DodgerBlue;
+            this.SearchDateBtn.BackColor = System.Drawing.Color.White;
+            this.SearchDateBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SearchDateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.SearchDateBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchDateBtn.ForeColor = System.Drawing.Color.White;
+            this.SearchDateBtn.ForeColor = System.Drawing.Color.Black;
             this.SearchDateBtn.Location = new System.Drawing.Point(8, 92);
             this.SearchDateBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SearchDateBtn.Name = "SearchDateBtn";
@@ -109,7 +116,9 @@
             // 
             // SearchTxt
             // 
+            this.SearchTxt.BackColor = System.Drawing.Color.White;
             this.SearchTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.SearchTxt.ForeColor = System.Drawing.Color.Black;
             this.SearchTxt.Location = new System.Drawing.Point(8, 215);
             this.SearchTxt.Name = "SearchTxt";
             this.SearchTxt.Size = new System.Drawing.Size(280, 27);
@@ -118,6 +127,8 @@
             // 
             // ToDate
             // 
+            this.ToDate.BackColor = System.Drawing.Color.White;
+            this.ToDate.ForeColor = System.Drawing.Color.Black;
             this.ToDate.Location = new System.Drawing.Point(6, 60);
             this.ToDate.Name = "ToDate";
             this.ToDate.Size = new System.Drawing.Size(215, 28);
@@ -125,6 +136,8 @@
             // 
             // FromDate
             // 
+            this.FromDate.BackColor = System.Drawing.Color.White;
+            this.FromDate.ForeColor = System.Drawing.Color.Black;
             this.FromDate.Location = new System.Drawing.Point(6, 26);
             this.FromDate.Name = "FromDate";
             this.FromDate.Size = new System.Drawing.Size(215, 28);
@@ -136,7 +149,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.Font = new System.Drawing.Font("IRANSansWeb", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(227, 59);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 28);
@@ -150,7 +163,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.Font = new System.Drawing.Font("IRANSansWeb", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(227, 25);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 34);
@@ -160,10 +173,11 @@
             // 
             // SearchBtn
             // 
-            this.SearchBtn.BackColor = System.Drawing.Color.DodgerBlue;
+            this.SearchBtn.BackColor = System.Drawing.Color.White;
+            this.SearchBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SearchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.SearchBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchBtn.ForeColor = System.Drawing.Color.White;
+            this.SearchBtn.ForeColor = System.Drawing.Color.Black;
             this.SearchBtn.Location = new System.Drawing.Point(8, 250);
             this.SearchBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SearchBtn.Name = "SearchBtn";
@@ -183,6 +197,7 @@
             this.groupBox2.Controls.Add(this.InsertBtn);
             this.groupBox2.Controls.Add(this.DescriptionSTxt);
             this.groupBox2.Controls.Add(this.ID);
+            this.groupBox2.ForeColor = System.Drawing.Color.White;
             this.groupBox2.Location = new System.Drawing.Point(6, 26);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(292, 321);
@@ -196,7 +211,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.Font = new System.Drawing.Font("IRANSansWeb", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(207, 81);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(79, 25);
@@ -206,7 +221,9 @@
             // 
             // SmnaTitleTxt
             // 
+            this.SmnaTitleTxt.BackColor = System.Drawing.Color.White;
             this.SmnaTitleTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.SmnaTitleTxt.ForeColor = System.Drawing.Color.Black;
             this.SmnaTitleTxt.Location = new System.Drawing.Point(6, 109);
             this.SmnaTitleTxt.Name = "SmnaTitleTxt";
             this.SmnaTitleTxt.Size = new System.Drawing.Size(280, 27);
@@ -214,7 +231,9 @@
             // 
             // SmnaNameTxt
             // 
+            this.SmnaNameTxt.BackColor = System.Drawing.Color.White;
             this.SmnaNameTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.SmnaNameTxt.ForeColor = System.Drawing.Color.Black;
             this.SmnaNameTxt.Location = new System.Drawing.Point(6, 51);
             this.SmnaNameTxt.Name = "SmnaNameTxt";
             this.SmnaNameTxt.Size = new System.Drawing.Size(280, 27);
@@ -226,7 +245,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.Font = new System.Drawing.Font("IRANSansWeb", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(207, 139);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(79, 25);
@@ -240,7 +259,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.Font = new System.Drawing.Font("IRANSansWeb", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(207, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 25);
@@ -250,7 +269,8 @@
             // 
             // InsertBtn
             // 
-            this.InsertBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.InsertBtn.BackColor = System.Drawing.Color.White;
+            this.InsertBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.InsertBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.InsertBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InsertBtn.ForeColor = System.Drawing.Color.Black;
@@ -265,6 +285,8 @@
             // 
             // DescriptionSTxt
             // 
+            this.DescriptionSTxt.BackColor = System.Drawing.Color.White;
+            this.DescriptionSTxt.ForeColor = System.Drawing.Color.Black;
             this.DescriptionSTxt.Location = new System.Drawing.Point(8, 167);
             this.DescriptionSTxt.Name = "DescriptionSTxt";
             this.DescriptionSTxt.Size = new System.Drawing.Size(276, 108);
@@ -287,16 +309,48 @@
             // 
             // group2
             // 
+            this.group2.Controls.Add(this.CountLBL);
+            this.group2.Controls.Add(this.label6);
             this.group2.Controls.Add(this.Reloding);
             this.group2.Controls.Add(this.NextBtn);
             this.group2.Controls.Add(this.PrevBtn);
             this.group2.Controls.Add(this.SaamanehDG);
+            this.group2.ForeColor = System.Drawing.Color.White;
             this.group2.Location = new System.Drawing.Point(3, 3);
             this.group2.Name = "group2";
             this.group2.Size = new System.Drawing.Size(939, 654);
             this.group2.TabIndex = 1;
             this.group2.TabStop = false;
             this.group2.Text = "اطلاعات";
+            this.group2.Enter += new System.EventHandler(this.group2_Enter);
+            // 
+            // CountLBL
+            // 
+            this.CountLBL.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.CountLBL.BackColor = System.Drawing.Color.Transparent;
+            this.CountLBL.Font = new System.Drawing.Font("IRANSansWeb", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CountLBL.ForeColor = System.Drawing.Color.Black;
+            this.CountLBL.Location = new System.Drawing.Point(98, 613);
+            this.CountLBL.Name = "CountLBL";
+            this.CountLBL.Size = new System.Drawing.Size(100, 29);
+            this.CountLBL.TabIndex = 13;
+            this.CountLBL.Text = "تعداد رکورد";
+            this.CountLBL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.CountLBL.UseMnemonic = false;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("IRANSansWeb", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(204, 613);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(100, 29);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "تعداد رکورد";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label6.UseMnemonic = false;
             // 
             // Reloding
             // 
@@ -328,13 +382,24 @@
             // SaamanehDG
             // 
             this.SaamanehDG.AllowUserToAddRows = false;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.SaamanehDG.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.SaamanehDG.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.SaamanehDG.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.SaamanehDG.BackgroundColor = System.Drawing.Color.White;
             this.SaamanehDG.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.SaamanehDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.SaamanehDG.Cursor = System.Windows.Forms.Cursors.PanWest;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("IRANSansWeb", 8.999999F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.SaamanehDG.DefaultCellStyle = dataGridViewCellStyle4;
             this.SaamanehDG.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.SaamanehDG.GridColor = System.Drawing.SystemColors.MenuHighlight;
             this.SaamanehDG.Location = new System.Drawing.Point(6, 17);
             this.SaamanehDG.Name = "SaamanehDG";
             this.SaamanehDG.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -350,7 +415,9 @@
             this.تغییروضعیتToolStripMenuItem,
             this.حذفToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(142, 70);
+            this.contextMenuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 92);
+            this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening_1);
             // 
             // ویرایشToolStripMenuItem
             // 
@@ -372,7 +439,7 @@
             // 
             this.حذفToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("حذفToolStripMenuItem.Image")));
             this.حذفToolStripMenuItem.Name = "حذفToolStripMenuItem";
-            this.حذفToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.حذفToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.حذفToolStripMenuItem.Text = "حذف";
             this.حذفToolStripMenuItem.Click += new System.EventHandler(this.حذفToolStripMenuItem_Click);
             // 
@@ -431,5 +498,7 @@
         private System.Windows.Forms.ToolStripMenuItem ویرایشToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem تغییروضعیتToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem حذفToolStripMenuItem;
+        private System.Windows.Forms.Label CountLBL;
+        private System.Windows.Forms.Label label6;
     }
 }

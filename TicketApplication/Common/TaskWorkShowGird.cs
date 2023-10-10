@@ -14,6 +14,7 @@ namespace TicketApplication.Common
 SELECT 
     TS.ID AS [آیدی],
     TS.Title AS [عنوان تسک],
+        CASE TS.ImportanceType WHEN 0 THEN N'کم' WHEN 1 THEN N'متوسط' WHEN 2 THEN N'مهم' WHEN 3 THEN N'خیلی مهم' WHEN 4 THEN N'فوری' ELSE N'نامعلوم' END AS N'الویت',
 	TS.Description AS [توضیحات تسک],
 	format(TS.CreateDate,'yyyy/MM/dd hh:mm','fa-ir') AS [تاریخ ثبت],
 	CASE  WHEN TS.IsPassed = 0 THEN N'نخیر'
@@ -39,6 +40,7 @@ ORDER BY TS.ID DESC
 SELECT 
     TS.ID AS [آیدی],
     TS.Title AS [عنوان تسک],
+        CASE TS.ImportanceType WHEN 0 THEN N'کم' WHEN 1 THEN N'متوسط' WHEN 2 THEN N'مهم' WHEN 3 THEN N'خیلی مهم' WHEN 4 THEN N'فوری' ELSE N'نامعلوم' END AS N'الویت',
 	TS.Description AS [توضیحات تسک],
 	format(TS.CreateDate,'yyyy/MM/dd hh:mm','fa-ir') AS [تاریخ ثبت],
 	CASE  WHEN TS.IsPassed = 0 THEN N'نخیر'
@@ -64,6 +66,7 @@ ORDER BY TS.ID DESC
 SELECT 
     TS.ID AS [آیدی],
     TS.Title AS [عنوان تسک],
+        CASE TS.ImportanceType WHEN 0 THEN N'کم' WHEN 1 THEN N'متوسط' WHEN 2 THEN N'مهم' WHEN 3 THEN N'خیلی مهم' WHEN 4 THEN N'فوری' ELSE N'نامعلوم' END AS N'الویت', 
 	TS.Description AS [توضیحات تسک],
 	format(TS.CreateDate,'yyyy/MM/dd hh:mm','fa-ir') AS [تاریخ ثبت],
 	CASE  WHEN TS.IsPassed = 0 THEN N'نخیر'
@@ -82,12 +85,13 @@ AND (TS.Title LIKE N'%{data}%' OR TS.Description LIKE N'%{data}%')
 ORDER BY TS.ID DESC
             ";
         }
-        public string ShowPassed()
+        public string ShowPassed(string paging)
         {
             return $@"
 SELECT 
     TS.ID AS [آیدی],
     TS.Title AS [عنوان تسک],
+        CASE TS.ImportanceType WHEN 0 THEN N'کم' WHEN 1 THEN N'متوسط' WHEN 2 THEN N'مهم' WHEN 3 THEN N'خیلی مهم' WHEN 4 THEN N'فوری' ELSE N'نامعلوم' END AS N'الویت',
 	TS.Description AS [توضیحات تسک],
 	format(TS.CreateDate,'yyyy/MM/dd hh:mm','fa-ir') AS [تاریخ ثبت],
 	CASE  WHEN TS.IsPassed = 0 THEN N'نخیر'
@@ -104,14 +108,16 @@ FROM
 WHERE (TS.IsDeleted = 0 AND TS.IsActive = 1)
 AND TS.IsPassed = 1
 ORDER BY TS.ID DESC
+{paging}
             ";
         }
-        public string ShowNotPassed()
+        public string ShowNotPassed(string paging)
         {
             return $@"
 SELECT 
     TS.ID AS [آیدی],
     TS.Title AS [عنوان تسک],
+        CASE TS.ImportanceType WHEN 0 THEN N'کم' WHEN 1 THEN N'متوسط' WHEN 2 THEN N'مهم' WHEN 3 THEN N'خیلی مهم' WHEN 4 THEN N'فوری' ELSE N'نامعلوم' END AS N'الویت',
 	TS.Description AS [توضیحات تسک],
 	format(TS.CreateDate,'yyyy/MM/dd hh:mm','fa-ir') AS [تاریخ ثبت],
 	CASE  WHEN TS.IsPassed = 0 THEN N'نخیر'
@@ -128,14 +134,16 @@ FROM
 WHERE (TS.IsDeleted = 0 AND TS.IsActive = 1)
 AND TS.IsPassed = 0
 ORDER BY TS.ID DESC
+{paging}
             ";
         }
-        public string ShowAlphabet()
+        public string ShowAlphabet(string paging)
         {
             return $@"
 SELECT 
     TS.ID AS [آیدی],
     TS.Title AS [عنوان تسک],
+        CASE TS.ImportanceType WHEN 0 THEN N'کم' WHEN 1 THEN N'متوسط' WHEN 2 THEN N'مهم' WHEN 3 THEN N'خیلی مهم' WHEN 4 THEN N'فوری' ELSE N'نامعلوم' END AS N'الویت',
 	TS.Description AS [توضیحات تسک],
 	format(TS.CreateDate,'yyyy/MM/dd hh:mm','fa-ir') AS [تاریخ ثبت],
 	CASE  WHEN TS.IsPassed = 0 THEN N'نخیر'
@@ -150,16 +158,18 @@ FROM
 	BUS.TaskWorks TS
 	INNER JOIN BUS.Samanehs SM ON TS.SamanaID = SM.ID
 WHERE (TS.IsDeleted = 0 AND TS.IsActive = 1)
-AND TS.IsPassed = 0
 ORDER BY TS.Title
+{paging}
+
             ";
         }
-        public string ShowDeliver()
+        public string ShowDeliver(string paging)
         {
             return $@"
 SELECT 
     TS.ID AS [آیدی],
     TS.Title AS [عنوان تسک],
+        CASE TS.ImportanceType WHEN 0 THEN N'کم' WHEN 1 THEN N'متوسط' WHEN 2 THEN N'مهم' WHEN 3 THEN N'خیلی مهم' WHEN 4 THEN N'فوری' ELSE N'نامعلوم' END AS N'الویت',
 	TS.Description AS [توضیحات تسک],
 	format(TS.CreateDate,'yyyy/MM/dd hh:mm','fa-ir') AS [تاریخ ثبت],
 	CASE  WHEN TS.IsPassed = 0 THEN N'نخیر'
@@ -176,7 +186,63 @@ FROM
 WHERE (TS.IsDeleted = 0 AND TS.IsActive = 1)
 AND TS.IsDeliver = 1
 ORDER BY TS.ID DESC
+{paging}
+
+            ";
+        }
+        public string ShowNotDeliver(string paging)
+        {
+            return $@"
+SELECT 
+    TS.ID AS [آیدی],
+    TS.Title AS [عنوان تسک],
+        CASE TS.ImportanceType WHEN 0 THEN N'کم' WHEN 1 THEN N'متوسط' WHEN 2 THEN N'مهم' WHEN 3 THEN N'خیلی مهم' WHEN 4 THEN N'فوری' ELSE N'نامعلوم' END AS N'الویت',
+	TS.Description AS [توضیحات تسک],
+	format(TS.CreateDate,'yyyy/MM/dd hh:mm','fa-ir') AS [تاریخ ثبت],
+	CASE  WHEN TS.IsPassed = 0 THEN N'نخیر'
+		  ELSE N'بلی'
+	END [پاس شده؟], 
+	CASE WHEN TS.IsDeliver = 0 THEN N'نخیر'
+		 ELSE N'بلی'
+	END [تحویل شده؟], 
+	SM.Title AS [سامانه]
+	
+FROM 
+	BUS.TaskWorks TS
+	INNER JOIN BUS.Samanehs SM ON TS.SamanaID = SM.ID
+WHERE (TS.IsDeleted = 0 AND TS.IsActive = 1)
+AND TS.IsDeliver = 0
+ORDER BY TS.ID DESC
+{paging}
+
+            ";
+        }
+        public string ShowImportant(string paging)
+        {
+            return $@"
+SELECT 
+    TS.ID AS [آیدی],
+    TS.Title AS [عنوان تسک],
+        CASE TS.ImportanceType WHEN 0 THEN N'کم' WHEN 1 THEN N'متوسط' WHEN 2 THEN N'مهم' WHEN 3 THEN N'خیلی مهم' WHEN 4 THEN N'فوری' ELSE N'نامعلوم' END AS N'الویت',
+	TS.Description AS [توضیحات تسک],
+	format(TS.CreateDate,'yyyy/MM/dd hh:mm','fa-ir') AS [تاریخ ثبت],
+	CASE  WHEN TS.IsPassed = 0 THEN N'نخیر'
+		  ELSE N'بلی'
+	END [پاس شده؟], 
+	CASE WHEN TS.IsDeliver = 0 THEN N'نخیر'
+		 ELSE N'بلی'
+	END [تحویل شده؟], 
+	SM.Title AS [سامانه]
+	
+FROM 
+	BUS.TaskWorks TS
+	INNER JOIN BUS.Samanehs SM ON TS.SamanaID = SM.ID
+WHERE (TS.IsDeleted = 0 AND TS.IsActive = 1)
+ORDER BY TS.ImportanceType DESC
+{paging}
+
             ";
         }
     }
 }
+ 

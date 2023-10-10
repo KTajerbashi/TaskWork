@@ -10,7 +10,11 @@ namespace BusinessLogic.Library
     {
         public List<TaskWork> GetAllIncluded()
         {
-            return _context.Tasks.Include("Samaneh").Where(x => !x.IsDeleted).OrderByDescending(x => !x.IsPassed).ThenByDescending(x => !x.IsDeliver).Take(14).ToList();
+            return _context.Tasks.Include("Samaneh")
+                    .Where(x => !x.IsDeleted && (!x.IsPassed || !x.IsDeliver))
+                    .OrderByDescending(x => !x.IsPassed)
+                    .ThenByDescending(x => !x.IsDeliver)
+                    .Take(14).ToList();
         }
     }
 }

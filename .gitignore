@@ -1,3 +1,4 @@
+.vs/
 Domain.Library/bin
 Domain.Library/obj
 
@@ -6,5 +7,3 @@ Application.Library/obj
 
 TicketApplication/bin
 TicketApplication/obj
-
-.vs

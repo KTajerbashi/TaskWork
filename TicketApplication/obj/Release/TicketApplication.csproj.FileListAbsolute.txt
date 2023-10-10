@@ -1,9 +1,0 @@
-C:\Users\tajer-k\Desktop\Ticket\Ticket\TicketApplication\obj\Release\TicketApplication.csproj.AssemblyReference.cache
-C:\Users\tajer-k\Desktop\Ticket\Ticket\TicketApplication\obj\Release\TicketApplication.csproj.SuggestedBindingRedirects.cache
-C:\Users\tajer-k\Desktop\Ticket\Ticket\TicketApplication\obj\Release\TicketApplication.Forms.NewTaskForm.resources
-C:\Users\tajer-k\Desktop\Ticket\Ticket\TicketApplication\obj\Release\TicketApplication.Main.resources
-C:\Users\tajer-k\Desktop\Ticket\Ticket\TicketApplication\obj\Release\TicketApplication.Properties.Resources.resources
-C:\Users\tajer-k\Desktop\Ticket\Ticket\TicketApplication\obj\Release\TicketApplication.UserControls.ReportList.resources
-C:\Users\tajer-k\Desktop\Ticket\Ticket\TicketApplication\obj\Release\TicketApplication.UserControls.TaskList.resources
-C:\Users\tajer-k\Desktop\Ticket\Ticket\TicketApplication\obj\Release\TicketApplication.csproj.GenerateResource.cache
-C:\Users\tajer-k\Desktop\Ticket\Ticket\TicketApplication\obj\Release\TicketApplication.csproj.CoreCompileInputs.cache

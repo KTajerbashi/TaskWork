@@ -1,4 +1,5 @@
 ﻿using Domain.Base;
+using Domain.Library.Enums;
 using System;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -16,6 +17,7 @@ namespace Domain.Model
 
         public string Answer { get; set; }
 
+        public TaskImportanceType  ImportanceType { get; set; }
 
         [ForeignKey(nameof(Samaneh))]
         public long SamanaID { get; set; }

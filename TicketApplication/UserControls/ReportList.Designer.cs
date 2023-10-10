@@ -41,6 +41,8 @@
             this.NextBtn = new Glass.GlassButton();
             this.Reloding = new Glass.GlassButton();
             this.ListTasks = new System.Windows.Forms.DataGridView();
+            this.CountLBL = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ListTasks)).BeginInit();
             this.SuspendLayout();
@@ -55,6 +57,7 @@
             this.groupBox1.Controls.Add(this.SearchTxt);
             this.groupBox1.Controls.Add(this.SearchBtn);
             this.groupBox1.Controls.Add(this.FTDateBtn);
+            this.groupBox1.ForeColor = System.Drawing.Color.Black;
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -65,6 +68,8 @@
             // 
             // ToDate
             // 
+            this.ToDate.BackColor = System.Drawing.Color.White;
+            this.ToDate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ToDate.Location = new System.Drawing.Point(740, 22);
             this.ToDate.Name = "ToDate";
             this.ToDate.Size = new System.Drawing.Size(172, 28);
@@ -72,6 +77,9 @@
             // 
             // FromDate
             // 
+            this.FromDate.BackColor = System.Drawing.Color.White;
+            this.FromDate.CalendarBackColor = System.Drawing.Color.White;
+            this.FromDate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FromDate.Location = new System.Drawing.Point(992, 22);
             this.FromDate.Name = "FromDate";
             this.FromDate.Size = new System.Drawing.Size(172, 28);
@@ -83,8 +91,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.Font = new System.Drawing.Font("IRANSansWeb", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label3.Location = new System.Drawing.Point(915, 22);
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(915, 21);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 29);
             this.label3.TabIndex = 13;
@@ -97,8 +105,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.Font = new System.Drawing.Font("IRANSansWeb", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label2.Location = new System.Drawing.Point(1170, 22);
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(1170, 21);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 29);
             this.label2.TabIndex = 12;
@@ -111,8 +119,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.Font = new System.Drawing.Font("IRANSansWeb", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label1.Location = new System.Drawing.Point(442, 22);
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(442, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(73, 29);
             this.label1.TabIndex = 9;
@@ -121,7 +129,8 @@
             // 
             // SearchTxt
             // 
-            this.SearchTxt.Location = new System.Drawing.Point(71, 23);
+            this.SearchTxt.BackColor = System.Drawing.Color.White;
+            this.SearchTxt.Location = new System.Drawing.Point(82, 23);
             this.SearchTxt.Name = "SearchTxt";
             this.SearchTxt.Size = new System.Drawing.Size(354, 27);
             this.SearchTxt.TabIndex = 8;
@@ -129,14 +138,14 @@
             // 
             // SearchBtn
             // 
-            this.SearchBtn.BackColor = System.Drawing.Color.DodgerBlue;
-            this.SearchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.SearchBtn.BackColor = System.Drawing.Color.White;
+            this.SearchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SearchBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchBtn.ForeColor = System.Drawing.Color.White;
+            this.SearchBtn.ForeColor = System.Drawing.Color.Black;
             this.SearchBtn.Location = new System.Drawing.Point(7, 21);
             this.SearchBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SearchBtn.Name = "SearchBtn";
-            this.SearchBtn.Size = new System.Drawing.Size(57, 30);
+            this.SearchBtn.Size = new System.Drawing.Size(68, 30);
             this.SearchBtn.TabIndex = 7;
             this.SearchBtn.Text = "جستجو";
             this.SearchBtn.UseVisualStyleBackColor = false;
@@ -144,16 +153,16 @@
             // 
             // FTDateBtn
             // 
-            this.FTDateBtn.BackColor = System.Drawing.Color.DodgerBlue;
-            this.FTDateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.FTDateBtn.BackColor = System.Drawing.Color.White;
+            this.FTDateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.FTDateBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FTDateBtn.ForeColor = System.Drawing.Color.White;
-            this.FTDateBtn.Location = new System.Drawing.Point(676, 21);
+            this.FTDateBtn.ForeColor = System.Drawing.Color.Black;
+            this.FTDateBtn.Location = new System.Drawing.Point(665, 21);
             this.FTDateBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.FTDateBtn.Name = "FTDateBtn";
-            this.FTDateBtn.Size = new System.Drawing.Size(57, 30);
+            this.FTDateBtn.Size = new System.Drawing.Size(68, 30);
             this.FTDateBtn.TabIndex = 6;
-            this.FTDateBtn.Text = "جستجو";
+            this.FTDateBtn.Text = "مرور";
             this.FTDateBtn.UseVisualStyleBackColor = false;
             this.FTDateBtn.Click += new System.EventHandler(this.FTDateBtn_Click);
             // 
@@ -192,18 +201,49 @@
             this.ListTasks.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ListTasks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ListTasks.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.ListTasks.Location = new System.Drawing.Point(2, 58);
+            this.ListTasks.GridColor = System.Drawing.SystemColors.MenuHighlight;
+            this.ListTasks.Location = new System.Drawing.Point(2, 65);
             this.ListTasks.Name = "ListTasks";
             this.ListTasks.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             this.ListTasks.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.ListTasks.Size = new System.Drawing.Size(1250, 545);
             this.ListTasks.TabIndex = 8;
             // 
+            // CountLBL
+            // 
+            this.CountLBL.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.CountLBL.BackColor = System.Drawing.Color.Transparent;
+            this.CountLBL.Font = new System.Drawing.Font("IRANSansWeb", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CountLBL.ForeColor = System.Drawing.Color.Black;
+            this.CountLBL.Location = new System.Drawing.Point(98, 620);
+            this.CountLBL.Name = "CountLBL";
+            this.CountLBL.Size = new System.Drawing.Size(100, 29);
+            this.CountLBL.TabIndex = 13;
+            this.CountLBL.Text = "تعداد رکورد";
+            this.CountLBL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.CountLBL.UseMnemonic = false;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("IRANSansWeb", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(204, 620);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(100, 29);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "تعداد رکورد";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label4.UseMnemonic = false;
+            // 
             // ReportList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.CountLBL);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.ListTasks);
             this.Controls.Add(this.Reloding);
             this.Controls.Add(this.NextBtn);
@@ -235,5 +275,7 @@
         private Glass.GlassButton NextBtn;
         private Glass.GlassButton Reloding;
         public System.Windows.Forms.DataGridView ListTasks;
+        private System.Windows.Forms.Label CountLBL;
+        private System.Windows.Forms.Label label4;
     }
 }

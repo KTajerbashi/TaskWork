@@ -35,6 +35,7 @@ namespace TicketApplication.UserControls
                 QUERY = Show.ShowAll(Paging.Order(Paging.Page));
             }
             ListTasks.DataSource = _baseDatabase.Execute(QUERY);
+            CountLBL.Text = ListTasks.Rows.Count.ToString();
         }
 
         private void SearchBtn_Click(object sender, EventArgs e)

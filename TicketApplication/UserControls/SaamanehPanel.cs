@@ -54,6 +54,7 @@ namespace TicketApplication.UserControls
                     }
             }
             SaamanehDG.DataSource = _baseDatabase.Execute(QUERY);
+            CountLBL.Text = SaamanehDG.Rows.Count.ToString();
 
         }
 
@@ -173,6 +174,16 @@ namespace TicketApplication.UserControls
             {
                 contextMenuStrip1.Show(Cursor.Position.X, Cursor.Position.Y);
             }
+        }
+
+        private void group2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void contextMenuStrip1_Opening_1(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+
         }
     }
 }

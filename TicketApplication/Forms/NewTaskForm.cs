@@ -1,4 +1,6 @@
 ﻿using BusinessLogic.Library;
+using Domain.Library.Enums;
+using Domain.Library.KeyValues;
 using Domain.Model;
 using System;
 using System.Collections.Generic;
@@ -6,6 +8,7 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using TicketApplication.UserControls;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace TicketApplication.Forms
 {
@@ -51,12 +54,13 @@ namespace TicketApplication.Forms
         {
             this.Close();
         }
+        private List<string> importance = new List<string>{"کم","متوسط","مهم","خیلی مهم","فوری" };
 
         private void SaveBtn_Click(object sender, EventArgs e)
         {
             try
             {
-                if (comboBox1.SelectedItem == null)
+                if (SaamanehCombo.SelectedItem == null || SaamanehCombo.SelectedIndex == 0)
                 {
                     ERR.Text = "سامانه را انتخاب کنید";
                 }
@@ -68,17 +72,18 @@ namespace TicketApplication.Forms
                 {
                     ERR.Text = "توضیحات وارد کنید";
                 }
-                else if (AnswerTaskTxt.Text.Trim() == "")
+                else if (ImportanceCombo.Text.Trim() == "" || ImportanceCombo.SelectedIndex == 0)
                 {
-                    ERR.Text = "پاسخ را وارد کنید";
+                    ERR.Text = "الویت را وارد کنید";
                 }
                 else
                 {
 
                     TaskWorkService service = new TaskWorkService();
-                    var SID =((ComboboxItem)comboBox1.SelectedItem).Value;
+                    var SID =((ComboboxItem)SaamanehCombo.SelectedItem).Value;
+                    var ImpID =((ComboboxItem)ImportanceCombo.SelectedItem).Value;
 
-                    
+
                     if (ID.Text == "0")
                     {
                         TaskWork entity = new TaskWork();
@@ -87,6 +92,7 @@ namespace TicketApplication.Forms
                         entity.Description = DetailsTaskTxt.Text;
                         entity.SamanaID = SID;
                         entity.CreatedByUserRoleID = 1;
+                        entity.ImportanceType = (TaskImportanceType)ImpID;
                         service.Insert(entity);
                     }
                     else
@@ -96,6 +102,7 @@ namespace TicketApplication.Forms
                         entity.Description = DetailsTaskTxt.Text;
                         entity.Answer = AnswerTaskTxt.Text;
                         entity.SamanaID = SID;
+                        entity.ImportanceType = (TaskImportanceType)ImpID;
                         entity.CreatedByUserRoleID = 1;
                         entity.UpdateBy = 1;
                         entity.UpdateDate = DateTime.Now;
@@ -114,28 +121,74 @@ namespace TicketApplication.Forms
 
         private void NewTaskForm_Load(object sender, EventArgs e)
         {
+            SaamanehCombo.Text = "---  انتخاب کنید ---";
             SamanehService samana = new SamanehService();
-            comboBox1.Items.Clear();
             var items = samana.GetAll().Where(x => !x.IsDeleted).ToList();
+            if (TitleTaskTxt.Text.Trim().Length == 0)
+            {
+                SaamanehCombo.Items.Clear();
+                ImportanceCombo.Items.Clear();
+                SaamanehCombo.Items.Add(new ComboboxItem()
+                {
+                    Text = "--- انتخاب کنید ---",
+                    Value = 0
+                });
+                ImportanceCombo.Items.Add(new ComboboxItem()
+                {
+                    Text = "--- انتخاب کنید ---",
+                    Value = 0
+                });
+
+            }
             foreach (var item in items)
             {
-                comboBox1.Items.Add(new ComboboxItem()
+                SaamanehCombo.Items.Add(new ComboboxItem()
                 {
                     Text = item.Title,
-                    Value = item.ID
+                    Value = Convert.ToByte(item.ID)
                 });
             }
-        }
-        public class ComboboxItem
-        {
-            public string Text { get; set; }
-            public long Value { get; set; }
-
-            public override string ToString()
+            for (int i = 0; i < 5; i++)
             {
-                return Text;
+                ImportanceCombo.Items.Add(new ComboboxItem()
+                {
+                    Text = importance[i],
+                    Value = Convert.ToByte(i)
+                });
+            }
+
+            if (ImportanceCombo.Tag != null)
+            {
+                int index = 0;
+                var samanehId = SaamanehCombo.Tag;
+                var importanceId = (int) (TaskImportanceType)ImportanceCombo.Tag;
+                foreach (var i in SaamanehCombo.Items)
+                {
+                    var t = (ComboboxItem)i;
+                    if (t.Value == Convert.ToByte(samanehId))
+                    {
+                        SaamanehCombo.SelectedIndex = index;
+                    }
+                    index++;
+                }
+                index = 0;
+                foreach (var i in ImportanceCombo.Items)
+                {
+                    var t = (ComboboxItem)i;
+                    if (t.Value == Convert.ToByte(importanceId))
+                    {
+                        ImportanceCombo.SelectedIndex = index;
+                    }
+                    index++;
+                }
+            }
+            else
+            {
+                SaamanehCombo.SelectedIndex = 0;
+                ImportanceCombo.SelectedIndex = 0;
             }
         }
+
 
     }
 }
