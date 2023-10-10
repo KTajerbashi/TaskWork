@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SaamanehPanel));
             this.group1 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -100,11 +100,11 @@
             // 
             // SearchDateBtn
             // 
-            this.SearchDateBtn.BackColor = System.Drawing.Color.White;
+            this.SearchDateBtn.BackColor = System.Drawing.Color.SteelBlue;
             this.SearchDateBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SearchDateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.SearchDateBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchDateBtn.ForeColor = System.Drawing.Color.Black;
+            this.SearchDateBtn.ForeColor = System.Drawing.Color.White;
             this.SearchDateBtn.Location = new System.Drawing.Point(8, 92);
             this.SearchDateBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SearchDateBtn.Name = "SearchDateBtn";
@@ -173,11 +173,11 @@
             // 
             // SearchBtn
             // 
-            this.SearchBtn.BackColor = System.Drawing.Color.White;
+            this.SearchBtn.BackColor = System.Drawing.Color.SteelBlue;
             this.SearchBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SearchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.SearchBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchBtn.ForeColor = System.Drawing.Color.Black;
+            this.SearchBtn.ForeColor = System.Drawing.Color.White;
             this.SearchBtn.Location = new System.Drawing.Point(8, 250);
             this.SearchBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SearchBtn.Name = "SearchBtn";
@@ -269,11 +269,11 @@
             // 
             // InsertBtn
             // 
-            this.InsertBtn.BackColor = System.Drawing.Color.White;
+            this.InsertBtn.BackColor = System.Drawing.Color.SteelBlue;
             this.InsertBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.InsertBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.InsertBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InsertBtn.ForeColor = System.Drawing.Color.Black;
+            this.InsertBtn.ForeColor = System.Drawing.Color.White;
             this.InsertBtn.Location = new System.Drawing.Point(7, 283);
             this.InsertBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.InsertBtn.Name = "InsertBtn";
@@ -382,22 +382,22 @@
             // SaamanehDG
             // 
             this.SaamanehDG.AllowUserToAddRows = false;
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            this.SaamanehDG.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.SaamanehDG.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.SaamanehDG.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.SaamanehDG.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.SaamanehDG.BackgroundColor = System.Drawing.Color.White;
             this.SaamanehDG.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.SaamanehDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.SaamanehDG.Cursor = System.Windows.Forms.Cursors.PanWest;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("IRANSansWeb", 8.999999F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.SaamanehDG.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("IRANSansWeb", 8.999999F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.SaamanehDG.DefaultCellStyle = dataGridViewCellStyle2;
             this.SaamanehDG.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.SaamanehDG.GridColor = System.Drawing.SystemColors.MenuHighlight;
             this.SaamanehDG.Location = new System.Drawing.Point(6, 17);
@@ -416,7 +416,7 @@
             this.حذفToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 92);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(142, 70);
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening_1);
             // 
             // ویرایشToolStripMenuItem
@@ -439,7 +439,7 @@
             // 
             this.حذفToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("حذفToolStripMenuItem.Image")));
             this.حذفToolStripMenuItem.Name = "حذفToolStripMenuItem";
-            this.حذفToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.حذفToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.حذفToolStripMenuItem.Text = "حذف";
             this.حذفToolStripMenuItem.Click += new System.EventHandler(this.حذفToolStripMenuItem_Click);
             // 

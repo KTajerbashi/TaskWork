@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MessageBoxForm));
             this.MsgTxt = new System.Windows.Forms.Label();
             this.YesBtn = new System.Windows.Forms.Button();
             this.NoBtn = new System.Windows.Forms.Button();
@@ -88,10 +89,11 @@
             this.Controls.Add(this.MsgTxt);
             this.Font = new System.Drawing.Font("IRANSansWeb", 8.999999F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "MessageBoxForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MessageBox";
+            this.Text = "پیام";
             this.ResumeLayout(false);
 
         }

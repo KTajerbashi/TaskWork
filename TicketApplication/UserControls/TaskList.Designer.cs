@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TaskList));
             this.ListTasks = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -62,30 +62,30 @@
             // ListTasks
             // 
             this.ListTasks.AllowUserToAddRows = false;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
-            this.ListTasks.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.ListTasks.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.ListTasks.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ListTasks.BackgroundColor = System.Drawing.Color.White;
             this.ListTasks.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("IRANSansWeb", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ListTasks.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("IRANSansWeb", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ListTasks.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.ListTasks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ListTasks.Cursor = System.Windows.Forms.Cursors.PanWest;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("IRANSansWeb", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.ListTasks.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("IRANSansWeb", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ListTasks.DefaultCellStyle = dataGridViewCellStyle3;
             this.ListTasks.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.ListTasks.GridColor = System.Drawing.SystemColors.MenuHighlight;
             this.ListTasks.Location = new System.Drawing.Point(3, 70);
@@ -119,11 +119,11 @@
             // 
             // SortDateBtn
             // 
-            this.SortDateBtn.BackColor = System.Drawing.Color.White;
+            this.SortDateBtn.BackColor = System.Drawing.Color.SteelBlue;
             this.SortDateBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SortDateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SortDateBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SortDateBtn.ForeColor = System.Drawing.Color.Black;
+            this.SortDateBtn.ForeColor = System.Drawing.Color.White;
             this.SortDateBtn.Location = new System.Drawing.Point(361, 23);
             this.SortDateBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SortDateBtn.Name = "SortDateBtn";
@@ -136,11 +136,11 @@
             // 
             // NotDeliverBtn
             // 
-            this.NotDeliverBtn.BackColor = System.Drawing.Color.White;
+            this.NotDeliverBtn.BackColor = System.Drawing.Color.SteelBlue;
             this.NotDeliverBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.NotDeliverBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.NotDeliverBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NotDeliverBtn.ForeColor = System.Drawing.Color.Black;
+            this.NotDeliverBtn.ForeColor = System.Drawing.Color.White;
             this.NotDeliverBtn.Location = new System.Drawing.Point(615, 23);
             this.NotDeliverBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.NotDeliverBtn.Name = "NotDeliverBtn";
@@ -153,11 +153,11 @@
             // 
             // DeliverBtn
             // 
-            this.DeliverBtn.BackColor = System.Drawing.Color.White;
+            this.DeliverBtn.BackColor = System.Drawing.Color.SteelBlue;
             this.DeliverBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DeliverBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DeliverBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeliverBtn.ForeColor = System.Drawing.Color.Black;
+            this.DeliverBtn.ForeColor = System.Drawing.Color.White;
             this.DeliverBtn.Location = new System.Drawing.Point(742, 23);
             this.DeliverBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DeliverBtn.Name = "DeliverBtn";
@@ -198,11 +198,11 @@
             // 
             // AlphabetBtn
             // 
-            this.AlphabetBtn.BackColor = System.Drawing.Color.White;
+            this.AlphabetBtn.BackColor = System.Drawing.Color.SteelBlue;
             this.AlphabetBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AlphabetBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AlphabetBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AlphabetBtn.ForeColor = System.Drawing.Color.Black;
+            this.AlphabetBtn.ForeColor = System.Drawing.Color.White;
             this.AlphabetBtn.Location = new System.Drawing.Point(488, 23);
             this.AlphabetBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.AlphabetBtn.Name = "AlphabetBtn";
@@ -215,11 +215,11 @@
             // 
             // NotPassBtn
             // 
-            this.NotPassBtn.BackColor = System.Drawing.Color.White;
+            this.NotPassBtn.BackColor = System.Drawing.Color.SteelBlue;
             this.NotPassBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.NotPassBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.NotPassBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NotPassBtn.ForeColor = System.Drawing.Color.Black;
+            this.NotPassBtn.ForeColor = System.Drawing.Color.White;
             this.NotPassBtn.Location = new System.Drawing.Point(869, 23);
             this.NotPassBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.NotPassBtn.Name = "NotPassBtn";
@@ -232,11 +232,11 @@
             // 
             // PassedBtn
             // 
-            this.PassedBtn.BackColor = System.Drawing.Color.White;
+            this.PassedBtn.BackColor = System.Drawing.Color.SteelBlue;
             this.PassedBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PassedBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PassedBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PassedBtn.ForeColor = System.Drawing.Color.Black;
+            this.PassedBtn.ForeColor = System.Drawing.Color.White;
             this.PassedBtn.Location = new System.Drawing.Point(996, 23);
             this.PassedBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.PassedBtn.Name = "PassedBtn";
@@ -249,11 +249,11 @@
             // 
             // NewTaskBtn
             // 
-            this.NewTaskBtn.BackColor = System.Drawing.Color.White;
+            this.NewTaskBtn.BackColor = System.Drawing.Color.SteelBlue;
             this.NewTaskBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.NewTaskBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.NewTaskBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NewTaskBtn.ForeColor = System.Drawing.Color.Black;
+            this.NewTaskBtn.ForeColor = System.Drawing.Color.White;
             this.NewTaskBtn.Location = new System.Drawing.Point(1123, 23);
             this.NewTaskBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.NewTaskBtn.Name = "NewTaskBtn";

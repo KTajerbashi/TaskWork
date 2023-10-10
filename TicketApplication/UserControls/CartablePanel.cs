@@ -132,8 +132,8 @@ namespace TicketApplication.UserControls
                     _service.Save();
                     DescriptionTxt.Visible = false;
                     TaskAddDescBtn.Text = "افزودن یادداشت";
-                    TaskAddDescBtn.ForeColor = System.Drawing.Color.Black;
-                    TaskAddDescBtn.BackColor = System.Drawing.Color.FromArgb(255, 255, 255);
+                    TaskAddDescBtn.ForeColor = System.Drawing.Color.White;
+                    TaskAddDescBtn.BackColor = System.Drawing.Color.SteelBlue;
                 }
                 else
                 {

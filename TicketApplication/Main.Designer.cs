@@ -340,7 +340,7 @@
             this.Name = "Main";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Ticket";
+            this.Text = "صفحه اصلی";
             this.Load += new System.EventHandler(this.Main_Load);
             this.AsidePanel.ResumeLayout(false);
             this.ResumeLayout(false);

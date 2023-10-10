@@ -249,7 +249,7 @@
             this.Name = "NewTaskForm";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "NewTaskForm";
+            this.Text = "تسک جدید";
             this.Load += new System.EventHandler(this.NewTaskForm_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.NewTaskForm_MouseDown);
             this.ResumeLayout(false);

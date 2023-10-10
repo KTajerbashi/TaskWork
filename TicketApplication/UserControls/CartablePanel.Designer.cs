@@ -31,8 +31,8 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.TaskAnswerBtn = new System.Windows.Forms.Button();
-            this.TaskAnswerLBL = new System.Windows.Forms.Label();
             this.AnswerTxt = new System.Windows.Forms.RichTextBox();
+            this.TaskAnswerLBL = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.TaskAddDescBtn = new System.Windows.Forms.Button();
             this.DescriptionTxt = new System.Windows.Forms.RichTextBox();
@@ -40,6 +40,8 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.TaskSaveDateLBL = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.PassBtn = new System.Windows.Forms.Button();
+            this.DeliverBtn = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.TaskTitleLBL = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -56,8 +58,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.DeliverBtn = new System.Windows.Forms.Button();
-            this.PassBtn = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.MessageTxt = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
@@ -100,10 +100,10 @@
             // 
             // TaskAnswerBtn
             // 
-            this.TaskAnswerBtn.BackColor = System.Drawing.Color.White;
+            this.TaskAnswerBtn.BackColor = System.Drawing.Color.SteelBlue;
             this.TaskAnswerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TaskAnswerBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TaskAnswerBtn.ForeColor = System.Drawing.Color.Black;
+            this.TaskAnswerBtn.ForeColor = System.Drawing.Color.White;
             this.TaskAnswerBtn.Location = new System.Drawing.Point(6, 281);
             this.TaskAnswerBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TaskAnswerBtn.Name = "TaskAnswerBtn";
@@ -112,6 +112,17 @@
             this.TaskAnswerBtn.Text = "ارایه پاسخ";
             this.TaskAnswerBtn.UseVisualStyleBackColor = false;
             this.TaskAnswerBtn.Click += new System.EventHandler(this.TaskAnswerBtn_Click);
+            // 
+            // AnswerTxt
+            // 
+            this.AnswerTxt.BackColor = System.Drawing.Color.White;
+            this.AnswerTxt.ForeColor = System.Drawing.Color.Black;
+            this.AnswerTxt.Location = new System.Drawing.Point(6, 24);
+            this.AnswerTxt.Name = "AnswerTxt";
+            this.AnswerTxt.Size = new System.Drawing.Size(438, 253);
+            this.AnswerTxt.TabIndex = 59;
+            this.AnswerTxt.Text = "";
+            this.AnswerTxt.Visible = false;
             // 
             // TaskAnswerLBL
             // 
@@ -125,17 +136,6 @@
             this.TaskAnswerLBL.Size = new System.Drawing.Size(438, 253);
             this.TaskAnswerLBL.TabIndex = 58;
             this.TaskAnswerLBL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // AnswerTxt
-            // 
-            this.AnswerTxt.BackColor = System.Drawing.Color.White;
-            this.AnswerTxt.ForeColor = System.Drawing.Color.Black;
-            this.AnswerTxt.Location = new System.Drawing.Point(6, 24);
-            this.AnswerTxt.Name = "AnswerTxt";
-            this.AnswerTxt.Size = new System.Drawing.Size(438, 253);
-            this.AnswerTxt.TabIndex = 59;
-            this.AnswerTxt.Text = "";
-            this.AnswerTxt.Visible = false;
             // 
             // groupBox6
             // 
@@ -152,10 +152,10 @@
             // 
             // TaskAddDescBtn
             // 
-            this.TaskAddDescBtn.BackColor = System.Drawing.Color.White;
+            this.TaskAddDescBtn.BackColor = System.Drawing.Color.SteelBlue;
             this.TaskAddDescBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TaskAddDescBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TaskAddDescBtn.ForeColor = System.Drawing.Color.Black;
+            this.TaskAddDescBtn.ForeColor = System.Drawing.Color.White;
             this.TaskAddDescBtn.Location = new System.Drawing.Point(7, 281);
             this.TaskAddDescBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TaskAddDescBtn.Name = "TaskAddDescBtn";
@@ -216,12 +216,42 @@
             this.groupBox4.Controls.Add(this.PassBtn);
             this.groupBox4.Controls.Add(this.DeliverBtn);
             this.groupBox4.ForeColor = System.Drawing.Color.White;
-            this.groupBox4.Location = new System.Drawing.Point(931, 264);
+            this.groupBox4.Location = new System.Drawing.Point(931, 265);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(312, 70);
             this.groupBox4.TabIndex = 7;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "تعیین وضعیت";
+            // 
+            // PassBtn
+            // 
+            this.PassBtn.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.PassBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PassBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PassBtn.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.PassBtn.Location = new System.Drawing.Point(16, 32);
+            this.PassBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.PassBtn.Name = "PassBtn";
+            this.PassBtn.Size = new System.Drawing.Size(131, 30);
+            this.PassBtn.TabIndex = 60;
+            this.PassBtn.Text = "پاس شدن";
+            this.PassBtn.UseVisualStyleBackColor = false;
+            this.PassBtn.Click += new System.EventHandler(this.PassBtn_Click);
+            // 
+            // DeliverBtn
+            // 
+            this.DeliverBtn.BackColor = System.Drawing.Color.Chartreuse;
+            this.DeliverBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeliverBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeliverBtn.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.DeliverBtn.Location = new System.Drawing.Point(166, 32);
+            this.DeliverBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.DeliverBtn.Name = "DeliverBtn";
+            this.DeliverBtn.Size = new System.Drawing.Size(131, 30);
+            this.DeliverBtn.TabIndex = 59;
+            this.DeliverBtn.Text = "تحویل";
+            this.DeliverBtn.UseVisualStyleBackColor = false;
+            this.DeliverBtn.Click += new System.EventHandler(this.DeliverBtn_Click);
             // 
             // groupBox3
             // 
@@ -428,36 +458,6 @@
             this.label6.Text = "تحویل نشده";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label6.UseMnemonic = false;
-            // 
-            // DeliverBtn
-            // 
-            this.DeliverBtn.BackColor = System.Drawing.Color.Chartreuse;
-            this.DeliverBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DeliverBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeliverBtn.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.DeliverBtn.Location = new System.Drawing.Point(166, 32);
-            this.DeliverBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.DeliverBtn.Name = "DeliverBtn";
-            this.DeliverBtn.Size = new System.Drawing.Size(131, 30);
-            this.DeliverBtn.TabIndex = 59;
-            this.DeliverBtn.Text = "تحویل";
-            this.DeliverBtn.UseVisualStyleBackColor = false;
-            this.DeliverBtn.Click += new System.EventHandler(this.DeliverBtn_Click);
-            // 
-            // PassBtn
-            // 
-            this.PassBtn.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.PassBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PassBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PassBtn.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.PassBtn.Location = new System.Drawing.Point(16, 32);
-            this.PassBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.PassBtn.Name = "PassBtn";
-            this.PassBtn.Size = new System.Drawing.Size(131, 30);
-            this.PassBtn.TabIndex = 60;
-            this.PassBtn.Text = "پاس شدن";
-            this.PassBtn.UseVisualStyleBackColor = false;
-            this.PassBtn.Click += new System.EventHandler(this.PassBtn_Click);
             // 
             // label7
             // 
