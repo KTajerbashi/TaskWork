@@ -18,6 +18,7 @@ namespace Domain.Model
         public string Answer { get; set; }
 
         public TaskImportanceType  ImportanceType { get; set; }
+        public TaskType Type { get; set; }
 
         [ForeignKey(nameof(Samaneh))]
         public long SamanaID { get; set; }

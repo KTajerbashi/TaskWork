@@ -47,6 +47,7 @@
     <Compile Include="BaseEntity\IBaseEntity.cs" />
     <Compile Include="BaseEntity\IEntity.cs" />
     <Compile Include="Enums\TaskImportanceType.cs" />
+    <Compile Include="Enums\TaskType.cs" />
     <Compile Include="KeyValues\ComboboxItem.cs" />
     <Compile Include="Models\Entity\Samaneh.cs" />
     <Compile Include="Models\Entity\Role.cs" />

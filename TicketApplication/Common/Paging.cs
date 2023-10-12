@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TicketApplication.Common
+﻿namespace TicketApplication.Common
 {
     public class Paging
     {
@@ -23,7 +17,7 @@ namespace TicketApplication.Common
         {
             Page++;
         }
-        public string Order(int skip,int take = 23)
+        public string Order(int skip, int take = 23)
         {
             if (Page < 1)
             {

@@ -43,6 +43,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.ImportanceCombo = new System.Windows.Forms.ComboBox();
+            this.TypeCombo = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // ExitBtn
@@ -50,9 +52,9 @@
             this.ExitBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.ExitBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ExitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.ExitBtn.Location = new System.Drawing.Point(10, 368);
+            this.ExitBtn.Location = new System.Drawing.Point(637, 475);
             this.ExitBtn.Name = "ExitBtn";
-            this.ExitBtn.Size = new System.Drawing.Size(121, 33);
+            this.ExitBtn.Size = new System.Drawing.Size(422, 33);
             this.ExitBtn.TabIndex = 5;
             this.ExitBtn.Text = "خروج";
             this.ExitBtn.UseVisualStyleBackColor = false;
@@ -63,9 +65,9 @@
             this.SaveBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.SaveBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SaveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.SaveBtn.Location = new System.Drawing.Point(137, 368);
+            this.SaveBtn.Location = new System.Drawing.Point(637, 437);
             this.SaveBtn.Name = "SaveBtn";
-            this.SaveBtn.Size = new System.Drawing.Size(121, 33);
+            this.SaveBtn.Size = new System.Drawing.Size(422, 33);
             this.SaveBtn.TabIndex = 4;
             this.SaveBtn.Text = "ثبت";
             this.SaveBtn.UseVisualStyleBackColor = false;
@@ -79,10 +81,10 @@
             this.TitleTaskTxt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.TitleTaskTxt.Font = new System.Drawing.Font("IRANSansWeb", 13F);
             this.TitleTaskTxt.ForeColor = System.Drawing.Color.Black;
-            this.TitleTaskTxt.Location = new System.Drawing.Point(206, 52);
+            this.TitleTaskTxt.Location = new System.Drawing.Point(637, 46);
             this.TitleTaskTxt.MaxLength = 50;
             this.TitleTaskTxt.Name = "TitleTaskTxt";
-            this.TitleTaskTxt.Size = new System.Drawing.Size(426, 29);
+            this.TitleTaskTxt.Size = new System.Drawing.Size(422, 29);
             this.TitleTaskTxt.TabIndex = 1;
             // 
             // DetailsTaskTxt
@@ -92,9 +94,9 @@
             this.DetailsTaskTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DetailsTaskTxt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DetailsTaskTxt.ForeColor = System.Drawing.Color.Black;
-            this.DetailsTaskTxt.Location = new System.Drawing.Point(445, 116);
+            this.DetailsTaskTxt.Location = new System.Drawing.Point(22, 46);
             this.DetailsTaskTxt.Name = "DetailsTaskTxt";
-            this.DetailsTaskTxt.Size = new System.Drawing.Size(429, 246);
+            this.DetailsTaskTxt.Size = new System.Drawing.Size(605, 212);
             this.DetailsTaskTxt.TabIndex = 2;
             this.DetailsTaskTxt.Text = "";
             // 
@@ -103,7 +105,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.Font = new System.Drawing.Font("IRANSansWeb", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(543, 20);
+            this.label1.Location = new System.Drawing.Point(976, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(88, 29);
             this.label1.TabIndex = 4;
@@ -115,7 +117,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.Font = new System.Drawing.Font("IRANSansWeb", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(756, 84);
+            this.label2.Location = new System.Drawing.Point(513, 15);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(119, 29);
             this.label2.TabIndex = 5;
@@ -127,7 +129,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.Font = new System.Drawing.Font("IRANSansWeb", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(787, 19);
+            this.label3.Location = new System.Drawing.Point(976, 76);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(88, 29);
             this.label3.TabIndex = 7;
@@ -142,9 +144,9 @@
             this.SaamanehCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.SaamanehCombo.ForeColor = System.Drawing.Color.Black;
             this.SaamanehCombo.FormattingEnabled = true;
-            this.SaamanehCombo.Location = new System.Drawing.Point(636, 51);
+            this.SaamanehCombo.Location = new System.Drawing.Point(637, 106);
             this.SaamanehCombo.Name = "SaamanehCombo";
-            this.SaamanehCombo.Size = new System.Drawing.Size(237, 30);
+            this.SaamanehCombo.Size = new System.Drawing.Size(422, 30);
             this.SaamanehCombo.TabIndex = 0;
             // 
             // ID
@@ -152,7 +154,7 @@
             this.ID.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ID.Font = new System.Drawing.Font("IRANSansWeb", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ID.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.ID.Location = new System.Drawing.Point(13, 276);
+            this.ID.Location = new System.Drawing.Point(288, 479);
             this.ID.Name = "ID";
             this.ID.Size = new System.Drawing.Size(32, 29);
             this.ID.TabIndex = 9;
@@ -164,9 +166,9 @@
             this.ERR.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ERR.Font = new System.Drawing.Font("IRANSansWeb", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ERR.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.ERR.Location = new System.Drawing.Point(261, 371);
+            this.ERR.Location = new System.Drawing.Point(22, 516);
             this.ERR.Name = "ERR";
-            this.ERR.Size = new System.Drawing.Size(615, 29);
+            this.ERR.Size = new System.Drawing.Size(1042, 29);
             this.ERR.TabIndex = 10;
             this.ERR.Text = "پیام :";
             this.ERR.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -178,9 +180,9 @@
             this.AnswerTaskTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.AnswerTaskTxt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AnswerTaskTxt.ForeColor = System.Drawing.Color.Black;
-            this.AnswerTaskTxt.Location = new System.Drawing.Point(10, 116);
+            this.AnswerTaskTxt.Location = new System.Drawing.Point(22, 296);
             this.AnswerTaskTxt.Name = "AnswerTaskTxt";
-            this.AnswerTaskTxt.Size = new System.Drawing.Size(429, 246);
+            this.AnswerTaskTxt.Size = new System.Drawing.Size(605, 212);
             this.AnswerTaskTxt.TabIndex = 3;
             this.AnswerTaskTxt.Text = "";
             // 
@@ -189,7 +191,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.Font = new System.Drawing.Font("IRANSansWeb", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(356, 84);
+            this.label4.Location = new System.Drawing.Point(544, 261);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(88, 29);
             this.label4.TabIndex = 12;
@@ -201,7 +203,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.Font = new System.Drawing.Font("IRANSansWeb", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(154, 19);
+            this.label5.Location = new System.Drawing.Point(1011, 137);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 29);
             this.label5.TabIndex = 14;
@@ -216,17 +218,44 @@
             this.ImportanceCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ImportanceCombo.ForeColor = System.Drawing.Color.Black;
             this.ImportanceCombo.FormattingEnabled = true;
-            this.ImportanceCombo.Location = new System.Drawing.Point(13, 51);
+            this.ImportanceCombo.Location = new System.Drawing.Point(637, 167);
             this.ImportanceCombo.Name = "ImportanceCombo";
-            this.ImportanceCombo.Size = new System.Drawing.Size(189, 30);
+            this.ImportanceCombo.Size = new System.Drawing.Size(422, 30);
             this.ImportanceCombo.TabIndex = 15;
+            // 
+            // TypeCombo
+            // 
+            this.TypeCombo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.TypeCombo.BackColor = System.Drawing.Color.White;
+            this.TypeCombo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.TypeCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.TypeCombo.ForeColor = System.Drawing.Color.Black;
+            this.TypeCombo.FormattingEnabled = true;
+            this.TypeCombo.Location = new System.Drawing.Point(637, 228);
+            this.TypeCombo.Name = "TypeCombo";
+            this.TypeCombo.Size = new System.Drawing.Size(422, 30);
+            this.TypeCombo.TabIndex = 17;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.Font = new System.Drawing.Font("IRANSansWeb", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(1011, 198);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(53, 29);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "نوع";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // NewTaskForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(25)))), ((int)(((byte)(82)))));
-            this.ClientSize = new System.Drawing.Size(887, 411);
+            this.ClientSize = new System.Drawing.Size(1076, 554);
+            this.Controls.Add(this.TypeCombo);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.ImportanceCombo);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -273,5 +302,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         public System.Windows.Forms.ComboBox ImportanceCombo;
+        public System.Windows.Forms.ComboBox TypeCombo;
+        private System.Windows.Forms.Label label6;
     }
 }

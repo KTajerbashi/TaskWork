@@ -65,6 +65,10 @@
     <Compile Include="Migrations\202310081433576_importanceType.designer.cs">
       <DependentUpon>202310081433576_importanceType.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202310121021389_init_TaskType.cs" />
+    <Compile Include="Migrations\202310121021389_init_TaskType.designer.cs">
+      <DependentUpon>202310121021389_init_TaskType.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Validator\GroupValidator.cs" />
@@ -89,6 +93,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202310081433576_importanceType.resx">
       <DependentUpon>202310081433576_importanceType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202310121021389_init_TaskType.resx">
+      <DependentUpon>202310121021389_init_TaskType.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

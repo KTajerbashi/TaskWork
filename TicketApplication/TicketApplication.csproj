@@ -110,6 +110,12 @@
     <Compile Include="UserControls\SaamanehPanel.Designer.cs">
       <DependentUpon>SaamanehPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\SampaPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\SampaPanel.Designer.cs">
+      <DependentUpon>SampaPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\TaskList.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -143,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\SaamanehPanel.resx">
       <DependentUpon>SaamanehPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\SampaPanel.resx">
+      <DependentUpon>SampaPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\TaskList.resx">
       <DependentUpon>TaskList.cs</DependentUpon>

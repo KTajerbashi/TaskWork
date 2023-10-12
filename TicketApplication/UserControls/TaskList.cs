@@ -22,9 +22,10 @@ namespace TicketApplication.UserControls
             _baseDatabase = new BaseDatabaseRepository();
             Show = new TaskWorkShowGird();
         }
+
         private long ID;
 
-        public void ShowDataGridView(int type)
+        private void ShowDataGridView(int type)
         {
             _taskWork = new TaskWorkService();
             string QUERY;
@@ -75,6 +76,7 @@ namespace TicketApplication.UserControls
             ListTasks.DataSource = _baseDatabase.Execute(QUERY);
             CountLBL.Text = ListTasks.Rows.Count.ToString();
         }
+       
         private void TaskList_Load(object sender, EventArgs e)
         {
             ShowDataGridView(99);

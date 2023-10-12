@@ -33,6 +33,7 @@ namespace TicketApplication
         ReportList reportList;
         SaamanehPanel saamaneh;
         CartablePanel cartable;
+        SampaPanel sampa;
         Timer timer = new Timer();
 
         public Main()
@@ -72,12 +73,12 @@ namespace TicketApplication
 
         private void Main_Load(object sender, EventArgs e)
         {
-            taskList = new TaskList();
+            cartable = new CartablePanel();
             if (MainPanel.Controls.Count > 0)
             {
                 MainPanel.Controls[0].Dispose();
             }
-            MainPanel.Controls.Add(taskList);
+            MainPanel.Controls.Add(cartable);
         }
 
         private void TasksListBtn_Click(object sender, EventArgs e)
@@ -122,6 +123,16 @@ namespace TicketApplication
                 MainPanel.Controls[0].Dispose();
             }
             MainPanel.Controls.Add(cartable);
+        }
+
+        private void SampaBtn_Click(object sender, EventArgs e)
+        {
+            sampa = new SampaPanel();
+            if (MainPanel.Controls.Count > 0)
+            {
+                MainPanel.Controls[0].Dispose();
+            }
+            MainPanel.Controls.Add(sampa);
         }
     }
 }

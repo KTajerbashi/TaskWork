@@ -51,3 +51,4 @@ D:\Visual Studio\GitProject\TaskWork\Infrastrucure.Library\obj\Debug\Infrastrucu
 D:\Visual Studio\GitProject\TaskWork\Infrastrucure.Library\obj\Debug\Infrastrucure.Library.pdb
 D:\Visual Studio\GitProject\TaskWork\Infrastrucure.Library\obj\Debug\Infrastrucure.Library.Migrations.Saamaneh_Change.resources
 D:\Visual Studio\GitProject\TaskWork\Infrastrucure.Library\obj\Debug\Infrastrucure.Library.Migrations.importanceType.resources
+D:\Visual Studio\GitProject\TaskWork\Infrastrucure.Library\obj\Debug\Infrastrucure.Library.Migrations.init_TaskType.resources

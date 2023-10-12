@@ -49,6 +49,7 @@
             this.progressBar5 = new System.Windows.Forms.ProgressBar();
             this.progressBar6 = new System.Windows.Forms.ProgressBar();
             this.AsidePanel = new System.Windows.Forms.Panel();
+            this.SampaBtn = new System.Windows.Forms.Button();
             this.progressBar2 = new System.Windows.Forms.ProgressBar();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.label3 = new System.Windows.Forms.Label();
@@ -93,7 +94,7 @@
             this.ExitBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ExitBtn.Name = "ExitBtn";
             this.ExitBtn.Size = new System.Drawing.Size(155, 38);
-            this.ExitBtn.TabIndex = 0;
+            this.ExitBtn.TabIndex = 6;
             this.ExitBtn.Text = "خروج";
             this.ExitBtn.UseVisualStyleBackColor = false;
             this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
@@ -109,7 +110,7 @@
             this.NewTaskBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.NewTaskBtn.Name = "NewTaskBtn";
             this.NewTaskBtn.Size = new System.Drawing.Size(125, 31);
-            this.NewTaskBtn.TabIndex = 1;
+            this.NewTaskBtn.TabIndex = 2;
             this.NewTaskBtn.Text = "تسک جدید";
             this.NewTaskBtn.UseVisualStyleBackColor = false;
             this.NewTaskBtn.Click += new System.EventHandler(this.NewTaskBtn_Click);
@@ -126,7 +127,7 @@
             this.ReportBtn.Name = "ReportBtn";
             this.ReportBtn.Size = new System.Drawing.Size(125, 31);
             this.ReportBtn.TabIndex = 4;
-            this.ReportBtn.Text = "گزارشات";
+            this.ReportBtn.Text = "مدیریت گزارشات";
             this.ReportBtn.UseVisualStyleBackColor = false;
             this.ReportBtn.Click += new System.EventHandler(this.ReportBtn_Click);
             // 
@@ -141,7 +142,7 @@
             this.TasksListBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TasksListBtn.Name = "TasksListBtn";
             this.TasksListBtn.Size = new System.Drawing.Size(125, 31);
-            this.TasksListBtn.TabIndex = 5;
+            this.TasksListBtn.TabIndex = 1;
             this.TasksListBtn.Text = "لیست تسک ها";
             this.TasksListBtn.UseVisualStyleBackColor = false;
             this.TasksListBtn.Click += new System.EventHandler(this.TasksListBtn_Click);
@@ -205,7 +206,7 @@
             this.SaamanehBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SaamanehBtn.Name = "SaamanehBtn";
             this.SaamanehBtn.Size = new System.Drawing.Size(125, 31);
-            this.SaamanehBtn.TabIndex = 53;
+            this.SaamanehBtn.TabIndex = 3;
             this.SaamanehBtn.Text = "مدیریت سامانه ها";
             this.SaamanehBtn.UseVisualStyleBackColor = false;
             this.SaamanehBtn.Click += new System.EventHandler(this.SaamanehBtn_Click);
@@ -221,7 +222,7 @@
             this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(125, 31);
-            this.button1.TabIndex = 56;
+            this.button1.TabIndex = 0;
             this.button1.Text = "کارتابل";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -266,6 +267,7 @@
             // AsidePanel
             // 
             this.AsidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(25)))), ((int)(((byte)(82)))));
+            this.AsidePanel.Controls.Add(this.SampaBtn);
             this.AsidePanel.Controls.Add(this.progressBar2);
             this.AsidePanel.Controls.Add(this.progressBar1);
             this.AsidePanel.Controls.Add(this.progressBar6);
@@ -292,6 +294,22 @@
             this.AsidePanel.Size = new System.Drawing.Size(163, 660);
             this.AsidePanel.TabIndex = 1;
             this.AsidePanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AsidePanel_MouseDown);
+            // 
+            // SampaBtn
+            // 
+            this.SampaBtn.BackColor = System.Drawing.Color.MidnightBlue;
+            this.SampaBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SampaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SampaBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SampaBtn.ForeColor = System.Drawing.Color.White;
+            this.SampaBtn.Location = new System.Drawing.Point(19, 416);
+            this.SampaBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.SampaBtn.Name = "SampaBtn";
+            this.SampaBtn.Size = new System.Drawing.Size(125, 31);
+            this.SampaBtn.TabIndex = 5;
+            this.SampaBtn.Text = "مدیریت سمپا";
+            this.SampaBtn.UseVisualStyleBackColor = false;
+            this.SampaBtn.Click += new System.EventHandler(this.SampaBtn_Click);
             // 
             // progressBar2
             // 
@@ -370,6 +388,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ProgressBar progressBar2;
         private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.Button SampaBtn;
     }
 }
 
