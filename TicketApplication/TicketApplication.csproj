@@ -206,8 +206,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Gakuseisean-Ivista-2-Alarm-Error.256.png" />
+    <Content Include="Extentions\AnalogClock.dll" />
+    <Content Include="Extentions\DateTimeSelector.dll" />
+    <Content Include="Extentions\GlassButton.dll" />
+    <Content Include="Extentions\Persia.dll" />
+    <Content Include="Extentions\TxtProNetV3.dll" />
     <Content Include="task_document_paper_descending_priority_tasks_documents_icon_142254 %281%29.ico" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
