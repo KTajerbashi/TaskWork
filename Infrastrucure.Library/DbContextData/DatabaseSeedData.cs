@@ -16,7 +16,7 @@ namespace Infrastructure.Library.DatabaseContext
                  new Role
                 {
                     ID=1,
-                    Title = RolesSeed.Admin,
+                    Title = RolesSeed.ADMIN,
                     CreateDate = DateTime.Now,
                     Description = "ادمین",
                     IsActive = true,
@@ -26,7 +26,7 @@ namespace Infrastructure.Library.DatabaseContext
                  new Role
                 {
                     ID=2,
-                    Title = RolesSeed.Operator,
+                    Title = RolesSeed.OPERATOR,
                     CreateDate = DateTime.Now,
                     Description = "کارشناس",
                     IsActive = true,
@@ -36,7 +36,7 @@ namespace Infrastructure.Library.DatabaseContext
                  new Role
                 {
                     ID=3,
-                    Title = RolesSeed.User,
+                    Title = RolesSeed.USER,
                     CreateDate = DateTime.Now,
                     Description = "کاربر",
                     IsActive = true,
@@ -49,16 +49,16 @@ namespace Infrastructure.Library.DatabaseContext
                 new User
                 {
                     ID = 0,
-                    Name = RolesSeed.Admin,
-                    Family = RolesSeed.Admin,
-                    Phone = RolesSeed.Admin,
-                    Email = RolesSeed.Admin,
-                    Password = RolesSeed.Admin,
-                    Address = RolesSeed.Admin,
-                    DisplayName = RolesSeed.Admin,
-                    Description = RolesSeed.Admin,
-                    Title = RolesSeed.Admin,
-                    Username = RolesSeed.Admin,
+                    Name = RolesSeed.ADMIN,
+                    Family = RolesSeed.ADMIN,
+                    Phone = RolesSeed.ADMIN,
+                    Email = RolesSeed.ADMIN,
+                    Password = RolesSeed.ADMIN,
+                    Address = RolesSeed.ADMIN,
+                    DisplayName = RolesSeed.ADMIN,
+                    Description = RolesSeed.ADMIN,
+                    Title = RolesSeed.ADMIN,
+                    Username = RolesSeed.ADMIN,
                     IsActive = true,
                     IsDeleted = false,
                     CreateDate = DateTime.Now,

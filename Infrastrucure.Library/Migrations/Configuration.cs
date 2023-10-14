@@ -23,7 +23,7 @@
                  new Role
                 {
                     ID=1,
-                    Title = RolesSeed.Admin,
+                    Title = nameof(RolesSeed.ADMIN),
                     CreateDate = DateTime.Now,
                     Description = "ادمین",
                     IsActive = true,
@@ -33,7 +33,7 @@
                  new Role
                 {
                     ID=2,
-                    Title = RolesSeed.Operator,
+                    Title = nameof(RolesSeed.OPERATOR),
                     CreateDate = DateTime.Now,
                     Description = "کارشناس",
                     IsActive = true,
@@ -43,7 +43,7 @@
                  new Role
                 {
                     ID=3,
-                    Title = RolesSeed.User,
+                    Title = nameof(RolesSeed.USER),
                     CreateDate = DateTime.Now,
                     Description = "کاربر",
                     IsActive = true,
@@ -55,16 +55,16 @@
                 new User
                 {
                     ID = 0,
-                    Name = RolesSeed.Admin,
-                    Family = RolesSeed.Admin,
-                    Phone = RolesSeed.Admin,
-                    Email = RolesSeed.Admin,
-                    Password = RolesSeed.Admin,
-                    Address = RolesSeed.Admin,
-                    DisplayName = RolesSeed.Admin,
-                    Description = RolesSeed.Admin,
-                    Title = RolesSeed.Admin,
-                    Username = RolesSeed.Admin,
+                    Name = nameof(RolesSeed.ADMIN),
+                    Family = nameof(RolesSeed.ADMIN),
+                    Phone = nameof(RolesSeed.ADMIN),
+                    Email = nameof(RolesSeed.ADMIN),
+                    Password = nameof(RolesSeed.ADMIN),
+                    Address = nameof(RolesSeed.ADMIN),
+                    DisplayName = RolesSeed.ADMIN,
+                    Description = RolesSeed.ADMIN,
+                    Title = RolesSeed.ADMIN,
+                    Username = nameof(RolesSeed.ADMIN),
                     IsActive = true,
                     IsDeleted = false,
                     CreateDate = DateTime.Now,

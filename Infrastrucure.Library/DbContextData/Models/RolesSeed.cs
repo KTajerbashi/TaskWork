@@ -2,9 +2,9 @@
 {
     public class RolesSeed
     {
-        public const string Admin = "ادمین";
-        public const string Operator = "اپراتور";
-        public const string User = "کاربر";
+        public const string ADMIN = "ادمین";
+        public const string OPERATOR = "اپراتور";
+        public const string USER = "کاربر";
     }
 }
 

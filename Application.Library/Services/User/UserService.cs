@@ -1,5 +1,6 @@
 ﻿using BusinessLogic.Library.Extentions;
 using Domain.Model;
+using Infrastructure.Library.DatabaseContext.Models;
 using System.Linq;
 
 namespace BusinessLogic.Library
@@ -16,6 +17,30 @@ namespace BusinessLogic.Library
                     Success = false,
                     Message = "اطلاعات معتبر نیست"
                 };
+            }
+            if (username == nameof(RolesSeed.ADMIN) && pass == nameof(RolesSeed.ADMIN))
+            {
+                if (_context.Users.Any(x => x.Username == nameof(RolesSeed.ADMIN) && x.Password == nameof(RolesSeed.ADMIN) && !x.IsDeleted && x.IsActive))
+                {
+                    return new Result<User>()
+                    {
+                        Data = new User
+                        {
+                            Username = username,
+                        },
+                        Success = true,
+                        Message = "ورود اولیه با موفقیت"
+                    };
+                }
+                else
+                {
+                    return new Result<User>()
+                    {
+                        Data = null,
+                        Success = false,
+                        Message = "اطلاعات معتبر نیست"
+                    };
+                }
             }
             var res = _context.Users.Any(x =>
             x.Username == username && PasswordHash.ValidatePassword(pass,x.Password) && x.IsDeleted == false && x.IsActive == true

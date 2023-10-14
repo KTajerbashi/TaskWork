@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using TicketApplication.Authentication;
 
 namespace TicketApplication.Forms
 {
@@ -215,16 +216,14 @@ namespace TicketApplication.Forms
         }
         private void CloseLoginPanel()
         {
-            while (LoginPanel.Location.Y > -400)
+            while (this.Location.Y > -400)
             {
                 y = y - 10;
-                LoginPanel.Location = new Point(535, y);
+                //LoginPanel.Location = new Point(535, y);
                 this.Location = new Point(this.Location.X, y);
-                //this.Controls["MainPanel"].Location = new Point(411, y2);
-
             }
             T1.Stop();
-            this.Close();
+            this.Hide();
         }
     }
 }

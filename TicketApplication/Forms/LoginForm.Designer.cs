@@ -96,7 +96,7 @@
             this.LoginTitle.Location = new System.Drawing.Point(4, 4);
             this.LoginTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LoginTitle.Name = "LoginTitle";
-            this.LoginTitle.Size = new System.Drawing.Size(366, 59);
+            this.LoginTitle.Size = new System.Drawing.Size(366, 47);
             this.LoginTitle.TabIndex = 2;
             this.LoginTitle.Text = "ورود به حساب";
             this.LoginTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -123,7 +123,7 @@
             // LoginBtn
             // 
             this.LoginBtn.Font = new System.Drawing.Font("IRANSansWeb", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LoginBtn.Location = new System.Drawing.Point(81, 475);
+            this.LoginBtn.Location = new System.Drawing.Point(81, 494);
             this.LoginBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.LoginBtn.Name = "LoginBtn";
             this.LoginBtn.Size = new System.Drawing.Size(213, 34);
@@ -249,7 +249,7 @@
             // SignInBtn
             // 
             this.SignInBtn.Font = new System.Drawing.Font("IRANSansWeb", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SignInBtn.Location = new System.Drawing.Point(81, 519);
+            this.SignInBtn.Location = new System.Drawing.Point(81, 538);
             this.SignInBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SignInBtn.Name = "SignInBtn";
             this.SignInBtn.Size = new System.Drawing.Size(213, 34);
@@ -348,6 +348,7 @@
             this.Sign_RePass.Location = new System.Drawing.Point(23, 486);
             this.Sign_RePass.MaxLength = 50;
             this.Sign_RePass.Name = "Sign_RePass";
+            this.Sign_RePass.PasswordChar = '*';
             this.Sign_RePass.PreventEnterBeep = true;
             this.Sign_RePass.Size = new System.Drawing.Size(213, 27);
             this.Sign_RePass.TabIndex = 6;
@@ -402,6 +403,7 @@
             this.Sign_Pass.Location = new System.Drawing.Point(259, 486);
             this.Sign_Pass.MaxLength = 50;
             this.Sign_Pass.Name = "Sign_Pass";
+            this.Sign_Pass.PasswordChar = '*';
             this.Sign_Pass.PreventEnterBeep = true;
             this.Sign_Pass.Size = new System.Drawing.Size(213, 27);
             this.Sign_Pass.TabIndex = 5;
@@ -724,6 +726,7 @@
             this.RCV_RePas.Location = new System.Drawing.Point(20, 486);
             this.RCV_RePas.MaxLength = 50;
             this.RCV_RePas.Name = "RCV_RePas";
+            this.RCV_RePas.PasswordChar = '*';
             this.RCV_RePas.PreventEnterBeep = true;
             this.RCV_RePas.Size = new System.Drawing.Size(213, 27);
             this.RCV_RePas.TabIndex = 6;
@@ -779,6 +782,7 @@
             this.RCV_Pass.Location = new System.Drawing.Point(256, 486);
             this.RCV_Pass.MaxLength = 50;
             this.RCV_Pass.Name = "RCV_Pass";
+            this.RCV_Pass.PasswordChar = '*';
             this.RCV_Pass.PreventEnterBeep = true;
             this.RCV_Pass.Size = new System.Drawing.Size(213, 27);
             this.RCV_Pass.TabIndex = 5;
