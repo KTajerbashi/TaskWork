@@ -34,3 +34,4 @@ C:\Users\Tajer\Desktop\Visual Studio\Repository Project\Windows Application\Task
 C:\Users\Tajer\Desktop\Visual Studio\Repository Project\Windows Application\TaskWork\Infrastrucure.Library\obj\Debug\Infrastructure.Library.csproj.CopyComplete
 C:\Users\Tajer\Desktop\Visual Studio\Repository Project\Windows Application\TaskWork\Infrastrucure.Library\obj\Debug\Infrastrucure.Library.dll
 C:\Users\Tajer\Desktop\Visual Studio\Repository Project\Windows Application\TaskWork\Infrastrucure.Library\obj\Debug\Infrastrucure.Library.pdb
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\Windows Application\TaskWork\Infrastrucure.Library\obj\Debug\Infrastrucure.Library.Migrations.Migration1.resources

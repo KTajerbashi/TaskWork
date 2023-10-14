@@ -55,7 +55,7 @@
     <Compile Include="BaseServices\IBaseDatabaseRepository.cs" />
     <Compile Include="BaseServices\IGenericRepository.cs" />
     <Compile Include="BaseView\IBaseView.cs" />
-    <Compile Include="Controller\UserController.cs" />
+    <Compile Include="Extentions\PasswordHash.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\Application\SamanehService.cs" />
     <Compile Include="Services\Task\TaskWorkService.cs" />

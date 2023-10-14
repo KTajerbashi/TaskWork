@@ -1,4 +1,6 @@
 ﻿using Domain.Model;
+using Infrastrucure.Library;
+using System;
 using System.Data.Entity;
 
 namespace DAL.DatabaseContext
@@ -19,8 +21,9 @@ namespace DAL.DatabaseContext
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            //modelBuilder.Entity<Samana>().HasIndex(c => c.Title).IsUnique();
+            modelBuilder.Entity<Samaneh>().HasIndex(c => c.Title).IsUnique();
         }
+
     }
 
 

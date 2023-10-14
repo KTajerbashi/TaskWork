@@ -76,7 +76,7 @@ namespace TicketApplication.UserControls
             ListTasks.DataSource = _baseDatabase.Execute(QUERY);
             CountLBL.Text = ListTasks.Rows.Count.ToString();
         }
-       
+
         private void TaskList_Load(object sender, EventArgs e)
         {
             ShowDataGridView(99);
@@ -95,7 +95,10 @@ namespace TicketApplication.UserControls
 
         private void ListTasks_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            ID = Convert.ToInt32(ListTasks.Rows[ListTasks.CurrentRow.Index].Cells["آیدی"].Value);
+            if (ListTasks.Rows.Count > 0)
+            {
+                ID = Convert.ToInt32(ListTasks.Rows[ListTasks.CurrentRow.Index].Cells["آیدی"].Value);
+            }
         }
 
         private void ListTasks_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)

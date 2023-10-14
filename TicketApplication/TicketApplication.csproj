@@ -39,9 +39,11 @@
     <ApplicationIcon>task_document_paper_descending_priority_tasks_documents_icon_142254 %281%29.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AnalogClock, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="DateTimeSelector">
       <HintPath>..\..\..\..\..\HDD\Ico\cp (Www.SourceBaran.Com)\datetimeselector\bin\Debug\DateTimeSelector.dll</HintPath>
     </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -67,11 +69,19 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="TxtProNetV3, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Authentication\AppUser.cs" />
     <Compile Include="Common\Paging.cs" />
     <Compile Include="Common\SaamanehShowGrid.cs" />
     <Compile Include="Common\TaskWorkShowGird.cs" />
+    <Compile Include="Forms\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MessageBoxForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,12 +107,6 @@
     </Compile>
     <Compile Include="UserControls\CartablePanel.Designer.cs">
       <DependentUpon>CartablePanel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\LoginPanel.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\LoginPanel.Designer.cs">
-      <DependentUpon>LoginPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\ReportList.cs">
       <SubType>UserControl</SubType>
@@ -134,6 +138,9 @@
     <Compile Include="UserControls\TaskList.Designer.cs">
       <DependentUpon>TaskList.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\MessageBoxForm.resx">
       <DependentUpon>MessageBoxForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -155,9 +162,6 @@
     </Compile>
     <EmbeddedResource Include="UserControls\CartablePanel.resx">
       <DependentUpon>CartablePanel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\LoginPanel.resx">
-      <DependentUpon>LoginPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ReportList.resx">
       <DependentUpon>ReportList.cs</DependentUpon>
@@ -211,6 +215,27 @@
     <Content Include="Extentions\GlassButton.dll" />
     <Content Include="Extentions\Persia.dll" />
     <Content Include="Extentions\TxtProNetV3.dll" />
+    <Content Include="Image\Activity.png" />
+    <Content Include="Image\Alarm.png" />
+    <Content Include="Image\Chat.png" />
+    <Content Include="Image\Console.png" />
+    <Content Include="Image\Dollor Icon.png" />
+    <Content Include="Image\Exit-1.png" />
+    <Content Include="Image\Icon.png" />
+    <Content Include="Image\icons8-alarm-48.png" />
+    <Content Include="Image\info.png" />
+    <Content Include="Image\invoce.png" />
+    <Content Include="Image\invoice.png" />
+    <Content Include="Image\LOGO 1.png" />
+    <Content Include="Image\LOGO 2.png" />
+    <Content Include="Image\Reminder icon.png" />
+    <Content Include="Image\sell.png" />
+    <Content Include="Image\settings.png" />
+    <Content Include="Image\ShutDown.png" />
+    <Content Include="Image\User.ico" />
+    <Content Include="Image\User1.png" />
+    <Content Include="Image\Users.png" />
+    <Content Include="Image\UserSetting.png" />
     <Content Include="task_document_paper_descending_priority_tasks_documents_icon_142254 %281%29.ico" />
   </ItemGroup>
   <ItemGroup />

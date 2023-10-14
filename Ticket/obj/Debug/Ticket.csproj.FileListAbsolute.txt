@@ -1,8 +1,0 @@
-C:\Users\tajer-k\Desktop\Ticket\Ticket\Ticket\bin\Debug\Ticket.dll
-C:\Users\tajer-k\Desktop\Ticket\Ticket\Ticket\bin\Debug\Ticket.pdb
-C:\Users\tajer-k\Desktop\Ticket\Ticket\Ticket\obj\Debug\Ticket.csproj.AssemblyReference.cache
-C:\Users\tajer-k\Desktop\Ticket\Ticket\Ticket\obj\Debug\Ticket.UserControl1.resources
-C:\Users\tajer-k\Desktop\Ticket\Ticket\Ticket\obj\Debug\Ticket.csproj.GenerateResource.cache
-C:\Users\tajer-k\Desktop\Ticket\Ticket\Ticket\obj\Debug\Ticket.csproj.CoreCompileInputs.cache
-C:\Users\tajer-k\Desktop\Ticket\Ticket\Ticket\obj\Debug\Ticket.dll
-C:\Users\tajer-k\Desktop\Ticket\Ticket\Ticket\obj\Debug\Ticket.pdb

@@ -24,4 +24,10 @@ namespace BusinessLogic.Library
         public DateTime UpdateDate { get; set; }
         public long UpdateBy { get; set; }
     }
+    public class Result<T>
+    {
+        public T Data { get; set; }
+        public bool Success { get; set; }
+        public string Message { get; set; }
+    }
 }

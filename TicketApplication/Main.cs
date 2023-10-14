@@ -29,13 +29,6 @@ namespace TicketApplication
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         public static extern bool ReleaseCapture();
-        TaskList taskList;
-        ReportList reportList;
-        SaamanehPanel saamaneh;
-        CartablePanel cartable;
-        SampaPanel sampa;
-        Timer timer = new Timer();
-
         public Main()
         {
 
@@ -53,7 +46,7 @@ namespace TicketApplication
 
         private void ReportBtn_Click(object sender, EventArgs e)
         {
-            reportList = new ReportList();
+            ReportList reportList = new ReportList();
             if (MainPanel.Controls.Count > 0)
             {
                 MainPanel.Controls[0].Dispose();
@@ -73,7 +66,9 @@ namespace TicketApplication
 
         private void Main_Load(object sender, EventArgs e)
         {
-            cartable = new CartablePanel();
+            LoginForm loginForm = new LoginForm();
+            loginForm.ShowDialog();
+            CartablePanel cartable = new CartablePanel();
             if (MainPanel.Controls.Count > 0)
             {
                 MainPanel.Controls[0].Dispose();
@@ -83,7 +78,7 @@ namespace TicketApplication
 
         private void TasksListBtn_Click(object sender, EventArgs e)
         {
-            taskList = new TaskList();
+            TaskList taskList = new TaskList();
             if (MainPanel.Controls.Count > 0)
             {
                 MainPanel.Controls[0].Dispose();
@@ -107,7 +102,7 @@ namespace TicketApplication
 
         private void SaamanehBtn_Click(object sender, EventArgs e)
         {
-            saamaneh = new SaamanehPanel();
+            SaamanehPanel saamaneh = new SaamanehPanel();
             if (MainPanel.Controls.Count > 0)
             {
                 MainPanel.Controls[0].Dispose();
@@ -117,7 +112,7 @@ namespace TicketApplication
 
         private void button1_Click(object sender, EventArgs e)
         {
-            cartable = new CartablePanel();
+            CartablePanel cartable = new CartablePanel();
             if (MainPanel.Controls.Count > 0)
             {
                 MainPanel.Controls[0].Dispose();
@@ -127,12 +122,22 @@ namespace TicketApplication
 
         private void SampaBtn_Click(object sender, EventArgs e)
         {
-            sampa = new SampaPanel();
+            SampaPanel sampa = new SampaPanel();
             if (MainPanel.Controls.Count > 0)
             {
                 MainPanel.Controls[0].Dispose();
             }
             MainPanel.Controls.Add(sampa);
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            RoadMapPanel roadMap = new RoadMapPanel();
+            if (MainPanel.Controls.Count > 0)
+            {
+                MainPanel.Controls[0].Dispose();
+            }
+            MainPanel.Controls.Add(roadMap);
         }
     }
 }
