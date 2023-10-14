@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogic.Library", "Ap
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.Library", "Domain.Library\Domain.Library.csproj", "{7C9E93BC-5043-43EF-9363-C8B0BCD7767B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastrucure.Library", "Infrastrucure.Library\Infrastrucure.Library.csproj", "{907D32E4-3CA4-437E-87F0-8B7FB8D7F98F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Library", "Infrastrucure.Library\Infrastructure.Library.csproj", "{907D32E4-3CA4-437E-87F0-8B7FB8D7F98F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

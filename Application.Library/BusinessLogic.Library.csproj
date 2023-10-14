@@ -67,9 +67,9 @@
       <Project>{7C9E93BC-5043-43EF-9363-C8B0BCD7767B}</Project>
       <Name>Domain.Library</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Infrastrucure.Library\Infrastrucure.Library.csproj">
+    <ProjectReference Include="..\Infrastrucure.Library\Infrastructure.Library.csproj">
       <Project>{907D32E4-3CA4-437E-87F0-8B7FB8D7F98F}</Project>
-      <Name>Infrastrucure.Library</Name>
+      <Name>Infrastructure.Library</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

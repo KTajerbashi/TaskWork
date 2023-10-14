@@ -98,11 +98,23 @@
     <Compile Include="UserControls\CartablePanel.Designer.cs">
       <DependentUpon>CartablePanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\LoginPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\LoginPanel.Designer.cs">
+      <DependentUpon>LoginPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ReportList.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\ReportList.Designer.cs">
       <DependentUpon>ReportList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\RoadMapPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\RoadMapPanel.Designer.cs">
+      <DependentUpon>RoadMapPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\SaamanehPanel.cs">
       <SubType>UserControl</SubType>
@@ -144,8 +156,14 @@
     <EmbeddedResource Include="UserControls\CartablePanel.resx">
       <DependentUpon>CartablePanel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\LoginPanel.resx">
+      <DependentUpon>LoginPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ReportList.resx">
       <DependentUpon>ReportList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\RoadMapPanel.resx">
+      <DependentUpon>RoadMapPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\SaamanehPanel.resx">
       <DependentUpon>SaamanehPanel.cs</DependentUpon>

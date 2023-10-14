@@ -23,5 +23,13 @@ namespace Domain.Model
         [ForeignKey(nameof(Samaneh))]
         public long SamanaID { get; set; }
         public Samaneh Samaneh { get; set; }
+
+        [ForeignKey(nameof(User))]
+        public long? UserID { get; set; }
+        public User User { get; set; }
+
+        [ForeignKey(nameof(Role))]
+        public long? RoleId { get; set; }
+        public Role Role { get; set; }
     }
 }

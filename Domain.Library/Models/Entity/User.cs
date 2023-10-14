@@ -14,6 +14,7 @@ namespace Domain.Model
         public string Phone { get; set; }
         public string Address { get; set; }
 
-        public virtual ICollection<UserRole> UserRole { get; set; }
+        public virtual ICollection<UserRole> UserRoles { get; set; }
+        public virtual ICollection<TaskWork> TaskWorks { get; set; }
     }
 }
