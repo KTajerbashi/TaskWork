@@ -5,5 +5,8 @@ Domain.Library/obj
 Application.Library/bin
 Application.Library/obj
 
+Infrastructure.Library/bin
+Infrastructure.Library/obj
+
 TicketApplication/bin
 TicketApplication/obj
