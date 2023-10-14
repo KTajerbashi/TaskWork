@@ -1,23 +1,16 @@
-﻿namespace Infrastrucure.Library.Migrations
+﻿
+using Domain.Model;
+using Infrastructure.Library.DatabaseContext.Models;
+using System;
+using System.Collections.Generic;
+using System.Data.Entity;
+
+namespace Infrastructure.Library.DatabaseContext
 {
-    using Domain.Model;
-    using Infrastructure.Library.DatabaseContext.Models;
-    using System;
-    using System.Collections.Generic;
-    using System.Data.Entity;
-    using System.Data.Entity.Migrations;
-    using System.Linq;
-
-    internal sealed class Configuration : DbMigrationsConfiguration<Infrastructure.Library.DatabaseContext.DatabaseContext>
+    public class DatabaseSeedData : DropCreateDatabaseIfModelChanges<DatabaseContext>
     {
-        public Configuration()
+        protected override void Seed(DatabaseContext context)
         {
-            AutomaticMigrationsEnabled = false;
-        }
-
-        protected override void Seed(Infrastructure.Library.DatabaseContext.DatabaseContext context)
-        {
-            //  This method will be called after migrating to the latest version.
             var Roles = new List<Role>
             {
                  new Role
@@ -51,7 +44,8 @@
                     CreatedByUserRoleID = 0,
                 },
             };
-            var Users =
+            var Users = new List<User>
+            {
                 new User
                 {
                     ID = 0,
@@ -71,18 +65,12 @@
                     CreatedByUserRoleID = 0,
                     UpdateBy = 0,
                     UpdateDate = DateTime.Now,
-                };
-            if (context.Users.Count() == 0)
-            {
-                context.Users.Add(Users);
-            }
-            if (context.Roles.Count() == 0)
-            {
-                context.Roles.AddRange(Roles);
-            }
+                },
+            };
+            Roles.ForEach(x => context.Roles.Add(x));
+            Users.ForEach(x => context.Users.Add(x));
+            context.SaveChanges();
             base.Seed(context);
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method
-            //  to avoid creating duplicate seed data.
         }
     }
 }

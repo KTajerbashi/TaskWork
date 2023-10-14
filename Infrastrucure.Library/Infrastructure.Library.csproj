@@ -51,16 +51,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DatabaseContext\DatabaseContext.cs" />
-    <Compile Include="DatabaseContext\SeedDataDBInitializer.cs" />
+    <Compile Include="DbContextData\DatabaseContext.cs" />
+    <Compile Include="DbContextData\DatabaseSeedData.cs" />
+    <Compile Include="DbContextData\Models\SamanaSeed.cs" />
+    <Compile Include="DbContextData\Models\RolesSeed.cs" />
     <Compile Include="DatabaseService\BaseQuery.cs" />
-    <Compile Include="Migrations\202310141713303_Initial_Database.cs" />
-    <Compile Include="Migrations\202310141713303_Initial_Database.designer.cs">
-      <DependentUpon>202310141713303_Initial_Database.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202310142050094_Migration1.cs" />
-    <Compile Include="Migrations\202310142050094_Migration1.designer.cs">
-      <DependentUpon>202310142050094_Migration1.cs</DependentUpon>
+    <Compile Include="Migrations\202310142252161__initialDatabase.cs" />
+    <Compile Include="Migrations\202310142252161__initialDatabase.designer.cs">
+      <DependentUpon>202310142252161__initialDatabase.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -78,11 +76,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202310141713303_Initial_Database.resx">
-      <DependentUpon>202310141713303_Initial_Database.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202310142050094_Migration1.resx">
-      <DependentUpon>202310142050094_Migration1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202310142252161__initialDatabase.resx">
+      <DependentUpon>202310142252161__initialDatabase.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

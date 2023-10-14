@@ -1,9 +1,7 @@
 ﻿using Domain.Model;
-using Infrastrucure.Library;
-using System;
 using System.Data.Entity;
 
-namespace DAL.DatabaseContext
+namespace Infrastructure.Library.DatabaseContext
 {
     public class DatabaseContext : DbContext
     {
@@ -22,24 +20,9 @@ namespace DAL.DatabaseContext
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Samaneh>().HasIndex(c => c.Title).IsUnique();
+            modelBuilder.Configurations.Add(new UserMap());
         }
 
-    }
-
-
-    public class UserRolesSeed
-    {
-        public const string Admin = "ادمین";
-        public const string Operator = "اپراتور";
-        public const string User = "کاربر";
-    }
-
-    public class SamanaSeed
-    {
-        public const string Commission = "سامانه کمیسیون بند 20";
-        public const string BPMS = "سامانه BPMS";
-        public const string Estate = "سامانه املاک";
-        public const string Seraj = "سامانه سراج";
     }
 }
 

@@ -28,10 +28,10 @@ C:\Users\Tajer\Desktop\Visual Studio\Repository Project\Windows Application\Task
 C:\Users\Tajer\Desktop\Visual Studio\Repository Project\Windows Application\TaskWork\Infrastrucure.Library\bin\Debug\EntityFramework.xml
 C:\Users\Tajer\Desktop\Visual Studio\Repository Project\Windows Application\TaskWork\Infrastrucure.Library\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Tajer\Desktop\Visual Studio\Repository Project\Windows Application\TaskWork\Infrastrucure.Library\obj\Debug\Infrastructure.Library.csproj.AssemblyReference.cache
-C:\Users\Tajer\Desktop\Visual Studio\Repository Project\Windows Application\TaskWork\Infrastrucure.Library\obj\Debug\Infrastrucure.Library.Migrations.Initial_Database.resources
-C:\Users\Tajer\Desktop\Visual Studio\Repository Project\Windows Application\TaskWork\Infrastrucure.Library\obj\Debug\Infrastructure.Library.csproj.GenerateResource.cache
 C:\Users\Tajer\Desktop\Visual Studio\Repository Project\Windows Application\TaskWork\Infrastrucure.Library\obj\Debug\Infrastructure.Library.csproj.CoreCompileInputs.cache
 C:\Users\Tajer\Desktop\Visual Studio\Repository Project\Windows Application\TaskWork\Infrastrucure.Library\obj\Debug\Infrastructure.Library.csproj.CopyComplete
 C:\Users\Tajer\Desktop\Visual Studio\Repository Project\Windows Application\TaskWork\Infrastrucure.Library\obj\Debug\Infrastrucure.Library.dll
 C:\Users\Tajer\Desktop\Visual Studio\Repository Project\Windows Application\TaskWork\Infrastrucure.Library\obj\Debug\Infrastrucure.Library.pdb
-C:\Users\Tajer\Desktop\Visual Studio\Repository Project\Windows Application\TaskWork\Infrastrucure.Library\obj\Debug\Infrastrucure.Library.Migrations.Migration1.resources
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\Windows Application\TaskWork\Infrastrucure.Library\bin\Debug\Domain.Library.dll.config
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\Windows Application\TaskWork\Infrastrucure.Library\obj\Debug\Infrastrucure.Library.Migrations._initialDatabase.resources
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\Windows Application\TaskWork\Infrastrucure.Library\obj\Debug\Infrastructure.Library.csproj.GenerateResource.cache
