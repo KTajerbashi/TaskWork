@@ -1,12 +1,16 @@
 ﻿using BusinessLogic.Library.Extentions;
 using Domain.Model;
 using Infrastructure.Library.DatabaseContext.Models;
+using System;
+using System.Data.Entity.Core.Metadata.Edm;
 using System.Linq;
 
 namespace BusinessLogic.Library
 {
     public class UserService : GenericRepository<User>
     {
+        private UserRoleService roleService = new UserRoleService();
+
         public Result<User> IsExit(string username, string pass)
         {
             if (string.IsNullOrEmpty(username) || string.IsNullOrWhiteSpace(username) || string.IsNullOrEmpty(pass) || string.IsNullOrWhiteSpace(pass))
@@ -42,9 +46,11 @@ namespace BusinessLogic.Library
                     };
                 }
             }
-            var res = _context.Users.Any(x =>
-            x.Username == username && PasswordHash.ValidatePassword(pass,x.Password) && x.IsDeleted == false && x.IsActive == true
-            );
+            var hash = PasswordHash.CreateHash(username);
+            var res = _context.Users.Any(x =>   x.Username == username &&
+                                                    hash == x.Password &&
+                                                    x.IsDeleted == false &&
+                                                    x.IsActive == true);
             if (!res)
             {
                 return new Result<User>()
@@ -60,6 +66,7 @@ namespace BusinessLogic.Library
                 Success = true,
                 Message = "کابر مورد نظر با موفقیت پیدا شد"
             };
+
         }
         public Result<User> IsMatchAny(User user)
         {
@@ -92,7 +99,7 @@ namespace BusinessLogic.Library
                 {
                     Success = false,
                     Data = user,
-                    Message = "اطلاعات شما تکراری است"
+                    Message = "نام کاربری یا ایمیل یا شماره تلفن تکراری است"
                 };
             }
             else
@@ -113,6 +120,30 @@ namespace BusinessLogic.Library
                 Data = _context.Users.Include("UserRoles").Single(x => x.Username == username),
                 Success = true,
                 Message = "اطلاعات کاربر به درستی واکشی شد"
+            };
+        }
+        public Result<User> InsertWithRole(User user, Role role)
+        {            
+            base.Insert(user);
+            base.Save();
+            var UserRole = new UserRole
+            {
+                IsActive=true,
+                IsDeleted=false,
+                CreateDate=DateTime.Now,
+                Title=role.Title,
+                Description=role.Description,
+                CreatedByUserRoleID = user.CreatedByUserRoleID,
+                RoleID = role.ID,
+                UserID=user.ID,
+            };
+            roleService.Insert(UserRole);
+            roleService.Save();
+            return new Result<User>
+            {
+                Success = true,
+                Data = user,
+                Message = ""
             };
         }
     }

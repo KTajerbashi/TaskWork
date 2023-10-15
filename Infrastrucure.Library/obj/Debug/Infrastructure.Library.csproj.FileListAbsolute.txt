@@ -32,3 +32,5 @@ D:\Visual Studio\GitProject\TaskWork\Infrastrucure.Library\obj\Debug\Infrastrucu
 D:\Visual Studio\GitProject\TaskWork\Infrastrucure.Library\obj\Debug\Infrastructure.Library.csproj.GenerateResource.cache
 C:\Users\Tajer\Desktop\Visual Studio\Repository Project\Windows Application\TaskWork\Infrastrucure.Library\obj\Debug\Infrastrucure.Library.Migrations._init_1.resources
 C:\Users\Tajer\Desktop\Visual Studio\Repository Project\Windows Application\TaskWork\Infrastrucure.Library\obj\Debug\Infrastructure.Library.csproj.GenerateResource.cache
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\Windows Application\TaskWork\Infrastrucure.Library\obj\Debug\Infrastrucure.Library.Migrations.__Data.resources
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\Windows Application\TaskWork\Infrastrucure.Library\obj\Debug\Infrastrucure.Library.Migrations._init_unique.resources

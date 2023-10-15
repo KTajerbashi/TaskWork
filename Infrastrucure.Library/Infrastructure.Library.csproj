@@ -60,6 +60,14 @@
     <Compile Include="Migrations\202310151757108__init_1.designer.cs">
       <DependentUpon>202310151757108__init_1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202310151959201___Data.cs" />
+    <Compile Include="Migrations\202310151959201___Data.designer.cs">
+      <DependentUpon>202310151959201___Data.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202310152005559__init_unique.cs" />
+    <Compile Include="Migrations\202310152005559__init_unique.designer.cs">
+      <DependentUpon>202310152005559__init_unique.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Validator\GroupValidator.cs" />
@@ -78,6 +86,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202310151757108__init_1.resx">
       <DependentUpon>202310151757108__init_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202310151959201___Data.resx">
+      <DependentUpon>202310151959201___Data.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202310152005559__init_unique.resx">
+      <DependentUpon>202310152005559__init_unique.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

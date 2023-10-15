@@ -20,6 +20,13 @@ namespace Infrastructure.Library.DatabaseContext
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Samaneh>().HasIndex(c => c.Title).IsUnique();
+            modelBuilder.Entity<User>().HasIndex(c => new
+            {
+                c.Username,
+                c.Email,
+                c.Phone,
+            }).IsUnique();
+            modelBuilder.Entity<Role>().HasIndex(c => c.Title).IsUnique();
             modelBuilder.Configurations.Add(new UserMap());
         }
 

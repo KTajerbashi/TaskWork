@@ -1,4 +1,5 @@
-﻿using BusinessLogic.Library;
+﻿
+using BusinessLogic.Library;
 using BusinessLogic.Library.Extentions;
 using Domain.Model;
 using System;
@@ -28,19 +29,21 @@ namespace TicketApplication.Forms
         int y = 500;
         Timer T1 = new Timer();
         private UserService _userService;
+        private RoleService _roleService;
         public LoginForm()
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
             _userService = new UserService();
+            _roleService = new RoleService();
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
             //StartTimer1();
         }
-        
+
         private void label1_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -48,17 +51,25 @@ namespace TicketApplication.Forms
 
         private void LoginBtn_Click(object sender, EventArgs e)
         {
-            var res = _userService.IsExit(UsernameTxt.Text, PasswordTxt.Text);
-            LoginMsg.Text = res.Message;
-            if (res.Success)
+            try
             {
-                StartTimer1();
+                var res = _userService.IsExit(UsernameTxt.Text, PasswordTxt.Text);
+                LoginMsg.Text = res.Message;
+                if (res.Success)
+                {
+                    StartTimer1();
+                }
+                else
+                {
+                    //UsernameTxt.Text = "";
+                    PasswordTxt.Text = "";
+                    PasswordTxt.Focus();
+                }
             }
-            else
+            catch
             {
-                //UsernameTxt.Text = "";
-                PasswordTxt.Text = "";
-                PasswordTxt.Focus();
+                LoginMsg.Text = "مجدد تلاش کنید";
+                throw;
             }
         }
         private void SignInBtn_Click(object sender, EventArgs e)
@@ -89,20 +100,12 @@ namespace TicketApplication.Forms
                 SignInMsg.Text = $"ایمیل معتبر وارد کنید";
                 Sign_Email.Focus();
             }
-            else if (
-                string.IsNullOrEmpty(Sign_Username.Text) ||
-                string.IsNullOrWhiteSpace(Sign_Username.Text) ||
-                Sign_Username.Text.Count() < 8 ||
-                Sign_Username.Text.Trim() == "")
+            else if (string.IsNullOrEmpty(Sign_Username.Text) || string.IsNullOrWhiteSpace(Sign_Username.Text) || Sign_Username.Text.Count() < 8 || Sign_Username.Text.Trim() == "")
             {
-                SignInMsg.Text = $"نام کاربری معتبر وارد کنید";
+                SignInMsg.Text = $"نام کاربری معتبر وارد کنید حداقل 8 کارکتر باشد";
                 Sign_Username.Focus();
             }
-            else if (
-                string.IsNullOrEmpty(Sign_Pass.Text) ||
-                string.IsNullOrWhiteSpace(Sign_Pass.Text) ||
-                Sign_Pass.Text.Count() < 8 ||
-                Sign_Pass.Text.Trim() == "")
+            else if (string.IsNullOrEmpty(Sign_Pass.Text) || string.IsNullOrWhiteSpace(Sign_Pass.Text) || Sign_Pass.Text.Count() < 8 || Sign_Pass.Text.Trim() == "")
             {
                 SignInMsg.Text = $"رمز باید حرف,عدد و حداقل 8 کارکتر باشد ";
                 Sign_Pass.Focus();
@@ -124,10 +127,10 @@ namespace TicketApplication.Forms
                 entity.Username = Sign_Username.Text.Trim();
                 entity.Password = PasswordHash.CreateHash(Sign_Pass.Text.Trim());
                 var res =_userService.IsMatchAny(entity);
+
                 if (res.Success)
                 {
-                    _userService.Insert(entity);
-                    _userService.Save();
+                    _userService.InsertWithRole(entity, _roleService.GetById(3));
                     SignInMsg.Text = res.Message;
                     CloseSignInPanel();
                 }
@@ -211,6 +214,7 @@ namespace TicketApplication.Forms
 
             }
             T1.Stop();
+            SetCurrentUserData(Sign_Username.Text);
             this.Close();
         }
         private void CloseLoginPanel()
@@ -222,13 +226,23 @@ namespace TicketApplication.Forms
                 this.Location = new Point(this.Location.X, y);
             }
             T1.Stop();
-            var user = _userService.GetByUserName(UsernameTxt.Text);
+
+            SetCurrentUserData(UsernameTxt.Text);
+            this.Hide();
+        }
+
+        private void Sign_Phone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void SetCurrentUserData(string username)
+        {
+            var user = _userService.GetByUserName(username);
             AppUser.Username = user.Data.Username;
             AppUser.UserID = user.Data.ID;
             AppUser.UserRoleID = user.Data.UserRoles.FirstOrDefault(x => x.UserID == user.Data.ID).ID;
-            AppUser.RoleID =  user.Data.UserRoles.FirstOrDefault(x => x.UserID == user.Data.ID).Role.ID;
-
-            this.Hide();
+            AppUser.RoleID = user.Data.UserRoles.FirstOrDefault(x => x.UserID == user.Data.ID).Role.ID;
         }
     }
 }

@@ -497,6 +497,7 @@
             this.Sign_Phone.Size = new System.Drawing.Size(213, 27);
             this.Sign_Phone.TabIndex = 2;
             this.Sign_Phone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Sign_Phone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Sign_Phone_KeyPress);
             // 
             // label9
             // 
@@ -556,7 +557,6 @@
             this.Sign_Name.Location = new System.Drawing.Point(259, 300);
             this.Sign_Name.MaxLength = 50;
             this.Sign_Name.Name = "Sign_Name";
-            this.Sign_Name.PasswordChar = '*';
             this.Sign_Name.PreventEnterBeep = true;
             this.Sign_Name.Size = new System.Drawing.Size(213, 27);
             this.Sign_Name.TabIndex = 0;
