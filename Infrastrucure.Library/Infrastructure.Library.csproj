@@ -56,9 +56,9 @@
     <Compile Include="DbContextData\Models\SamanaSeed.cs" />
     <Compile Include="DbContextData\Models\RolesSeed.cs" />
     <Compile Include="DatabaseService\BaseQuery.cs" />
-    <Compile Include="Migrations\202310150622342__Init_Migration.cs" />
-    <Compile Include="Migrations\202310150622342__Init_Migration.designer.cs">
-      <DependentUpon>202310150622342__Init_Migration.cs</DependentUpon>
+    <Compile Include="Migrations\202310151757108__init_1.cs" />
+    <Compile Include="Migrations\202310151757108__init_1.designer.cs">
+      <DependentUpon>202310151757108__init_1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -76,8 +76,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202310150622342__Init_Migration.resx">
-      <DependentUpon>202310150622342__Init_Migration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202310151757108__init_1.resx">
+      <DependentUpon>202310151757108__init_1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

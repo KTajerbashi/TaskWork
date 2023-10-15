@@ -1,20 +1,14 @@
-﻿using Microsoft.AspNet.Identity.EntityFramework;
-using System;
-using System.Runtime.Serialization;
-using System.Security.Principal;
-using System.Threading.Tasks;
-
-namespace TicketApplication.Authentication
+﻿namespace TicketApplication.Authentication
 {
-    public class AppUser : WindowsIdentity
+    public static class AppUser
     {
-        public AppUser(SerializationInfo info, StreamingContext context) : base(info, context)
-        {
-        }
-    }
-    public class CurrentUser: IdentityUser
-    {
+        public static long UserID { get; set; }
+        public static long UserRoleID { get; set; }
+        public static long RoleID { get; set; }
+        public static string Username { get; set; }
+        public static string Name { get; set; }
+        public static string DisplayName { get; set; }
+        public static string Email { get; set; }
 
     }
-
 }

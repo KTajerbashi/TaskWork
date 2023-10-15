@@ -48,7 +48,6 @@ namespace TicketApplication.Forms
 
         private void LoginBtn_Click(object sender, EventArgs e)
         {
-
             var res = _userService.IsExit(UsernameTxt.Text, PasswordTxt.Text);
             LoginMsg.Text = res.Message;
             if (res.Success)
@@ -223,6 +222,12 @@ namespace TicketApplication.Forms
                 this.Location = new Point(this.Location.X, y);
             }
             T1.Stop();
+            var user = _userService.GetByUserName(UsernameTxt.Text);
+            AppUser.Username = user.Data.Username;
+            AppUser.UserID = user.Data.ID;
+            AppUser.UserRoleID = user.Data.UserRoles.FirstOrDefault(x => x.UserID == user.Data.ID).ID;
+            AppUser.RoleID =  user.Data.UserRoles.FirstOrDefault(x => x.UserID == user.Data.ID).Role.ID;
+
             this.Hide();
         }
     }

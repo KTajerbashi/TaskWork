@@ -51,7 +51,7 @@
                     CreatedByUserRoleID = 0,
                 },
             };
-            var Users =
+            var User =
                 new User
                 {
                     ID = 0,
@@ -72,13 +72,32 @@
                     UpdateBy = 0,
                     UpdateDate = DateTime.Now,
                 };
+            var UserRole =
+                new UserRole
+                {
+                    ID = 0,
+                    RoleID=1,
+                    Title = nameof(RolesSeed.ADMIN),
+                    UserID = 0,
+                    Description = RolesSeed.ADMIN,
+                    IsActive = true,
+                    IsDeleted = false,
+                    CreateDate = DateTime.Now,
+                    CreatedByUserRoleID = 0,
+                    UpdateBy = 0,
+                    UpdateDate = DateTime.Now,
+                };
             if (context.Users.Count() == 0)
             {
-                context.Users.Add(Users);
+                context.Users.Add(User);
             }
             if (context.Roles.Count() == 0)
             {
                 context.Roles.AddRange(Roles);
+            }
+            if (context.UserRoles.Count() == 0)
+            {
+                context.UserRoles.Add(UserRole);
             }
             base.Seed(context);
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method

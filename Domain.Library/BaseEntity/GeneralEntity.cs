@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Domain.Base
 {
-    public abstract class GeneralEntity<Tkey> : BaseEntity<Tkey>
+    public abstract class GeneralEntity<Tkey> : BaseEntity
     {
         /// <summary>
         /// عنوان

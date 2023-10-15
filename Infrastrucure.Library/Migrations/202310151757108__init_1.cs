@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class _InitMigration_1 : DbMigration
+    public partial class _init_1 : DbMigration
     {
         public override void Up()
         {
@@ -14,12 +14,12 @@
                         ID = c.Long(nullable: false, identity: true),
                         Title = c.String(maxLength: 200),
                         Description = c.String(maxLength: 500),
+                        CreateDate = c.DateTime(nullable: false),
+                        CreatedByUserRoleID = c.Long(),
                         IsActive = c.Boolean(nullable: false),
                         IsDeleted = c.Boolean(nullable: false),
                         UpdateDate = c.DateTime(),
                         UpdateBy = c.Long(),
-                        CreateDate = c.DateTime(nullable: false),
-                        CreatedByUserRoleID = c.Long(nullable: false),
                     })
                 .PrimaryKey(t => t.ID);
             
@@ -38,12 +38,12 @@
                         RoleId = c.Long(),
                         Title = c.String(maxLength: 200),
                         Description = c.String(maxLength: 500),
+                        CreateDate = c.DateTime(nullable: false),
+                        CreatedByUserRoleID = c.Long(),
                         IsActive = c.Boolean(nullable: false),
                         IsDeleted = c.Boolean(nullable: false),
                         UpdateDate = c.DateTime(),
                         UpdateBy = c.Long(),
-                        CreateDate = c.DateTime(nullable: false),
-                        CreatedByUserRoleID = c.Long(nullable: false),
                     })
                 .PrimaryKey(t => t.ID)
                 .ForeignKey("SEC.Roles", t => t.RoleId)
@@ -61,12 +61,12 @@
                         Name = c.String(),
                         Title = c.String(maxLength: 200),
                         Description = c.String(maxLength: 500),
+                        CreateDate = c.DateTime(nullable: false),
+                        CreatedByUserRoleID = c.Long(),
                         IsActive = c.Boolean(nullable: false),
                         IsDeleted = c.Boolean(nullable: false),
                         UpdateDate = c.DateTime(),
                         UpdateBy = c.Long(),
-                        CreateDate = c.DateTime(nullable: false),
-                        CreatedByUserRoleID = c.Long(nullable: false),
                     })
                 .PrimaryKey(t => t.ID)
                 .Index(t => t.Title, unique: true);
@@ -86,12 +86,12 @@
                         Password = c.String(),
                         Title = c.String(maxLength: 200),
                         Description = c.String(maxLength: 500),
+                        CreateDate = c.DateTime(nullable: false),
+                        CreatedByUserRoleID = c.Long(),
                         IsActive = c.Boolean(nullable: false),
                         IsDeleted = c.Boolean(nullable: false),
                         UpdateDate = c.DateTime(),
                         UpdateBy = c.Long(),
-                        CreateDate = c.DateTime(nullable: false),
-                        CreatedByUserRoleID = c.Long(nullable: false),
                     })
                 .PrimaryKey(t => t.ID);
             
@@ -104,12 +104,12 @@
                         UserID = c.Long(),
                         Title = c.String(maxLength: 200),
                         Description = c.String(maxLength: 500),
+                        CreateDate = c.DateTime(nullable: false),
+                        CreatedByUserRoleID = c.Long(),
                         IsActive = c.Boolean(nullable: false),
                         IsDeleted = c.Boolean(nullable: false),
                         UpdateDate = c.DateTime(),
                         UpdateBy = c.Long(),
-                        CreateDate = c.DateTime(nullable: false),
-                        CreatedByUserRoleID = c.Long(nullable: false),
                     })
                 .PrimaryKey(t => t.ID)
                 .ForeignKey("SEC.Roles", t => t.RoleID)

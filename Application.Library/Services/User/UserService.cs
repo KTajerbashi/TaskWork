@@ -106,6 +106,14 @@ namespace BusinessLogic.Library
             }
 
         }
-
+        public Result<User> GetByUserName(string username)
+        {
+            return new Result<User>
+            {
+                Data = _context.Users.Include("UserRoles").Single(x => x.Username == username),
+                Success = true,
+                Message = "اطلاعات کاربر به درستی واکشی شد"
+            };
+        }
     }
 }

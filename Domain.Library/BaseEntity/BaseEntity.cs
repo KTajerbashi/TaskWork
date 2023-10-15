@@ -23,11 +23,10 @@ namespace Domain.Base
 
         [Description("آخرین کاربر ویرایش کننده")]
         public long? UpdateBy { get; set; }
-
-        public DateTime CreateDate { set; get; } = DateTime.Now;
-        public TKey CreatedByUserRoleID { set; get; }
     }
     public abstract class BaseEntity : BaseEntity<long>
     {
+        public DateTime CreateDate { set; get; } = DateTime.Now;
+        public long? CreatedByUserRoleID { set; get; }
     }
 }

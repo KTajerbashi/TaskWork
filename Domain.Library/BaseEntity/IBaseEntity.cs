@@ -5,8 +5,6 @@ namespace Domain.Base
     public interface IBaseEntity<IKey> : IEntity
     {
         IKey ID { get; set; }
-        DateTime CreateDate { set; get; }
-        IKey CreatedByUserRoleID { set; get; }
 
 
         bool IsDeleted { set; get; }
