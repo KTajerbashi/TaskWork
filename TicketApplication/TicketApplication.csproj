@@ -85,6 +85,7 @@
     <Compile Include="Common\Paging.cs" />
     <Compile Include="Common\SaamanehShowGrid.cs" />
     <Compile Include="Common\TaskWorkShowGird.cs" />
+    <Compile Include="Extentions\FormExtentions.cs" />
     <Compile Include="Forms\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>

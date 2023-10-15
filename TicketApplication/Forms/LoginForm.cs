@@ -8,6 +8,7 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using TicketApplication.Authentication;
+using TicketApplication.Extentions;
 
 namespace TicketApplication.Forms
 {
@@ -76,6 +77,7 @@ namespace TicketApplication.Forms
         {
             SignInPanel.Visible = true;
             LoginPanel.Visible = false;
+            ClearTextBoxes(this.Controls);
         }
 
         private void SaveNewUserBtn_Click(object sender, EventArgs e)
@@ -123,9 +125,9 @@ namespace TicketApplication.Forms
                 entity.Family = Sign_Family.Text;
                 entity.DisplayName = $"{entity.Name} {entity.Family}";
                 entity.Phone = Sign_Phone.Text;
-                entity.Email = Sign_Email.Text;
-                entity.Username = Sign_Username.Text.Trim();
-                entity.Password = PasswordHash.CreateHash(Sign_Pass.Text.Trim());
+                entity.Email = Sign_Email.Text.ToLower();
+                entity.Username = Sign_Username.Text.Trim().ToLower();
+                entity.Password = PasswordHash.EncodeServerName(Sign_Pass.Text.Trim());
                 var res =_userService.IsMatchAny(entity);
 
                 if (res.Success)
@@ -147,35 +149,81 @@ namespace TicketApplication.Forms
         {
             LoginPanel.Visible = true;
             SignInPanel.Visible = false;
+            ClearTextBoxes(this.Controls);
+
         }
 
         private void ForgotPass_Click(object sender, EventArgs e)
         {
             LoginPanel.Visible = false;
             RecoverPanel.Visible = true;
+            ClearTextBoxes(this.Controls);
         }
 
         private void RCV_CheckBtn_Click(object sender, EventArgs e)
         {
-            var find = true;
-            if (find)
+            var userModel = new User
             {
-                RCV_LBL_Pass1.Visible = true;
-                RCV_LBL_Pass2.Visible = true;
-                RCV_Pass.Visible = true;
-                RCV_RePas.Visible = true;
-                RCV_CheckBtn.Text = "ذخیره اطلاعات";
+                Name= RCV_Name.Text,
+                Family=RCV_Family.Text,
+                Phone= RCV_Phone.Text,
+                Email= RCV_Email.Text.ToLower(),
+                Username = RCV_Username.Text.ToLower(),
+                Password = RCV_Pass.Text,
+                UpdateBy = AppUser.UserID,
+                UpdateDate = DateTime.Now
+            };
+            if (RCV_CheckBtn.Text == "بررسی اطلاعات")
+            {
+
+                var res = _userService.Recovery(userModel);
+                if (res.Success)
+                {
+                    RCV_LBL_Pass1.Visible = true;
+                    RCV_LBL_Pass2.Visible = true;
+                    RCV_Pass.Visible = true;
+                    RCV_RePas.Visible = true;
+                    RCV_CheckBtn.Text = "ذخیره اطلاعات";
+                    RecoverMsg.Text = $"کاربر {userModel.Name} {userModel.Family} رمز جدید و درست وارد کنید";
+                }
+                else
+                {
+                    RecoverMsg.Text = "اطلاعات مورد نظر درست نمیباشد";
+                }
             }
             else
             {
-                RecoverMsg.Text = "اطلاعات مورد نظر درست نمیباشد";
+                if (!string.IsNullOrEmpty(RCV_Pass.Text.Trim())  &&  !string.IsNullOrWhiteSpace(RCV_RePas.Text.Trim()) && RCV_RePas.Text.Trim().Count() >= 8)
+                {
+                    if (RCV_Pass.Text == RCV_RePas.Text)
+                    {
+                        _userService.UpdateRecoveryPass(userModel);
+                        RCV_CheckBtn.Text = "بررسی اطلاعات";
+                        RCV_LBL_Pass1.Visible = false;
+                        RCV_LBL_Pass2.Visible = false;
+                        RCV_Pass.Visible = false;
+                        RCV_RePas.Visible = false;
+                        RecoverMsg.Text = "با موفقیت ویرایش شد";
+                        ClearTextBoxes(this.Controls);
+                    }
+                    else
+                    {
+                        RecoverMsg.Text = "رمز همخوانی ندارد";
+                    }
+                }
+                else
+                {
+                    RecoverMsg.Text = "رمز معتبر نیست";
+                }
             }
+
         }
 
         private void BackToLoginPanel_Click(object sender, EventArgs e)
         {
             RecoverPanel.Visible = false;
             LoginPanel.Visible = true;
+            ClearTextBoxes(this.Controls);
         }
 
         //  Create Timer
@@ -239,10 +287,20 @@ namespace TicketApplication.Forms
         private void SetCurrentUserData(string username)
         {
             var user = _userService.GetByUserName(username);
-            AppUser.Username = user.Data.Username;
+            AppUser.Username = user.Data.Username.ToUpper();
             AppUser.UserID = user.Data.ID;
             AppUser.UserRoleID = user.Data.UserRoles.FirstOrDefault(x => x.UserID == user.Data.ID).ID;
             AppUser.RoleID = user.Data.UserRoles.FirstOrDefault(x => x.UserID == user.Data.ID).Role.ID;
+        }
+
+        public void ClearTextBoxes(Control.ControlCollection ctrlCollection)
+        {
+            FormExtentions.ClearTextBoxes(ctrlCollection);
+        }
+
+        private void RCV_Phone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
     }
 }

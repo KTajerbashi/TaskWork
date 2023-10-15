@@ -295,7 +295,7 @@
             this.SignInPanel.Controls.Add(this.label8);
             this.SignInPanel.Controls.Add(this.pictureBox2);
             this.SignInPanel.Controls.Add(this.SaveNewUserBtn);
-            this.SignInPanel.Location = new System.Drawing.Point(937, 23);
+            this.SignInPanel.Location = new System.Drawing.Point(475, 23);
             this.SignInPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SignInPanel.Name = "SignInPanel";
             this.SignInPanel.Size = new System.Drawing.Size(495, 627);
@@ -657,7 +657,7 @@
             this.RecoverPanel.Controls.Add(this.label20);
             this.RecoverPanel.Controls.Add(this.pictureBox3);
             this.RecoverPanel.Controls.Add(this.RCV_CheckBtn);
-            this.RecoverPanel.Location = new System.Drawing.Point(13, 23);
+            this.RecoverPanel.Location = new System.Drawing.Point(475, 23);
             this.RecoverPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RecoverPanel.Name = "RecoverPanel";
             this.RecoverPanel.Size = new System.Drawing.Size(495, 627);
@@ -878,6 +878,7 @@
             this.RCV_Phone.Size = new System.Drawing.Size(213, 27);
             this.RCV_Phone.TabIndex = 2;
             this.RCV_Phone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.RCV_Phone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.RCV_Phone_KeyPress);
             // 
             // label17
             // 
@@ -925,7 +926,6 @@
             this.RCV_Name.Location = new System.Drawing.Point(256, 300);
             this.RCV_Name.MaxLength = 50;
             this.RCV_Name.Name = "RCV_Name";
-            this.RCV_Name.PasswordChar = '*';
             this.RCV_Name.PreventEnterBeep = true;
             this.RCV_Name.Size = new System.Drawing.Size(213, 27);
             this.RCV_Name.TabIndex = 0;
@@ -1011,15 +1011,14 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(25)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(1445, 679);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.RecoverPanel);
             this.Controls.Add(this.SignInPanel);
             this.Controls.Add(this.LoginPanel);
+            this.Controls.Add(this.RecoverPanel);
             this.Font = new System.Drawing.Font("IRANSansWeb", 8.999999F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "LoginForm";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginForm";
             this.Load += new System.EventHandler(this.LoginForm_Load);

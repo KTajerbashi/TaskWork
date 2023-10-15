@@ -38,22 +38,22 @@
             this.ReportBtn = new System.Windows.Forms.Button();
             this.TasksListBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.Red = new System.Windows.Forms.ProgressBar();
             this.BLACK = new System.Windows.Forms.ProgressBar();
             this.BLUE1 = new System.Windows.Forms.ProgressBar();
+            this.DateTimeLBL = new System.Windows.Forms.Label();
             this.SaamanehBtn = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.progressBar4 = new System.Windows.Forms.ProgressBar();
             this.label2 = new System.Windows.Forms.Label();
             this.progressBar5 = new System.Windows.Forms.ProgressBar();
             this.progressBar6 = new System.Windows.Forms.ProgressBar();
-            this.AsidePanel = new System.Windows.Forms.Panel();
-            this.SampaBtn = new System.Windows.Forms.Button();
-            this.progressBar2 = new System.Windows.Forms.ProgressBar();
-            this.label3 = new System.Windows.Forms.Label();
-            this.DateTimeLBL = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.progressBar2 = new System.Windows.Forms.ProgressBar();
+            this.SampaBtn = new System.Windows.Forms.Button();
             this.UsernameLBL = new System.Windows.Forms.Label();
+            this.AsidePanel = new System.Windows.Forms.Panel();
             this.AsidePanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -160,6 +160,20 @@
             this.label1.Text = "TASK WROK";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("IranNastaliq", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(9, 21);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(145, 77);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "مدیریت فعالیت";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3.UseMnemonic = false;
+            // 
             // Red
             // 
             this.Red.Location = new System.Drawing.Point(-1, 10);
@@ -183,6 +197,18 @@
             this.BLUE1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.BLUE1.Size = new System.Drawing.Size(164, 5);
             this.BLUE1.TabIndex = 15;
+            // 
+            // DateTimeLBL
+            // 
+            this.DateTimeLBL.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.DateTimeLBL.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DateTimeLBL.ForeColor = System.Drawing.Color.Transparent;
+            this.DateTimeLBL.Location = new System.Drawing.Point(3, 585);
+            this.DateTimeLBL.Name = "DateTimeLBL";
+            this.DateTimeLBL.Size = new System.Drawing.Size(155, 18);
+            this.DateTimeLBL.TabIndex = 52;
+            this.DateTimeLBL.Text = "1402/01/01 12:00:00";
+            this.DateTimeLBL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // SaamanehBtn
             // 
@@ -254,6 +280,53 @@
             this.progressBar6.TabIndex = 60;
             this.progressBar6.Value = 99;
             // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(-13, 534);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(188, 16);
+            this.progressBar1.TabIndex = 61;
+            this.progressBar1.Value = 99;
+            // 
+            // progressBar2
+            // 
+            this.progressBar2.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.progressBar2.Cursor = System.Windows.Forms.Cursors.SizeAll;
+            this.progressBar2.Location = new System.Drawing.Point(-1, 606);
+            this.progressBar2.Name = "progressBar2";
+            this.progressBar2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.progressBar2.Size = new System.Drawing.Size(164, 5);
+            this.progressBar2.TabIndex = 62;
+            // 
+            // SampaBtn
+            // 
+            this.SampaBtn.BackColor = System.Drawing.Color.MidnightBlue;
+            this.SampaBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SampaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SampaBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SampaBtn.ForeColor = System.Drawing.Color.White;
+            this.SampaBtn.Location = new System.Drawing.Point(19, 415);
+            this.SampaBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.SampaBtn.Name = "SampaBtn";
+            this.SampaBtn.Size = new System.Drawing.Size(125, 31);
+            this.SampaBtn.TabIndex = 5;
+            this.SampaBtn.Text = "مدیریت سمپا";
+            this.SampaBtn.UseVisualStyleBackColor = false;
+            this.SampaBtn.Click += new System.EventHandler(this.SampaBtn_Click);
+            // 
+            // UsernameLBL
+            // 
+            this.UsernameLBL.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.UsernameLBL.BackColor = System.Drawing.Color.Transparent;
+            this.UsernameLBL.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsernameLBL.ForeColor = System.Drawing.Color.AliceBlue;
+            this.UsernameLBL.Location = new System.Drawing.Point(1, 553);
+            this.UsernameLBL.Name = "UsernameLBL";
+            this.UsernameLBL.Size = new System.Drawing.Size(159, 22);
+            this.UsernameLBL.TabIndex = 63;
+            this.UsernameLBL.Text = "کاربر جاری";
+            this.UsernameLBL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // AsidePanel
             // 
             this.AsidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(25)))), ((int)(((byte)(82)))));
@@ -286,79 +359,6 @@
             this.AsidePanel.TabIndex = 1;
             this.AsidePanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AsidePanel_MouseDown);
             // 
-            // SampaBtn
-            // 
-            this.SampaBtn.BackColor = System.Drawing.Color.MidnightBlue;
-            this.SampaBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SampaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SampaBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SampaBtn.ForeColor = System.Drawing.Color.White;
-            this.SampaBtn.Location = new System.Drawing.Point(19, 415);
-            this.SampaBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.SampaBtn.Name = "SampaBtn";
-            this.SampaBtn.Size = new System.Drawing.Size(125, 31);
-            this.SampaBtn.TabIndex = 5;
-            this.SampaBtn.Text = "مدیریت سمپا";
-            this.SampaBtn.UseVisualStyleBackColor = false;
-            this.SampaBtn.Click += new System.EventHandler(this.SampaBtn_Click);
-            // 
-            // progressBar2
-            // 
-            this.progressBar2.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.progressBar2.Cursor = System.Windows.Forms.Cursors.SizeAll;
-            this.progressBar2.Location = new System.Drawing.Point(-1, 606);
-            this.progressBar2.Name = "progressBar2";
-            this.progressBar2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.progressBar2.Size = new System.Drawing.Size(164, 5);
-            this.progressBar2.TabIndex = 62;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("IranNastaliq", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(9, 21);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(145, 77);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "مدیریت فعالیت";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label3.UseMnemonic = false;
-            // 
-            // DateTimeLBL
-            // 
-            this.DateTimeLBL.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.DateTimeLBL.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DateTimeLBL.ForeColor = System.Drawing.Color.Transparent;
-            this.DateTimeLBL.Location = new System.Drawing.Point(3, 585);
-            this.DateTimeLBL.Name = "DateTimeLBL";
-            this.DateTimeLBL.Size = new System.Drawing.Size(155, 18);
-            this.DateTimeLBL.TabIndex = 52;
-            this.DateTimeLBL.Text = "1402/01/01 12:00:00";
-            this.DateTimeLBL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(-13, 534);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(188, 16);
-            this.progressBar1.TabIndex = 61;
-            this.progressBar1.Value = 99;
-            // 
-            // UsernameLBL
-            // 
-            this.UsernameLBL.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.UsernameLBL.BackColor = System.Drawing.Color.Transparent;
-            this.UsernameLBL.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsernameLBL.ForeColor = System.Drawing.Color.AliceBlue;
-            this.UsernameLBL.Location = new System.Drawing.Point(1, 553);
-            this.UsernameLBL.Name = "UsernameLBL";
-            this.UsernameLBL.Size = new System.Drawing.Size(159, 22);
-            this.UsernameLBL.TabIndex = 63;
-            this.UsernameLBL.Text = "کاربر جاری";
-            this.UsernameLBL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 20F);
@@ -390,22 +390,22 @@
         private System.Windows.Forms.Button ReportBtn;
         private System.Windows.Forms.Button TasksListBtn;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ProgressBar Red;
         private System.Windows.Forms.ProgressBar BLACK;
         private System.Windows.Forms.ProgressBar BLUE1;
+        private System.Windows.Forms.Label DateTimeLBL;
         private System.Windows.Forms.Button SaamanehBtn;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ProgressBar progressBar4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ProgressBar progressBar5;
         private System.Windows.Forms.ProgressBar progressBar6;
-        private System.Windows.Forms.Panel AsidePanel;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.ProgressBar progressBar2;
         private System.Windows.Forms.Button SampaBtn;
-        private System.Windows.Forms.ProgressBar progressBar1;
-        private System.Windows.Forms.Label DateTimeLBL;
         public System.Windows.Forms.Label UsernameLBL;
+        private System.Windows.Forms.Panel AsidePanel;
     }
 }
 

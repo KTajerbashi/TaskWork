@@ -2,8 +2,8 @@
 using Domain.Model;
 using Infrastructure.Library.DatabaseContext.Models;
 using System;
-using System.Data.Entity.Core.Metadata.Edm;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 
 namespace BusinessLogic.Library
 {
@@ -46,12 +46,8 @@ namespace BusinessLogic.Library
                     };
                 }
             }
-            var hash = PasswordHash.CreateHash(username);
-            var res = _context.Users.Any(x =>   x.Username == username &&
-                                                    hash == x.Password &&
-                                                    x.IsDeleted == false &&
-                                                    x.IsActive == true);
-            if (!res)
+            var use = _context.Users.Where(x => x.Username ==  username && !x.IsDeleted && x.IsActive).FirstOrDefault();
+            if (use == null)
             {
                 return new Result<User>()
                 {
@@ -59,12 +55,23 @@ namespace BusinessLogic.Library
                     Success = false,
                     Message = "کاربر مورد نظر یافت نشد"
                 };
+                
+            }
+            var de = PasswordHash.EncodeServerName(pass);
+            if (pass == PasswordHash.DecodeServerName(use.Password))
+            {
+                return new Result<User>()
+                {
+                    Data = use,
+                    Success = true,
+                    Message = "کابر مورد نظر با موفقیت پیدا شد"
+                };
             }
             return new Result<User>()
             {
-                Data = _context.Users.Single(x => x.Username == username && PasswordHash.ValidatePassword(pass, x.Password)),
-                Success = true,
-                Message = "کابر مورد نظر با موفقیت پیدا شد"
+                Data = null,
+                Success = false,
+                Message = "کاربر مورد نظر یافت نشد"
             };
 
         }
@@ -123,7 +130,7 @@ namespace BusinessLogic.Library
             };
         }
         public Result<User> InsertWithRole(User user, Role role)
-        {            
+        {
             base.Insert(user);
             base.Save();
             var UserRole = new UserRole
@@ -144,6 +151,47 @@ namespace BusinessLogic.Library
                 Success = true,
                 Data = user,
                 Message = ""
+            };
+        }
+        public Result<User> Recovery(User user)
+        {
+            var search = _context.Users.Where(x =>
+            !x.IsDeleted &&
+            x.IsActive &&
+            x.Name == user.Name &&
+            x.Family == user.Family &&
+            x.Phone == user.Phone &&
+            x.Email == user.Email &&
+            x.Username == user.Username
+            ).FirstOrDefault();
+            if (search == null)
+            {
+                return new Result<User>
+                {
+                    Data = search,
+                    Success = false,
+                    Message = "اطلاعاتی وجود ندارد"
+                };
+            }
+            return new Result<User>
+            {
+                Data = search,
+                Success = true,
+                Message = "با موفقیت دریافت شد"
+            };
+        }
+        public Result<User> UpdateRecoveryPass(User user)
+        {
+            user = _context.Users.Where(x => x.Username == user.Username).FirstOrDefault();
+            user.Password = PasswordHash.EncodeServerName(user.Password);
+            user.UpdateDate = DateTime.Now;
+            user.UpdateBy = user.UpdateBy;
+            _context.SaveChanges();
+            return new Result<User>
+            {
+                Data = user,
+                Success = true,
+                Message = "با موفقیت ویرایش شد"
             };
         }
     }
