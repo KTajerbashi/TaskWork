@@ -55,6 +55,7 @@ namespace TicketApplication.Forms
             this.Close();
         }
         private List<string> importance = new List<string>{"کم","متوسط","مهم","خیلی مهم","فوری" };
+        private List<string> typetask = new List<string>{ "-- انتخاب کنید --", "-- توسعه سامانه --","-- پشتیبانی سامانه --","-- سمپا --" };
 
         private void SaveBtn_Click(object sender, EventArgs e)
         {
@@ -73,6 +74,10 @@ namespace TicketApplication.Forms
                     ERR.Text = "توضیحات وارد کنید";
                 }
                 else if (ImportanceCombo.Text.Trim() == "" || ImportanceCombo.SelectedIndex == 0)
+                {
+                    ERR.Text = "الویت را وارد کنید";
+                }
+                else if (TypeCombo.Text.Trim() == "" || ImportanceCombo.SelectedIndex == 0)
                 {
                     ERR.Text = "الویت را وارد کنید";
                 }
@@ -121,13 +126,19 @@ namespace TicketApplication.Forms
 
         private void NewTaskForm_Load(object sender, EventArgs e)
         {
-            SaamanehCombo.Text = "---  انتخاب کنید ---";
+            FillCombo();
+            FillTypeCombo();
+            SelectCombo();
+        }
+        private void FillCombo()
+        {
             SamanehService samana = new SamanehService();
             var items = samana.GetAll().Where(x => !x.IsDeleted).ToList();
             if (TitleTaskTxt.Text.Trim().Length == 0)
             {
                 SaamanehCombo.Items.Clear();
                 ImportanceCombo.Items.Clear();
+                TypeCombo.Items.Clear();
                 SaamanehCombo.Items.Add(new ComboboxItem()
                 {
                     Text = "--- انتخاب کنید ---",
@@ -138,6 +149,7 @@ namespace TicketApplication.Forms
                     Text = "--- انتخاب کنید ---",
                     Value = 0
                 });
+
 
             }
             foreach (var item in items)
@@ -157,6 +169,21 @@ namespace TicketApplication.Forms
                 });
             }
 
+
+        }
+        private void FillTypeCombo()
+        {
+            for (int i = 0; i < typetask.Count; i++)
+            {
+                TypeCombo.Items.Add(new ComboboxItem()
+                {
+                    Text = $"{typetask[i]}",
+                    Value = Convert.ToByte(i)
+                });
+            }
+        }
+        private void SelectCombo()
+        {
             if (ImportanceCombo.Tag != null)
             {
                 int index = 0;
@@ -186,9 +213,8 @@ namespace TicketApplication.Forms
             {
                 SaamanehCombo.SelectedIndex = 0;
                 ImportanceCombo.SelectedIndex = 0;
+                TypeCombo.SelectedIndex = 0;
             }
         }
-
-
     }
 }
