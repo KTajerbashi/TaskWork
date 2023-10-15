@@ -7,13 +7,13 @@ namespace Infrastrucure.Library.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class Init_Role_User_Task : IMigrationMetadata
+    public sealed partial class _Init_Migration : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Init_Role_User_Task));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(_Init_Migration));
         
         string IMigrationMetadata.Id
         {
-            get { return "202310140858533_Init_Role_User_Task"; }
+            get { return "202310150622342__Init_Migration"; }
         }
         
         string IMigrationMetadata.Source

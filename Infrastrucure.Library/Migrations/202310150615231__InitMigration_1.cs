@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Initial_Database : DbMigration
+    public partial class _InitMigration_1 : DbMigration
     {
         public override void Up()
         {
@@ -68,7 +68,8 @@
                         CreateDate = c.DateTime(nullable: false),
                         CreatedByUserRoleID = c.Long(nullable: false),
                     })
-                .PrimaryKey(t => t.ID);
+                .PrimaryKey(t => t.ID)
+                .Index(t => t.Title, unique: true);
             
             CreateTable(
                 "SEC.Users",
@@ -81,6 +82,8 @@
                         Email = c.String(),
                         Phone = c.String(),
                         Address = c.String(),
+                        Username = c.String(),
+                        Password = c.String(),
                         Title = c.String(maxLength: 200),
                         Description = c.String(maxLength: 500),
                         IsActive = c.Boolean(nullable: false),
@@ -125,6 +128,7 @@
             DropForeignKey("BUS.TaskWorks", "RoleId", "SEC.Roles");
             DropIndex("SEC.UserRoles", new[] { "UserID" });
             DropIndex("SEC.UserRoles", new[] { "RoleID" });
+            DropIndex("BUS.Samanehs", new[] { "Title" });
             DropIndex("BUS.TaskWorks", new[] { "RoleId" });
             DropIndex("BUS.TaskWorks", new[] { "UserID" });
             DropIndex("BUS.TaskWorks", new[] { "SamanaID" });

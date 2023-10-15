@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Infrastrucure.Library.Migrations
 {
-    internal class _202310140858533_Init_Role_User_Task
+    internal class _202310121021389_init_TaskType
     {
     }
 }
