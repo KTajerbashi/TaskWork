@@ -65,9 +65,6 @@ namespace TicketApplication.UserControls
 
         private void NextBtn_Click(object sender, EventArgs e)
         {
-            if (Convert.ToInt32(ListTasks.Rows.Count.ToString().Trim()) == 23)
-            {
-            }
             Paging.Next(23, ListTasks.Rows.Count);
             ShowDataGridView(99);
         }
