@@ -56,9 +56,9 @@
             this.groupPanel1.Controls.Add(this.RecoverDbBtn);
             this.groupPanel1.Controls.Add(this.BackupBtn);
             this.groupPanel1.DisabledBackColor = System.Drawing.Color.Empty;
-            this.groupPanel1.Location = new System.Drawing.Point(1011, 3);
+            this.groupPanel1.Location = new System.Drawing.Point(3, 3);
             this.groupPanel1.Name = "groupPanel1";
-            this.groupPanel1.Size = new System.Drawing.Size(241, 654);
+            this.groupPanel1.Size = new System.Drawing.Size(1249, 87);
             // 
             // 
             // 
@@ -96,7 +96,7 @@
             this.RecoverDbBtn.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.RecoverDbBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.RecoverDbBtn.Font = new System.Drawing.Font("IRANSansWeb", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RecoverDbBtn.Location = new System.Drawing.Point(8, 72);
+            this.RecoverDbBtn.Location = new System.Drawing.Point(798, 12);
             this.RecoverDbBtn.Name = "RecoverDbBtn";
             this.RecoverDbBtn.Size = new System.Drawing.Size(218, 35);
             this.RecoverDbBtn.Style = DevComponents.DotNetBar.eDotNetBarStyle.VS2005;
@@ -110,7 +110,7 @@
             this.BackupBtn.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.BackupBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BackupBtn.Font = new System.Drawing.Font("IRANSansWeb", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BackupBtn.Location = new System.Drawing.Point(8, 31);
+            this.BackupBtn.Location = new System.Drawing.Point(1022, 12);
             this.BackupBtn.Name = "BackupBtn";
             this.BackupBtn.Size = new System.Drawing.Size(218, 35);
             this.BackupBtn.Style = DevComponents.DotNetBar.eDotNetBarStyle.VS2005;
@@ -129,9 +129,9 @@
             this.groupPanel2.Controls.Add(this.Reloding);
             this.groupPanel2.Controls.Add(this.Datagrid);
             this.groupPanel2.DisabledBackColor = System.Drawing.Color.Empty;
-            this.groupPanel2.Location = new System.Drawing.Point(3, 3);
+            this.groupPanel2.Location = new System.Drawing.Point(3, 96);
             this.groupPanel2.Name = "groupPanel2";
-            this.groupPanel2.Size = new System.Drawing.Size(1002, 654);
+            this.groupPanel2.Size = new System.Drawing.Size(1249, 561);
             // 
             // 
             // 
@@ -169,9 +169,9 @@
             this.MsgLBl.BackColor = System.Drawing.Color.Transparent;
             this.MsgLBl.Font = new System.Drawing.Font("IRANSansWeb", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MsgLBl.ForeColor = System.Drawing.Color.DarkRed;
-            this.MsgLBl.Location = new System.Drawing.Point(3, 17);
+            this.MsgLBl.Location = new System.Drawing.Point(3, 2);
             this.MsgLBl.Name = "MsgLBl";
-            this.MsgLBl.Size = new System.Drawing.Size(990, 29);
+            this.MsgLBl.Size = new System.Drawing.Size(1237, 29);
             this.MsgLBl.TabIndex = 18;
             this.MsgLBl.Text = "نکته : پشتیبان گیری نباید در درایور ویندوز ذخیره شود از یک درایور دیگر برای نگهدا" +
     "ری فایل پشتیبانی استفاده شود";
@@ -184,7 +184,7 @@
             this.CountLBL.BackColor = System.Drawing.Color.Transparent;
             this.CountLBL.Font = new System.Drawing.Font("IRANSansWeb", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CountLBL.ForeColor = System.Drawing.Color.Black;
-            this.CountLBL.Location = new System.Drawing.Point(448, 600);
+            this.CountLBL.Location = new System.Drawing.Point(571, 504);
             this.CountLBL.Name = "CountLBL";
             this.CountLBL.Size = new System.Drawing.Size(100, 29);
             this.CountLBL.TabIndex = 17;
@@ -194,7 +194,7 @@
             // 
             // NextBtn
             // 
-            this.NextBtn.Location = new System.Drawing.Point(3, 583);
+            this.NextBtn.Location = new System.Drawing.Point(3, 490);
             this.NextBtn.Name = "NextBtn";
             this.NextBtn.Size = new System.Drawing.Size(40, 40);
             this.NextBtn.TabIndex = 15;
@@ -203,7 +203,7 @@
             // 
             // PrevBtn
             // 
-            this.PrevBtn.Location = new System.Drawing.Point(49, 583);
+            this.PrevBtn.Location = new System.Drawing.Point(49, 490);
             this.PrevBtn.Name = "PrevBtn";
             this.PrevBtn.Size = new System.Drawing.Size(40, 40);
             this.PrevBtn.TabIndex = 14;
@@ -212,7 +212,7 @@
             // 
             // Reloding
             // 
-            this.Reloding.Location = new System.Drawing.Point(953, 583);
+            this.Reloding.Location = new System.Drawing.Point(1200, 490);
             this.Reloding.Name = "Reloding";
             this.Reloding.Size = new System.Drawing.Size(40, 40);
             this.Reloding.TabIndex = 8;
@@ -221,6 +221,7 @@
             // 
             // Datagrid
             // 
+            this.Datagrid.AllowUserToAddRows = false;
             this.Datagrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.Datagrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.Datagrid.BackgroundColor = System.Drawing.Color.White;
@@ -235,11 +236,11 @@
             this.Datagrid.DefaultCellStyle = dataGridViewCellStyle1;
             this.Datagrid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.Datagrid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.Datagrid.Location = new System.Drawing.Point(3, 49);
+            this.Datagrid.Location = new System.Drawing.Point(3, 34);
             this.Datagrid.Name = "Datagrid";
             this.Datagrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.Datagrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Datagrid.Size = new System.Drawing.Size(990, 531);
+            this.Datagrid.Size = new System.Drawing.Size(1237, 450);
             this.Datagrid.TabIndex = 0;
             // 
             // SearchTxt
@@ -249,11 +250,13 @@
             // 
             this.SearchTxt.Border.Class = "TextBoxBorder";
             this.SearchTxt.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.SearchTxt.Location = new System.Drawing.Point(8, 550);
+            this.SearchTxt.Font = new System.Drawing.Font("IRANSansWeb", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchTxt.Location = new System.Drawing.Point(109, 13);
             this.SearchTxt.Name = "SearchTxt";
             this.SearchTxt.PreventEnterBeep = true;
-            this.SearchTxt.Size = new System.Drawing.Size(218, 27);
+            this.SearchTxt.Size = new System.Drawing.Size(520, 34);
             this.SearchTxt.TabIndex = 2;
+            this.SearchTxt.WatermarkText = "جستجو ......";
             // 
             // SearchBtn
             // 
@@ -261,9 +264,9 @@
             this.SearchBtn.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.SearchBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SearchBtn.Font = new System.Drawing.Font("IRANSansWeb", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchBtn.Location = new System.Drawing.Point(8, 583);
+            this.SearchBtn.Location = new System.Drawing.Point(3, 12);
             this.SearchBtn.Name = "SearchBtn";
-            this.SearchBtn.Size = new System.Drawing.Size(218, 35);
+            this.SearchBtn.Size = new System.Drawing.Size(100, 35);
             this.SearchBtn.Style = DevComponents.DotNetBar.eDotNetBarStyle.VS2005;
             this.SearchBtn.TabIndex = 3;
             this.SearchBtn.Text = "جستجو";
