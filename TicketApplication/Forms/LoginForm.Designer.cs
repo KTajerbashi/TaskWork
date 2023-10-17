@@ -1016,6 +1016,7 @@
             this.Controls.Add(this.SignInPanel);
             this.Font = new System.Drawing.Font("IRANSansWeb", 8.999999F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "LoginForm";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;

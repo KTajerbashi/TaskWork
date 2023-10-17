@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using TicketApplication.Authentication;
+using TicketApplication.Extentions;
 using TicketApplication.Forms;
 using TicketApplication.UserControls;
 
@@ -67,7 +68,7 @@ namespace TicketApplication
                 MainPanel.Controls[0].Dispose();
             }
             MainPanel.Controls.Add(cartable);
-            UsernameLBL.Text = AppUser.Username;
+            UsernameLBL.Text = AppUser.DisplayName;
         }
 
         private void TasksListBtn_Click(object sender, EventArgs e)

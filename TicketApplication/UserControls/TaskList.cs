@@ -167,6 +167,9 @@ namespace TicketApplication.UserControls
                 NewTaskForm form = new NewTaskForm();
                 form.SaamanehCombo.Tag = model.SamanaID;
                 form.ImportanceCombo.Tag = (TaskImportanceType)model.ImportanceType;
+                form.TypeCombo.Tag = (TaskType)model.Type;
+                form.UserIdCombo.Tag = model.UserID;
+                form.RoleIdCombo.Tag = model.RoleId;
                 form.TitleTaskTxt.Text = model.Title;
                 form.AnswerTaskTxt.Text = model.Answer;
                 form.DetailsTaskTxt.Text = model.Description;
@@ -184,7 +187,7 @@ namespace TicketApplication.UserControls
 
         private void NextBtn_Click(object sender, EventArgs e)
         {
-            Paging.Next();
+            Paging.Next(23,ListTasks.Rows.Count);
             ShowDataGridView(99);
         }
 

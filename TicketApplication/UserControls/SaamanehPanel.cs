@@ -3,6 +3,7 @@ using Domain.Model;
 using System;
 using System.Windows.Forms;
 using TicketApplication.Common;
+using TicketApplication.Extentions;
 
 namespace TicketApplication.UserControls
 {
@@ -62,18 +63,8 @@ namespace TicketApplication.UserControls
         private void InsertBtn_Click(object sender, EventArgs e)
         {
             SamanehService _service = new SamanehService();
-            if (Int32.Parse(ID.Text) > 0)
-            {
-                //  Update
-                var model = _service.GetById(Int32.Parse(ID.Text));
-                model.Name = SmnaNameTxt.Text;
-                model.Title = SmnaTitleTxt.Text;
-                model.UpdateDate = DateTime.Now;
-                model.UpdateBy = 1;
-                model.Description = DescriptionSTxt.Text;
-                _service.Update(model);
-            }
-            else
+            
+            if (InsertBtn.Text == "ثبت")
             {
                 //  Insert
                 Samaneh entity = new Samaneh
@@ -88,9 +79,22 @@ namespace TicketApplication.UserControls
                 };
                 _service.Insert(entity);
             }
+            else
+            {
+                //  Update
+                var model = _service.GetById(Int32.Parse(ID.Text));
+                model.Name = SmnaNameTxt.Text;
+                model.Title = SmnaTitleTxt.Text;
+                model.UpdateDate = DateTime.Now;
+                model.UpdateBy = 1;
+                model.Description = DescriptionSTxt.Text;
+                _service.Update(model);
+            }
+           
             InsertBtn.Text = "ثبت";
             ID.Text = "0";
             _service.Save();
+            FormExtentions.ClearTextBoxes(this.Controls);
             ShowDataGridView(0);
         }
 
@@ -115,7 +119,7 @@ namespace TicketApplication.UserControls
 
         private void NextBtn_Click(object sender, EventArgs e)
         {
-            Paging.Next();
+            Paging.Next(23,SaamanehDG.Rows.Count);
             ShowDataGridView(0);
         }
 

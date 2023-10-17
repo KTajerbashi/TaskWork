@@ -30,6 +30,8 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.SearchBtn = new DevComponents.DotNetBar.ButtonX();
+            this.SearchTxt = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.RecoverDbBtn = new DevComponents.DotNetBar.ButtonX();
             this.BackupBtn = new DevComponents.DotNetBar.ButtonX();
             this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
@@ -39,8 +41,6 @@
             this.PrevBtn = new Glass.GlassButton();
             this.Reloding = new Glass.GlassButton();
             this.Datagrid = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.SearchTxt = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.SearchBtn = new DevComponents.DotNetBar.ButtonX();
             this.groupPanel1.SuspendLayout();
             this.groupPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Datagrid)).BeginInit();
@@ -49,8 +49,8 @@
             // groupPanel1
             // 
             this.groupPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.groupPanel1.CanvasColor = System.Drawing.SystemColors.Control;
-            this.groupPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.groupPanel1.CanvasColor = System.Drawing.Color.Transparent;
+            this.groupPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2013;
             this.groupPanel1.Controls.Add(this.SearchBtn);
             this.groupPanel1.Controls.Add(this.SearchTxt);
             this.groupPanel1.Controls.Add(this.RecoverDbBtn);
@@ -90,6 +90,34 @@
             this.groupPanel1.TabIndex = 0;
             this.groupPanel1.Text = "پشتیبان گیری";
             // 
+            // SearchBtn
+            // 
+            this.SearchBtn.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.SearchBtn.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.SearchBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SearchBtn.Font = new System.Drawing.Font("IRANSansWeb", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchBtn.Location = new System.Drawing.Point(3, 12);
+            this.SearchBtn.Name = "SearchBtn";
+            this.SearchBtn.Size = new System.Drawing.Size(100, 35);
+            this.SearchBtn.Style = DevComponents.DotNetBar.eDotNetBarStyle.VS2005;
+            this.SearchBtn.TabIndex = 3;
+            this.SearchBtn.Text = "جستجو";
+            // 
+            // SearchTxt
+            // 
+            // 
+            // 
+            // 
+            this.SearchTxt.Border.Class = "TextBoxBorder";
+            this.SearchTxt.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.SearchTxt.Font = new System.Drawing.Font("IRANSansWeb", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchTxt.Location = new System.Drawing.Point(109, 13);
+            this.SearchTxt.Name = "SearchTxt";
+            this.SearchTxt.PreventEnterBeep = true;
+            this.SearchTxt.Size = new System.Drawing.Size(327, 34);
+            this.SearchTxt.TabIndex = 2;
+            this.SearchTxt.WatermarkText = "جستجو ......";
+            // 
             // RecoverDbBtn
             // 
             this.RecoverDbBtn.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
@@ -120,8 +148,8 @@
             // 
             // groupPanel2
             // 
-            this.groupPanel2.CanvasColor = System.Drawing.SystemColors.Control;
-            this.groupPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.groupPanel2.CanvasColor = System.Drawing.Color.Transparent;
+            this.groupPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2013;
             this.groupPanel2.Controls.Add(this.MsgLBl);
             this.groupPanel2.Controls.Add(this.CountLBL);
             this.groupPanel2.Controls.Add(this.NextBtn);
@@ -135,9 +163,9 @@
             // 
             // 
             // 
-            this.groupPanel2.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.groupPanel2.Style.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(89)))), ((int)(((byte)(135)))), ((int)(((byte)(214)))));
+            this.groupPanel2.Style.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.groupPanel2.Style.BackColorGradientAngle = 90;
-            this.groupPanel2.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
             this.groupPanel2.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
             this.groupPanel2.Style.BorderBottomWidth = 1;
             this.groupPanel2.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
@@ -167,11 +195,11 @@
             // 
             this.MsgLBl.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.MsgLBl.BackColor = System.Drawing.Color.Transparent;
-            this.MsgLBl.Font = new System.Drawing.Font("IRANSansWeb", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MsgLBl.Font = new System.Drawing.Font("IRANSansWeb", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MsgLBl.ForeColor = System.Drawing.Color.DarkRed;
-            this.MsgLBl.Location = new System.Drawing.Point(3, 2);
+            this.MsgLBl.Location = new System.Drawing.Point(3, 12);
             this.MsgLBl.Name = "MsgLBl";
-            this.MsgLBl.Size = new System.Drawing.Size(1237, 29);
+            this.MsgLBl.Size = new System.Drawing.Size(1237, 19);
             this.MsgLBl.TabIndex = 18;
             this.MsgLBl.Text = "نکته : پشتیبان گیری نباید در درایور ویندوز ذخیره شود از یک درایور دیگر برای نگهدا" +
     "ری فایل پشتیبانی استفاده شود";
@@ -242,34 +270,6 @@
             this.Datagrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Datagrid.Size = new System.Drawing.Size(1237, 450);
             this.Datagrid.TabIndex = 0;
-            // 
-            // SearchTxt
-            // 
-            // 
-            // 
-            // 
-            this.SearchTxt.Border.Class = "TextBoxBorder";
-            this.SearchTxt.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.SearchTxt.Font = new System.Drawing.Font("IRANSansWeb", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchTxt.Location = new System.Drawing.Point(109, 13);
-            this.SearchTxt.Name = "SearchTxt";
-            this.SearchTxt.PreventEnterBeep = true;
-            this.SearchTxt.Size = new System.Drawing.Size(520, 34);
-            this.SearchTxt.TabIndex = 2;
-            this.SearchTxt.WatermarkText = "جستجو ......";
-            // 
-            // SearchBtn
-            // 
-            this.SearchBtn.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.SearchBtn.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.SearchBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SearchBtn.Font = new System.Drawing.Font("IRANSansWeb", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchBtn.Location = new System.Drawing.Point(3, 12);
-            this.SearchBtn.Name = "SearchBtn";
-            this.SearchBtn.Size = new System.Drawing.Size(100, 35);
-            this.SearchBtn.Style = DevComponents.DotNetBar.eDotNetBarStyle.VS2005;
-            this.SearchBtn.TabIndex = 3;
-            this.SearchBtn.Text = "جستجو";
             // 
             // BackupPanel
             // 

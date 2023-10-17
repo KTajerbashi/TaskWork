@@ -46,25 +46,23 @@
             this.button1 = new System.Windows.Forms.Button();
             this.progressBar4 = new System.Windows.Forms.ProgressBar();
             this.label2 = new System.Windows.Forms.Label();
-            this.progressBar5 = new System.Windows.Forms.ProgressBar();
             this.progressBar6 = new System.Windows.Forms.ProgressBar();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.progressBar2 = new System.Windows.Forms.ProgressBar();
             this.SampaBtn = new System.Windows.Forms.Button();
             this.UsernameLBL = new System.Windows.Forms.Label();
             this.AsidePanel = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.DbBackupBtn = new System.Windows.Forms.PictureBox();
             this.LockScreenBtn = new System.Windows.Forms.PictureBox();
+            this.DbBackupBtn = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.AsidePanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DbBackupBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.LockScreenBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DbBackupBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // MainPanel
             // 
-            this.MainPanel.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.MainPanel.BackColor = System.Drawing.Color.White;
             this.MainPanel.Location = new System.Drawing.Point(10, 8);
             this.MainPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MainPanel.Name = "MainPanel";
@@ -142,7 +140,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.Font = new System.Drawing.Font("Algerian", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label1.Location = new System.Drawing.Point(-7, 161);
+            this.label1.Location = new System.Drawing.Point(-7, 147);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(176, 38);
             this.label1.TabIndex = 7;
@@ -253,29 +251,13 @@
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // progressBar5
-            // 
-            this.progressBar5.Location = new System.Drawing.Point(-13, 153);
-            this.progressBar5.Name = "progressBar5";
-            this.progressBar5.Size = new System.Drawing.Size(188, 5);
-            this.progressBar5.TabIndex = 59;
-            this.progressBar5.Value = 99;
-            // 
             // progressBar6
             // 
-            this.progressBar6.Location = new System.Drawing.Point(-13, 202);
+            this.progressBar6.Location = new System.Drawing.Point(-13, 185);
             this.progressBar6.Name = "progressBar6";
             this.progressBar6.Size = new System.Drawing.Size(188, 5);
             this.progressBar6.TabIndex = 60;
             this.progressBar6.Value = 99;
-            // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(-13, 534);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(188, 16);
-            this.progressBar1.TabIndex = 61;
-            this.progressBar1.Value = 99;
             // 
             // progressBar2
             // 
@@ -325,9 +307,7 @@
             this.AsidePanel.Controls.Add(this.UsernameLBL);
             this.AsidePanel.Controls.Add(this.SampaBtn);
             this.AsidePanel.Controls.Add(this.progressBar2);
-            this.AsidePanel.Controls.Add(this.progressBar1);
             this.AsidePanel.Controls.Add(this.progressBar6);
-            this.AsidePanel.Controls.Add(this.progressBar5);
             this.AsidePanel.Controls.Add(this.label2);
             this.AsidePanel.Controls.Add(this.progressBar4);
             this.AsidePanel.Controls.Add(this.button1);
@@ -350,18 +330,18 @@
             this.AsidePanel.TabIndex = 0;
             this.AsidePanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AsidePanel_MouseDown);
             // 
-            // pictureBox1
+            // LockScreenBtn
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(61, 617);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 64;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.LockScreenBtn.BackColor = System.Drawing.Color.Transparent;
+            this.LockScreenBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.LockScreenBtn.Image = ((System.Drawing.Image)(resources.GetObject("LockScreenBtn.Image")));
+            this.LockScreenBtn.Location = new System.Drawing.Point(4, 617);
+            this.LockScreenBtn.Name = "LockScreenBtn";
+            this.LockScreenBtn.Size = new System.Drawing.Size(40, 40);
+            this.LockScreenBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.LockScreenBtn.TabIndex = 66;
+            this.LockScreenBtn.TabStop = false;
+            this.LockScreenBtn.Click += new System.EventHandler(this.LockScreenBtn_Click);
             // 
             // DbBackupBtn
             // 
@@ -376,18 +356,18 @@
             this.DbBackupBtn.TabStop = false;
             this.DbBackupBtn.Click += new System.EventHandler(this.DbBackupBtn_Click);
             // 
-            // LockScreenBtn
+            // pictureBox1
             // 
-            this.LockScreenBtn.BackColor = System.Drawing.Color.Transparent;
-            this.LockScreenBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.LockScreenBtn.Image = ((System.Drawing.Image)(resources.GetObject("LockScreenBtn.Image")));
-            this.LockScreenBtn.Location = new System.Drawing.Point(4, 617);
-            this.LockScreenBtn.Name = "LockScreenBtn";
-            this.LockScreenBtn.Size = new System.Drawing.Size(40, 40);
-            this.LockScreenBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.LockScreenBtn.TabIndex = 66;
-            this.LockScreenBtn.TabStop = false;
-            this.LockScreenBtn.Click += new System.EventHandler(this.LockScreenBtn_Click);
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(61, 617);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 64;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Main
             // 
@@ -407,9 +387,9 @@
             this.Text = "صفحه اصلی";
             this.Load += new System.EventHandler(this.Main_Load);
             this.AsidePanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DbBackupBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.LockScreenBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DbBackupBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -431,9 +411,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ProgressBar progressBar4;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ProgressBar progressBar5;
         private System.Windows.Forms.ProgressBar progressBar6;
-        private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.ProgressBar progressBar2;
         private System.Windows.Forms.Button SampaBtn;
         public System.Windows.Forms.Label UsernameLBL;

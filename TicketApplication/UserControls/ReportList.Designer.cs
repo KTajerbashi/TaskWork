@@ -34,7 +34,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.SearchTxt = new System.Windows.Forms.TextBox();
             this.SearchBtn = new System.Windows.Forms.Button();
             this.FTDateBtn = new System.Windows.Forms.Button();
             this.PrevBtn = new Glass.GlassButton();
@@ -43,21 +42,22 @@
             this.ListTasks = new System.Windows.Forms.DataGridView();
             this.CountLBL = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.SearchTxt = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ListTasks)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.SearchTxt);
             this.groupBox1.Controls.Add(this.ToDate);
             this.groupBox1.Controls.Add(this.FromDate);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.SearchTxt);
             this.groupBox1.Controls.Add(this.SearchBtn);
             this.groupBox1.Controls.Add(this.FTDateBtn);
-            this.groupBox1.ForeColor = System.Drawing.Color.Black;
+            this.groupBox1.ForeColor = System.Drawing.Color.RoyalBlue;
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -91,7 +91,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.Font = new System.Drawing.Font("IRANSansWeb", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.ForeColor = System.Drawing.Color.RoyalBlue;
             this.label3.Location = new System.Drawing.Point(915, 21);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 29);
@@ -105,7 +105,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.Font = new System.Drawing.Font("IRANSansWeb", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.ForeColor = System.Drawing.Color.RoyalBlue;
             this.label2.Location = new System.Drawing.Point(1170, 21);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 29);
@@ -119,22 +119,13 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.Font = new System.Drawing.Font("IRANSansWeb", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.ForeColor = System.Drawing.Color.RoyalBlue;
             this.label1.Location = new System.Drawing.Point(442, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(73, 29);
             this.label1.TabIndex = 9;
             this.label1.Text = "جستجو :";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // SearchTxt
-            // 
-            this.SearchTxt.BackColor = System.Drawing.Color.White;
-            this.SearchTxt.Location = new System.Drawing.Point(82, 23);
-            this.SearchTxt.Name = "SearchTxt";
-            this.SearchTxt.Size = new System.Drawing.Size(354, 27);
-            this.SearchTxt.TabIndex = 8;
-            this.SearchTxt.Text = "جستجو ...";
             // 
             // SearchBtn
             // 
@@ -214,7 +205,7 @@
             this.CountLBL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.CountLBL.BackColor = System.Drawing.Color.Transparent;
             this.CountLBL.Font = new System.Drawing.Font("IRANSansWeb", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CountLBL.ForeColor = System.Drawing.Color.Black;
+            this.CountLBL.ForeColor = System.Drawing.Color.RoyalBlue;
             this.CountLBL.Location = new System.Drawing.Point(98, 620);
             this.CountLBL.Name = "CountLBL";
             this.CountLBL.Size = new System.Drawing.Size(100, 29);
@@ -228,7 +219,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("IRANSansWeb", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.ForeColor = System.Drawing.Color.RoyalBlue;
             this.label4.Location = new System.Drawing.Point(204, 620);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(100, 29);
@@ -236,6 +227,21 @@
             this.label4.Text = "تعداد رکورد";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label4.UseMnemonic = false;
+            // 
+            // SearchTxt
+            // 
+            // 
+            // 
+            // 
+            this.SearchTxt.Border.Class = "TextBoxBorder";
+            this.SearchTxt.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.SearchTxt.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.SearchTxt.Location = new System.Drawing.Point(82, 23);
+            this.SearchTxt.Name = "SearchTxt";
+            this.SearchTxt.PreventEnterBeep = true;
+            this.SearchTxt.Size = new System.Drawing.Size(364, 27);
+            this.SearchTxt.TabIndex = 16;
+            this.SearchTxt.WatermarkText = "جستجو ...";
             // 
             // ReportList
             // 
@@ -263,7 +269,6 @@
 
         #endregion
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox SearchTxt;
         private System.Windows.Forms.Button SearchBtn;
         private System.Windows.Forms.Button FTDateBtn;
         private System.Windows.Forms.Label label1;
@@ -277,5 +282,6 @@
         public System.Windows.Forms.DataGridView ListTasks;
         private System.Windows.Forms.Label CountLBL;
         private System.Windows.Forms.Label label4;
+        private DevComponents.DotNetBar.Controls.TextBoxX SearchTxt;
     }
 }

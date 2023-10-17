@@ -39,7 +39,6 @@
             this.NotDeliverBtn = new System.Windows.Forms.Button();
             this.DeliverBtn = new System.Windows.Forms.Button();
             this.SearchBtn = new System.Windows.Forms.Button();
-            this.SearchTxt = new System.Windows.Forms.TextBox();
             this.AlphabetBtn = new System.Windows.Forms.Button();
             this.NotPassBtn = new System.Windows.Forms.Button();
             this.PassedBtn = new System.Windows.Forms.Button();
@@ -54,6 +53,7 @@
             this.Reloding = new Glass.GlassButton();
             this.label1 = new System.Windows.Forms.Label();
             this.CountLBL = new System.Windows.Forms.Label();
+            this.SearchTxt = new DevComponents.DotNetBar.Controls.TextBoxX();
             ((System.ComponentModel.ISupportInitialize)(this.ListTasks)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.StripMenu.SuspendLayout();
@@ -99,11 +99,11 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.SearchTxt);
             this.groupBox1.Controls.Add(this.SortDateBtn);
             this.groupBox1.Controls.Add(this.NotDeliverBtn);
             this.groupBox1.Controls.Add(this.DeliverBtn);
             this.groupBox1.Controls.Add(this.SearchBtn);
-            this.groupBox1.Controls.Add(this.SearchTxt);
             this.groupBox1.Controls.Add(this.AlphabetBtn);
             this.groupBox1.Controls.Add(this.NotPassBtn);
             this.groupBox1.Controls.Add(this.PassedBtn);
@@ -183,18 +183,6 @@
             this.SearchBtn.Text = "جستجو";
             this.SearchBtn.UseVisualStyleBackColor = false;
             this.SearchBtn.Click += new System.EventHandler(this.SearchBtn_Click);
-            // 
-            // SearchTxt
-            // 
-            this.SearchTxt.BackColor = System.Drawing.Color.White;
-            this.SearchTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.SearchTxt.Font = new System.Drawing.Font("IRANSansWeb", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchTxt.ForeColor = System.Drawing.Color.Black;
-            this.SearchTxt.Location = new System.Drawing.Point(129, 24);
-            this.SearchTxt.Name = "SearchTxt";
-            this.SearchTxt.Size = new System.Drawing.Size(204, 27);
-            this.SearchTxt.TabIndex = 8;
-            this.SearchTxt.Text = "جستجو ...";
             // 
             // AlphabetBtn
             // 
@@ -365,6 +353,21 @@
             this.CountLBL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.CountLBL.UseMnemonic = false;
             // 
+            // SearchTxt
+            // 
+            // 
+            // 
+            // 
+            this.SearchTxt.Border.Class = "TextBoxBorder";
+            this.SearchTxt.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.SearchTxt.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.SearchTxt.Location = new System.Drawing.Point(129, 24);
+            this.SearchTxt.Name = "SearchTxt";
+            this.SearchTxt.PreventEnterBeep = true;
+            this.SearchTxt.Size = new System.Drawing.Size(218, 27);
+            this.SearchTxt.TabIndex = 17;
+            this.SearchTxt.WatermarkText = "جستجو ...";
+            // 
             // TaskList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 20F);
@@ -384,7 +387,6 @@
             this.Load += new System.EventHandler(this.TaskList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ListTasks)).EndInit();
             this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.StripMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -392,7 +394,6 @@
 
         #endregion
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox SearchTxt;
         private System.Windows.Forms.Button AlphabetBtn;
         private System.Windows.Forms.Button NotPassBtn;
         private System.Windows.Forms.Button PassedBtn;
@@ -412,5 +413,6 @@
         private System.Windows.Forms.Button NotDeliverBtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label CountLBL;
+        private DevComponents.DotNetBar.Controls.TextBoxX SearchTxt;
     }
 }

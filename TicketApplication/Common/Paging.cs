@@ -13,9 +13,12 @@
             }
         }
 
-        public void Next()
+        public void Next(int max, int count)
         {
-            Page++;
+            if (count < max)
+            {
+                Page++;
+            }
         }
         public string Order(int skip, int take = 23)
         {

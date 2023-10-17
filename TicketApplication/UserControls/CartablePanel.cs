@@ -142,8 +142,8 @@ namespace TicketApplication.UserControls
                     TaskAddDescBtn.BackColor = System.Drawing.Color.FromArgb(0, 0, 51);
                     TaskAddDescBtn.ForeColor = System.Drawing.Color.White;
                     DescriptionTxt.Visible = true;
-
                 }
+                TaskDescriptionLBL.Text = DescriptionTxt.Text;
             }
             else
             {
@@ -164,8 +164,8 @@ namespace TicketApplication.UserControls
                     _service.Save();
                     AnswerTxt.Visible = false;
                     TaskAnswerBtn.Text = "ارایه پاسخ";
-                    TaskAnswerBtn.ForeColor = System.Drawing.Color.Black;
-                    TaskAnswerBtn.BackColor = System.Drawing.Color.FromArgb(255, 255, 255);
+                    TaskAnswerBtn.ForeColor = System.Drawing.Color.White;
+                    TaskAnswerBtn.BackColor = System.Drawing.Color.SteelBlue;
                 }
                 else
                 {
@@ -175,6 +175,7 @@ namespace TicketApplication.UserControls
                     TaskAnswerBtn.ForeColor = System.Drawing.Color.White;
                     AnswerTxt.Visible = true;
                 }
+                TaskAnswerLBL.Text = AnswerTxt.Text;
             }
             else
             {

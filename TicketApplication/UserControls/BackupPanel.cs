@@ -30,11 +30,11 @@ namespace TicketApplication.UserControls
 
             if (type == 0)  // ShowAll
             {
-                QUERY = Show.ShowAll(Paging.Order(Paging.Page));
+                QUERY = Show.ShowAll(Paging.Order(Paging.Page,20));
             }
             else // ShowAll
             {
-                QUERY = Show.ShowAll(Paging.Order(Paging.Page));
+                QUERY = Show.ShowAll(Paging.Order(Paging.Page,20));
             }
 
             Datagrid.DataSource = _baseDatabase.Execute(QUERY);
@@ -110,7 +110,7 @@ namespace TicketApplication.UserControls
         {
             if (Convert.ToInt32(Datagrid.Rows.Count.ToString().Trim()) == 23)
             {
-                Paging.Next();
+                Paging.Next(20, int.Parse(CountLBL.Text));
             }
             ShowDataGridView(99);
         }

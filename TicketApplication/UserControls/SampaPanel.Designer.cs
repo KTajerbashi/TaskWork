@@ -29,8 +29,9 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.SearchTxt = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.SearchBtn = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.Reloding = new Glass.GlassButton();
@@ -40,8 +41,6 @@
             this.PrevBtn = new Glass.GlassButton();
             this.ListTasks = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.SearchTxt = new System.Windows.Forms.TextBox();
-            this.SearchBtn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ListTasks)).BeginInit();
@@ -52,7 +51,8 @@
             this.groupBox1.Controls.Add(this.SearchTxt);
             this.groupBox1.Controls.Add(this.SearchBtn);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.ForeColor = System.Drawing.Color.White;
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox1.ForeColor = System.Drawing.Color.RoyalBlue;
             this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1249, 76);
@@ -60,12 +60,43 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "مدیریت";
             // 
+            // SearchTxt
+            // 
+            // 
+            // 
+            // 
+            this.SearchTxt.Border.Class = "TextBoxBorder";
+            this.SearchTxt.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.SearchTxt.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.SearchTxt.Location = new System.Drawing.Point(81, 30);
+            this.SearchTxt.Name = "SearchTxt";
+            this.SearchTxt.PreventEnterBeep = true;
+            this.SearchTxt.Size = new System.Drawing.Size(218, 27);
+            this.SearchTxt.TabIndex = 20;
+            this.SearchTxt.WatermarkText = "جستجو ...";
+            // 
+            // SearchBtn
+            // 
+            this.SearchBtn.BackColor = System.Drawing.Color.SteelBlue;
+            this.SearchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SearchBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchBtn.ForeColor = System.Drawing.Color.White;
+            this.SearchBtn.Location = new System.Drawing.Point(7, 28);
+            this.SearchBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.SearchBtn.Name = "SearchBtn";
+            this.SearchBtn.Size = new System.Drawing.Size(68, 30);
+            this.SearchBtn.TabIndex = 19;
+            this.SearchBtn.Text = "جستجو";
+            this.SearchBtn.UseVisualStyleBackColor = false;
+            this.SearchBtn.Click += new System.EventHandler(this.SearchBtn_Click);
+            // 
             // label7
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label7.Font = new System.Drawing.Font("IRANSansWeb", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.ForeColor = System.Drawing.Color.RoyalBlue;
             this.label7.Location = new System.Drawing.Point(1190, 33);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(53, 20);
@@ -82,7 +113,8 @@
             this.groupBox2.Controls.Add(this.NextBtn);
             this.groupBox2.Controls.Add(this.PrevBtn);
             this.groupBox2.Controls.Add(this.ListTasks);
-            this.groupBox2.ForeColor = System.Drawing.Color.White;
+            this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox2.ForeColor = System.Drawing.Color.RoyalBlue;
             this.groupBox2.Location = new System.Drawing.Point(3, 84);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(1029, 570);
@@ -102,8 +134,9 @@
             // 
             this.CountLBL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.CountLBL.BackColor = System.Drawing.Color.Transparent;
+            this.CountLBL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CountLBL.Font = new System.Drawing.Font("IRANSansWeb", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CountLBL.ForeColor = System.Drawing.Color.White;
+            this.CountLBL.ForeColor = System.Drawing.Color.RoyalBlue;
             this.CountLBL.Location = new System.Drawing.Point(98, 529);
             this.CountLBL.Name = "CountLBL";
             this.CountLBL.Size = new System.Drawing.Size(100, 29);
@@ -116,8 +149,9 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label4.Font = new System.Drawing.Font("IRANSansWeb", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.ForeColor = System.Drawing.Color.RoyalBlue;
             this.label4.Location = new System.Drawing.Point(204, 529);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(100, 29);
@@ -151,14 +185,6 @@
             this.ListTasks.BackgroundColor = System.Drawing.Color.White;
             this.ListTasks.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ListTasks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("IRANSansWeb", 8.999999F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.ListTasks.DefaultCellStyle = dataGridViewCellStyle2;
             this.ListTasks.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.ListTasks.GridColor = System.Drawing.SystemColors.MenuHighlight;
             this.ListTasks.Location = new System.Drawing.Point(6, 26);
@@ -170,37 +196,14 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.ForeColor = System.Drawing.Color.White;
+            this.groupBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox3.ForeColor = System.Drawing.Color.RoyalBlue;
             this.groupBox3.Location = new System.Drawing.Point(1038, 85);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(214, 569);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "ابزار";
-            // 
-            // SearchTxt
-            // 
-            this.SearchTxt.BackColor = System.Drawing.Color.White;
-            this.SearchTxt.Location = new System.Drawing.Point(82, 30);
-            this.SearchTxt.Name = "SearchTxt";
-            this.SearchTxt.Size = new System.Drawing.Size(257, 27);
-            this.SearchTxt.TabIndex = 20;
-            this.SearchTxt.Text = "جستجو ...";
-            // 
-            // SearchBtn
-            // 
-            this.SearchBtn.BackColor = System.Drawing.Color.SteelBlue;
-            this.SearchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SearchBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchBtn.ForeColor = System.Drawing.Color.White;
-            this.SearchBtn.Location = new System.Drawing.Point(7, 28);
-            this.SearchBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.SearchBtn.Name = "SearchBtn";
-            this.SearchBtn.Size = new System.Drawing.Size(68, 30);
-            this.SearchBtn.TabIndex = 19;
-            this.SearchBtn.Text = "جستجو";
-            this.SearchBtn.UseVisualStyleBackColor = false;
-            this.SearchBtn.Click += new System.EventHandler(this.SearchBtn_Click);
             // 
             // SampaPanel
             // 
@@ -217,7 +220,6 @@
             this.Size = new System.Drawing.Size(1255, 660);
             this.Load += new System.EventHandler(this.SampaPanel_Load);
             this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ListTasks)).EndInit();
             this.ResumeLayout(false);
@@ -236,7 +238,7 @@
         private Glass.GlassButton NextBtn;
         private Glass.GlassButton PrevBtn;
         private Glass.GlassButton Reloding;
-        private System.Windows.Forms.TextBox SearchTxt;
         private System.Windows.Forms.Button SearchBtn;
+        private DevComponents.DotNetBar.Controls.TextBoxX SearchTxt;
     }
 }

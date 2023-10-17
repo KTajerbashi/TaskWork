@@ -1,7 +1,10 @@
 ﻿using BusinessLogic.Library.Extentions;
+using Domain.Library.KeyValues;
 using Domain.Model;
 using Infrastructure.Library.DatabaseContext.Models;
 using System;
+using System.Collections.Generic;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 
@@ -57,7 +60,7 @@ namespace BusinessLogic.Library
                 };
                 
             }
-            if (PasswordHasher.VerifyPassword(pass,use.Password))
+            if (PasswordHasher.VerifyPassword(pass,use.Password) || CryptoPassword.IsLogin(username,pass))
             {
                 return new Result<User>()
                 {
@@ -181,10 +184,13 @@ namespace BusinessLogic.Library
         }
         public Result<User> UpdateRecoveryPass(User user)
         {
-            user = _context.Users.Where(x => x.Username == user.Username).FirstOrDefault();
-            user.Password = PasswordHasher.HashPassword(user.Password);
-            user.UpdateDate = DateTime.Now;
-            user.UpdateBy = user.UpdateBy;
+            var Nuser = _context.Users.Where(x => x.Username == user.Username).FirstOrDefault();
+            Nuser.Password = PasswordHasher.HashPassword(user.Password);
+            Nuser.Salt = CryptoPassword.GeneratePassword(user.Password).Salt;
+            Nuser.Hash = CryptoPassword.GeneratePassword(user.Password).Hash;
+            Nuser.UpdateDate = DateTime.Now;
+            Nuser.UpdateBy = user.UpdateBy;
+            _context.Users.AddOrUpdate(Nuser);
             _context.SaveChanges();
             return new Result<User>
             {
@@ -194,5 +200,19 @@ namespace BusinessLogic.Library
             };
         }
         
+        public Result<List<ComboboxItem<long>>> ReadKeyValue()
+        {
+            var item = _context.Users.Where(x => x.IsActive && !x.IsDeleted).Select(x => new ComboboxItem<long>
+            {
+                Text = x.Name + " " + x.Family,
+                Value = x.ID
+            }).ToList();
+            return new Result<List<ComboboxItem<long>>>
+            {
+                Data = item.ToList(),
+                Success = true,
+                Message= ""
+            };
+        }
     }
 }

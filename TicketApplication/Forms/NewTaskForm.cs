@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using TicketApplication.Authentication;
 using TicketApplication.UserControls;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
@@ -54,8 +55,20 @@ namespace TicketApplication.Forms
         {
             this.Close();
         }
-        private List<string> importance = new List<string>{"کم","متوسط","مهم","خیلی مهم","فوری" };
-        private List<string> typetask = new List<string>{ "-- انتخاب کنید --", "-- توسعه سامانه --","-- پشتیبانی سامانه --","-- سمپا --" };
+        private List<ComboboxItem<int>> TypeTask = new List<ComboboxItem<int>>{
+            new ComboboxItem<int>{ Text = "-- انتخاب کنید --" ,Value = 0},
+            new ComboboxItem<int>{ Text = "-- توسعه سامانه --" ,Value = 1},
+            new ComboboxItem<int>{ Text = "-- پشتیبانی سامانه --" ,Value = 2},
+            new ComboboxItem<int>{ Text = "-- سمپا --" ,Value = 3},
+        };
+        private List<ComboboxItem<int>>  ImportanceTask = new List<ComboboxItem<int>>{
+            new ComboboxItem<int>{ Text = "-- انتخاب کنید --" ,Value = 0},
+            new ComboboxItem<int>{ Text = "-- پایین --" ,Value = 1},
+            new ComboboxItem<int>{ Text = "-- متوسط --" ,Value = 2},
+            new ComboboxItem<int>{ Text = "-- بالا --" ,Value = 3},
+            new ComboboxItem<int>{ Text = "-- فوری --" ,Value = 4},
+            new ComboboxItem<int>{ Text = "-- خیلی فوری --" ,Value = 5},
+        };
 
         private void SaveBtn_Click(object sender, EventArgs e)
         {
@@ -79,15 +92,21 @@ namespace TicketApplication.Forms
                 }
                 else if (TypeCombo.Text.Trim() == "" || ImportanceCombo.SelectedIndex == 0)
                 {
-                    ERR.Text = "الویت را وارد کنید";
+                    ERR.Text = "نوع تسک را وارد کنید";
+                }
+                else if (UserIdCombo.Text.Trim() == "" || UserIdCombo.SelectedIndex == 0)
+                {
+                    ERR.Text = "نوع تسک را وارد کنید";
                 }
                 else
                 {
 
                     TaskWorkService service = new TaskWorkService();
-                    var SID =((ComboboxItem)SaamanehCombo.SelectedItem).Value;
-                    var ImpID =((ComboboxItem)ImportanceCombo.SelectedItem).Value;
-
+                    var SID =((ComboboxItem < long >)SaamanehCombo.SelectedItem).Value;
+                    var ImpID =((ComboboxItem < long >)ImportanceCombo.SelectedItem).Value;
+                    var typeID =((ComboboxItem < long >)TypeCombo.SelectedItem).Value;
+                    var userID =((ComboboxItem < long >)UserIdCombo.SelectedItem).Value;
+                    var roleId =((ComboboxItem < long >)RoleIdCombo.SelectedItem).Value;
 
                     if (ID.Text == "0")
                     {
@@ -96,21 +115,27 @@ namespace TicketApplication.Forms
                         entity.Answer = AnswerTaskTxt.Text;
                         entity.Description = DetailsTaskTxt.Text;
                         entity.SamanaID = SID;
-                        entity.CreatedByUserRoleID = 1;
                         entity.ImportanceType = (TaskImportanceType)ImpID;
+                        entity.Type = (TaskType)typeID;
+                        entity.UserID = userID;
+                        entity.RoleId = roleId;
+                        entity.SamanaID = SID;
+                        entity.CreatedByUserRoleID = AppUser.UserRoleID;
                         service.Insert(entity);
                     }
                     else
                     {
                         TaskWork entity = service.GetById(long.Parse(ID.Text));
                         entity.Title = TitleTaskTxt.Text;
-                        entity.Description = DetailsTaskTxt.Text;
                         entity.Answer = AnswerTaskTxt.Text;
+                        entity.Description = DetailsTaskTxt.Text;
                         entity.SamanaID = SID;
                         entity.ImportanceType = (TaskImportanceType)ImpID;
-                        entity.CreatedByUserRoleID = 1;
-                        entity.UpdateBy = 1;
-                        entity.UpdateDate = DateTime.Now;
+                        entity.Type = (TaskType)typeID;
+                        entity.UserID = userID;
+                        entity.RoleId = roleId;
+                        entity.SamanaID = SID;
+                        entity.CreatedByUserRoleID = AppUser.UserRoleID;
                         service.Update(entity);
                     }
                     service.Save();
@@ -126,83 +151,74 @@ namespace TicketApplication.Forms
 
         private void NewTaskForm_Load(object sender, EventArgs e)
         {
-            FillCombo();
+            FillSaamanehCombo();
+            FillImportanceCombo();
             FillTypeCombo();
-            SelectCombo();
+            FillUserCombo();
+            FillRoleCombo();
         }
-        private void FillCombo()
+
+
+
+        //  Samaneh Combo Config
+        private void FillSaamanehCombo()
         {
             SamanehService samana = new SamanehService();
-            var items = samana.GetAll().Where(x => !x.IsDeleted).ToList();
-            if (TitleTaskTxt.Text.Trim().Length == 0)
+            SaamanehCombo.Items.Clear();
+            SaamanehCombo.Items.Add(new ComboboxItem<long>()
             {
-                SaamanehCombo.Items.Clear();
-                ImportanceCombo.Items.Clear();
-                TypeCombo.Items.Clear();
-                SaamanehCombo.Items.Add(new ComboboxItem()
-                {
-                    Text = "--- انتخاب کنید ---",
-                    Value = 0
-                });
-                ImportanceCombo.Items.Add(new ComboboxItem()
-                {
-                    Text = "--- انتخاب کنید ---",
-                    Value = 0
-                });
-
-
-            }
+                Text = "--- انتخاب کنید ---",
+                Value = 0
+            });
+            var items = samana.GetAll().Where(x => !x.IsDeleted).ToList();
             foreach (var item in items)
             {
-                SaamanehCombo.Items.Add(new ComboboxItem()
+                SaamanehCombo.Items.Add(new ComboboxItem<long>()
                 {
                     Text = item.Title,
                     Value = Convert.ToByte(item.ID)
                 });
             }
-            for (int i = 0; i < 5; i++)
+            if (SaamanehCombo.Tag != null)
             {
-                ImportanceCombo.Items.Add(new ComboboxItem()
-                {
-                    Text = importance[i],
-                    Value = Convert.ToByte(i)
-                });
-            }
-
-
-        }
-        private void FillTypeCombo()
-        {
-            for (int i = 0; i < typetask.Count; i++)
-            {
-                TypeCombo.Items.Add(new ComboboxItem()
-                {
-                    Text = $"{typetask[i]}",
-                    Value = Convert.ToByte(i)
-                });
-            }
-        }
-        private void SelectCombo()
-        {
-            if (ImportanceCombo.Tag != null)
-            {
-                int index = 0;
-                var samanehId = SaamanehCombo.Tag;
-                var importanceId = (int) (TaskImportanceType)ImportanceCombo.Tag;
+                var index = 0;
+                var id = SaamanehCombo.Tag;
                 foreach (var i in SaamanehCombo.Items)
                 {
-                    var t = (ComboboxItem)i;
-                    if (t.Value == Convert.ToByte(samanehId))
+                    var t = (ComboboxItem<long>)i;
+                    if (t.Value == Convert.ToByte(id))
                     {
                         SaamanehCombo.SelectedIndex = index;
                     }
                     index++;
                 }
-                index = 0;
+            }
+            else
+            {
+                SaamanehCombo.SelectedIndex = 0;
+
+            }
+        }
+        //  Importance Combo Config
+        private void FillImportanceCombo()
+        {
+            ImportanceCombo.Items.Clear();
+            for (int i = 0; i < ImportanceTask.Count; i++)
+            {
+                ImportanceCombo.Items.Add(new ComboboxItem<long>()
+                {
+                    Text = $"{ImportanceTask[i]}",
+                    Value = Convert.ToByte(i)
+                });
+            }
+            if (ImportanceCombo.Tag != null)
+            {
+                var index = 0;
+                var id = (int) (TaskImportanceType)ImportanceCombo.Tag;
                 foreach (var i in ImportanceCombo.Items)
                 {
-                    var t = (ComboboxItem)i;
-                    if (t.Value == Convert.ToByte(importanceId))
+                    var t = (ComboboxItem<long>)i;
+                    if (t.Value == Convert.ToByte(id))
                     {
                         ImportanceCombo.SelectedIndex = index;
                     }
@@ -211,10 +227,112 @@ namespace TicketApplication.Forms
             }
             else
             {
-                SaamanehCombo.SelectedIndex = 0;
                 ImportanceCombo.SelectedIndex = 0;
+            }
+        }
+        //  TaskType Combo Config
+        private void FillTypeCombo()
+        {
+            TypeCombo.Items.Clear();
+            for (int i = 0; i < TypeTask.Count; i++)
+            {
+                TypeCombo.Items.Add(new ComboboxItem<long>()
+                {
+                    Text = $"{TypeTask[i]}",
+                    Value = Convert.ToByte(i)
+                });
+            }
+            if (TypeCombo.Tag != null)
+            {
+                var index = 0;
+                var id = TypeCombo.Tag;
+                foreach (var i in TypeCombo.Items)
+                {
+                    var t = (ComboboxItem<long>)i;
+                    if (t.Value == Convert.ToByte(id))
+                    {
+                        TypeCombo.SelectedIndex = index;
+                    }
+                    index++;
+                }
+            }
+            else
+            {
                 TypeCombo.SelectedIndex = 0;
             }
         }
+        //  UserId Combo Config
+        private void FillUserCombo()
+        {
+            UserService service = new UserService();
+            UserIdCombo.Items.Clear();
+            UserIdCombo.Items.Add(new ComboboxItem<long>()
+            {
+                Text = "--- انتخاب کنید ---",
+                Value = 0
+            });
+            var users = service.ReadKeyValue();
+            for (int i = 0; i < users.Data.Count; i++)
+            {
+                UserIdCombo.Items.Add(users.Data[i]);
+            }
+            if (UserIdCombo.Tag != null)
+            {
+                var index = 0;
+                var id = UserIdCombo.Tag;
+                foreach (var i in UserIdCombo.Items)
+                {
+                    var t = (ComboboxItem<long>)i;
+                    if (t.Value == Convert.ToByte(id))
+                    {
+                        UserIdCombo.SelectedIndex = index;
+                    }
+                    index++;
+                }
+            }
+            else
+            {
+                UserIdCombo.SelectedIndex = 0;
+            }
+        }
+        //  RoleId Combo Config
+        private void FillRoleCombo()
+        {
+            RoleService service = new RoleService();
+            RoleIdCombo.Items.Clear();
+            RoleIdCombo.Items.Add(new ComboboxItem<long>()
+            {
+                Text = "--- انتخاب کنید ---",
+                Value = 0
+            });
+            var roles = service.ReadKeyValue();
+            for (int i = 0; i < roles.Data.Count; i++)
+            {
+                RoleIdCombo.Items.Add(roles.Data[i]);
+            }
+            if (RoleIdCombo.Tag != null)
+            {
+                var index = 0;
+                var id = RoleIdCombo.Tag;
+                foreach (var i in RoleIdCombo.Items)
+                {
+                    var t = (ComboboxItem<long>)i;
+                    if (t.Value == Convert.ToByte(id))
+                    {
+                        RoleIdCombo.SelectedIndex = index;
+                    }
+                    index++;
+                }
+            }
+            else
+            {
+                RoleIdCombo.SelectedIndex = 0;
+            }
+        }
+
+
+
+
+
     }
 }

@@ -77,7 +77,7 @@
             this.groupBox1.Controls.Add(this.groupBox4);
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.ForeColor = System.Drawing.Color.White;
+            this.groupBox1.ForeColor = System.Drawing.Color.RoyalBlue;
             this.groupBox1.Location = new System.Drawing.Point(3, 317);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1249, 340);
@@ -90,7 +90,7 @@
             this.groupBox7.Controls.Add(this.TaskAnswerBtn);
             this.groupBox7.Controls.Add(this.AnswerTxt);
             this.groupBox7.Controls.Add(this.TaskAnswerLBL);
-            this.groupBox7.ForeColor = System.Drawing.Color.White;
+            this.groupBox7.ForeColor = System.Drawing.Color.RoyalBlue;
             this.groupBox7.Location = new System.Drawing.Point(6, 15);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(450, 320);
@@ -116,7 +116,7 @@
             // AnswerTxt
             // 
             this.AnswerTxt.BackColor = System.Drawing.Color.White;
-            this.AnswerTxt.ForeColor = System.Drawing.Color.Black;
+            this.AnswerTxt.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.AnswerTxt.Location = new System.Drawing.Point(6, 24);
             this.AnswerTxt.Name = "AnswerTxt";
             this.AnswerTxt.Size = new System.Drawing.Size(438, 253);
@@ -130,7 +130,7 @@
             this.TaskAnswerLBL.BackColor = System.Drawing.Color.White;
             this.TaskAnswerLBL.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.TaskAnswerLBL.Font = new System.Drawing.Font("IRANSansWeb", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TaskAnswerLBL.ForeColor = System.Drawing.Color.Black;
+            this.TaskAnswerLBL.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.TaskAnswerLBL.Location = new System.Drawing.Point(6, 24);
             this.TaskAnswerLBL.Name = "TaskAnswerLBL";
             this.TaskAnswerLBL.Size = new System.Drawing.Size(438, 253);
@@ -142,7 +142,7 @@
             this.groupBox6.Controls.Add(this.TaskAddDescBtn);
             this.groupBox6.Controls.Add(this.DescriptionTxt);
             this.groupBox6.Controls.Add(this.TaskDescriptionLBL);
-            this.groupBox6.ForeColor = System.Drawing.Color.White;
+            this.groupBox6.ForeColor = System.Drawing.Color.RoyalBlue;
             this.groupBox6.Location = new System.Drawing.Point(479, 15);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(450, 320);
@@ -168,7 +168,7 @@
             // DescriptionTxt
             // 
             this.DescriptionTxt.BackColor = System.Drawing.Color.White;
-            this.DescriptionTxt.ForeColor = System.Drawing.Color.Black;
+            this.DescriptionTxt.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.DescriptionTxt.Location = new System.Drawing.Point(6, 24);
             this.DescriptionTxt.Name = "DescriptionTxt";
             this.DescriptionTxt.Size = new System.Drawing.Size(438, 253);
@@ -182,7 +182,7 @@
             this.TaskDescriptionLBL.BackColor = System.Drawing.Color.White;
             this.TaskDescriptionLBL.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.TaskDescriptionLBL.Font = new System.Drawing.Font("IRANSansWeb", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TaskDescriptionLBL.ForeColor = System.Drawing.Color.Black;
+            this.TaskDescriptionLBL.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.TaskDescriptionLBL.Location = new System.Drawing.Point(6, 24);
             this.TaskDescriptionLBL.Name = "TaskDescriptionLBL";
             this.TaskDescriptionLBL.Size = new System.Drawing.Size(438, 253);
@@ -192,7 +192,7 @@
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.TaskSaveDateLBL);
-            this.groupBox5.ForeColor = System.Drawing.Color.White;
+            this.groupBox5.ForeColor = System.Drawing.Color.RoyalBlue;
             this.groupBox5.Location = new System.Drawing.Point(931, 98);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(312, 70);
@@ -204,7 +204,7 @@
             // 
             this.TaskSaveDateLBL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.TaskSaveDateLBL.Font = new System.Drawing.Font("IRANSansWeb", 8.999999F);
-            this.TaskSaveDateLBL.ForeColor = System.Drawing.Color.White;
+            this.TaskSaveDateLBL.ForeColor = System.Drawing.Color.RoyalBlue;
             this.TaskSaveDateLBL.Location = new System.Drawing.Point(6, 21);
             this.TaskSaveDateLBL.Name = "TaskSaveDateLBL";
             this.TaskSaveDateLBL.Size = new System.Drawing.Size(300, 44);
@@ -215,7 +215,7 @@
             // 
             this.groupBox4.Controls.Add(this.PassBtn);
             this.groupBox4.Controls.Add(this.DeliverBtn);
-            this.groupBox4.ForeColor = System.Drawing.Color.White;
+            this.groupBox4.ForeColor = System.Drawing.Color.RoyalBlue;
             this.groupBox4.Location = new System.Drawing.Point(931, 265);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(312, 70);
@@ -256,7 +256,7 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.TaskTitleLBL);
-            this.groupBox3.ForeColor = System.Drawing.Color.White;
+            this.groupBox3.ForeColor = System.Drawing.Color.RoyalBlue;
             this.groupBox3.Location = new System.Drawing.Point(931, 181);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(312, 70);
@@ -268,7 +268,7 @@
             // 
             this.TaskTitleLBL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.TaskTitleLBL.Font = new System.Drawing.Font("IRANSansWeb", 8.999999F);
-            this.TaskTitleLBL.ForeColor = System.Drawing.Color.White;
+            this.TaskTitleLBL.ForeColor = System.Drawing.Color.RoyalBlue;
             this.TaskTitleLBL.Location = new System.Drawing.Point(6, 20);
             this.TaskTitleLBL.Name = "TaskTitleLBL";
             this.TaskTitleLBL.Size = new System.Drawing.Size(300, 44);
@@ -278,7 +278,7 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.SamNameLBL);
-            this.groupBox2.ForeColor = System.Drawing.Color.White;
+            this.groupBox2.ForeColor = System.Drawing.Color.RoyalBlue;
             this.groupBox2.Location = new System.Drawing.Point(931, 15);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(312, 70);
@@ -290,7 +290,7 @@
             // 
             this.SamNameLBL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.SamNameLBL.Font = new System.Drawing.Font("IRANSansWeb", 8.999999F);
-            this.SamNameLBL.ForeColor = System.Drawing.Color.White;
+            this.SamNameLBL.ForeColor = System.Drawing.Color.RoyalBlue;
             this.SamNameLBL.Location = new System.Drawing.Point(6, 20);
             this.SamNameLBL.Name = "SamNameLBL";
             this.SamNameLBL.Size = new System.Drawing.Size(300, 44);
@@ -380,7 +380,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("IRANSansWeb", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.Color.RoyalBlue;
             this.label1.Location = new System.Drawing.Point(1168, 2);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 20);
@@ -394,7 +394,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("IRANSansWeb", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.ForeColor = System.Drawing.Color.RoyalBlue;
             this.label2.Location = new System.Drawing.Point(1168, 27);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 20);
@@ -408,7 +408,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("IRANSansWeb", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.ForeColor = System.Drawing.Color.RoyalBlue;
             this.label3.Location = new System.Drawing.Point(1168, 52);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(70, 20);
@@ -422,7 +422,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("IRANSansWeb", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.ForeColor = System.Drawing.Color.RoyalBlue;
             this.label4.Location = new System.Drawing.Point(1168, 77);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(70, 20);
@@ -436,7 +436,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("IRANSansWeb", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.ForeColor = System.Drawing.Color.RoyalBlue;
             this.label5.Location = new System.Drawing.Point(1168, 102);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(70, 20);
@@ -450,7 +450,7 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("IRANSansWeb", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.ForeColor = System.Drawing.Color.RoyalBlue;
             this.label6.Location = new System.Drawing.Point(1158, 127);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(80, 20);
@@ -464,7 +464,7 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("IRANSansWeb", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.ForeColor = System.Drawing.Color.RoyalBlue;
             this.label7.Location = new System.Drawing.Point(1201, 294);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(53, 20);

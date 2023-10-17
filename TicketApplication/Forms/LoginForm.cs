@@ -42,7 +42,10 @@ namespace TicketApplication.Forms
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
+            SetPanelLocation();
+            FormExtentions.ClearTextBoxes(this.Controls);
             //StartTimer1();
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -58,6 +61,13 @@ namespace TicketApplication.Forms
                 LoginMsg.Text = res.Message;
                 if (res.Success)
                 {
+                    AppUser.Username = res.Data.Username;
+                    AppUser.UserRoleID = res.Data.UserRoles.Where(x => x.UserID == res.Data.ID).FirstOrDefault().ID;
+                    AppUser.UserID = res.Data.ID;
+                    AppUser.RoleID = res.Data.UserRoles.Where(x => x.UserID == res.Data.ID).FirstOrDefault().RoleID;
+                    AppUser.DisplayName = res.Data.DisplayName;
+                    AppUser.Email = res.Data.Email;
+                    AppUser.Name = res.Data.Name;
                     StartTimer1();
                 }
                 else
@@ -125,8 +135,8 @@ namespace TicketApplication.Forms
                 entity.Family = Sign_Family.Text;
                 entity.DisplayName = $"{entity.Name} {entity.Family}";
                 entity.Phone = Sign_Phone.Text;
-                entity.Email = Sign_Email.Text.ToLower();
-                entity.Username = Sign_Username.Text.Trim().ToLower();
+                entity.Email = Sign_Email.Text.ToUpper();
+                entity.Username = Sign_Username.Text.Trim().ToUpper();
                 entity.Password = PasswordHasher.HashPassword(Sign_Pass.Text);
                 entity.Salt = CryptoPassword.GeneratePassword(Sign_Pass.Text).Salt;
                 entity.Hash = CryptoPassword.GeneratePassword(Sign_Pass.Text).Hash;
@@ -136,7 +146,9 @@ namespace TicketApplication.Forms
                 {
                     _userService.InsertWithRole(entity, _roleService.GetById(3));
                     SignInMsg.Text = res.Message;
-                    CloseSignInPanel();
+                    //CloseSignInPanel();
+                    SignInPanel.Visible = false;
+                    LoginPanel.Visible = true;
                 }
                 else
                 {
@@ -152,7 +164,7 @@ namespace TicketApplication.Forms
             LoginPanel.Visible = true;
             SignInPanel.Visible = false;
             ClearTextBoxes(this.Controls);
-
+            SetPanelLocation();
         }
 
         private void ForgotPass_Click(object sender, EventArgs e)
@@ -160,6 +172,7 @@ namespace TicketApplication.Forms
             LoginPanel.Visible = false;
             RecoverPanel.Visible = true;
             ClearTextBoxes(this.Controls);
+            SetPanelLocation();
         }
 
         private void RCV_CheckBtn_Click(object sender, EventArgs e)
@@ -169,8 +182,8 @@ namespace TicketApplication.Forms
                 Name= RCV_Name.Text,
                 Family=RCV_Family.Text,
                 Phone= RCV_Phone.Text,
-                Email= RCV_Email.Text.ToLower(),
-                Username = RCV_Username.Text.ToLower(),
+                Email= RCV_Email.Text.ToUpper(),
+                Username = RCV_Username.Text.ToUpper(),
                 Password = RCV_Pass.Text,
                 UpdateBy = AppUser.UserID,
                 UpdateDate = DateTime.Now
@@ -195,7 +208,7 @@ namespace TicketApplication.Forms
             }
             else
             {
-                if (!string.IsNullOrEmpty(RCV_Pass.Text.Trim())  &&  !string.IsNullOrWhiteSpace(RCV_RePas.Text.Trim()) && RCV_RePas.Text.Trim().Count() >= 8)
+                if (!string.IsNullOrEmpty(RCV_Pass.Text.Trim()) && !string.IsNullOrWhiteSpace(RCV_RePas.Text.Trim()) && RCV_RePas.Text.Trim().Count() >= 8)
                 {
                     if (RCV_Pass.Text == RCV_RePas.Text)
                     {
@@ -207,6 +220,8 @@ namespace TicketApplication.Forms
                         RCV_RePas.Visible = false;
                         RecoverMsg.Text = "با موفقیت ویرایش شد";
                         ClearTextBoxes(this.Controls);
+                        LoginPanel.Visible = true;
+                        RecoverPanel.Visible = false;
                     }
                     else
                     {
@@ -226,6 +241,8 @@ namespace TicketApplication.Forms
             RecoverPanel.Visible = false;
             LoginPanel.Visible = true;
             ClearTextBoxes(this.Controls);
+            SetPanelLocation();
+
         }
 
         //  Create Timer
@@ -278,6 +295,7 @@ namespace TicketApplication.Forms
             T1.Stop();
 
             SetCurrentUserData(UsernameTxt.Text);
+
             this.Hide();
         }
 
@@ -293,6 +311,8 @@ namespace TicketApplication.Forms
             AppUser.UserID = user.Data.ID;
             AppUser.UserRoleID = user.Data.UserRoles.FirstOrDefault(x => x.UserID == user.Data.ID).ID;
             AppUser.RoleID = user.Data.UserRoles.FirstOrDefault(x => x.UserID == user.Data.ID).Role.ID;
+            Form frm = Application.OpenForms[0];
+            frm.Controls[1].Controls[3].Text = AppUser.DisplayName;
         }
 
         public void ClearTextBoxes(Control.ControlCollection ctrlCollection)
@@ -303,6 +323,13 @@ namespace TicketApplication.Forms
         private void RCV_Phone_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+        private void SetPanelLocation()
+        {
+            SignInPanel.Location = new Point(475, 23);
+            LoginPanel.Location = new Point(535, 23);
+            RecoverPanel.Location = new Point(475, 23);
+
         }
     }
 }

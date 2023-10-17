@@ -34,8 +34,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SaamanehPanel));
             this.group1 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.SearchTxt = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.SearchDateBtn = new System.Windows.Forms.Button();
-            this.SearchTxt = new System.Windows.Forms.TextBox();
             this.ToDate = new Atf.UI.DateTimeSelector();
             this.FromDate = new Atf.UI.DateTimeSelector();
             this.label3 = new System.Windows.Forms.Label();
@@ -73,7 +73,7 @@
             // 
             this.group1.Controls.Add(this.groupBox3);
             this.group1.Controls.Add(this.groupBox2);
-            this.group1.ForeColor = System.Drawing.Color.White;
+            this.group1.ForeColor = System.Drawing.Color.RoyalBlue;
             this.group1.Location = new System.Drawing.Point(948, 3);
             this.group1.Name = "group1";
             this.group1.Size = new System.Drawing.Size(304, 654);
@@ -83,8 +83,8 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.SearchDateBtn);
             this.groupBox3.Controls.Add(this.SearchTxt);
+            this.groupBox3.Controls.Add(this.SearchDateBtn);
             this.groupBox3.Controls.Add(this.ToDate);
             this.groupBox3.Controls.Add(this.FromDate);
             this.groupBox3.Controls.Add(this.label3);
@@ -98,6 +98,21 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "جستجو";
             // 
+            // SearchTxt
+            // 
+            // 
+            // 
+            // 
+            this.SearchTxt.Border.Class = "TextBoxBorder";
+            this.SearchTxt.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.SearchTxt.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.SearchTxt.Location = new System.Drawing.Point(8, 215);
+            this.SearchTxt.Name = "SearchTxt";
+            this.SearchTxt.PreventEnterBeep = true;
+            this.SearchTxt.Size = new System.Drawing.Size(278, 27);
+            this.SearchTxt.TabIndex = 19;
+            this.SearchTxt.WatermarkText = "جستجو ...";
+            // 
             // SearchDateBtn
             // 
             this.SearchDateBtn.BackColor = System.Drawing.Color.SteelBlue;
@@ -109,39 +124,28 @@
             this.SearchDateBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SearchDateBtn.Name = "SearchDateBtn";
             this.SearchDateBtn.Size = new System.Drawing.Size(280, 37);
-            this.SearchDateBtn.TabIndex = 21;
+            this.SearchDateBtn.TabIndex = 2;
             this.SearchDateBtn.Text = "جستجو براساس تاریخ";
             this.SearchDateBtn.UseVisualStyleBackColor = false;
             this.SearchDateBtn.Click += new System.EventHandler(this.SearchDateBtn_Click);
-            // 
-            // SearchTxt
-            // 
-            this.SearchTxt.BackColor = System.Drawing.Color.White;
-            this.SearchTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.SearchTxt.ForeColor = System.Drawing.Color.Black;
-            this.SearchTxt.Location = new System.Drawing.Point(8, 215);
-            this.SearchTxt.Name = "SearchTxt";
-            this.SearchTxt.Size = new System.Drawing.Size(280, 27);
-            this.SearchTxt.TabIndex = 13;
-            this.SearchTxt.Text = "جستجو ...";
             // 
             // ToDate
             // 
             this.ToDate.BackColor = System.Drawing.Color.White;
             this.ToDate.ForeColor = System.Drawing.Color.Black;
-            this.ToDate.Location = new System.Drawing.Point(6, 60);
+            this.ToDate.Location = new System.Drawing.Point(8, 59);
             this.ToDate.Name = "ToDate";
-            this.ToDate.Size = new System.Drawing.Size(215, 28);
-            this.ToDate.TabIndex = 20;
+            this.ToDate.Size = new System.Drawing.Size(213, 28);
+            this.ToDate.TabIndex = 1;
             // 
             // FromDate
             // 
             this.FromDate.BackColor = System.Drawing.Color.White;
             this.FromDate.ForeColor = System.Drawing.Color.Black;
-            this.FromDate.Location = new System.Drawing.Point(6, 26);
+            this.FromDate.Location = new System.Drawing.Point(8, 25);
             this.FromDate.Name = "FromDate";
-            this.FromDate.Size = new System.Drawing.Size(215, 28);
-            this.FromDate.TabIndex = 19;
+            this.FromDate.Size = new System.Drawing.Size(213, 28);
+            this.FromDate.TabIndex = 0;
             // 
             // label3
             // 
@@ -149,7 +153,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.Font = new System.Drawing.Font("IRANSansWeb", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.ForeColor = System.Drawing.Color.RoyalBlue;
             this.label3.Location = new System.Drawing.Point(227, 59);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 28);
@@ -163,7 +167,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.Font = new System.Drawing.Font("IRANSansWeb", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.ForeColor = System.Drawing.Color.RoyalBlue;
             this.label2.Location = new System.Drawing.Point(227, 25);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 34);
@@ -182,7 +186,7 @@
             this.SearchBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SearchBtn.Name = "SearchBtn";
             this.SearchBtn.Size = new System.Drawing.Size(280, 37);
-            this.SearchBtn.TabIndex = 16;
+            this.SearchBtn.TabIndex = 4;
             this.SearchBtn.Text = "جستجو";
             this.SearchBtn.UseVisualStyleBackColor = false;
             this.SearchBtn.Click += new System.EventHandler(this.SearchBtn_Click);
@@ -197,7 +201,7 @@
             this.groupBox2.Controls.Add(this.InsertBtn);
             this.groupBox2.Controls.Add(this.DescriptionSTxt);
             this.groupBox2.Controls.Add(this.ID);
-            this.groupBox2.ForeColor = System.Drawing.Color.White;
+            this.groupBox2.ForeColor = System.Drawing.Color.RoyalBlue;
             this.groupBox2.Location = new System.Drawing.Point(6, 26);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(292, 321);
@@ -211,7 +215,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.Font = new System.Drawing.Font("IRANSansWeb", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.ForeColor = System.Drawing.Color.RoyalBlue;
             this.label5.Location = new System.Drawing.Point(207, 81);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(79, 25);
@@ -223,21 +227,21 @@
             // 
             this.SmnaTitleTxt.BackColor = System.Drawing.Color.White;
             this.SmnaTitleTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.SmnaTitleTxt.ForeColor = System.Drawing.Color.Black;
+            this.SmnaTitleTxt.ForeColor = System.Drawing.Color.RoyalBlue;
             this.SmnaTitleTxt.Location = new System.Drawing.Point(6, 109);
             this.SmnaTitleTxt.Name = "SmnaTitleTxt";
             this.SmnaTitleTxt.Size = new System.Drawing.Size(280, 27);
-            this.SmnaTitleTxt.TabIndex = 24;
+            this.SmnaTitleTxt.TabIndex = 1;
             // 
             // SmnaNameTxt
             // 
             this.SmnaNameTxt.BackColor = System.Drawing.Color.White;
             this.SmnaNameTxt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.SmnaNameTxt.ForeColor = System.Drawing.Color.Black;
+            this.SmnaNameTxt.ForeColor = System.Drawing.Color.RoyalBlue;
             this.SmnaNameTxt.Location = new System.Drawing.Point(6, 51);
             this.SmnaNameTxt.Name = "SmnaNameTxt";
             this.SmnaNameTxt.Size = new System.Drawing.Size(280, 27);
-            this.SmnaNameTxt.TabIndex = 22;
+            this.SmnaNameTxt.TabIndex = 0;
             // 
             // label4
             // 
@@ -245,7 +249,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.Font = new System.Drawing.Font("IRANSansWeb", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.ForeColor = System.Drawing.Color.RoyalBlue;
             this.label4.Location = new System.Drawing.Point(207, 139);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(79, 25);
@@ -259,7 +263,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.Font = new System.Drawing.Font("IRANSansWeb", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.Color.RoyalBlue;
             this.label1.Location = new System.Drawing.Point(207, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 25);
@@ -278,7 +282,7 @@
             this.InsertBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.InsertBtn.Name = "InsertBtn";
             this.InsertBtn.Size = new System.Drawing.Size(278, 30);
-            this.InsertBtn.TabIndex = 10;
+            this.InsertBtn.TabIndex = 3;
             this.InsertBtn.Text = "ثبت";
             this.InsertBtn.UseVisualStyleBackColor = false;
             this.InsertBtn.Click += new System.EventHandler(this.InsertBtn_Click);
@@ -286,11 +290,11 @@
             // DescriptionSTxt
             // 
             this.DescriptionSTxt.BackColor = System.Drawing.Color.White;
-            this.DescriptionSTxt.ForeColor = System.Drawing.Color.Black;
+            this.DescriptionSTxt.ForeColor = System.Drawing.Color.RoyalBlue;
             this.DescriptionSTxt.Location = new System.Drawing.Point(8, 167);
             this.DescriptionSTxt.Name = "DescriptionSTxt";
             this.DescriptionSTxt.Size = new System.Drawing.Size(276, 108);
-            this.DescriptionSTxt.TabIndex = 23;
+            this.DescriptionSTxt.TabIndex = 2;
             this.DescriptionSTxt.Text = "";
             // 
             // ID
@@ -315,7 +319,7 @@
             this.group2.Controls.Add(this.NextBtn);
             this.group2.Controls.Add(this.PrevBtn);
             this.group2.Controls.Add(this.SaamanehDG);
-            this.group2.ForeColor = System.Drawing.Color.White;
+            this.group2.ForeColor = System.Drawing.Color.RoyalBlue;
             this.group2.Location = new System.Drawing.Point(3, 3);
             this.group2.Name = "group2";
             this.group2.Size = new System.Drawing.Size(939, 654);
@@ -357,7 +361,7 @@
             this.Reloding.Location = new System.Drawing.Point(893, 608);
             this.Reloding.Name = "Reloding";
             this.Reloding.Size = new System.Drawing.Size(40, 40);
-            this.Reloding.TabIndex = 8;
+            this.Reloding.TabIndex = 0;
             this.Reloding.Text = "تازه";
             this.Reloding.Click += new System.EventHandler(this.Reloding_Click);
             // 
@@ -366,7 +370,7 @@
             this.NextBtn.Location = new System.Drawing.Point(6, 608);
             this.NextBtn.Name = "NextBtn";
             this.NextBtn.Size = new System.Drawing.Size(40, 40);
-            this.NextBtn.TabIndex = 7;
+            this.NextBtn.TabIndex = 2;
             this.NextBtn.Text = "بعد";
             this.NextBtn.Click += new System.EventHandler(this.NextBtn_Click);
             // 
@@ -375,7 +379,7 @@
             this.PrevBtn.Location = new System.Drawing.Point(52, 608);
             this.PrevBtn.Name = "PrevBtn";
             this.PrevBtn.Size = new System.Drawing.Size(40, 40);
-            this.PrevBtn.TabIndex = 6;
+            this.PrevBtn.TabIndex = 1;
             this.PrevBtn.Text = "قبل";
             this.PrevBtn.Click += new System.EventHandler(this.PrevBtn_Click);
             // 
@@ -482,7 +486,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button SearchBtn;
-        private System.Windows.Forms.TextBox SearchTxt;
         private Glass.GlassButton NextBtn;
         private Glass.GlassButton PrevBtn;
         private Glass.GlassButton Reloding;
@@ -500,5 +503,6 @@
         private System.Windows.Forms.ToolStripMenuItem حذفToolStripMenuItem;
         private System.Windows.Forms.Label CountLBL;
         private System.Windows.Forms.Label label6;
+        private DevComponents.DotNetBar.Controls.TextBoxX SearchTxt;
     }
 }
