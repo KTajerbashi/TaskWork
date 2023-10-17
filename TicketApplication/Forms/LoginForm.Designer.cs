@@ -1011,9 +1011,9 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(25)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(1445, 679);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.SignInPanel);
             this.Controls.Add(this.LoginPanel);
             this.Controls.Add(this.RecoverPanel);
+            this.Controls.Add(this.SignInPanel);
             this.Font = new System.Drawing.Font("IRANSansWeb", 8.999999F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -1040,10 +1040,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private DevComponents.DotNetBar.Controls.TextBoxX PasswordTxt;
-        private DevComponents.DotNetBar.Controls.TextBoxX UsernameTxt;
         private System.Windows.Forms.Label ForgotPass;
-        private System.Windows.Forms.Label LoginMsg;
         private System.Windows.Forms.Button LoginBtn;
         private System.Windows.Forms.Panel SignInPanel;
         private DevComponents.DotNetBar.Controls.TextBoxX Sign_Phone;
@@ -1085,5 +1082,8 @@
         private DevComponents.DotNetBar.Controls.TextBoxX RCV_Pass;
         private System.Windows.Forms.Label RCV_LBL_Pass1;
         private System.Windows.Forms.Label BackToLoginPanel;
+        public DevComponents.DotNetBar.Controls.TextBoxX PasswordTxt;
+        public DevComponents.DotNetBar.Controls.TextBoxX UsernameTxt;
+        public System.Windows.Forms.Label LoginMsg;
     }
 }

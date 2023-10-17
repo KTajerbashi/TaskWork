@@ -46,7 +46,7 @@ namespace BusinessLogic.Library
                     };
                 }
             }
-            var use = _context.Users.Where(x => x.Username ==  username && !x.IsDeleted && x.IsActive).FirstOrDefault();
+            var use = _context.Users.Where(x => x.Username ==  username.ToLower() && !x.IsDeleted && x.IsActive).FirstOrDefault();
             if (use == null)
             {
                 return new Result<User>()
@@ -57,8 +57,7 @@ namespace BusinessLogic.Library
                 };
                 
             }
-            var de = PasswordHash.EncodeServerName(pass);
-            if (pass == PasswordHash.DecodeServerName(use.Password))
+            if (PasswordHasher.VerifyPassword(pass,use.Password))
             {
                 return new Result<User>()
                 {
@@ -183,7 +182,7 @@ namespace BusinessLogic.Library
         public Result<User> UpdateRecoveryPass(User user)
         {
             user = _context.Users.Where(x => x.Username == user.Username).FirstOrDefault();
-            user.Password = PasswordHash.EncodeServerName(user.Password);
+            user.Password = PasswordHasher.HashPassword(user.Password);
             user.UpdateDate = DateTime.Now;
             user.UpdateBy = user.UpdateBy;
             _context.SaveChanges();
@@ -194,5 +193,6 @@ namespace BusinessLogic.Library
                 Message = "با موفقیت ویرایش شد"
             };
         }
+        
     }
 }

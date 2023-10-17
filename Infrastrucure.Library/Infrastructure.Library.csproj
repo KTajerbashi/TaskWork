@@ -68,6 +68,14 @@
     <Compile Include="Migrations\202310152005559__init_unique.designer.cs">
       <DependentUpon>202310152005559__init_unique.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202310162153214__InitPassword.cs" />
+    <Compile Include="Migrations\202310162153214__InitPassword.designer.cs">
+      <DependentUpon>202310162153214__InitPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202310162330084__BackupPanel.cs" />
+    <Compile Include="Migrations\202310162330084__BackupPanel.designer.cs">
+      <DependentUpon>202310162330084__BackupPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Validator\GroupValidator.cs" />
@@ -92,6 +100,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202310152005559__init_unique.resx">
       <DependentUpon>202310152005559__init_unique.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202310162153214__InitPassword.resx">
+      <DependentUpon>202310162153214__InitPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202310162330084__BackupPanel.resx">
+      <DependentUpon>202310162330084__BackupPanel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

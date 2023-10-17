@@ -1,19 +1,17 @@
-﻿using Domain.Model;
-using MD.PersianDateTime;
+﻿using MD.PersianDateTime;
 using System;
-using System.Globalization;
+using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using TicketApplication.Authentication;
 using TicketApplication.Forms;
 using TicketApplication.UserControls;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace TicketApplication
 {
     public partial class Main : Form
     {
-
+        #region Code
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
@@ -38,13 +36,7 @@ namespace TicketApplication
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
 
         }
-
-
-        private void ExitBtn_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
+        #endregion
         private void ReportBtn_Click(object sender, EventArgs e)
         {
             ReportList reportList = new ReportList();
@@ -55,6 +47,7 @@ namespace TicketApplication
             MainPanel.Controls.Add(reportList);
 
         }
+        LoginForm loginForm = new LoginForm();
 
         private void AsidePanel_MouseDown(object sender, MouseEventArgs e)
         {
@@ -67,7 +60,6 @@ namespace TicketApplication
 
         private void Main_Load(object sender, EventArgs e)
         {
-            LoginForm loginForm = new LoginForm();
             loginForm.ShowDialog();
             CartablePanel cartable = new CartablePanel();
             if (MainPanel.Controls.Count > 0)
@@ -96,9 +88,7 @@ namespace TicketApplication
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-
             PersianDateTime persianDateTime = new PersianDateTime(DateTime.Now);
-            Console.WriteLine(persianDateTime);
             DateTimeLBL.Text = persianDateTime.ToString();
         }
 
@@ -140,6 +130,30 @@ namespace TicketApplication
                 MainPanel.Controls[0].Dispose();
             }
             MainPanel.Controls.Add(roadMap);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void LockScreenBtn_Click(object sender, EventArgs e)
+        {
+            //loginForm.Location = new Point(535, 0);
+            loginForm.UsernameTxt.Text = "";
+            loginForm.PasswordTxt.Text = "";
+            loginForm.LoginMsg.Text = "";
+            loginForm.ShowDialog();
+        }
+
+        private void DbBackupBtn_Click(object sender, EventArgs e)
+        {
+            BackupPanel panel = new BackupPanel();
+            if (MainPanel.Controls.Count > 0)
+            {
+                MainPanel.Controls[0].Dispose();
+            }
+            MainPanel.Controls.Add(panel);
         }
     }
 }

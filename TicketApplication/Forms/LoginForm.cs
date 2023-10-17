@@ -102,7 +102,7 @@ namespace TicketApplication.Forms
                 SignInMsg.Text = $"ایمیل معتبر وارد کنید";
                 Sign_Email.Focus();
             }
-            else if (string.IsNullOrEmpty(Sign_Username.Text) || string.IsNullOrWhiteSpace(Sign_Username.Text) || Sign_Username.Text.Count() < 8 || Sign_Username.Text.Trim() == "")
+            else if (string.IsNullOrEmpty(Sign_Username.Text) || string.IsNullOrWhiteSpace(Sign_Username.Text) || Sign_Username.Text.Count() < 6 || Sign_Username.Text.Trim() == "")
             {
                 SignInMsg.Text = $"نام کاربری معتبر وارد کنید حداقل 8 کارکتر باشد";
                 Sign_Username.Focus();
@@ -127,7 +127,9 @@ namespace TicketApplication.Forms
                 entity.Phone = Sign_Phone.Text;
                 entity.Email = Sign_Email.Text.ToLower();
                 entity.Username = Sign_Username.Text.Trim().ToLower();
-                entity.Password = PasswordHash.EncodeServerName(Sign_Pass.Text.Trim());
+                entity.Password = PasswordHasher.HashPassword(Sign_Pass.Text);
+                entity.Salt = CryptoPassword.GeneratePassword(Sign_Pass.Text).Salt;
+                entity.Hash = CryptoPassword.GeneratePassword(Sign_Pass.Text).Hash;
                 var res =_userService.IsMatchAny(entity);
 
                 if (res.Success)

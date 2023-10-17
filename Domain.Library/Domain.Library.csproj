@@ -58,6 +58,7 @@
     <Compile Include="Enums\TaskImportanceType.cs" />
     <Compile Include="Enums\TaskType.cs" />
     <Compile Include="KeyValues\ComboboxItem.cs" />
+    <Compile Include="Models\Entity\BackupLog.cs" />
     <Compile Include="Models\Entity\Samaneh.cs" />
     <Compile Include="Models\Entity\Role.cs" />
     <Compile Include="Models\Entity\TaskWork.cs" />

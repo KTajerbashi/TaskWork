@@ -34,3 +34,5 @@ C:\Users\Tajer\Desktop\Visual Studio\Repository Project\Windows Application\Task
 C:\Users\Tajer\Desktop\Visual Studio\Repository Project\Windows Application\TaskWork\Infrastrucure.Library\obj\Debug\Infrastructure.Library.csproj.GenerateResource.cache
 C:\Users\Tajer\Desktop\Visual Studio\Repository Project\Windows Application\TaskWork\Infrastrucure.Library\obj\Debug\Infrastrucure.Library.Migrations.__Data.resources
 C:\Users\Tajer\Desktop\Visual Studio\Repository Project\Windows Application\TaskWork\Infrastrucure.Library\obj\Debug\Infrastrucure.Library.Migrations._init_unique.resources
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\Windows Application\TaskWork\Infrastrucure.Library\obj\Debug\Infrastrucure.Library.Migrations._InitPassword.resources
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\Windows Application\TaskWork\Infrastrucure.Library\obj\Debug\Infrastrucure.Library.Migrations._BackupPanel.resources

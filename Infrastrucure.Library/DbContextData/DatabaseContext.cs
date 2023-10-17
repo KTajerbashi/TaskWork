@@ -1,4 +1,5 @@
-﻿using Domain.Model;
+﻿using Domain.Library.Models.Entity;
+using Domain.Model;
 using System.Data.Entity;
 
 namespace Infrastructure.Library.DatabaseContext
@@ -15,6 +16,7 @@ namespace Infrastructure.Library.DatabaseContext
         public DbSet<User> Users { get; set; }
         public DbSet<Role> Roles { get; set; }
         public DbSet<UserRole> UserRoles { get; set; }
+        public DbSet<BackupLog> BackupLogs { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
