@@ -36,7 +36,6 @@
             this.NewTaskBtn = new System.Windows.Forms.Button();
             this.ReportBtn = new System.Windows.Forms.Button();
             this.TasksListBtn = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.Red = new System.Windows.Forms.ProgressBar();
             this.BLACK = new System.Windows.Forms.ProgressBar();
@@ -51,6 +50,7 @@
             this.SampaBtn = new System.Windows.Forms.Button();
             this.UsernameLBL = new System.Windows.Forms.Label();
             this.AsidePanel = new System.Windows.Forms.Panel();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.LockScreenBtn = new System.Windows.Forms.PictureBox();
             this.DbBackupBtn = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -89,7 +89,7 @@
             // 
             // NewTaskBtn
             // 
-            this.NewTaskBtn.BackColor = System.Drawing.Color.Black;
+            this.NewTaskBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.NewTaskBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.NewTaskBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.NewTaskBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -105,7 +105,7 @@
             // 
             // ReportBtn
             // 
-            this.ReportBtn.BackColor = System.Drawing.Color.MidnightBlue;
+            this.ReportBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ReportBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ReportBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ReportBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -121,7 +121,7 @@
             // 
             // TasksListBtn
             // 
-            this.TasksListBtn.BackColor = System.Drawing.Color.MidnightBlue;
+            this.TasksListBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.TasksListBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.TasksListBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TasksListBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -134,18 +134,6 @@
             this.TasksListBtn.Text = "لیست تسک ها";
             this.TasksListBtn.UseVisualStyleBackColor = false;
             this.TasksListBtn.Click += new System.EventHandler(this.TasksListBtn_Click);
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.Font = new System.Drawing.Font("Algerian", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.AliceBlue;
-            this.label1.Location = new System.Drawing.Point(-7, 147);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(176, 38);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "TASK WROK";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
             // 
@@ -188,9 +176,9 @@
             // DateTimeLBL
             // 
             this.DateTimeLBL.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.DateTimeLBL.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DateTimeLBL.Font = new System.Drawing.Font("Mongolian Baiti", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DateTimeLBL.ForeColor = System.Drawing.Color.Transparent;
-            this.DateTimeLBL.Location = new System.Drawing.Point(3, 585);
+            this.DateTimeLBL.Location = new System.Drawing.Point(4, 581);
             this.DateTimeLBL.Name = "DateTimeLBL";
             this.DateTimeLBL.Size = new System.Drawing.Size(155, 18);
             this.DateTimeLBL.TabIndex = 52;
@@ -199,7 +187,7 @@
             // 
             // SaamanehBtn
             // 
-            this.SaamanehBtn.BackColor = System.Drawing.Color.MidnightBlue;
+            this.SaamanehBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.SaamanehBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SaamanehBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SaamanehBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -263,15 +251,15 @@
             // 
             this.progressBar2.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.progressBar2.Cursor = System.Windows.Forms.Cursors.SizeAll;
-            this.progressBar2.Location = new System.Drawing.Point(-1, 606);
+            this.progressBar2.Location = new System.Drawing.Point(21, 601);
             this.progressBar2.Name = "progressBar2";
             this.progressBar2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.progressBar2.Size = new System.Drawing.Size(164, 5);
+            this.progressBar2.Size = new System.Drawing.Size(121, 1);
             this.progressBar2.TabIndex = 62;
             // 
             // SampaBtn
             // 
-            this.SampaBtn.BackColor = System.Drawing.Color.MidnightBlue;
+            this.SampaBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.SampaBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SampaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SampaBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -291,16 +279,17 @@
             this.UsernameLBL.BackColor = System.Drawing.Color.Transparent;
             this.UsernameLBL.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UsernameLBL.ForeColor = System.Drawing.Color.AliceBlue;
-            this.UsernameLBL.Location = new System.Drawing.Point(1, 553);
+            this.UsernameLBL.Location = new System.Drawing.Point(2, 150);
             this.UsernameLBL.Name = "UsernameLBL";
-            this.UsernameLBL.Size = new System.Drawing.Size(159, 22);
+            this.UsernameLBL.Size = new System.Drawing.Size(159, 32);
             this.UsernameLBL.TabIndex = 63;
             this.UsernameLBL.Text = "کاربر جاری";
             this.UsernameLBL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // AsidePanel
             // 
-            this.AsidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(25)))), ((int)(((byte)(82)))));
+            this.AsidePanel.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.AsidePanel.Controls.Add(this.progressBar1);
             this.AsidePanel.Controls.Add(this.LockScreenBtn);
             this.AsidePanel.Controls.Add(this.DbBackupBtn);
             this.AsidePanel.Controls.Add(this.pictureBox1);
@@ -317,7 +306,6 @@
             this.AsidePanel.Controls.Add(this.BLACK);
             this.AsidePanel.Controls.Add(this.Red);
             this.AsidePanel.Controls.Add(this.label3);
-            this.AsidePanel.Controls.Add(this.label1);
             this.AsidePanel.Controls.Add(this.TasksListBtn);
             this.AsidePanel.Controls.Add(this.ReportBtn);
             this.AsidePanel.Controls.Add(this.NewTaskBtn);
@@ -329,6 +317,14 @@
             this.AsidePanel.Size = new System.Drawing.Size(163, 660);
             this.AsidePanel.TabIndex = 0;
             this.AsidePanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AsidePanel_MouseDown);
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(-13, 608);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(188, 5);
+            this.progressBar1.TabIndex = 67;
+            this.progressBar1.Value = 99;
             // 
             // LockScreenBtn
             // 
@@ -401,7 +397,6 @@
         private System.Windows.Forms.Button NewTaskBtn;
         private System.Windows.Forms.Button ReportBtn;
         private System.Windows.Forms.Button TasksListBtn;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ProgressBar Red;
         private System.Windows.Forms.ProgressBar BLACK;
@@ -419,6 +414,7 @@
         private System.Windows.Forms.PictureBox LockScreenBtn;
         private System.Windows.Forms.PictureBox DbBackupBtn;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }
 
