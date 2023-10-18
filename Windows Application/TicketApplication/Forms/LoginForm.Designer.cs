@@ -263,7 +263,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label1.Font = new System.Drawing.Font("IRANSansWeb", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.IndianRed;
+            this.label1.ForeColor = System.Drawing.Color.Maroon;
             this.label1.Location = new System.Drawing.Point(674, 639);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
@@ -669,7 +669,7 @@
             this.BackToLoginPanel.BackColor = System.Drawing.Color.Transparent;
             this.BackToLoginPanel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BackToLoginPanel.Font = new System.Drawing.Font("IRANSansWeb", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BackToLoginPanel.ForeColor = System.Drawing.Color.IndianRed;
+            this.BackToLoginPanel.ForeColor = System.Drawing.Color.Maroon;
             this.BackToLoginPanel.Location = new System.Drawing.Point(367, 597);
             this.BackToLoginPanel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.BackToLoginPanel.Name = "BackToLoginPanel";
@@ -1010,10 +1010,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ClientSize = new System.Drawing.Size(1445, 679);
-            this.Controls.Add(this.SignInPanel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.LoginPanel);
             this.Controls.Add(this.RecoverPanel);
+            this.Controls.Add(this.SignInPanel);
             this.Font = new System.Drawing.Font("IRANSansWeb", 8.999999F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

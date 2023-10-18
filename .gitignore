@@ -1,24 +1,24 @@
 .vs/
-Domain.Library/bin
-Domain.Library/obj
+Windows Application/Domain.Library/bin
+Windows Application/Domain.Library/obj
+Windows Application/Application.Library/bin
+Windows Application/Application.Library/obj
+Windows Application/Infrastructure.Library/bin
+Windows Application/Infrastructure.Library/obj
+Windows Application/TicketApplication/obj
+Windows Application/TicketApplication/bin
 
-Application.Library/bin
-Application.Library/obj
+Web Application/TicketApplication/bin
+Web Application/TicketApplication/obj
 
-Infrastructure.Library/bin
-Infrastructure.Library/obj
+Web Application/Ticket.Domain/bin
+Web Application/Ticket.Domain/obj
 
-TicketApplication/bin
-TicketApplication/obj
+Web Application/Ticket.Application/bin
+Web Application/Ticket.Application/obj
 
-Ticket.Domain/bin
-Ticket.Domain/obj
+Web Application/Ticket.Infrastructure/bin
+Web Application/Ticket.Infrastructure/obj
 
-Ticket.Application/bin
-Ticket.Application/obj
-
-Ticket.Infrastructure/bin
-Ticket.Infrastructure/obj
-
-Ticket.EndPoint/bin
-Ticket.EndPoint/obj
+Web Application/Ticket.EndPoint/bin
+Web Application/Ticket.EndPoint/obj
