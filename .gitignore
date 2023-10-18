@@ -10,3 +10,15 @@ Infrastructure.Library/obj
 
 TicketApplication/bin
 TicketApplication/obj
+
+Ticket.Domain/bin
+Ticket.Domain/obj
+
+Ticket.Application/bin
+Ticket.Application/obj
+
+Ticket.Infrastructure/bin
+Ticket.Infrastructure/obj
+
+Ticket.EndPoint/bin
+Ticket.EndPoint/obj

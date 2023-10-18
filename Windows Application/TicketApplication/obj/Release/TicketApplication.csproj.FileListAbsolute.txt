@@ -1,0 +1,21 @@
+C:\Users\tajer-k\Desktop\Ticket\Ticket\TicketApplication\obj\Release\TicketApplication.csproj.AssemblyReference.cache
+C:\Users\tajer-k\Desktop\Ticket\Ticket\TicketApplication\obj\Release\TicketApplication.csproj.SuggestedBindingRedirects.cache
+C:\Users\tajer-k\Desktop\Ticket\Ticket\TicketApplication\obj\Release\TicketApplication.Forms.NewTaskForm.resources
+C:\Users\tajer-k\Desktop\Ticket\Ticket\TicketApplication\obj\Release\TicketApplication.Main.resources
+C:\Users\tajer-k\Desktop\Ticket\Ticket\TicketApplication\obj\Release\TicketApplication.Properties.Resources.resources
+C:\Users\tajer-k\Desktop\Ticket\Ticket\TicketApplication\obj\Release\TicketApplication.UserControls.ReportList.resources
+C:\Users\tajer-k\Desktop\Ticket\Ticket\TicketApplication\obj\Release\TicketApplication.UserControls.TaskList.resources
+C:\Users\tajer-k\Desktop\Ticket\Ticket\TicketApplication\obj\Release\TicketApplication.csproj.GenerateResource.cache
+C:\Users\tajer-k\Desktop\Ticket\Ticket\TicketApplication\obj\Release\TicketApplication.csproj.CoreCompileInputs.cache
+D:\Visual Studio\GitProject\TaskWork\TicketApplication\obj\Release\TicketApplication.csproj.AssemblyReference.cache
+D:\Visual Studio\GitProject\TaskWork\TicketApplication\obj\Release\TicketApplication.csproj.SuggestedBindingRedirects.cache
+D:\Visual Studio\GitProject\TaskWork\TicketApplication\obj\Release\TicketApplication.Forms.MessageBoxForm.resources
+D:\Visual Studio\GitProject\TaskWork\TicketApplication\obj\Release\TicketApplication.Forms.NewTaskForm.resources
+D:\Visual Studio\GitProject\TaskWork\TicketApplication\obj\Release\TicketApplication.Main.resources
+D:\Visual Studio\GitProject\TaskWork\TicketApplication\obj\Release\TicketApplication.Properties.Resources.resources
+D:\Visual Studio\GitProject\TaskWork\TicketApplication\obj\Release\TicketApplication.UserControls.CartablePanel.resources
+D:\Visual Studio\GitProject\TaskWork\TicketApplication\obj\Release\TicketApplication.UserControls.ReportList.resources
+D:\Visual Studio\GitProject\TaskWork\TicketApplication\obj\Release\TicketApplication.UserControls.SaamanehPanel.resources
+D:\Visual Studio\GitProject\TaskWork\TicketApplication\obj\Release\TicketApplication.UserControls.TaskList.resources
+D:\Visual Studio\GitProject\TaskWork\TicketApplication\obj\Release\TicketApplication.csproj.GenerateResource.cache
+D:\Visual Studio\GitProject\TaskWork\TicketApplication\obj\Release\TicketApplication.csproj.CoreCompileInputs.cache

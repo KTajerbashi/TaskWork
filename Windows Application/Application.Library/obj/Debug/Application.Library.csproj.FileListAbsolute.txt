@@ -1,0 +1,17 @@
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Application.Library\bin\Debug\Application.Library.dll.config
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Application.Library\bin\Debug\Application.Library.dll
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Application.Library\bin\Debug\Application.Library.pdb
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Application.Library\bin\Debug\Domain.Library.dll
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Application.Library\bin\Debug\EntityFramework.dll
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Application.Library\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Application.Library\bin\Debug\Infrastrucure.Library.dll
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Application.Library\bin\Debug\Domain.Library.pdb
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Application.Library\bin\Debug\Infrastrucure.Library.pdb
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Application.Library\bin\Debug\Infrastrucure.Library.dll.config
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Application.Library\bin\Debug\EntityFramework.xml
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Application.Library\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Application.Library\obj\Debug\Application.Library.csproj.AssemblyReference.cache
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Application.Library\obj\Debug\Application.Library.csproj.CoreCompileInputs.cache
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Application.Library\obj\Debug\Application.Library.csproj.CopyComplete
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Application.Library\obj\Debug\Application.Library.dll
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Application.Library\obj\Debug\Application.Library.pdb

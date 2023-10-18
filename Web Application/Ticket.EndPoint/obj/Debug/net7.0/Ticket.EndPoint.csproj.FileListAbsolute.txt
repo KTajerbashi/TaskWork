@@ -1,0 +1,62 @@
+D:\Visual Studio\GitProject\TaskWork\Ticket.EndPoint\bin\Debug\net7.0\appsettings.Development.json
+D:\Visual Studio\GitProject\TaskWork\Ticket.EndPoint\bin\Debug\net7.0\appsettings.json
+D:\Visual Studio\GitProject\TaskWork\Ticket.EndPoint\bin\Debug\net7.0\Ticket.EndPoint.staticwebassets.runtime.json
+D:\Visual Studio\GitProject\TaskWork\Ticket.EndPoint\bin\Debug\net7.0\Ticket.EndPoint.exe
+D:\Visual Studio\GitProject\TaskWork\Ticket.EndPoint\bin\Debug\net7.0\Ticket.EndPoint.deps.json
+D:\Visual Studio\GitProject\TaskWork\Ticket.EndPoint\bin\Debug\net7.0\Ticket.EndPoint.runtimeconfig.json
+D:\Visual Studio\GitProject\TaskWork\Ticket.EndPoint\bin\Debug\net7.0\Ticket.EndPoint.dll
+D:\Visual Studio\GitProject\TaskWork\Ticket.EndPoint\bin\Debug\net7.0\Ticket.EndPoint.pdb
+D:\Visual Studio\GitProject\TaskWork\Ticket.EndPoint\obj\Debug\net7.0\Ticket.EndPoint.GeneratedMSBuildEditorConfig.editorconfig
+D:\Visual Studio\GitProject\TaskWork\Ticket.EndPoint\obj\Debug\net7.0\Ticket.EndPoint.AssemblyInfoInputs.cache
+D:\Visual Studio\GitProject\TaskWork\Ticket.EndPoint\obj\Debug\net7.0\Ticket.EndPoint.AssemblyInfo.cs
+D:\Visual Studio\GitProject\TaskWork\Ticket.EndPoint\obj\Debug\net7.0\Ticket.EndPoint.csproj.CoreCompileInputs.cache
+D:\Visual Studio\GitProject\TaskWork\Ticket.EndPoint\obj\Debug\net7.0\Ticket.EndPoint.MvcApplicationPartsAssemblyInfo.cache
+D:\Visual Studio\GitProject\TaskWork\Ticket.EndPoint\obj\Debug\net7.0\Ticket.EndPoint.RazorAssemblyInfo.cache
+D:\Visual Studio\GitProject\TaskWork\Ticket.EndPoint\obj\Debug\net7.0\Ticket.EndPoint.RazorAssemblyInfo.cs
+D:\Visual Studio\GitProject\TaskWork\Ticket.EndPoint\obj\Debug\net7.0\staticwebassets\msbuild.Ticket.EndPoint.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Visual Studio\GitProject\TaskWork\Ticket.EndPoint\obj\Debug\net7.0\staticwebassets\msbuild.build.Ticket.EndPoint.props
+D:\Visual Studio\GitProject\TaskWork\Ticket.EndPoint\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.Ticket.EndPoint.props
+D:\Visual Studio\GitProject\TaskWork\Ticket.EndPoint\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.Ticket.EndPoint.props
+D:\Visual Studio\GitProject\TaskWork\Ticket.EndPoint\obj\Debug\net7.0\staticwebassets.pack.json
+D:\Visual Studio\GitProject\TaskWork\Ticket.EndPoint\obj\Debug\net7.0\staticwebassets.build.json
+D:\Visual Studio\GitProject\TaskWork\Ticket.EndPoint\obj\Debug\net7.0\staticwebassets.development.json
+D:\Visual Studio\GitProject\TaskWork\Ticket.EndPoint\obj\Debug\net7.0\scopedcss\Shared\MainLayout.razor.rz.scp.css
+D:\Visual Studio\GitProject\TaskWork\Ticket.EndPoint\obj\Debug\net7.0\scopedcss\Shared\NavMenu.razor.rz.scp.css
+D:\Visual Studio\GitProject\TaskWork\Ticket.EndPoint\obj\Debug\net7.0\scopedcss\bundle\Ticket.EndPoint.styles.css
+D:\Visual Studio\GitProject\TaskWork\Ticket.EndPoint\obj\Debug\net7.0\scopedcss\projectbundle\Ticket.EndPoint.bundle.scp.css
+D:\Visual Studio\GitProject\TaskWork\Ticket.EndPoint\obj\Debug\net7.0\Ticket.EndPoint.dll
+D:\Visual Studio\GitProject\TaskWork\Ticket.EndPoint\obj\Debug\net7.0\refint\Ticket.EndPoint.dll
+D:\Visual Studio\GitProject\TaskWork\Ticket.EndPoint\obj\Debug\net7.0\Ticket.EndPoint.pdb
+D:\Visual Studio\GitProject\TaskWork\Ticket.EndPoint\obj\Debug\net7.0\Ticket.EndPoint.genruntimeconfig.cache
+D:\Visual Studio\GitProject\TaskWork\Ticket.EndPoint\obj\Debug\net7.0\ref\Ticket.EndPoint.dll
+D:\Visual Studio\GitProject\TaskWork\Web Application\Ticket.EndPoint\bin\Debug\net7.0\appsettings.Development.json
+D:\Visual Studio\GitProject\TaskWork\Web Application\Ticket.EndPoint\bin\Debug\net7.0\appsettings.json
+D:\Visual Studio\GitProject\TaskWork\Web Application\Ticket.EndPoint\bin\Debug\net7.0\Ticket.EndPoint.staticwebassets.runtime.json
+D:\Visual Studio\GitProject\TaskWork\Web Application\Ticket.EndPoint\bin\Debug\net7.0\Ticket.EndPoint.exe
+D:\Visual Studio\GitProject\TaskWork\Web Application\Ticket.EndPoint\bin\Debug\net7.0\Ticket.EndPoint.deps.json
+D:\Visual Studio\GitProject\TaskWork\Web Application\Ticket.EndPoint\bin\Debug\net7.0\Ticket.EndPoint.runtimeconfig.json
+D:\Visual Studio\GitProject\TaskWork\Web Application\Ticket.EndPoint\bin\Debug\net7.0\Ticket.EndPoint.dll
+D:\Visual Studio\GitProject\TaskWork\Web Application\Ticket.EndPoint\bin\Debug\net7.0\Ticket.EndPoint.pdb
+D:\Visual Studio\GitProject\TaskWork\Web Application\Ticket.EndPoint\obj\Debug\net7.0\Ticket.EndPoint.GeneratedMSBuildEditorConfig.editorconfig
+D:\Visual Studio\GitProject\TaskWork\Web Application\Ticket.EndPoint\obj\Debug\net7.0\Ticket.EndPoint.AssemblyInfoInputs.cache
+D:\Visual Studio\GitProject\TaskWork\Web Application\Ticket.EndPoint\obj\Debug\net7.0\Ticket.EndPoint.AssemblyInfo.cs
+D:\Visual Studio\GitProject\TaskWork\Web Application\Ticket.EndPoint\obj\Debug\net7.0\Ticket.EndPoint.csproj.CoreCompileInputs.cache
+D:\Visual Studio\GitProject\TaskWork\Web Application\Ticket.EndPoint\obj\Debug\net7.0\Ticket.EndPoint.MvcApplicationPartsAssemblyInfo.cache
+D:\Visual Studio\GitProject\TaskWork\Web Application\Ticket.EndPoint\obj\Debug\net7.0\Ticket.EndPoint.RazorAssemblyInfo.cache
+D:\Visual Studio\GitProject\TaskWork\Web Application\Ticket.EndPoint\obj\Debug\net7.0\Ticket.EndPoint.RazorAssemblyInfo.cs
+D:\Visual Studio\GitProject\TaskWork\Web Application\Ticket.EndPoint\obj\Debug\net7.0\staticwebassets\msbuild.Ticket.EndPoint.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Visual Studio\GitProject\TaskWork\Web Application\Ticket.EndPoint\obj\Debug\net7.0\staticwebassets\msbuild.build.Ticket.EndPoint.props
+D:\Visual Studio\GitProject\TaskWork\Web Application\Ticket.EndPoint\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.Ticket.EndPoint.props
+D:\Visual Studio\GitProject\TaskWork\Web Application\Ticket.EndPoint\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.Ticket.EndPoint.props
+D:\Visual Studio\GitProject\TaskWork\Web Application\Ticket.EndPoint\obj\Debug\net7.0\staticwebassets.pack.json
+D:\Visual Studio\GitProject\TaskWork\Web Application\Ticket.EndPoint\obj\Debug\net7.0\staticwebassets.build.json
+D:\Visual Studio\GitProject\TaskWork\Web Application\Ticket.EndPoint\obj\Debug\net7.0\staticwebassets.development.json
+D:\Visual Studio\GitProject\TaskWork\Web Application\Ticket.EndPoint\obj\Debug\net7.0\scopedcss\Shared\MainLayout.razor.rz.scp.css
+D:\Visual Studio\GitProject\TaskWork\Web Application\Ticket.EndPoint\obj\Debug\net7.0\scopedcss\Shared\NavMenu.razor.rz.scp.css
+D:\Visual Studio\GitProject\TaskWork\Web Application\Ticket.EndPoint\obj\Debug\net7.0\scopedcss\bundle\Ticket.EndPoint.styles.css
+D:\Visual Studio\GitProject\TaskWork\Web Application\Ticket.EndPoint\obj\Debug\net7.0\scopedcss\projectbundle\Ticket.EndPoint.bundle.scp.css
+D:\Visual Studio\GitProject\TaskWork\Web Application\Ticket.EndPoint\obj\Debug\net7.0\Ticket.EndPoint.dll
+D:\Visual Studio\GitProject\TaskWork\Web Application\Ticket.EndPoint\obj\Debug\net7.0\refint\Ticket.EndPoint.dll
+D:\Visual Studio\GitProject\TaskWork\Web Application\Ticket.EndPoint\obj\Debug\net7.0\Ticket.EndPoint.pdb
+D:\Visual Studio\GitProject\TaskWork\Web Application\Ticket.EndPoint\obj\Debug\net7.0\Ticket.EndPoint.genruntimeconfig.cache
+D:\Visual Studio\GitProject\TaskWork\Web Application\Ticket.EndPoint\obj\Debug\net7.0\ref\Ticket.EndPoint.dll

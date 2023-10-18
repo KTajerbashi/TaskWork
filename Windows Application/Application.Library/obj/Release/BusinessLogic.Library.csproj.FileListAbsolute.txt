@@ -1,0 +1,34 @@
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Application.Library\bin\Release\Application.Library.dll.config
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Application.Library\bin\Release\Application.Library.dll
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Application.Library\bin\Release\Application.Library.pdb
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Application.Library\bin\Release\Domain.Library.dll
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Application.Library\bin\Release\EntityFramework.dll
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Application.Library\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Application.Library\bin\Release\Infrastrucure.Library.dll
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Application.Library\bin\Release\Domain.Library.pdb
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Application.Library\bin\Release\Infrastrucure.Library.pdb
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Application.Library\bin\Release\Infrastrucure.Library.dll.config
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Application.Library\bin\Release\EntityFramework.xml
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Application.Library\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Application.Library\obj\Release\BusinessLogic.Library.csproj.AssemblyReference.cache
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Application.Library\obj\Release\BusinessLogic.Library.csproj.CoreCompileInputs.cache
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Application.Library\obj\Release\BusinessLogic.Library.csproj.CopyComplete
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Application.Library\obj\Release\Application.Library.dll
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Application.Library\obj\Release\Application.Library.pdb
+D:\Visual Studio\GitProject\TaskWork\Application.Library\bin\Release\Application.Library.dll.config
+D:\Visual Studio\GitProject\TaskWork\Application.Library\bin\Release\Application.Library.dll
+D:\Visual Studio\GitProject\TaskWork\Application.Library\bin\Release\Application.Library.pdb
+D:\Visual Studio\GitProject\TaskWork\Application.Library\bin\Release\Domain.Library.dll
+D:\Visual Studio\GitProject\TaskWork\Application.Library\bin\Release\EntityFramework.dll
+D:\Visual Studio\GitProject\TaskWork\Application.Library\bin\Release\EntityFramework.SqlServer.dll
+D:\Visual Studio\GitProject\TaskWork\Application.Library\bin\Release\Infrastrucure.Library.dll
+D:\Visual Studio\GitProject\TaskWork\Application.Library\bin\Release\Domain.Library.pdb
+D:\Visual Studio\GitProject\TaskWork\Application.Library\bin\Release\Infrastrucure.Library.pdb
+D:\Visual Studio\GitProject\TaskWork\Application.Library\bin\Release\Infrastrucure.Library.dll.config
+D:\Visual Studio\GitProject\TaskWork\Application.Library\bin\Release\EntityFramework.xml
+D:\Visual Studio\GitProject\TaskWork\Application.Library\bin\Release\EntityFramework.SqlServer.xml
+D:\Visual Studio\GitProject\TaskWork\Application.Library\obj\Release\BusinessLogic.Library.csproj.AssemblyReference.cache
+D:\Visual Studio\GitProject\TaskWork\Application.Library\obj\Release\BusinessLogic.Library.csproj.CoreCompileInputs.cache
+D:\Visual Studio\GitProject\TaskWork\Application.Library\obj\Release\BusinessLogic.Library.csproj.CopyComplete
+D:\Visual Studio\GitProject\TaskWork\Application.Library\obj\Release\Application.Library.dll
+D:\Visual Studio\GitProject\TaskWork\Application.Library\obj\Release\Application.Library.pdb

@@ -1,0 +1,22 @@
+D:\Visual Studio\GitProject\TaskWork\Ticket.Application\bin\Debug\net7.0\Ticket.Application.deps.json
+D:\Visual Studio\GitProject\TaskWork\Ticket.Application\bin\Debug\net7.0\Ticket.Application.dll
+D:\Visual Studio\GitProject\TaskWork\Ticket.Application\bin\Debug\net7.0\Ticket.Application.pdb
+D:\Visual Studio\GitProject\TaskWork\Ticket.Application\obj\Debug\net7.0\Ticket.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Visual Studio\GitProject\TaskWork\Ticket.Application\obj\Debug\net7.0\Ticket.Application.AssemblyInfoInputs.cache
+D:\Visual Studio\GitProject\TaskWork\Ticket.Application\obj\Debug\net7.0\Ticket.Application.AssemblyInfo.cs
+D:\Visual Studio\GitProject\TaskWork\Ticket.Application\obj\Debug\net7.0\Ticket.Application.csproj.CoreCompileInputs.cache
+D:\Visual Studio\GitProject\TaskWork\Ticket.Application\obj\Debug\net7.0\Ticket.Application.dll
+D:\Visual Studio\GitProject\TaskWork\Ticket.Application\obj\Debug\net7.0\refint\Ticket.Application.dll
+D:\Visual Studio\GitProject\TaskWork\Ticket.Application\obj\Debug\net7.0\Ticket.Application.pdb
+D:\Visual Studio\GitProject\TaskWork\Ticket.Application\obj\Debug\net7.0\ref\Ticket.Application.dll
+D:\Visual Studio\GitProject\TaskWork\Web Application\Ticket.Application\bin\Debug\net7.0\Ticket.Application.deps.json
+D:\Visual Studio\GitProject\TaskWork\Web Application\Ticket.Application\bin\Debug\net7.0\Ticket.Application.dll
+D:\Visual Studio\GitProject\TaskWork\Web Application\Ticket.Application\bin\Debug\net7.0\Ticket.Application.pdb
+D:\Visual Studio\GitProject\TaskWork\Web Application\Ticket.Application\obj\Debug\net7.0\Ticket.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Visual Studio\GitProject\TaskWork\Web Application\Ticket.Application\obj\Debug\net7.0\Ticket.Application.AssemblyInfoInputs.cache
+D:\Visual Studio\GitProject\TaskWork\Web Application\Ticket.Application\obj\Debug\net7.0\Ticket.Application.AssemblyInfo.cs
+D:\Visual Studio\GitProject\TaskWork\Web Application\Ticket.Application\obj\Debug\net7.0\Ticket.Application.csproj.CoreCompileInputs.cache
+D:\Visual Studio\GitProject\TaskWork\Web Application\Ticket.Application\obj\Debug\net7.0\Ticket.Application.dll
+D:\Visual Studio\GitProject\TaskWork\Web Application\Ticket.Application\obj\Debug\net7.0\refint\Ticket.Application.dll
+D:\Visual Studio\GitProject\TaskWork\Web Application\Ticket.Application\obj\Debug\net7.0\Ticket.Application.pdb
+D:\Visual Studio\GitProject\TaskWork\Web Application\Ticket.Application\obj\Debug\net7.0\ref\Ticket.Application.dll

@@ -1,0 +1,24 @@
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Domain.Library\bin\Debug\Domain.Library.dll
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Domain.Library\bin\Debug\Domain.Library.pdb
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Domain.Library\obj\Debug\Domain.Library.csproj.AssemblyReference.cache
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Domain.Library\obj\Debug\Domain.Library.csproj.CoreCompileInputs.cache
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Domain.Library\obj\Debug\Domain.Library.dll
+C:\Users\tajer-k\Desktop\Ticket\Ticket\Domain.Library\obj\Debug\Domain.Library.pdb
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\Domain.Library\bin\Debug\Domain.Library.dll
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\Domain.Library\bin\Debug\Domain.Library.pdb
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\Domain.Library\obj\Debug\Domain.Library.csproj.AssemblyReference.cache
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\Domain.Library\obj\Debug\Domain.Library.csproj.CoreCompileInputs.cache
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\Domain.Library\obj\Debug\Domain.Library.dll
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\GitHub\TaskWork\Domain.Library\obj\Debug\Domain.Library.pdb
+D:\Visual Studio\GitProject\TaskWork\Domain.Library\bin\Debug\Domain.Library.dll.config
+D:\Visual Studio\GitProject\TaskWork\Domain.Library\bin\Debug\Domain.Library.dll
+D:\Visual Studio\GitProject\TaskWork\Domain.Library\bin\Debug\Domain.Library.pdb
+D:\Visual Studio\GitProject\TaskWork\Domain.Library\bin\Debug\EntityFramework.dll
+D:\Visual Studio\GitProject\TaskWork\Domain.Library\bin\Debug\EntityFramework.SqlServer.dll
+D:\Visual Studio\GitProject\TaskWork\Domain.Library\bin\Debug\EntityFramework.xml
+D:\Visual Studio\GitProject\TaskWork\Domain.Library\bin\Debug\EntityFramework.SqlServer.xml
+D:\Visual Studio\GitProject\TaskWork\Domain.Library\obj\Debug\Domain.Library.csproj.AssemblyReference.cache
+D:\Visual Studio\GitProject\TaskWork\Domain.Library\obj\Debug\Domain.Library.csproj.CoreCompileInputs.cache
+D:\Visual Studio\GitProject\TaskWork\Domain.Library\obj\Debug\Domain.Library.csproj.CopyComplete
+D:\Visual Studio\GitProject\TaskWork\Domain.Library\obj\Debug\Domain.Library.dll
+D:\Visual Studio\GitProject\TaskWork\Domain.Library\obj\Debug\Domain.Library.pdb
