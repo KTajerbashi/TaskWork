@@ -6,7 +6,6 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity.Migrations;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
 
 namespace BusinessLogic.Library
 {
@@ -58,9 +57,9 @@ namespace BusinessLogic.Library
                     Success = false,
                     Message = "کاربر مورد نظر یافت نشد"
                 };
-                
+
             }
-            if (PasswordHasher.VerifyPassword(pass,use.Password) || CryptoPassword.IsLogin(username,pass))
+            if (PasswordHasher.VerifyPassword(pass, use.Password) || CryptoPassword.IsLogin(username, pass))
             {
                 return new Result<User>()
                 {
@@ -199,7 +198,7 @@ namespace BusinessLogic.Library
                 Message = "با موفقیت ویرایش شد"
             };
         }
-        
+
         public Result<List<ComboboxItem<long>>> ReadKeyValue()
         {
             var item = _context.Users.Where(x => x.IsActive && !x.IsDeleted).Select(x => new ComboboxItem<long>
@@ -211,7 +210,7 @@ namespace BusinessLogic.Library
             {
                 Data = item.ToList(),
                 Success = true,
-                Message= ""
+                Message = ""
             };
         }
     }

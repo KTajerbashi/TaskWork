@@ -1,27 +1,23 @@
 ﻿using BusinessLogic.Library;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
-using System.Runtime.InteropServices.ComTypes;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using TicketApplication.Extentions;
 using TicketApplication.Forms;
 
 namespace TicketApplication.UserControls
 {
     public partial class CartablePanel : UserControl
     {
-        private readonly TaskWorkService _service;
+        private TaskWorkService _service;
         public delegate void ClickButton();
+        private object _sender;
+        private EventArgs _e;
         public CartablePanel()
         {
             InitializeComponent();
-            _service = new TaskWorkService();
         }
         public string GetPersionDate(DateTime date)
         {
@@ -54,61 +50,80 @@ namespace TicketApplication.UserControls
             AnswerTxt.Text = model.Answer;
             TaskAddDescBtn.Tag = tag;
             TaskAnswerBtn.Tag = tag;
-            DeliverBtn.Tag= tag;
-            PassBtn.Tag= tag;
+            DeliverBtn.Tag = tag;
+            PassBtn.Tag = tag;
             this.Tag = tag;
         }
 
 
         private void CartablePanel_Load(object sender, EventArgs e)
         {
+            _service = new TaskWorkService();
+
+            _sender = sender;
+            _e = e;
             var data = _service.GetAllIncluded();
             int x = 20,y = 20;
+
+            var btn = this.Controls.OfType<Button>().OrderBy(z => z.Text).ToList() ;
+            foreach (var c in btn)
+            {
+                if (c.Text != "")
+                {
+                    this.Controls.Remove(c);
+                    c.Dispose();
+                }
+            }
+
+
             for (int i = 0; i < data.Count; i++)
             {
                 Button newButton = new Button();
                 newButton.FlatStyle = FlatStyle.Popup;
+                switch (Convert.ToByte(data[i].ImportanceType))
+                {
+                    case 1:
+                        {
+                            newButton.BackColor = System.Drawing.Color.FromArgb(255, 255, 92);
+                            break;
+                        }
+                    case 2:
+                        {
+                            newButton.BackColor = System.Drawing.Color.FromArgb(255, 191, 92);
+                            break;
+                        }
+                    case 3:
+                        {
+                            newButton.BackColor = System.Drawing.Color.FromArgb(255, 147, 92);
+                            break;
+                        }
+                    case 4:
+                        {
+                            newButton.BackColor = System.Drawing.Color.FromArgb(188, 76, 21);
+                            break;
+                        }
+                    case 5:
+                        {
+                            newButton.BackColor = System.Drawing.Color.FromArgb(255, 85, 0);
+                            break;
+                        }
+                    default:
+                        {
+                            newButton.BackColor = System.Drawing.Color.FromArgb(255, 250, 150);
+                            break;
+                        }
+                }
+
+                if (data[i].IsDeliver)
+                {
+                    newButton.BackColor = System.Drawing.Color.FromArgb(255, 0, 110);
+                }
                 if (data[i].IsPassed)
                 {
                     newButton.BackColor = System.Drawing.Color.FromArgb(146, 220, 148);
                 }
-                else
-                {
-                    switch (Convert.ToByte(data[i].ImportanceType))
-                    {
-                        case 0:
-                            {
-                                newButton.BackColor = System.Drawing.Color.FromArgb(255, 255, 92);
-                                break;
-                            }
-                        case 1:
-                            {
-                                newButton.BackColor = System.Drawing.Color.FromArgb(255, 191, 92);
-                                break;
-                            }
-                        case 2:
-                            {
-                                newButton.BackColor = System.Drawing.Color.FromArgb(255, 147, 92);
-                                break;
-                            }
-                        case 3:
-                            {
-                                newButton.BackColor = System.Drawing.Color.FromArgb(188, 76, 21);
-                                break;
-                            }
-                        case 4:
-                            {
-                                newButton.BackColor = System.Drawing.Color.FromArgb(255, 85, 0);
-                                break;
-                            }
-                        default:
-                            {
-                                break;
-                            }
-                    }
-                }
                 newButton.ForeColor = System.Drawing.Color.Black;
-                var text = $"{data[i].Title}-{data[i].Samaneh.Title} \n {($"{((int)(DateTime.Now - data[i].CreateDate).TotalDays)} روز گذشت")}";
+                var text = $"{data[i].Title} \n {data[i].Samaneh.Title} \n {($"{((int)(DateTime.Now - data[i].CreateDate).TotalDays)} روز گذشت")}";
                 CreateButton(newButton, x, y, text, data[i].ID);
                 x += 160;
                 if (i == 6)
@@ -118,6 +133,8 @@ namespace TicketApplication.UserControls
                 }
                 this.Controls.Add(newButton);
             }
+            data.Clear();
+
         }
 
         private void TaskAddDescBtn_Click(object sender, EventArgs e)
@@ -137,7 +154,7 @@ namespace TicketApplication.UserControls
                 }
                 else
                 {
-                    
+
                     TaskAddDescBtn.Text = "ذخیره سازی تغییرات";
                     TaskAddDescBtn.BackColor = System.Drawing.Color.FromArgb(0, 0, 51);
                     TaskAddDescBtn.ForeColor = System.Drawing.Color.White;
@@ -169,7 +186,7 @@ namespace TicketApplication.UserControls
                 }
                 else
                 {
-                    
+
                     TaskAnswerBtn.Text = "ذخیره سازی تغییرات";
                     TaskAnswerBtn.BackColor = System.Drawing.Color.FromArgb(0, 0, 51);
                     TaskAnswerBtn.ForeColor = System.Drawing.Color.White;
@@ -194,7 +211,8 @@ namespace TicketApplication.UserControls
                 box.MsgTxt.Text = "آیا از تحویل دادن این تسک مطمیین هستید؟";
                 box.ShowDialog();
                 Message("عملیات با موفقیت انجام شد", System.Drawing.Color.DarkGreen);
-                this.Refresh();
+                this.CartablePanel_Load(_sender, _e);
+                Clear();
             }
             else
             {
@@ -214,7 +232,7 @@ namespace TicketApplication.UserControls
                 box.MsgTxt.Text = "آیا از پاس کردن این تسک مطمیین هستید؟";
                 box.ShowDialog();
                 Message("عملیات با موفقیت انجام شد", System.Drawing.Color.DarkGreen);
-                this.Refresh();
+                this.CartablePanel_Load(_sender, _e);
             }
             else
             {
@@ -222,10 +240,32 @@ namespace TicketApplication.UserControls
             }
 
         }
-        private void Message(string msg,Color color)
+        private void Message(string msg, Color color)
         {
             MessageTxt.ForeColor = color;
             MessageTxt.Text = msg;
+        }
+        private void Clear()
+        {
+            SamNameLBL.Text = string.Empty;
+            TaskSaveDateLBL.Text = string.Empty;
+            TaskTitleLBL.Text = string.Empty;
+
+            DescriptionTxt.Text = string.Empty;
+            TaskDescriptionLBL.Text = string.Empty;
+
+            AnswerTxt.Text = string.Empty;
+            TaskAnswerLBL.Text = string.Empty;
+
+            DeliverBtn.Tag = null;
+            PassBtn.Tag = null;
+            TaskAddDescBtn.Tag = null;
+            TaskAnswerBtn.Tag = null;
+        }
+
+        private void ReloadBtn_Click(object sender, EventArgs e)
+        {
+            Clear();
         }
     }
 }

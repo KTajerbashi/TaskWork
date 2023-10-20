@@ -30,8 +30,8 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.TaskAnswerBtn = new System.Windows.Forms.Button();
             this.AnswerTxt = new System.Windows.Forms.RichTextBox();
+            this.TaskAnswerBtn = new System.Windows.Forms.Button();
             this.TaskAnswerLBL = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.TaskAddDescBtn = new System.Windows.Forms.Button();
@@ -60,6 +60,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.MessageTxt = new System.Windows.Forms.Label();
+            this.button7 = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.ReloadBtn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -87,8 +90,8 @@
             // 
             // groupBox7
             // 
-            this.groupBox7.Controls.Add(this.TaskAnswerBtn);
             this.groupBox7.Controls.Add(this.AnswerTxt);
+            this.groupBox7.Controls.Add(this.TaskAnswerBtn);
             this.groupBox7.Controls.Add(this.TaskAnswerLBL);
             this.groupBox7.ForeColor = System.Drawing.Color.RoyalBlue;
             this.groupBox7.Location = new System.Drawing.Point(6, 15);
@@ -97,6 +100,17 @@
             this.groupBox7.TabIndex = 7;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "پاسخ";
+            // 
+            // AnswerTxt
+            // 
+            this.AnswerTxt.BackColor = System.Drawing.Color.White;
+            this.AnswerTxt.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.AnswerTxt.Location = new System.Drawing.Point(6, 24);
+            this.AnswerTxt.Name = "AnswerTxt";
+            this.AnswerTxt.Size = new System.Drawing.Size(438, 253);
+            this.AnswerTxt.TabIndex = 59;
+            this.AnswerTxt.Text = "";
+            this.AnswerTxt.Visible = false;
             // 
             // TaskAnswerBtn
             // 
@@ -112,17 +126,6 @@
             this.TaskAnswerBtn.Text = "ارایه پاسخ";
             this.TaskAnswerBtn.UseVisualStyleBackColor = false;
             this.TaskAnswerBtn.Click += new System.EventHandler(this.TaskAnswerBtn_Click);
-            // 
-            // AnswerTxt
-            // 
-            this.AnswerTxt.BackColor = System.Drawing.Color.White;
-            this.AnswerTxt.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.AnswerTxt.Location = new System.Drawing.Point(6, 24);
-            this.AnswerTxt.Name = "AnswerTxt";
-            this.AnswerTxt.Size = new System.Drawing.Size(438, 253);
-            this.AnswerTxt.TabIndex = 59;
-            this.AnswerTxt.Text = "";
-            this.AnswerTxt.Visible = false;
             // 
             // TaskAnswerLBL
             // 
@@ -143,7 +146,7 @@
             this.groupBox6.Controls.Add(this.DescriptionTxt);
             this.groupBox6.Controls.Add(this.TaskDescriptionLBL);
             this.groupBox6.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.groupBox6.Location = new System.Drawing.Point(479, 15);
+            this.groupBox6.Location = new System.Drawing.Point(467, 15);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(450, 320);
             this.groupBox6.TabIndex = 6;
@@ -213,6 +216,7 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.ReloadBtn);
             this.groupBox4.Controls.Add(this.PassBtn);
             this.groupBox4.Controls.Add(this.DeliverBtn);
             this.groupBox4.ForeColor = System.Drawing.Color.RoyalBlue;
@@ -229,10 +233,10 @@
             this.PassBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PassBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PassBtn.ForeColor = System.Drawing.Color.White;
-            this.PassBtn.Location = new System.Drawing.Point(16, 32);
+            this.PassBtn.Location = new System.Drawing.Point(56, 31);
             this.PassBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.PassBtn.Name = "PassBtn";
-            this.PassBtn.Size = new System.Drawing.Size(131, 30);
+            this.PassBtn.Size = new System.Drawing.Size(114, 30);
             this.PassBtn.TabIndex = 60;
             this.PassBtn.Text = "پاس شدن";
             this.PassBtn.UseVisualStyleBackColor = false;
@@ -244,10 +248,10 @@
             this.DeliverBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DeliverBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeliverBtn.ForeColor = System.Drawing.Color.White;
-            this.DeliverBtn.Location = new System.Drawing.Point(166, 32);
+            this.DeliverBtn.Location = new System.Drawing.Point(186, 31);
             this.DeliverBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DeliverBtn.Name = "DeliverBtn";
-            this.DeliverBtn.Size = new System.Drawing.Size(131, 30);
+            this.DeliverBtn.Size = new System.Drawing.Size(114, 30);
             this.DeliverBtn.TabIndex = 59;
             this.DeliverBtn.Text = "تحویل";
             this.DeliverBtn.UseVisualStyleBackColor = false;
@@ -385,7 +389,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 20);
             this.label1.TabIndex = 11;
-            this.label1.Text = "ضعیف";
+            this.label1.Text = "پایین";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label1.UseMnemonic = false;
             // 
@@ -413,7 +417,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(70, 20);
             this.label3.TabIndex = 13;
-            this.label3.Text = "مهم";
+            this.label3.Text = "بالا";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label3.UseMnemonic = false;
             // 
@@ -427,7 +431,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(70, 20);
             this.label4.TabIndex = 14;
-            this.label4.Text = "خیلی مهم";
+            this.label4.Text = "فوری";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label4.UseMnemonic = false;
             // 
@@ -441,7 +445,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(70, 20);
             this.label5.TabIndex = 15;
-            this.label5.Text = "فوری";
+            this.label5.Text = "خیلی فوری";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label5.UseMnemonic = false;
             // 
@@ -486,11 +490,55 @@
             this.MessageTxt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.MessageTxt.UseMnemonic = false;
             // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(0)))), ((int)(((byte)(110)))));
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.Color.Black;
+            this.button7.Location = new System.Drawing.Point(1235, 152);
+            this.button7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(15, 15);
+            this.button7.TabIndex = 19;
+            this.button7.UseVisualStyleBackColor = false;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("IRANSansWeb", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label8.Location = new System.Drawing.Point(1186, 149);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(52, 20);
+            this.label8.TabIndex = 20;
+            this.label8.Text = "برگشتی";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label8.UseMnemonic = false;
+            // 
+            // ReloadBtn
+            // 
+            this.ReloadBtn.BackColor = System.Drawing.Color.PowderBlue;
+            this.ReloadBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ReloadBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ReloadBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReloadBtn.ForeColor = System.Drawing.Color.White;
+            this.ReloadBtn.Location = new System.Drawing.Point(12, 31);
+            this.ReloadBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ReloadBtn.Name = "ReloadBtn";
+            this.ReloadBtn.Size = new System.Drawing.Size(28, 30);
+            this.ReloadBtn.TabIndex = 61;
+            this.ReloadBtn.UseVisualStyleBackColor = false;
+            this.ReloadBtn.Click += new System.EventHandler(this.ReloadBtn_Click);
+            // 
             // CartablePanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.MessageTxt);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.button6);
@@ -558,5 +606,8 @@
         private System.Windows.Forms.Button DeliverBtn;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label MessageTxt;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button ReloadBtn;
     }
 }

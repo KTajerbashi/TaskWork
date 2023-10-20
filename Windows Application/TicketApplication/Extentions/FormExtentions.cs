@@ -19,5 +19,33 @@ namespace TicketApplication.Extentions
                 }
             }
         }
+        public static void LabelBoxes(Control.ControlCollection ctrlCollection)
+        {
+            foreach (Control ctrl in ctrlCollection)
+            {
+                if (ctrl is Label)
+                {
+                    ctrl.Text = String.Empty;
+                }
+                else
+                {
+                    LabelBoxes(ctrl.Controls);
+                }
+            }
+        }
+        public static void TextAreaBoxes(Control.ControlCollection ctrlCollection)
+        {
+            foreach (Control ctrl in ctrlCollection)
+            {
+                if (ctrl is RichTextBox)
+                {
+                    ctrl.Text = String.Empty;
+                }
+                else
+                {
+                    LabelBoxes(ctrl.Controls);
+                }
+            }
+        }
     }
 }

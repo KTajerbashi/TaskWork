@@ -61,14 +61,19 @@ namespace TicketApplication
 
         private void Main_Load(object sender, EventArgs e)
         {
-            loginForm.ShowDialog();
+            //loginForm.ShowDialog();
             CartablePanel cartable = new CartablePanel();
             if (MainPanel.Controls.Count > 0)
             {
                 MainPanel.Controls[0].Dispose();
             }
             MainPanel.Controls.Add(cartable);
+#if DEBUG
+            UsernameLBL.Text = "محیط توسعه";
+#else
             UsernameLBL.Text = AppUser.DisplayName;
+#endif
+
         }
 
         private void TasksListBtn_Click(object sender, EventArgs e)

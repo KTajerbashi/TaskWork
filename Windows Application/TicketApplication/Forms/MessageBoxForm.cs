@@ -1,13 +1,6 @@
 ﻿using BusinessLogic.Library;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TicketApplication.Forms
@@ -66,12 +59,14 @@ namespace TicketApplication.Forms
                     {
                         var model = _service.GetById(tag);
                         model.IsDeliver = true;
+                        _service.Update(model);
                         break;
                     }
                 case "PassTask":
                     {
                         var model = _service.GetById(tag);
                         model.IsPassed = true;
+                        _service.Update(model);
                         break;
                     }
                 default:

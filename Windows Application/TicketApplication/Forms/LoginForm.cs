@@ -29,15 +29,13 @@ namespace TicketApplication.Forms
 
         int y = 500;
         Timer T1 = new Timer();
-        private UserService _userService;
-        private RoleService _roleService;
+
         public LoginForm()
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
-            _userService = new UserService();
-            _roleService = new RoleService();
+
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
@@ -57,6 +55,7 @@ namespace TicketApplication.Forms
         {
             try
             {
+                UserService _userService = new UserService();
                 var res = _userService.IsExit(UsernameTxt.Text, PasswordTxt.Text);
                 LoginMsg.Text = res.Message;
                 if (res.Success)
@@ -94,6 +93,8 @@ namespace TicketApplication.Forms
         {
             if (AccessXCode.Text.ToUpper() == "ADMIN_ACCESS")
             {
+                UserService _userService = new UserService();
+                RoleService _roleService = new RoleService();
 
                 if (string.IsNullOrEmpty(Sign_Name.Text) || string.IsNullOrWhiteSpace(Sign_Name.Text))
                 {
@@ -161,7 +162,7 @@ namespace TicketApplication.Forms
             }
             else
             {
-                    SignInMsg.Text = $"شما برای انجام این کار نیاز به مشاوره ادمین دارید";
+                SignInMsg.Text = $"شما برای انجام این کار نیاز به مشاوره ادمین دارید";
             }
 
         }
@@ -198,6 +199,7 @@ namespace TicketApplication.Forms
             };
             if (RCV_CheckBtn.Text == "بررسی اطلاعات")
             {
+                UserService _userService = new UserService();
 
                 var res = _userService.Recovery(userModel);
                 if (res.Success)
@@ -220,6 +222,7 @@ namespace TicketApplication.Forms
                 {
                     if (RCV_Pass.Text == RCV_RePas.Text)
                     {
+                        UserService _userService = new UserService();
                         _userService.UpdateRecoveryPass(userModel);
                         RCV_CheckBtn.Text = "بررسی اطلاعات";
                         RCV_LBL_Pass1.Visible = false;
@@ -314,6 +317,7 @@ namespace TicketApplication.Forms
 
         private void SetCurrentUserData(string username)
         {
+            UserService _userService = new UserService();
             var user = _userService.GetByUserName(username);
             AppUser.Username = user.Data.Username.ToUpper();
             AppUser.UserID = user.Data.ID;
