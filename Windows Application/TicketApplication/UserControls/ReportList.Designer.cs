@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.SearchTxt = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.ToDate = new Atf.UI.DateTimeSelector();
             this.FromDate = new Atf.UI.DateTimeSelector();
             this.label3 = new System.Windows.Forms.Label();
@@ -42,7 +43,6 @@
             this.ListTasks = new System.Windows.Forms.DataGridView();
             this.CountLBL = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.SearchTxt = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ListTasks)).BeginInit();
             this.SuspendLayout();
@@ -65,6 +65,21 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "فیلتر";
+            // 
+            // SearchTxt
+            // 
+            // 
+            // 
+            // 
+            this.SearchTxt.Border.Class = "TextBoxBorder";
+            this.SearchTxt.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.SearchTxt.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.SearchTxt.Location = new System.Drawing.Point(82, 23);
+            this.SearchTxt.Name = "SearchTxt";
+            this.SearchTxt.PreventEnterBeep = true;
+            this.SearchTxt.Size = new System.Drawing.Size(364, 27);
+            this.SearchTxt.TabIndex = 16;
+            this.SearchTxt.WatermarkText = "جستجو ...";
             // 
             // ToDate
             // 
@@ -129,7 +144,7 @@
             // 
             // SearchBtn
             // 
-            this.SearchBtn.BackColor = System.Drawing.Color.SteelBlue;
+            this.SearchBtn.BackColor = System.Drawing.Color.DodgerBlue;
             this.SearchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SearchBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SearchBtn.ForeColor = System.Drawing.Color.White;
@@ -144,7 +159,7 @@
             // 
             // FTDateBtn
             // 
-            this.FTDateBtn.BackColor = System.Drawing.Color.SteelBlue;
+            this.FTDateBtn.BackColor = System.Drawing.Color.DodgerBlue;
             this.FTDateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.FTDateBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FTDateBtn.ForeColor = System.Drawing.Color.White;
@@ -227,21 +242,6 @@
             this.label4.Text = "تعداد رکورد";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label4.UseMnemonic = false;
-            // 
-            // SearchTxt
-            // 
-            // 
-            // 
-            // 
-            this.SearchTxt.Border.Class = "TextBoxBorder";
-            this.SearchTxt.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.SearchTxt.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.SearchTxt.Location = new System.Drawing.Point(82, 23);
-            this.SearchTxt.Name = "SearchTxt";
-            this.SearchTxt.PreventEnterBeep = true;
-            this.SearchTxt.Size = new System.Drawing.Size(364, 27);
-            this.SearchTxt.TabIndex = 16;
-            this.SearchTxt.WatermarkText = "جستجو ...";
             // 
             // ReportList
             // 

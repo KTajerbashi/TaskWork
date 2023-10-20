@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TicketApplication.Authentication;
 
 namespace TicketApplication.Common
 {
@@ -192,6 +193,7 @@ ORDER BY TS.ID DESC
         }
         public string ShowNotDeliver(string paging)
         {
+			var UserRoleId = AppUser.UserRoleID;
             return $@"
 SELECT 
     TS.ID AS [آیدی],

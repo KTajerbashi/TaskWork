@@ -81,6 +81,8 @@
             this.label20 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.RCV_CheckBtn = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.AccessXCode = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.LoginPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SignInPanel.SuspendLayout();
@@ -114,7 +116,7 @@
             this.LoginPanel.Controls.Add(this.label3);
             this.LoginPanel.Controls.Add(this.pictureBox1);
             this.LoginPanel.Controls.Add(this.SignInBtn);
-            this.LoginPanel.Location = new System.Drawing.Point(535, 23);
+            this.LoginPanel.Location = new System.Drawing.Point(535, 4);
             this.LoginPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.LoginPanel.Name = "LoginPanel";
             this.LoginPanel.Size = new System.Drawing.Size(374, 627);
@@ -183,6 +185,7 @@
             this.PasswordTxt.PreventEnterBeep = true;
             this.PasswordTxt.Size = new System.Drawing.Size(339, 27);
             this.PasswordTxt.TabIndex = 8;
+            this.PasswordTxt.Text = "ADMINADMIN";
             this.PasswordTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // UsernameTxt
@@ -210,6 +213,7 @@
             this.UsernameTxt.PreventEnterBeep = true;
             this.UsernameTxt.Size = new System.Drawing.Size(339, 27);
             this.UsernameTxt.TabIndex = 7;
+            this.UsernameTxt.Text = "ADMIN";
             this.UsernameTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label4
@@ -276,6 +280,8 @@
             // SignInPanel
             // 
             this.SignInPanel.BackColor = System.Drawing.Color.Transparent;
+            this.SignInPanel.Controls.Add(this.label13);
+            this.SignInPanel.Controls.Add(this.AccessXCode);
             this.SignInPanel.Controls.Add(this.label5);
             this.SignInPanel.Controls.Add(this.label2);
             this.SignInPanel.Controls.Add(this.Sign_RePass);
@@ -295,7 +301,7 @@
             this.SignInPanel.Controls.Add(this.label8);
             this.SignInPanel.Controls.Add(this.pictureBox2);
             this.SignInPanel.Controls.Add(this.SaveNewUserBtn);
-            this.SignInPanel.Location = new System.Drawing.Point(475, 23);
+            this.SignInPanel.Location = new System.Drawing.Point(475, 4);
             this.SignInPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.SignInPanel.Name = "SignInPanel";
             this.SignInPanel.Size = new System.Drawing.Size(495, 627);
@@ -306,7 +312,7 @@
             // 
             this.label5.Font = new System.Drawing.Font("IRANSansWeb", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(135, 330);
+            this.label5.Location = new System.Drawing.Point(368, 454);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(107, 29);
@@ -318,7 +324,7 @@
             // 
             this.label2.Font = new System.Drawing.Font("IRANSansWeb", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(135, 454);
+            this.label2.Location = new System.Drawing.Point(132, 392);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(107, 29);
@@ -345,7 +351,7 @@
             this.Sign_RePass.Border.HideMnemonic = true;
             this.Sign_RePass.Border.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
             this.Sign_RePass.Border.UseMnemonic = true;
-            this.Sign_RePass.Location = new System.Drawing.Point(23, 486);
+            this.Sign_RePass.Location = new System.Drawing.Point(20, 424);
             this.Sign_RePass.MaxLength = 50;
             this.Sign_RePass.Name = "Sign_RePass";
             this.Sign_RePass.PasswordChar = '*';
@@ -373,11 +379,11 @@
             this.Sign_Username.Border.HideMnemonic = true;
             this.Sign_Username.Border.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
             this.Sign_Username.Border.UseMnemonic = true;
-            this.Sign_Username.Location = new System.Drawing.Point(20, 424);
+            this.Sign_Username.Location = new System.Drawing.Point(20, 300);
             this.Sign_Username.MaxLength = 50;
             this.Sign_Username.Name = "Sign_Username";
             this.Sign_Username.PreventEnterBeep = true;
-            this.Sign_Username.Size = new System.Drawing.Size(449, 27);
+            this.Sign_Username.Size = new System.Drawing.Size(213, 27);
             this.Sign_Username.TabIndex = 4;
             this.Sign_Username.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -400,7 +406,7 @@
             this.Sign_Pass.Border.HideMnemonic = true;
             this.Sign_Pass.Border.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
             this.Sign_Pass.Border.UseMnemonic = true;
-            this.Sign_Pass.Location = new System.Drawing.Point(259, 486);
+            this.Sign_Pass.Location = new System.Drawing.Point(20, 362);
             this.Sign_Pass.MaxLength = 50;
             this.Sign_Pass.Name = "Sign_Pass";
             this.Sign_Pass.PasswordChar = '*';
@@ -413,7 +419,7 @@
             // 
             this.label11.Font = new System.Drawing.Font("IRANSansWeb", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(368, 454);
+            this.label11.Location = new System.Drawing.Point(132, 330);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(107, 29);
@@ -425,7 +431,7 @@
             // 
             this.label12.Font = new System.Drawing.Font("IRANSansWeb", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(368, 392);
+            this.label12.Location = new System.Drawing.Point(132, 268);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(107, 29);
@@ -463,7 +469,7 @@
             this.Sign_Email.Border.HideMnemonic = true;
             this.Sign_Email.Border.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
             this.Sign_Email.Border.UseMnemonic = true;
-            this.Sign_Email.Location = new System.Drawing.Point(23, 362);
+            this.Sign_Email.Location = new System.Drawing.Point(253, 486);
             this.Sign_Email.MaxLength = 50;
             this.Sign_Email.Name = "Sign_Email";
             this.Sign_Email.PreventEnterBeep = true;
@@ -490,7 +496,7 @@
             this.Sign_Phone.Border.HideMnemonic = true;
             this.Sign_Phone.Border.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
             this.Sign_Phone.Border.UseMnemonic = true;
-            this.Sign_Phone.Location = new System.Drawing.Point(259, 362);
+            this.Sign_Phone.Location = new System.Drawing.Point(253, 424);
             this.Sign_Phone.MaxLength = 50;
             this.Sign_Phone.Name = "Sign_Phone";
             this.Sign_Phone.PreventEnterBeep = true;
@@ -503,7 +509,7 @@
             // 
             this.label9.Font = new System.Drawing.Font("IRANSansWeb", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(368, 330);
+            this.label9.Location = new System.Drawing.Point(368, 392);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(107, 29);
@@ -554,7 +560,7 @@
             this.Sign_Name.Border.HideMnemonic = true;
             this.Sign_Name.Border.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
             this.Sign_Name.Border.UseMnemonic = true;
-            this.Sign_Name.Location = new System.Drawing.Point(259, 300);
+            this.Sign_Name.Location = new System.Drawing.Point(253, 300);
             this.Sign_Name.MaxLength = 50;
             this.Sign_Name.Name = "Sign_Name";
             this.Sign_Name.PreventEnterBeep = true;
@@ -581,7 +587,7 @@
             this.Sign_Family.Border.HideMnemonic = true;
             this.Sign_Family.Border.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
             this.Sign_Family.Border.UseMnemonic = true;
-            this.Sign_Family.Location = new System.Drawing.Point(23, 300);
+            this.Sign_Family.Location = new System.Drawing.Point(253, 362);
             this.Sign_Family.MaxLength = 50;
             this.Sign_Family.Name = "Sign_Family";
             this.Sign_Family.PreventEnterBeep = true;
@@ -593,7 +599,7 @@
             // 
             this.label7.Font = new System.Drawing.Font("IRANSansWeb", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(135, 268);
+            this.label7.Location = new System.Drawing.Point(368, 330);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(107, 29);
@@ -657,7 +663,7 @@
             this.RecoverPanel.Controls.Add(this.label20);
             this.RecoverPanel.Controls.Add(this.pictureBox3);
             this.RecoverPanel.Controls.Add(this.RCV_CheckBtn);
-            this.RecoverPanel.Location = new System.Drawing.Point(475, 23);
+            this.RecoverPanel.Location = new System.Drawing.Point(475, 4);
             this.RecoverPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RecoverPanel.Name = "RecoverPanel";
             this.RecoverPanel.Size = new System.Drawing.Size(495, 627);
@@ -1004,6 +1010,46 @@
             this.RCV_CheckBtn.UseVisualStyleBackColor = true;
             this.RCV_CheckBtn.Click += new System.EventHandler(this.RCV_CheckBtn_Click);
             // 
+            // label13
+            // 
+            this.label13.Font = new System.Drawing.Font("IRANSansWeb", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(132, 454);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(107, 29);
+            this.label13.TabIndex = 24;
+            this.label13.Text = "کد دسترسی";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // AccessXCode
+            // 
+            this.AccessXCode.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.AccessXCode.Border.BackColor = System.Drawing.Color.White;
+            this.AccessXCode.Border.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarCaptionInactiveText;
+            this.AccessXCode.Border.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.AccessXCode.Border.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.DockSiteBackColor2;
+            this.AccessXCode.Border.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.AccessXCode.Border.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.AccessXCode.Border.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.AccessXCode.Border.Class = "TextBoxBorder";
+            this.AccessXCode.Border.CornerDiameter = 5;
+            this.AccessXCode.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.AccessXCode.Border.HideMnemonic = true;
+            this.AccessXCode.Border.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
+            this.AccessXCode.Border.UseMnemonic = true;
+            this.AccessXCode.Location = new System.Drawing.Point(20, 486);
+            this.AccessXCode.MaxLength = 50;
+            this.AccessXCode.Name = "AccessXCode";
+            this.AccessXCode.PasswordChar = '+';
+            this.AccessXCode.PreventEnterBeep = true;
+            this.AccessXCode.Size = new System.Drawing.Size(213, 27);
+            this.AccessXCode.TabIndex = 23;
+            this.AccessXCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 20F);
@@ -1011,9 +1057,9 @@
             this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ClientSize = new System.Drawing.Size(1445, 679);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.SignInPanel);
             this.Controls.Add(this.LoginPanel);
             this.Controls.Add(this.RecoverPanel);
-            this.Controls.Add(this.SignInPanel);
             this.Font = new System.Drawing.Font("IRANSansWeb", 8.999999F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -1086,5 +1132,7 @@
         public DevComponents.DotNetBar.Controls.TextBoxX PasswordTxt;
         public DevComponents.DotNetBar.Controls.TextBoxX UsernameTxt;
         public System.Windows.Forms.Label LoginMsg;
+        private System.Windows.Forms.Label label13;
+        private DevComponents.DotNetBar.Controls.TextBoxX AccessXCode;
     }
 }

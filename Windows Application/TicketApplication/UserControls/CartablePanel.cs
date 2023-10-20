@@ -133,7 +133,7 @@ namespace TicketApplication.UserControls
                     DescriptionTxt.Visible = false;
                     TaskAddDescBtn.Text = "افزودن یادداشت";
                     TaskAddDescBtn.ForeColor = System.Drawing.Color.White;
-                    TaskAddDescBtn.BackColor = System.Drawing.Color.SteelBlue;
+                    TaskAddDescBtn.BackColor = System.Drawing.Color.DodgerBlue;
                 }
                 else
                 {
@@ -165,7 +165,7 @@ namespace TicketApplication.UserControls
                     AnswerTxt.Visible = false;
                     TaskAnswerBtn.Text = "ارایه پاسخ";
                     TaskAnswerBtn.ForeColor = System.Drawing.Color.White;
-                    TaskAnswerBtn.BackColor = System.Drawing.Color.SteelBlue;
+                    TaskAnswerBtn.BackColor = System.Drawing.Color.DodgerBlue;
                 }
                 else
                 {

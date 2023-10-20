@@ -47,9 +47,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.progressBar6 = new System.Windows.Forms.ProgressBar();
             this.progressBar2 = new System.Windows.Forms.ProgressBar();
-            this.SampaBtn = new System.Windows.Forms.Button();
             this.UsernameLBL = new System.Windows.Forms.Label();
             this.AsidePanel = new System.Windows.Forms.Panel();
+            this.SettingBtn = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.LockScreenBtn = new System.Windows.Forms.PictureBox();
             this.DbBackupBtn = new System.Windows.Forms.PictureBox();
@@ -257,22 +257,6 @@
             this.progressBar2.Size = new System.Drawing.Size(121, 1);
             this.progressBar2.TabIndex = 62;
             // 
-            // SampaBtn
-            // 
-            this.SampaBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.SampaBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SampaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SampaBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SampaBtn.ForeColor = System.Drawing.Color.White;
-            this.SampaBtn.Location = new System.Drawing.Point(19, 415);
-            this.SampaBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.SampaBtn.Name = "SampaBtn";
-            this.SampaBtn.Size = new System.Drawing.Size(125, 31);
-            this.SampaBtn.TabIndex = 5;
-            this.SampaBtn.Text = "مدیریت سمپا";
-            this.SampaBtn.UseVisualStyleBackColor = false;
-            this.SampaBtn.Click += new System.EventHandler(this.SampaBtn_Click);
-            // 
             // UsernameLBL
             // 
             this.UsernameLBL.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -289,12 +273,12 @@
             // AsidePanel
             // 
             this.AsidePanel.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.AsidePanel.Controls.Add(this.SettingBtn);
             this.AsidePanel.Controls.Add(this.progressBar1);
             this.AsidePanel.Controls.Add(this.LockScreenBtn);
             this.AsidePanel.Controls.Add(this.DbBackupBtn);
             this.AsidePanel.Controls.Add(this.pictureBox1);
             this.AsidePanel.Controls.Add(this.UsernameLBL);
-            this.AsidePanel.Controls.Add(this.SampaBtn);
             this.AsidePanel.Controls.Add(this.progressBar2);
             this.AsidePanel.Controls.Add(this.progressBar6);
             this.AsidePanel.Controls.Add(this.label2);
@@ -317,6 +301,22 @@
             this.AsidePanel.Size = new System.Drawing.Size(163, 660);
             this.AsidePanel.TabIndex = 0;
             this.AsidePanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.AsidePanel_MouseDown);
+            // 
+            // SettingBtn
+            // 
+            this.SettingBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.SettingBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SettingBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SettingBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SettingBtn.ForeColor = System.Drawing.Color.White;
+            this.SettingBtn.Location = new System.Drawing.Point(19, 545);
+            this.SettingBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.SettingBtn.Name = "SettingBtn";
+            this.SettingBtn.Size = new System.Drawing.Size(125, 31);
+            this.SettingBtn.TabIndex = 68;
+            this.SettingBtn.Text = "تنظیمات";
+            this.SettingBtn.UseVisualStyleBackColor = false;
+            this.SettingBtn.Click += new System.EventHandler(this.SettingBtn_Click);
             // 
             // progressBar1
             // 
@@ -408,13 +408,13 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ProgressBar progressBar6;
         private System.Windows.Forms.ProgressBar progressBar2;
-        private System.Windows.Forms.Button SampaBtn;
         public System.Windows.Forms.Label UsernameLBL;
         private System.Windows.Forms.Panel AsidePanel;
         private System.Windows.Forms.PictureBox LockScreenBtn;
         private System.Windows.Forms.PictureBox DbBackupBtn;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.Button SettingBtn;
     }
 }
 

@@ -95,42 +95,32 @@ namespace TicketApplication
 
         private void SaamanehBtn_Click(object sender, EventArgs e)
         {
-            SaamanehPanel saamaneh = new SaamanehPanel();
+            SaamanehPanel panel = new SaamanehPanel();
             if (MainPanel.Controls.Count > 0)
             {
                 MainPanel.Controls[0].Dispose();
             }
-            MainPanel.Controls.Add(saamaneh);
+            MainPanel.Controls.Add(panel);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            CartablePanel cartable = new CartablePanel();
+            CartablePanel panel = new CartablePanel();
             if (MainPanel.Controls.Count > 0)
             {
                 MainPanel.Controls[0].Dispose();
             }
-            MainPanel.Controls.Add(cartable);
-        }
-
-        private void SampaBtn_Click(object sender, EventArgs e)
-        {
-            SampaPanel sampa = new SampaPanel();
-            if (MainPanel.Controls.Count > 0)
-            {
-                MainPanel.Controls[0].Dispose();
-            }
-            MainPanel.Controls.Add(sampa);
+            MainPanel.Controls.Add(panel);
         }
 
         private void label2_Click(object sender, EventArgs e)
         {
-            RoadMapPanel roadMap = new RoadMapPanel();
+            RoadMapPanel panel = new RoadMapPanel();
             if (MainPanel.Controls.Count > 0)
             {
                 MainPanel.Controls[0].Dispose();
             }
-            MainPanel.Controls.Add(roadMap);
+            MainPanel.Controls.Add(panel);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -150,6 +140,16 @@ namespace TicketApplication
         private void DbBackupBtn_Click(object sender, EventArgs e)
         {
             BackupPanel panel = new BackupPanel();
+            if (MainPanel.Controls.Count > 0)
+            {
+                MainPanel.Controls[0].Dispose();
+            }
+            MainPanel.Controls.Add(panel);
+        }
+
+        private void SettingBtn_Click(object sender, EventArgs e)
+        {
+            SettingPanel panel = new SettingPanel();
             if (MainPanel.Controls.Count > 0)
             {
                 MainPanel.Controls[0].Dispose();

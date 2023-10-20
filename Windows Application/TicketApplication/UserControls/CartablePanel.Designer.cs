@@ -100,7 +100,7 @@
             // 
             // TaskAnswerBtn
             // 
-            this.TaskAnswerBtn.BackColor = System.Drawing.Color.SteelBlue;
+            this.TaskAnswerBtn.BackColor = System.Drawing.Color.DodgerBlue;
             this.TaskAnswerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TaskAnswerBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TaskAnswerBtn.ForeColor = System.Drawing.Color.White;
@@ -152,7 +152,7 @@
             // 
             // TaskAddDescBtn
             // 
-            this.TaskAddDescBtn.BackColor = System.Drawing.Color.SteelBlue;
+            this.TaskAddDescBtn.BackColor = System.Drawing.Color.DodgerBlue;
             this.TaskAddDescBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TaskAddDescBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TaskAddDescBtn.ForeColor = System.Drawing.Color.White;
@@ -225,10 +225,10 @@
             // 
             // PassBtn
             // 
-            this.PassBtn.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.PassBtn.BackColor = System.Drawing.Color.DodgerBlue;
             this.PassBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PassBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PassBtn.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.PassBtn.ForeColor = System.Drawing.Color.White;
             this.PassBtn.Location = new System.Drawing.Point(16, 32);
             this.PassBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.PassBtn.Name = "PassBtn";
@@ -240,10 +240,10 @@
             // 
             // DeliverBtn
             // 
-            this.DeliverBtn.BackColor = System.Drawing.Color.Chartreuse;
+            this.DeliverBtn.BackColor = System.Drawing.Color.LimeGreen;
             this.DeliverBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DeliverBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeliverBtn.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.DeliverBtn.ForeColor = System.Drawing.Color.White;
             this.DeliverBtn.Location = new System.Drawing.Point(166, 32);
             this.DeliverBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DeliverBtn.Name = "DeliverBtn";

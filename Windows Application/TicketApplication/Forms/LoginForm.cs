@@ -92,68 +92,76 @@ namespace TicketApplication.Forms
 
         private void SaveNewUserBtn_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(Sign_Name.Text) || string.IsNullOrWhiteSpace(Sign_Name.Text))
+            if (AccessXCode.Text.ToUpper() == "ADMIN_ACCESS")
             {
-                SignInMsg.Text = $"نام معتبر وارد کنید";
-                Sign_Name.Focus();
-            }
-            else if (string.IsNullOrEmpty(Sign_Family.Text) || string.IsNullOrWhiteSpace(Sign_Family.Text))
-            {
-                SignInMsg.Text = $"فامیل معتبر وارد کنید";
-                Sign_Family.Focus();
-            }
-            else if (string.IsNullOrEmpty(Sign_Phone.Text) || string.IsNullOrWhiteSpace(Sign_Phone.Text))
-            {
-                SignInMsg.Text = $"تلفن معتبر وارد کنید";
-                Sign_Phone.Focus();
-            }
-            else if (string.IsNullOrEmpty(Sign_Email.Text) || string.IsNullOrWhiteSpace(Sign_Email.Text))
-            {
-                SignInMsg.Text = $"ایمیل معتبر وارد کنید";
-                Sign_Email.Focus();
-            }
-            else if (string.IsNullOrEmpty(Sign_Username.Text) || string.IsNullOrWhiteSpace(Sign_Username.Text) || Sign_Username.Text.Count() < 6 || Sign_Username.Text.Trim() == "")
-            {
-                SignInMsg.Text = $"نام کاربری معتبر وارد کنید حداقل 8 کارکتر باشد";
-                Sign_Username.Focus();
-            }
-            else if (string.IsNullOrEmpty(Sign_Pass.Text) || string.IsNullOrWhiteSpace(Sign_Pass.Text) || Sign_Pass.Text.Count() < 8 || Sign_Pass.Text.Trim() == "")
-            {
-                SignInMsg.Text = $"رمز باید حرف,عدد و حداقل 8 کارکتر باشد ";
-                Sign_Pass.Focus();
-            }
-            else if (Sign_Pass.Text != Sign_RePass.Text)
-            {
-                SignInMsg.Text = $"رمز ها همخوانی ندارد";
-                Sign_Pass.Text = null; Sign_RePass.Text = null;
-                Sign_Pass.Focus();
-            }
-            else
-            {
-                User entity = new User();
-                entity.Name = Sign_Name.Text;
-                entity.Family = Sign_Family.Text;
-                entity.DisplayName = $"{entity.Name} {entity.Family}";
-                entity.Phone = Sign_Phone.Text;
-                entity.Email = Sign_Email.Text.ToUpper();
-                entity.Username = Sign_Username.Text.Trim().ToUpper();
-                entity.Password = PasswordHasher.HashPassword(Sign_Pass.Text);
-                entity.Salt = CryptoPassword.GeneratePassword(Sign_Pass.Text).Salt;
-                entity.Hash = CryptoPassword.GeneratePassword(Sign_Pass.Text).Hash;
-                var res =_userService.IsMatchAny(entity);
 
-                if (res.Success)
+                if (string.IsNullOrEmpty(Sign_Name.Text) || string.IsNullOrWhiteSpace(Sign_Name.Text))
                 {
-                    _userService.InsertWithRole(entity, _roleService.GetById(3));
-                    SignInMsg.Text = res.Message;
-                    //CloseSignInPanel();
-                    SignInPanel.Visible = false;
-                    LoginPanel.Visible = true;
+                    SignInMsg.Text = $"نام معتبر وارد کنید";
+                    Sign_Name.Focus();
+                }
+                else if (string.IsNullOrEmpty(Sign_Family.Text) || string.IsNullOrWhiteSpace(Sign_Family.Text))
+                {
+                    SignInMsg.Text = $"فامیل معتبر وارد کنید";
+                    Sign_Family.Focus();
+                }
+                else if (string.IsNullOrEmpty(Sign_Phone.Text) || string.IsNullOrWhiteSpace(Sign_Phone.Text))
+                {
+                    SignInMsg.Text = $"تلفن معتبر وارد کنید";
+                    Sign_Phone.Focus();
+                }
+                else if (string.IsNullOrEmpty(Sign_Email.Text) || string.IsNullOrWhiteSpace(Sign_Email.Text))
+                {
+                    SignInMsg.Text = $"ایمیل معتبر وارد کنید";
+                    Sign_Email.Focus();
+                }
+                else if (string.IsNullOrEmpty(Sign_Username.Text) || string.IsNullOrWhiteSpace(Sign_Username.Text) || Sign_Username.Text.Count() < 6 || Sign_Username.Text.Trim() == "")
+                {
+                    SignInMsg.Text = $"نام کاربری معتبر وارد کنید حداقل 8 کارکتر باشد";
+                    Sign_Username.Focus();
+                }
+                else if (string.IsNullOrEmpty(Sign_Pass.Text) || string.IsNullOrWhiteSpace(Sign_Pass.Text) || Sign_Pass.Text.Count() < 8 || Sign_Pass.Text.Trim() == "")
+                {
+                    SignInMsg.Text = $"رمز باید حرف,عدد و حداقل 8 کارکتر باشد ";
+                    Sign_Pass.Focus();
+                }
+                else if (Sign_Pass.Text != Sign_RePass.Text)
+                {
+                    SignInMsg.Text = $"رمز ها همخوانی ندارد";
+                    Sign_Pass.Text = null; Sign_RePass.Text = null;
+                    Sign_Pass.Focus();
                 }
                 else
                 {
-                    SignInMsg.Text = res.Message;
+                    User entity = new User();
+                    entity.Name = Sign_Name.Text;
+                    entity.Family = Sign_Family.Text;
+                    entity.DisplayName = $"{entity.Name} {entity.Family}";
+                    entity.Phone = Sign_Phone.Text;
+                    entity.Email = Sign_Email.Text.ToUpper();
+                    entity.Username = Sign_Username.Text.Trim().ToUpper();
+                    entity.Password = PasswordHasher.HashPassword(Sign_Pass.Text);
+                    entity.Salt = CryptoPassword.GeneratePassword(Sign_Pass.Text).Salt;
+                    entity.Hash = CryptoPassword.GeneratePassword(Sign_Pass.Text).Hash;
+                    var res =_userService.IsMatchAny(entity);
+
+                    if (res.Success)
+                    {
+                        _userService.InsertWithRole(entity, _roleService.GetById(3));
+                        SignInMsg.Text = res.Message;
+                        //CloseSignInPanel();
+                        SignInPanel.Visible = false;
+                        LoginPanel.Visible = true;
+                    }
+                    else
+                    {
+                        SignInMsg.Text = res.Message;
+                    }
                 }
+            }
+            else
+            {
+                    SignInMsg.Text = $"شما برای انجام این کار نیاز به مشاوره ادمین دارید";
             }
 
         }
