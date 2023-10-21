@@ -1,0 +1,23 @@
+﻿using BusinessLogic.Library.DatabaseService;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
+namespace BusinessLogic.Library.BaseServices
+{
+    public interface IBaseServices<TEntity,TContext> 
+        where TEntity : class
+        where TContext : IDatabaseContext, new()
+    {
+        Task<int> Insert(TEntity entity);
+        Task<int> AddOrUpdate(TEntity entity);
+        Task<int> Update(TEntity entity);
+        Task<int> Delete(TEntity entity);
+        Task<int> DisActive(long Id);
+        Task<IEnumerable<TEntity>> GetAll();
+        Task<TEntity> GetById(long Id);
+        Task<TEntity> Delete(long Id);
+        Task<int> Save();
+        Task<int> SaveAsync();
+    }
+    
+}

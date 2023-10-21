@@ -1,4 +1,4 @@
-﻿namespace Infrastructure.Library.DatabaseContext.Models
+﻿namespace Infrastructure.Library.Models
 {
     public class RolesSeed
     {

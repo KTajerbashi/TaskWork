@@ -1,8 +1,6 @@
 ﻿using Domain.Model;
 using System;
 using System.Security.Cryptography;
-using System.Text;
-using BCrypt.Net;
 namespace BusinessLogic.Library.Extentions
 {
     public class HashSalt
@@ -51,9 +49,9 @@ namespace BusinessLogic.Library.Extentions
         {
             return BCrypt.Net.BCrypt.HashPassword(password);
         }
-        public static bool VerifyPassword(string passwod,string currenthash)
+        public static bool VerifyPassword(string passwod, string currenthash)
         {
-           return BCrypt.Net.BCrypt.Verify(passwod, currenthash);
+            return BCrypt.Net.BCrypt.Verify(passwod, currenthash);
 
         }
     }

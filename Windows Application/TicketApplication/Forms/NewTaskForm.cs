@@ -163,7 +163,7 @@ namespace TicketApplication.Forms
         //  Samaneh Combo Config
         private void FillSaamanehCombo()
         {
-            SamanehService samana = new SamanehService();
+            SamanehCommandService samana = new SamanehCommandService();
             SaamanehCombo.Items.Clear();
             SaamanehCombo.Items.Add(new ComboboxItem<long>()
             {

@@ -10,14 +10,14 @@ namespace TicketApplication.UserControls
     public partial class SaamanehPanel : UserControl
     {
         private readonly IBaseDatabaseRepository _baseDatabase;
-        SamanehService _service;
+        SamanehCommandService _service;
         Paging Paging;
         private readonly SaamanehShowGrid Show;
 
         public SaamanehPanel()
         {
             InitializeComponent();
-            _service = new SamanehService();
+            _service = new SamanehCommandService();
             _baseDatabase = new BaseDatabaseRepository();
             Show = new SaamanehShowGrid();
             Paging = new Paging();
@@ -62,7 +62,7 @@ namespace TicketApplication.UserControls
 
         private void InsertBtn_Click(object sender, EventArgs e)
         {
-            SamanehService _service = new SamanehService();
+            SamanehCommandService _service = new SamanehCommandService();
             
             if (InsertBtn.Text == "ثبت")
             {

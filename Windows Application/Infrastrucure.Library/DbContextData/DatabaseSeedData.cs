@@ -1,14 +1,4 @@
-﻿namespace Infrastrucure.Library.DatabaseService
-{
-    using Domain.Model;
-    using Infrastructure.Library.DatabaseContext;
-    using Infrastructure.Library.DatabaseContext.Models;
-    using System;
-    using System.Collections.Generic;
-    using System.Data.Entity.Migrations;
-    using System.Linq;
-
-    //internal sealed class Configuration : DbMigrationsConfiguration<DatabaseContext>
+﻿    //internal sealed class Configuration : DbMigrationsConfiguration<DatabaseContext>
     //{
     //    public Configuration()
     //    {
@@ -104,4 +94,3 @@
     //        //  to avoid creating duplicate seed data.
     //    }
     //}
-}
