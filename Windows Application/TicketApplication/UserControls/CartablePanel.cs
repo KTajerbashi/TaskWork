@@ -1,17 +1,15 @@
-﻿using BusinessLogic.Library;
+﻿using Infrastrucure.Library.Repository.TaskService;
 using System;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
-using TicketApplication.Extentions;
 using TicketApplication.Forms;
 
 namespace TicketApplication.UserControls
 {
     public partial class CartablePanel : UserControl
     {
-        private TaskWorkService _service;
         public delegate void ClickButton();
         private object _sender;
         private EventArgs _e;
@@ -39,8 +37,9 @@ namespace TicketApplication.UserControls
         }
         protected void ShowData(object sender, EventArgs e)
         {
+            TaskService _taskService = new TaskService();
             var tag = (sender as Button).Tag;
-            var model = _service.GetById(Int64.Parse(tag.ToString()));
+            var model = _taskService.GetById(Int64.Parse(tag.ToString())).Data;
             SamNameLBL.Text = $"{model.Samaneh.Title}";
             TaskSaveDateLBL.Text = GetPersionDate(model.CreateDate);
             TaskTitleLBL.Text = model.Title;
@@ -58,11 +57,10 @@ namespace TicketApplication.UserControls
 
         private void CartablePanel_Load(object sender, EventArgs e)
         {
-            _service = new TaskWorkService();
-
+            TaskService _taskService = new TaskService();
             _sender = sender;
             _e = e;
-            var data = _service.GetAllIncluded();
+            var data = _taskService.GetAllIncluded();
             int x = 20,y = 20;
 
             var btn = this.Controls.OfType<Button>().OrderBy(z => z.Text).ToList() ;
@@ -76,11 +74,11 @@ namespace TicketApplication.UserControls
             }
 
 
-            for (int i = 0; i < data.Count; i++)
+            for (int i = 0; i < data.Data.Count; i++)
             {
                 Button newButton = new Button();
                 newButton.FlatStyle = FlatStyle.Popup;
-                switch (Convert.ToByte(data[i].ImportanceType))
+                switch (Convert.ToByte(data.Data[i].ImportanceType))
                 {
                     case 1:
                         {
@@ -114,17 +112,17 @@ namespace TicketApplication.UserControls
                         }
                 }
 
-                if (data[i].IsDeliver)
+                if (data.Data[i].IsDeliver)
                 {
                     newButton.BackColor = System.Drawing.Color.FromArgb(255, 0, 110);
                 }
-                if (data[i].IsPassed)
+                if (data.Data[i].IsPassed)
                 {
                     newButton.BackColor = System.Drawing.Color.FromArgb(146, 220, 148);
                 }
                 newButton.ForeColor = System.Drawing.Color.Black;
-                var text = $"{data[i].Title} \n {data[i].Samaneh.Title} \n {($"{((int)(DateTime.Now - data[i].CreateDate).TotalDays)} روز گذشت")}";
-                CreateButton(newButton, x, y, text, data[i].ID);
+                var text = $"{data.Data[i].Title} \n {data.Data[i].Samaneh.Title} \n {($"{((int)(DateTime.Now - data.Data[i].CreateDate).TotalDays)} روز گذشت")}";
+                CreateButton(newButton, x, y, text, data.Data[i].ID);
                 x += 160;
                 if (i == 6)
                 {
@@ -133,20 +131,21 @@ namespace TicketApplication.UserControls
                 }
                 this.Controls.Add(newButton);
             }
-            data.Clear();
+            data.Data.Clear();
 
         }
 
-        private void TaskAddDescBtn_Click(object sender, EventArgs e)
+        private async void TaskAddDescBtn_Click(object sender, EventArgs e)
         {
+            TaskService _taskService = new TaskService();
             var tag = (sender as Button).Tag;
             if (tag != null)
             {
                 if (DescriptionTxt.Visible)
                 {
-                    var model = _service.GetById(tag);
+                    var model = await _taskService.GetById(tag);
                     model.Description = DescriptionTxt.Text;
-                    _service.Save();
+                    await _taskService.Save();
                     DescriptionTxt.Visible = false;
                     TaskAddDescBtn.Text = "افزودن یادداشت";
                     TaskAddDescBtn.ForeColor = System.Drawing.Color.White;
@@ -169,16 +168,17 @@ namespace TicketApplication.UserControls
 
         }
 
-        private void TaskAnswerBtn_Click(object sender, EventArgs e)
+        private async void TaskAnswerBtn_Click(object sender, EventArgs e)
         {
+            TaskService _taskService = new TaskService();
             var tag = (sender as Button).Tag;
             if (tag != null)
             {
                 if (AnswerTxt.Visible)
                 {
-                    var model = _service.GetById(tag);
+                    var model = await _taskService.GetById(tag);
                     model.Answer = AnswerTxt.Text;
-                    _service.Save();
+                    await _taskService.Save();
                     AnswerTxt.Visible = false;
                     TaskAnswerBtn.Text = "ارایه پاسخ";
                     TaskAnswerBtn.ForeColor = System.Drawing.Color.White;

@@ -4,7 +4,7 @@ namespace Domain.Library.Enums
 {
     public enum TaskImportanceType : byte
     {
-        [Description("ضعیت")]
+        [Description("ضعیف")]
         low = 0,
         [Description("متوسط")]
         middle = 1,

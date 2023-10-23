@@ -13,10 +13,10 @@ namespace Infrastrucure.Library.BaseService
         where TEntity : BaseEntity<long>
         where TContext : DatabaseContext, new()
     {
-        protected DatabaseContext _context;
-        public BaseService(DatabaseContext context)
+        protected DatabaseContext _context;//= new DatabaseContext();
+        public BaseService()
         {
-            _context = context;
+            _context = new DatabaseContext();
         }
 
         public async Task<int> AddOrUpdate(TEntity entity)
@@ -33,12 +33,12 @@ namespace Infrastrucure.Library.BaseService
             return 1;
         }
 
-        public async Task<TEntity> Delete(long Id)
+        public async Task<TEntity> Delete(object Id)
         {
             return await _context.Set<TEntity>().FindAsync(Id);
         }
 
-        public async Task<int> DisActive(long Id)
+        public async Task<int> DisActive(object Id)
         {
             var entity = await _context.Set<TEntity>().FindAsync(Id);
             entity.IsActive = false;
@@ -50,7 +50,7 @@ namespace Infrastrucure.Library.BaseService
             return await _context.Set<TEntity>().Where(x => !x.IsDeleted && x.IsActive).ToListAsync();
         }
 
-        public async Task<TEntity> GetById(long Id)
+        public async Task<TEntity> GetById(object Id)
         {
             return await _context.Set<TEntity>().FindAsync(Id);
         }
@@ -79,4 +79,6 @@ namespace Infrastrucure.Library.BaseService
             return 1;
         }
     }
+
+
 }

@@ -1,7 +1,4 @@
-﻿using BusinessLogic.Library.UnitOfWork;
-using Infrastrucure.Library.UnitOfWork;
-using Ninject.Modules;
-using System;
+﻿using Ninject.Modules;
 
 namespace TicketApplication.Repositories.Ninjict
 {
@@ -9,7 +6,7 @@ namespace TicketApplication.Repositories.Ninjict
     {
         public override void Load()
         {
-            Bind<IUnitOfWork>().To<UnitOfWork>();
+            //Bind<IUnitOfWork>().To<UnitOfWork>();
         }
     }
 }

@@ -1,6 +1,5 @@
-﻿using System;
-using BusinessLogic.Library.UnitOfWork;
-using Ninject;
+﻿using Ninject;
+using System;
 using System.Reflection;
 using System.Windows.Forms;
 
@@ -14,8 +13,8 @@ namespace TicketApplication
         [STAThread]
         static void Main()
         {
-            StandardKernel _Kernal = new StandardKernel();
-            _Kernal.Load(Assembly.GetExecutingAssembly());
+            //StandardKernel _Kernal = new StandardKernel();
+            //_Kernal.Load(Assembly.GetExecutingAssembly());
             //IUnitOfWork _unitOfWork = _Kernal.Get<IUnitOfWork>();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

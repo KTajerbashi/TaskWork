@@ -1,4 +1,5 @@
 ﻿using BusinessLogic.Library;
+using Infrastrucure.Library.Repository.TaskService;
 using System;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
@@ -7,9 +8,7 @@ namespace TicketApplication.Forms
 {
     public partial class MessageBoxForm : Form
     {
-        private readonly TaskWorkService _service;
         #region Code
-
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
@@ -31,9 +30,7 @@ namespace TicketApplication.Forms
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
-            _service = new TaskWorkService();
         }
-
         private void NewTaskForm_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -49,24 +46,25 @@ namespace TicketApplication.Forms
             this.Close();
         }
 
-        private void YesBtn_Click(object sender, EventArgs e)
+        private async void YesBtn_Click(object sender, EventArgs e)
         {
+            TaskService _service = new TaskService();
             var tag = (sender as Button).Tag;
             var Name = this.Name;
             switch (Name)
             {
                 case "DeliverTask":
                     {
-                        var model = _service.GetById(tag);
+                        var model = await _service.GetById(tag);
                         model.IsDeliver = true;
-                        _service.Update(model);
+                        await _service.Update(model);
                         break;
                     }
                 case "PassTask":
                     {
-                        var model = _service.GetById(tag);
+                        var model =  await _service.GetById(tag);
                         model.IsPassed = true;
-                        _service.Update(model);
+                        await _service.Update(model);
                         break;
                     }
                 default:
@@ -75,9 +73,8 @@ namespace TicketApplication.Forms
                         break;
                     }
             }
-
-            _service.Save();
             this.Close();
         }
+
     }
 }

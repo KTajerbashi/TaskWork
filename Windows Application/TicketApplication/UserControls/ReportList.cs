@@ -1,4 +1,5 @@
-﻿using BusinessLogic.Library;
+﻿using Infrastrucure.Library.DatabaseService;
+using Infrastrucure.Library.Repository.TaskService;
 using System;
 using System.Windows.Forms;
 using TicketApplication.Common;
@@ -7,32 +8,31 @@ namespace TicketApplication.UserControls
 {
     public partial class ReportList : UserControl
     {
-        private readonly IBaseDatabaseRepository _baseDatabase;
+        private readonly IBaseQuery _baseDatabase;
         Paging Paging;
-        private readonly TaskWorkShowGird Show;
         public ReportList()
         {
             InitializeComponent();
             Paging = new Paging();
-            Show = new TaskWorkShowGird();
-            _baseDatabase = new BaseDatabaseRepository();
-
+            _baseDatabase = new BaseQuery();
         }
         private void ShowDataGridView(int type)
         {
             string QUERY;
-
+            TaskQueries _taskQueries = new TaskQueries();
             if (type == 0)  //  From Date To Date
             {
-                QUERY = Show.ShowFDateT(FromDate.Value.ToString(), ToDate.Value.ToString());
+                var from = Convert.ToDateTime(FromDate.Value).ToString("yyyy-MM-dd HH:mm:ss");
+                var to = ToDate.Value.ToString();
+                QUERY = _taskQueries.ShowFDateT(FromDate.Value.ToString(), ToDate.Value.ToString());
             }
             else if (type == 1)  //  Search Result
             {
-                QUERY = Show.ShowSearchDate(SearchTxt.Text);
+                QUERY = _taskQueries.ShowSearchDate(SearchTxt.Text);
             }
             else
             {
-                QUERY = Show.ShowAll(Paging.Order(Paging.Page));
+                QUERY = _taskQueries.ShowAll(Paging.Order(Paging.Page));
             }
             ListTasks.DataSource = _baseDatabase.Execute(QUERY);
             CountLBL.Text = ListTasks.Rows.Count.ToString();

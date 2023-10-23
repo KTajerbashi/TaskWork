@@ -1,6 +1,8 @@
 ﻿using BusinessLogic.Library;
 using Domain.Library.Enums;
 using Domain.Model;
+using Infrastrucure.Library.DatabaseService;
+using Infrastrucure.Library.Repository.TaskService;
 using System;
 using System.Windows.Forms;
 using TicketApplication.Common;
@@ -10,70 +12,70 @@ namespace TicketApplication.UserControls
 {
     public partial class TaskList : UserControl
     {
-        private readonly IBaseDatabaseRepository _baseDatabase;
-        private TaskWorkService _taskWork;
+        private readonly IBaseQuery _baseQuery;
+        private TaskService _taskService;
         private Paging Paging;
+        private TaskQueries _query;
         private int tab;
-        private readonly TaskWorkShowGird Show;
         public TaskList()
         {
             InitializeComponent();
             Paging = new Paging();
-            _baseDatabase = new BaseDatabaseRepository();
-            Show = new TaskWorkShowGird();
+            _baseQuery = new BaseQuery();
+            _taskService = new TaskService();
+            _query = new TaskQueries();
         }
 
         private long ID;
 
         private void ShowDataGridView(int type)
         {
-            _taskWork = new TaskWorkService();
             string QUERY;
             switch (type)
             {
                 case 0: // الفبا
                     {
-                        QUERY = Show.ShowAlphabet(Paging.Order(Paging.Page));
+                        QUERY = _query.ShowAlphabet(Paging.Order(Paging.Page));
                         break;
                     }
                 case 1: // تمام شده
                     {
-                        QUERY = Show.ShowPassed(Paging.Order(Paging.Page));
+                        QUERY = _query.ShowPassed(Paging.Order(Paging.Page));
                         break;
                     }
                 case 2: // تمام نشده
                     {
-                        QUERY = Show.ShowNotPassed(Paging.Order(Paging.Page));
+                        QUERY = _query.ShowNotPassed(Paging.Order(Paging.Page));
                         break;
                     }
                 case 3: // جستجو
                     {
-                        QUERY = Show.ShowSearchDate(SearchTxt.Text);
+                        QUERY = _query.ShowSearchDate(SearchTxt.Text);
                         break;
                     }
                 case 4: // تحویل شده
                     {
-                        QUERY = Show.ShowDeliver(Paging.Order(Paging.Page));
+                        QUERY = _query.ShowDeliver(Paging.Order(Paging.Page));
                         break;
                     }
                 case 5: // به ترتیب الویت
                     {
-                        QUERY = Show.ShowImportant(Paging.Order(Paging.Page));
+                        QUERY = _query.ShowImportant(Paging.Order(Paging.Page));
                         break;
                     }
                 case 6: // تحویل شده
                     {
-                        QUERY = Show.ShowNotDeliver(Paging.Order(Paging.Page));
+                        QUERY = _query.ShowNotDeliver(Paging.Order(Paging.Page));
                         break;
                     }
                 default: // جدید ترین
                     {
-                        QUERY = Show.ShowAll(Paging.Order(Paging.Page));
+                        QUERY = _query.ShowAll(Paging.Order(Paging.Page));
                         break;
                     }
             }
             ListTasks.DataSource = null;
-            ListTasks.DataSource = _baseDatabase.Execute(QUERY);
+            ListTasks.DataSource = _baseQuery.Execute(QUERY);
             CountLBL.Text = ListTasks.Rows.Count.ToString();
         }
 
@@ -133,9 +135,9 @@ namespace TicketApplication.UserControls
             tab = 99;
             if (ID > 0)
             {
-                TaskWork entity= _taskWork.GetById(ID);
+                TaskWork entity=  _taskService.GetById(ID).Data;
                 entity.IsPassed = entity.IsPassed ? false : true;
-                _taskWork.Save();
+                _taskService.Save();
                 ShowDataGridView(tab);
             }
         }
@@ -144,20 +146,20 @@ namespace TicketApplication.UserControls
         {
             if (ID > 0)
             {
-                TaskWork entity= _taskWork.GetById(ID);
+                TaskWork entity=  _taskService.GetById(ID).Data;
                 entity.IsDeliver = entity.IsDeliver ? false : true;
                 tab = 99;
-                _taskWork.Save();
+                _taskService.Save();
                 ShowDataGridView(tab);
             }
         }
 
         private void حذفToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            TaskWork entity= _taskWork.GetById(ID);
+            TaskWork entity =  _taskService.GetById(ID).Data;
             entity.IsDeleted = true;
             tab = 99;
-            _taskWork.Save();
+             _taskService.Save();
             ShowDataGridView(tab);
         }
 
@@ -165,7 +167,7 @@ namespace TicketApplication.UserControls
         {
             if (ID > 0)
             {
-                TaskWork model= _taskWork.GetById(ID);
+                TaskWork model=  _taskService.GetById(ID).Data;
 
                 NewTaskForm form = new NewTaskForm();
                 form.SaamanehCombo.Tag = model.SamanaID;

@@ -73,30 +73,8 @@
     <Compile Include="DatabaseService\IDatabaseContext.cs" />
     <Compile Include="Extentions\PasswordHash.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\BackupServices\Commands\IBackupCommandServices.cs" />
-    <Compile Include="Repositories\BackupServices\Queries\IBackupQueryServices.cs" />
-    <Compile Include="Repositories\LoggerServices\Commands\ILoggerCommandServices.cs" />
-    <Compile Include="Repositories\LoggerServices\Queries\ILoggerQueryServices.cs" />
-    <Compile Include="Repositories\RoleServices\Commands\IRoleCommandServices.cs" />
-    <Compile Include="Repositories\RoleServices\Queries\IRoleQueryServices.cs" />
-    <Compile Include="Repositories\SamanehServices\Commands\ISamanehCommandService.cs" />
-    <Compile Include="Repositories\SamanehServices\Queries\ISamanedQueryService.cs" />
-    <Compile Include="Repositories\TaskServices\Commands\ITaskCommandServices.cs" />
-    <Compile Include="Repositories\TaskServices\Queries\ITaskQueryServices.cs" />
-    <Compile Include="Repositories\UserServices\Commands\IUserCommandRepository.cs" />
-    <Compile Include="Repositories\UserServices\Commands\IUserRoleCommandServices.cs" />
-    <Compile Include="Repositories\UserServices\Queries\IUserQueryServices.cs" />
-    <Compile Include="Repositories\UserServices\Queries\IUserRoleQueryServices.cs" />
-    <Compile Include="UnitOfWork\IUnitOfWork.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Repositories\BackupServices\Models\" />
-    <Folder Include="Repositories\LoggerServices\Models\" />
-    <Folder Include="Repositories\RoleServices\Models\" />
-    <Folder Include="Repositories\SamanehServices\Models\" />
-    <Folder Include="Repositories\TaskServices\Models\" />
-    <Folder Include="Repositories\UserServices\Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Domain.Library\Domain.Library.csproj">
       <Project>{7C9E93BC-5043-43EF-9363-C8B0BCD7767B}</Project>

@@ -77,23 +77,21 @@
     <Compile Include="Migrations\202310162330084__BackupPanel.designer.cs">
       <DependentUpon>202310162330084__BackupPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202310231915372__changeModels.cs" />
+    <Compile Include="Migrations\202310231915372__changeModels.designer.cs">
+      <DependentUpon>202310231915372__changeModels.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\Logger\Command\LoggerCommandServices.cs" />
-    <Compile Include="Services\Logger\Query\LoggerQueryServices.cs" />
-    <Compile Include="Services\Backup\Command\BackupCommandServices.cs" />
-    <Compile Include="Services\Backup\Query\BackupQueryServices.cs" />
-    <Compile Include="Services\Role\Command\RoleCommandServices.cs" />
-    <Compile Include="Services\Role\Query\RoleQueryServices.cs" />
-    <Compile Include="Services\Samaneh\Command\SamanehCommandService.cs" />
-    <Compile Include="Services\Samaneh\Query\SamanehQueryService.cs" />
-    <Compile Include="Services\Task\Command\TaskQueryServices.cs" />
-    <Compile Include="Services\Task\Query\TaskCommandServices.cs" />
-    <Compile Include="Services\User\Command\UserCommandServices.cs" />
-    <Compile Include="Services\User\Command\UserRoleCommandServices.cs" />
-    <Compile Include="Services\User\Query\UserQueryServices.cs" />
-    <Compile Include="Services\User\Query\UserRoleQueryServices.cs" />
-    <Compile Include="UnitOfWork\UnitOfWork.cs" />
+    <Compile Include="Repository\BackupService\BackupQueries.cs" />
+    <Compile Include="Repository\BackupService\BackupService.cs" />
+    <Compile Include="Repository\LoggerService\LoggerService.cs" />
+    <Compile Include="Repository\RoleService\RoleService.cs" />
+    <Compile Include="Repository\SamanehService\SamanehQueries.cs" />
+    <Compile Include="Repository\SamanehService\SamanehService.cs" />
+    <Compile Include="Repository\TaskService\TaskQueries.cs" />
+    <Compile Include="Repository\TaskService\TaskService.cs" />
+    <Compile Include="Repository\UserService\UserService.cs" />
     <Compile Include="Validator\GroupValidator.cs" />
     <Compile Include="Validator\TaskValidator.cs" />
   </ItemGroup>
@@ -117,6 +115,9 @@
     <EmbeddedResource Include="Migrations\202310162330084__BackupPanel.resx">
       <DependentUpon>202310162330084__BackupPanel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202310231915372__changeModels.resx">
+      <DependentUpon>202310231915372__changeModels.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Application.Library\BusinessLogic.Library.csproj">
@@ -128,6 +129,7 @@
       <Name>Domain.Library</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

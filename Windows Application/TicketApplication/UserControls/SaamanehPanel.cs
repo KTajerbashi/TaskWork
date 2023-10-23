@@ -1,5 +1,6 @@
-﻿using BusinessLogic.Library;
-using Domain.Model;
+﻿using Domain.Model;
+using Infrastrucure.Library.DatabaseService;
+using Infrastrucure.Library.Repository.SamanehService;
 using System;
 using System.Windows.Forms;
 using TicketApplication.Common;
@@ -9,18 +10,18 @@ namespace TicketApplication.UserControls
 {
     public partial class SaamanehPanel : UserControl
     {
-        private readonly IBaseDatabaseRepository _baseDatabase;
-        SamanehCommandService _service;
+        private readonly SamanehService _samanehService;
+        private readonly SamanehQueries Show;
+        private readonly IBaseQuery _baseQuery;
         Paging Paging;
-        private readonly SaamanehShowGrid Show;
 
         public SaamanehPanel()
         {
             InitializeComponent();
-            _service = new SamanehCommandService();
-            _baseDatabase = new BaseDatabaseRepository();
-            Show = new SaamanehShowGrid();
+            _samanehService = new SamanehService();
+            Show = new SamanehQueries();
             Paging = new Paging();
+            _baseQuery = new BaseQuery();
 
         }
         public void ShowDataGridView(int type)
@@ -40,7 +41,7 @@ namespace TicketApplication.UserControls
                     }
                 case 2: // نام
                     {
-                QUERY = Show.SearchText(SearchTxt.Text);
+                        QUERY = Show.SearchText(SearchTxt.Text);
                         break;
                     }
                 case 3: // کلید
@@ -54,16 +55,15 @@ namespace TicketApplication.UserControls
                         break;
                     }
             }
-            SaamanehDG.DataSource = _baseDatabase.Execute(QUERY);
+            SaamanehDG.DataSource = _baseQuery.Execute(QUERY);
             CountLBL.Text = SaamanehDG.Rows.Count.ToString();
 
         }
 
 
-        private void InsertBtn_Click(object sender, EventArgs e)
+        private async void InsertBtn_Click(object sender, EventArgs e)
         {
-            SamanehCommandService _service = new SamanehCommandService();
-            
+
             if (InsertBtn.Text == "ثبت")
             {
                 //  Insert
@@ -77,23 +77,23 @@ namespace TicketApplication.UserControls
                     IsActive = true,
                     IsDeleted = false,
                 };
-                _service.Insert(entity);
+                await _samanehService.Insert(entity);
             }
             else
             {
                 //  Update
-                var model = _service.GetById(Int32.Parse(ID.Text));
+                var model =  await _samanehService.GetById(Int32.Parse(ID.Text));
                 model.Name = SmnaNameTxt.Text;
                 model.Title = SmnaTitleTxt.Text;
                 model.UpdateDate = DateTime.Now;
                 model.UpdateBy = 1;
                 model.Description = DescriptionSTxt.Text;
-                _service.Update(model);
+                await _samanehService.Update(model);
             }
-           
+
             InsertBtn.Text = "ثبت";
             ID.Text = "0";
-            _service.Save();
+            await _samanehService.Save();
             FormExtentions.ClearTextBoxes(this.Controls);
             ShowDataGridView(0);
         }
@@ -119,7 +119,7 @@ namespace TicketApplication.UserControls
 
         private void NextBtn_Click(object sender, EventArgs e)
         {
-            Paging.Next(23,SaamanehDG.Rows.Count);
+            Paging.Next(23, SaamanehDG.Rows.Count);
             ShowDataGridView(0);
         }
 
@@ -139,30 +139,30 @@ namespace TicketApplication.UserControls
 
         }
 
-        private void ویرایشToolStripMenuItem_Click(object sender, EventArgs e)
+        private async void ویرایشToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var model = _service.GetById(Int64.Parse(ID.Text));
+            var model = await _samanehService.GetById(Int64.Parse(ID.Text));
             SmnaNameTxt.Text = model.Name;
             SmnaTitleTxt.Text = model.Title;
             DescriptionSTxt.Text = model.Description;
             InsertBtn.Text = "ویرایش";
         }
 
-        private void تغییروضعیتToolStripMenuItem_Click(object sender, EventArgs e)
+        private async void تغییروضعیتToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var model = _service.GetById(Int64.Parse(ID.Text));
+            var model = await _samanehService.GetById(Int64.Parse(ID.Text));
             model.IsActive = model.IsActive ? false : true;
-            _service.Update(model);
-            _service.Save();
+            await _samanehService.Update(model);
+            await _samanehService.Save();
             ShowDataGridView(0);
         }
 
-        private void حذفToolStripMenuItem_Click(object sender, EventArgs e)
+        private async void حذفToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var model = _service.GetById(Int64.Parse(ID.Text));
+            var model = await _samanehService.GetById(Int64.Parse(ID.Text));
             model.IsDeleted = true;
-            _service.Update(model);
-            _service.Save();
+            await _samanehService.Update(model);
+            await _samanehService.Save();
             ShowDataGridView(0);
         }
 
@@ -178,16 +178,6 @@ namespace TicketApplication.UserControls
             {
                 contextMenuStrip1.Show(Cursor.Position.X, Cursor.Position.Y);
             }
-        }
-
-        private void group2_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void contextMenuStrip1_Opening_1(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-
         }
     }
 }

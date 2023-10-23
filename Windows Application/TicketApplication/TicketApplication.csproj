@@ -101,9 +101,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Authentication\AppUser.cs" />
+    <Compile Include="Authentication\Authentication.cs" />
     <Compile Include="Common\Paging.cs" />
-    <Compile Include="Common\SaamanehShowGrid.cs" />
-    <Compile Include="Common\TaskWorkShowGird.cs" />
     <Compile Include="Extentions\FormExtentions.cs" />
     <Compile Include="Forms\LoginForm.cs">
       <SubType>Form</SubType>
@@ -235,6 +234,10 @@
     <ProjectReference Include="..\Application.Library\BusinessLogic.Library.csproj">
       <Project>{ef824a96-cbf0-4576-bcfd-be65e5e1a14c}</Project>
       <Name>BusinessLogic.Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Domain.Library\Domain.Library.csproj">
+      <Project>{7C9E93BC-5043-43EF-9363-C8B0BCD7767B}</Project>
+      <Name>Domain.Library</Name>
     </ProjectReference>
     <ProjectReference Include="..\Infrastrucure.Library\Infrastructure.Library.csproj">
       <Project>{907d32e4-3ca4-437e-87f0-8b7fb8d7f98f}</Project>

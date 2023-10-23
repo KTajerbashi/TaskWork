@@ -28,20 +28,13 @@ namespace BusinessLogic.Library.Extentions
             HashSalt hashSalt = new HashSalt { Hash = hashPassword, Salt = salt };
             return hashSalt;
         }
-        private static bool VerifyPassword(string enteredPassword, string storedHash, string storedSalt)
+        public static bool VerifyPassword(string enteredPassword, string storedHash, string storedSalt)
         {
             var saltBytes = Convert.FromBase64String(storedSalt);
             var rfc2898DeriveBytes = new Rfc2898DeriveBytes(enteredPassword, saltBytes, 10000);
             return Convert.ToBase64String(rfc2898DeriveBytes.GetBytes(256)) == storedHash;
         }
-        public static bool IsLogin(string username, string password)
-        {
-            var service = new UserService();
-            //You code here
-            Result<User> user = service.GetByUserName(username);
-            bool isPasswordMatched = VerifyPassword(password, user.Data.Hash, user.Data.Salt);
-            return isPasswordMatched ? true : false;
-        }
+        
     }
     public static class PasswordHasher
     {

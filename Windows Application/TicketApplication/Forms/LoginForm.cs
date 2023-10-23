@@ -1,7 +1,7 @@
-﻿
-using BusinessLogic.Library;
-using BusinessLogic.Library.Extentions;
+﻿using BusinessLogic.Library.Extentions;
 using Domain.Model;
+using Infrastrucure.Library.Repository.RoleService;
+using Infrastrucure.Library.Repository.UserService;
 using System;
 using System.Drawing;
 using System.Linq;
@@ -29,13 +29,15 @@ namespace TicketApplication.Forms
 
         int y = 500;
         Timer T1 = new Timer();
-
+        private readonly UserService _userService;
+        private readonly RoleService _roleService;
         public LoginForm()
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
-
+            _userService = new UserService() ;
+            _roleService = new RoleService();
         }
 
         private void LoginForm_Load(object sender, EventArgs e)
@@ -55,8 +57,7 @@ namespace TicketApplication.Forms
         {
             try
             {
-                UserService _userService = new UserService();
-                var res = _userService.IsExit(UsernameTxt.Text, PasswordTxt.Text);
+                var res = _userService.IsExist(UsernameTxt.Text, PasswordTxt.Text);
                 LoginMsg.Text = res.Message;
                 if (res.Success)
                 {
@@ -89,13 +90,10 @@ namespace TicketApplication.Forms
             ClearTextBoxes(this.Controls);
         }
 
-        private void SaveNewUserBtn_Click(object sender, EventArgs e)
+        private async void SaveNewUserBtn_Click(object sender, EventArgs e)
         {
             if (AccessXCode.Text.ToUpper() == "ADMIN_ACCESS")
             {
-                UserService _userService = new UserService();
-                RoleService _roleService = new RoleService();
-
                 if (string.IsNullOrEmpty(Sign_Name.Text) || string.IsNullOrWhiteSpace(Sign_Name.Text))
                 {
                     SignInMsg.Text = $"نام معتبر وارد کنید";
@@ -148,7 +146,7 @@ namespace TicketApplication.Forms
 
                     if (res.Success)
                     {
-                        _userService.InsertWithRole(entity, _roleService.GetById(3));
+                        _userService.InsertWithRole(entity, await _roleService.GetById(3));
                         SignInMsg.Text = res.Message;
                         //CloseSignInPanel();
                         SignInPanel.Visible = false;
@@ -199,8 +197,6 @@ namespace TicketApplication.Forms
             };
             if (RCV_CheckBtn.Text == "بررسی اطلاعات")
             {
-                UserService _userService = new UserService();
-
                 var res = _userService.Recovery(userModel);
                 if (res.Success)
                 {
@@ -222,7 +218,6 @@ namespace TicketApplication.Forms
                 {
                     if (RCV_Pass.Text == RCV_RePas.Text)
                     {
-                        UserService _userService = new UserService();
                         _userService.UpdateRecoveryPass(userModel);
                         RCV_CheckBtn.Text = "بررسی اطلاعات";
                         RCV_LBL_Pass1.Visible = false;
@@ -317,7 +312,6 @@ namespace TicketApplication.Forms
 
         private void SetCurrentUserData(string username)
         {
-            UserService _userService = new UserService();
             var user = _userService.GetByUserName(username);
             AppUser.Username = user.Data.Username.ToUpper();
             AppUser.UserID = user.Data.ID;

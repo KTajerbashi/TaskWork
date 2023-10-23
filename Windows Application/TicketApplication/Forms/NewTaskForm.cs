@@ -1,15 +1,15 @@
-﻿using BusinessLogic.Library;
-using Domain.Library.Enums;
+﻿using Domain.Library.Enums;
 using Domain.Library.KeyValues;
 using Domain.Model;
+using Infrastrucure.Library.Repository.RoleService;
+using Infrastrucure.Library.Repository.SamanehService;
+using Infrastrucure.Library.Repository.TaskService;
+using Infrastrucure.Library.Repository.UserService;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using TicketApplication.Authentication;
-using TicketApplication.UserControls;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace TicketApplication.Forms
 {
@@ -17,7 +17,6 @@ namespace TicketApplication.Forms
     {
 
         #region Code
-
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
@@ -34,12 +33,14 @@ namespace TicketApplication.Forms
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         public static extern bool ReleaseCapture();
+        
         public NewTaskForm()
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
+
 
         private void NewTaskForm_MouseDown(object sender, MouseEventArgs e)
         {
@@ -70,8 +71,9 @@ namespace TicketApplication.Forms
             new ComboboxItem<int>{ Text = "-- خیلی فوری --" ,Value = 5},
         };
 
-        private void SaveBtn_Click(object sender, EventArgs e)
+        private async void SaveBtn_Click(object sender, EventArgs e)
         {
+            TaskService _taskService = new TaskService();
             try
             {
                 if (SaamanehCombo.SelectedItem == null || SaamanehCombo.SelectedIndex == 0)
@@ -101,7 +103,6 @@ namespace TicketApplication.Forms
                 else
                 {
 
-                    TaskWorkService service = new TaskWorkService();
                     var SID =((ComboboxItem < long >)SaamanehCombo.SelectedItem).Value;
                     var ImpID =((ComboboxItem < long >)ImportanceCombo.SelectedItem).Value;
                     var typeID =((ComboboxItem < long >)TypeCombo.SelectedItem).Value;
@@ -121,11 +122,11 @@ namespace TicketApplication.Forms
                         entity.RoleId = roleId;
                         entity.SamanaID = SID;
                         entity.CreatedByUserRoleID = AppUser.UserRoleID;
-                        service.Insert(entity);
+                        await _taskService.Insert(entity);
                     }
                     else
                     {
-                        TaskWork entity = service.GetById(long.Parse(ID.Text));
+                        TaskWork entity = _taskService.GetById(long.Parse(ID.Text)).Data;
                         entity.Title = TitleTaskTxt.Text;
                         entity.Answer = AnswerTaskTxt.Text;
                         entity.Description = DetailsTaskTxt.Text;
@@ -136,9 +137,9 @@ namespace TicketApplication.Forms
                         entity.RoleId = roleId;
                         entity.SamanaID = SID;
                         entity.CreatedByUserRoleID = AppUser.UserRoleID;
-                        service.Update(entity);
+                        await _taskService.Update(entity);
                     }
-                    service.Save();
+                    await _taskService.Save();
                     ERR.Text = "با موفقیت ذخیره شد";
                     this.Close();
                 }
@@ -161,16 +162,16 @@ namespace TicketApplication.Forms
 
 
         //  Samaneh Combo Config
-        private void FillSaamanehCombo()
+        private async void FillSaamanehCombo()
         {
-            SamanehCommandService samana = new SamanehCommandService();
+            SamanehService _samanehService = new SamanehService();
             SaamanehCombo.Items.Clear();
             SaamanehCombo.Items.Add(new ComboboxItem<long>()
             {
                 Text = "--- انتخاب کنید ---",
                 Value = 0
             });
-            var items = samana.GetAll().Where(x => !x.IsDeleted).ToList();
+            var items = await _samanehService.GetAll();
             foreach (var item in items)
             {
                 SaamanehCombo.Items.Add(new ComboboxItem<long>()
@@ -264,14 +265,14 @@ namespace TicketApplication.Forms
         //  UserId Combo Config
         private void FillUserCombo()
         {
-            UserService service = new UserService();
+            UserService _userService = new UserService();
             UserIdCombo.Items.Clear();
             UserIdCombo.Items.Add(new ComboboxItem<long>()
             {
                 Text = "--- انتخاب کنید ---",
                 Value = 0
             });
-            var users = service.ReadKeyValue();
+            var users = _userService.ReadKeyValue();
             for (int i = 0; i < users.Data.Count; i++)
             {
                 UserIdCombo.Items.Add(users.Data[i]);
@@ -298,14 +299,14 @@ namespace TicketApplication.Forms
         //  RoleId Combo Config
         private void FillRoleCombo()
         {
-            RoleService service = new RoleService();
+            RoleService _roleService = new RoleService();
             RoleIdCombo.Items.Clear();
             RoleIdCombo.Items.Add(new ComboboxItem<long>()
             {
                 Text = "--- انتخاب کنید ---",
                 Value = 0
             });
-            var roles = service.ReadKeyValue();
+            var roles = _roleService.ReadKeyValue();
             for (int i = 0; i < roles.Data.Count; i++)
             {
                 RoleIdCombo.Items.Add(roles.Data[i]);

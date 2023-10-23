@@ -326,7 +326,6 @@
             this.group2.TabIndex = 1;
             this.group2.TabStop = false;
             this.group2.Text = "اطلاعات";
-            this.group2.Enter += new System.EventHandler(this.group2_Enter);
             // 
             // CountLBL
             // 
@@ -421,7 +420,6 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.contextMenuStrip1.Size = new System.Drawing.Size(142, 70);
-            this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening_1);
             // 
             // ویرایشToolStripMenuItem
             // 

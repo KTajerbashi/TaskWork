@@ -14,7 +14,6 @@ namespace Domain.Library.Enums
     }
     public enum BackupType : byte
     {
-
         [Description("پشتیبان گیری")]
         Backup = 1,
         [Description("بازگردانی")]

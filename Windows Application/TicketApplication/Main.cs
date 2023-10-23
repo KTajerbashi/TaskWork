@@ -1,10 +1,8 @@
-﻿using MD.PersianDateTime;
+﻿using Infrastrucure.Library.Migrations;
+using MD.PersianDateTime;
 using System;
-using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
-using TicketApplication.Authentication;
-using TicketApplication.Extentions;
 using TicketApplication.Forms;
 using TicketApplication.UserControls;
 
@@ -35,8 +33,9 @@ namespace TicketApplication
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
-
+            
         }
+
         #endregion
         private void ReportBtn_Click(object sender, EventArgs e)
         {
@@ -48,7 +47,6 @@ namespace TicketApplication
             MainPanel.Controls.Add(reportList);
 
         }
-        LoginForm loginForm = new LoginForm();
 
         private void AsidePanel_MouseDown(object sender, MouseEventArgs e)
         {
@@ -62,12 +60,12 @@ namespace TicketApplication
         private void Main_Load(object sender, EventArgs e)
         {
             //loginForm.ShowDialog();
-            CartablePanel cartable = new CartablePanel();
+            CartablePanel cartablePanel = new CartablePanel();
             if (MainPanel.Controls.Count > 0)
             {
                 MainPanel.Controls[0].Dispose();
             }
-            MainPanel.Controls.Add(cartable);
+            MainPanel.Controls.Add(cartablePanel);
 #if DEBUG
             UsernameLBL.Text = "محیط توسعه";
 #else
@@ -88,8 +86,8 @@ namespace TicketApplication
 
         private void NewTaskBtn_Click(object sender, EventArgs e)
         {
-            NewTaskForm form = new NewTaskForm();
-            form.ShowDialog();
+            NewTaskForm newTaskForm = new NewTaskForm();
+            newTaskForm.ShowDialog();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -100,22 +98,22 @@ namespace TicketApplication
 
         private void SaamanehBtn_Click(object sender, EventArgs e)
         {
-            SaamanehPanel panel = new SaamanehPanel();
+            SaamanehPanel saamanehPanel = new SaamanehPanel(); 
             if (MainPanel.Controls.Count > 0)
             {
                 MainPanel.Controls[0].Dispose();
             }
-            MainPanel.Controls.Add(panel);
+            MainPanel.Controls.Add(saamanehPanel);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            CartablePanel panel = new CartablePanel();
+            CartablePanel cartablePanel = new CartablePanel();
             if (MainPanel.Controls.Count > 0)
             {
                 MainPanel.Controls[0].Dispose();
             }
-            MainPanel.Controls.Add(panel);
+            MainPanel.Controls.Add(cartablePanel);
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -136,6 +134,7 @@ namespace TicketApplication
         private void LockScreenBtn_Click(object sender, EventArgs e)
         {
             //loginForm.Location = new Point(535, 0);
+            LoginForm loginForm = new LoginForm();
             loginForm.UsernameTxt.Text = "";
             loginForm.PasswordTxt.Text = "";
             loginForm.LoginMsg.Text = "";
@@ -144,12 +143,12 @@ namespace TicketApplication
 
         private void DbBackupBtn_Click(object sender, EventArgs e)
         {
-            BackupPanel panel = new BackupPanel();
+            BackupPanel backupPanel = new BackupPanel();
             if (MainPanel.Controls.Count > 0)
             {
                 MainPanel.Controls[0].Dispose();
             }
-            MainPanel.Controls.Add(panel);
+            MainPanel.Controls.Add(backupPanel);
         }
 
         private void SettingBtn_Click(object sender, EventArgs e)

@@ -1,28 +1,28 @@
-﻿using BusinessLogic.Library.Services.Backup;
+﻿using Domain.Library.Enums;
+using Domain.Library.Models.Entity;
+using Infrastrucure.Library.DatabaseService;
+using Infrastrucure.Library.Repository.BackupService;
 using MD.PersianDateTime;
 using System;
 using System.Windows.Forms;
-using TicketApplication.Common;
-using BusinessLogic.Library;
-using Domain.Model;
 using TicketApplication.Authentication;
-using Domain.Library.Models.Entity;
-using Domain.Library.Enums;
+using TicketApplication.Common;
 
 namespace TicketApplication.UserControls
 {
     public partial class BackupPanel : UserControl
     {
-        private readonly IBaseDatabaseRepository _baseDatabase;
         Paging Paging;
-        private readonly BackupShowGrid Show;
+        private readonly BackupQueries Show;
         private PersianDateTime persianDateTime = new PersianDateTime(DateTime.Now);
+        private readonly BackupService _backupService;
+        private readonly IBaseQuery _baseQuery;
         public BackupPanel()
         {
             InitializeComponent();
             Paging = new Paging();
-            Show = new BackupShowGrid();
-            _baseDatabase = new BaseDatabaseRepository();
+            Show = new BackupQueries();
+            _baseQuery = new BaseQuery();
         }
         private void ShowDataGridView(int type)
         {
@@ -30,25 +30,24 @@ namespace TicketApplication.UserControls
 
             if (type == 0)  // ShowAll
             {
-                QUERY = Show.ShowAll(Paging.Order(Paging.Page,20));
+                QUERY = Show.ShowAll(Paging.Order(Paging.Page, 20));
             }
             else // ShowAll
             {
-                QUERY = Show.ShowAll(Paging.Order(Paging.Page,20));
+                QUERY = Show.ShowAll(Paging.Order(Paging.Page, 20));
             }
 
-            Datagrid.DataSource = _baseDatabase.Execute(QUERY);
+            Datagrid.DataSource = _baseQuery.Execute(QUERY);
             CountLBL.Text = Datagrid.Rows.Count.ToString();
         }
 
         private void BackupBtn_Click(object sender, EventArgs e)
         {
-            BackupLogService _backupService = new BackupLogService() ;
             //  پشتیان گیری
             MsgLBl.Text = "منتظر اتمام عملیات بمانید";
             FolderBrowserDialog fbd = new FolderBrowserDialog();
             fbd.ShowDialog();
-            var model = new BackupLog
+            var model = new Backup
             {
                 CreateDate = DateTime.Now,
                 CreatedByUserRoleID= AppUser.UserRoleID,
@@ -60,34 +59,34 @@ namespace TicketApplication.UserControls
                 IsDeleted = false,
                 Title = AppUser.DisplayName,
             };
-            _backupService.Backup(fbd.SelectedPath, model);
+            //_backupService(fbd.SelectedPath, model);
             MsgLBl.Text = "پشتیبان گیری با موفقیت انجام شد";
         }
 
         private void RecoverDbBtn_Click(object sender, EventArgs e)
         {
-            BackupLogService _backuplogService = new BackupLogService() ;
-            //  باز نگری
-            MsgLBl.Text = "منتظر اتمام عملیات بمانید";
-            OpenFileDialog ofd = new OpenFileDialog();
-            ofd.ShowDialog();
-            var model = new BackupLog
-            {
-                CreateDate = DateTime.Now,
-                CreatedByUserRoleID= AppUser.UserRoleID,
-                Description= MsgLBl.Text,
-                BackupType = (BackupType) 1,
-                FileAddress = ofd.SafeFileName,
-                FileName = ofd.FileName,
-                IsActive = true,
-                IsDeleted = false,
-                Title = AppUser.DisplayName,
-            };
-            if (ofd.FileName.Trim().Length != 0)
-            {
-                _backuplogService.Restor(ofd.FileName, model);
-                MsgLBl.Text = "بازگردانی اطلاعات با موفقیت انجام شد";
-            }
+            ////BackupLogService _backuplogService = new BackupLogService() ;
+            ////  باز نگری
+            //MsgLBl.Text = "منتظر اتمام عملیات بمانید";
+            //OpenFileDialog ofd = new OpenFileDialog();
+            //ofd.ShowDialog();
+            //var model = new BackupLog
+            //{
+            //    CreateDate = DateTime.Now,
+            //    CreatedByUserRoleID= AppUser.UserRoleID,
+            //    Description= MsgLBl.Text,
+            //    BackupType = (BackupType) 1,
+            //    FileAddress = ofd.SafeFileName,
+            //    FileName = ofd.FileName,
+            //    IsActive = true,
+            //    IsDeleted = false,
+            //    Title = AppUser.DisplayName,
+            //};
+            //if (ofd.FileName.Trim().Length != 0)
+            //{
+            //    _backuplogService.Restor(ofd.FileName, model);
+            //    MsgLBl.Text = "بازگردانی اطلاعات با موفقیت انجام شد";
+            //}
         }
 
         private void Reloding_Click(object sender, EventArgs e)
