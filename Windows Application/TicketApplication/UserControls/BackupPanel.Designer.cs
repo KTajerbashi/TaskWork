@@ -222,6 +222,7 @@
             // 
             // NextBtn
             // 
+            this.NextBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.NextBtn.Location = new System.Drawing.Point(3, 490);
             this.NextBtn.Name = "NextBtn";
             this.NextBtn.Size = new System.Drawing.Size(40, 40);
@@ -231,6 +232,7 @@
             // 
             // PrevBtn
             // 
+            this.PrevBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PrevBtn.Location = new System.Drawing.Point(49, 490);
             this.PrevBtn.Name = "PrevBtn";
             this.PrevBtn.Size = new System.Drawing.Size(40, 40);
@@ -240,6 +242,7 @@
             // 
             // Reloding
             // 
+            this.Reloding.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Reloding.Location = new System.Drawing.Point(1200, 490);
             this.Reloding.Name = "Reloding";
             this.Reloding.Size = new System.Drawing.Size(40, 40);

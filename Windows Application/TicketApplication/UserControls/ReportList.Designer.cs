@@ -87,6 +87,7 @@
             this.ToDate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ToDate.Location = new System.Drawing.Point(740, 22);
             this.ToDate.Name = "ToDate";
+            this.ToDate.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.ToDate.Size = new System.Drawing.Size(172, 28);
             this.ToDate.TabIndex = 15;
             // 
@@ -97,6 +98,7 @@
             this.FromDate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FromDate.Location = new System.Drawing.Point(992, 22);
             this.FromDate.Name = "FromDate";
+            this.FromDate.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.FromDate.Size = new System.Drawing.Size(172, 28);
             this.FromDate.TabIndex = 14;
             // 
@@ -145,6 +147,7 @@
             // SearchBtn
             // 
             this.SearchBtn.BackColor = System.Drawing.Color.DodgerBlue;
+            this.SearchBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SearchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SearchBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SearchBtn.ForeColor = System.Drawing.Color.White;
@@ -160,6 +163,7 @@
             // FTDateBtn
             // 
             this.FTDateBtn.BackColor = System.Drawing.Color.DodgerBlue;
+            this.FTDateBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FTDateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.FTDateBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FTDateBtn.ForeColor = System.Drawing.Color.White;
@@ -174,6 +178,7 @@
             // 
             // PrevBtn
             // 
+            this.PrevBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PrevBtn.Location = new System.Drawing.Point(52, 615);
             this.PrevBtn.Name = "PrevBtn";
             this.PrevBtn.Size = new System.Drawing.Size(40, 40);
@@ -183,6 +188,7 @@
             // 
             // NextBtn
             // 
+            this.NextBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.NextBtn.Location = new System.Drawing.Point(6, 615);
             this.NextBtn.Name = "NextBtn";
             this.NextBtn.Size = new System.Drawing.Size(40, 40);
@@ -192,6 +198,7 @@
             // 
             // Reloding
             // 
+            this.Reloding.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Reloding.Location = new System.Drawing.Point(1210, 615);
             this.Reloding.Name = "Reloding";
             this.Reloding.Size = new System.Drawing.Size(40, 40);

@@ -134,10 +134,7 @@ namespace TicketApplication.UserControls
             ShowDataGridView(1);
         }
 
-        private void contextMenuStrip1_Opening(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-
-        }
+       
 
         private async void ویرایشToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -166,13 +163,13 @@ namespace TicketApplication.UserControls
             ShowDataGridView(0);
         }
 
-        private void SaamanehDG_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void SaamanehDG_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             ID.Text = Convert.ToString(SaamanehDG.Rows[SaamanehDG.CurrentRow.Index].Cells["آیدی"].Value);
 
         }
 
-        private void SaamanehDG_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void SaamanehDG_CellMouseClick_1(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (e.Button == MouseButtons.Right)
             {

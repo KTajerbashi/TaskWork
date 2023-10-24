@@ -40,6 +40,7 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.TaskSaveDateLBL = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.ReloadBtn = new System.Windows.Forms.Button();
             this.PassBtn = new System.Windows.Forms.Button();
             this.DeliverBtn = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -62,7 +63,6 @@
             this.MessageTxt = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.ReloadBtn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -115,6 +115,7 @@
             // TaskAnswerBtn
             // 
             this.TaskAnswerBtn.BackColor = System.Drawing.Color.DodgerBlue;
+            this.TaskAnswerBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.TaskAnswerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TaskAnswerBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TaskAnswerBtn.ForeColor = System.Drawing.Color.White;
@@ -156,6 +157,7 @@
             // TaskAddDescBtn
             // 
             this.TaskAddDescBtn.BackColor = System.Drawing.Color.DodgerBlue;
+            this.TaskAddDescBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.TaskAddDescBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TaskAddDescBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TaskAddDescBtn.ForeColor = System.Drawing.Color.White;
@@ -227,9 +229,24 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "تعیین وضعیت";
             // 
+            // ReloadBtn
+            // 
+            this.ReloadBtn.BackColor = System.Drawing.Color.SeaShell;
+            this.ReloadBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ReloadBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReloadBtn.ForeColor = System.Drawing.Color.White;
+            this.ReloadBtn.Location = new System.Drawing.Point(12, 31);
+            this.ReloadBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ReloadBtn.Name = "ReloadBtn";
+            this.ReloadBtn.Size = new System.Drawing.Size(28, 30);
+            this.ReloadBtn.TabIndex = 61;
+            this.ReloadBtn.UseVisualStyleBackColor = false;
+            this.ReloadBtn.Click += new System.EventHandler(this.ReloadBtn_Click);
+            // 
             // PassBtn
             // 
             this.PassBtn.BackColor = System.Drawing.Color.DodgerBlue;
+            this.PassBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PassBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PassBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PassBtn.ForeColor = System.Drawing.Color.White;
@@ -245,6 +262,7 @@
             // DeliverBtn
             // 
             this.DeliverBtn.BackColor = System.Drawing.Color.LimeGreen;
+            this.DeliverBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DeliverBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DeliverBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeliverBtn.ForeColor = System.Drawing.Color.White;
@@ -516,21 +534,6 @@
             this.label8.Text = "برگشتی";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label8.UseMnemonic = false;
-            // 
-            // ReloadBtn
-            // 
-            this.ReloadBtn.BackColor = System.Drawing.Color.PowderBlue;
-            this.ReloadBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ReloadBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ReloadBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ReloadBtn.ForeColor = System.Drawing.Color.White;
-            this.ReloadBtn.Location = new System.Drawing.Point(12, 31);
-            this.ReloadBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ReloadBtn.Name = "ReloadBtn";
-            this.ReloadBtn.Size = new System.Drawing.Size(28, 30);
-            this.ReloadBtn.TabIndex = 61;
-            this.ReloadBtn.UseVisualStyleBackColor = false;
-            this.ReloadBtn.Click += new System.EventHandler(this.ReloadBtn_Click);
             // 
             // CartablePanel
             // 

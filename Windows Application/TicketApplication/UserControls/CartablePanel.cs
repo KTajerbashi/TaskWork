@@ -52,6 +52,7 @@ namespace TicketApplication.UserControls
             DeliverBtn.Tag = tag;
             PassBtn.Tag = tag;
             this.Tag = tag;
+            MessageTxt.Text = "";
         }
 
 

@@ -394,13 +394,7 @@ INNER JOIN SEC.Roles ON BUS.TaskWorks.RoleId = SEC.Roles.ID
 WHERE 
 	(BUS.TaskWorks.IsActive = 1) 
 AND (BUS.TaskWorks.IsDeleted = 0)
-AND (
-(BUS.TaskWorks.CreateDate > N'{fromDate}')
-OR
-(BUS.TaskWorks.CreateDate < N'{toDate}')
-OR
-(BUS.TaskWorks.CreateDate > N'{fromDate}' AND BUS.TaskWorks.CreateDate < N'{toDate}')
-)
+AND (BUS.TaskWorks.CreateDate > N'{fromDate}' AND BUS.TaskWorks.CreateDate < N'{toDate}')
 ORDER BY BUS.TaskWorks.CreateDate DESC 
 ");
         }
