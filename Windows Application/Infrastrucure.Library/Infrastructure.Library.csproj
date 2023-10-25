@@ -91,6 +91,7 @@
     <Compile Include="Repository\SamanehService\SamanehService.cs" />
     <Compile Include="Repository\TaskService\TaskQueries.cs" />
     <Compile Include="Repository\TaskService\TaskService.cs" />
+    <Compile Include="Repository\UserService\UserQueries.cs" />
     <Compile Include="Repository\UserService\UserService.cs" />
     <Compile Include="Validator\GroupValidator.cs" />
     <Compile Include="Validator\TaskValidator.cs" />

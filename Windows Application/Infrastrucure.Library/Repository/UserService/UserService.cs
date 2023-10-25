@@ -5,6 +5,7 @@ using Infrastructure.Library.DbContextData;
 using Infrastrucure.Library.BaseService;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -32,19 +33,53 @@ namespace Infrastrucure.Library.Repository.UserService
         }
         public Result<User> IsMatchAny(User entity)
         {
+            var res = _context.Users.Where(x => (x.Username == entity.Username && x.Email == entity.Email && x.Phone == entity.Phone) && !x.IsDeleted && x.IsActive).FirstOrDefault();
+            if (res == null)
+            {
+                return new Result<User>
+                {
+                    Data = res,
+                    Message = "اطلاعات واکشی شد",
+                    Success = true
+                };
+            }
             return new Result<User>
             {
-                Data = _context.Users.Where(x => (x.Username == entity.Username && x.Email == entity.Email && x.Phone == entity.Phone) && !x.IsDeleted && x.IsActive).Single(),
-                Message = "اطلاعات واکشی شد",
-                Success = true
+                Data = null,
+                Message = "اطلاعات واکشی نشد",
+                Success = false
             };
+
         }
         public Result<User> InsertWithRole(User entity, Role role)
         {
+            _context.Users.Add(entity);
+            _context.SaveChanges();
             var ur = new UserRole
             {
-                Role = role,
-                User = entity,
+                RoleID = role.ID,
+                UserID = entity.ID,
+                CreateDate = DateTime.Now,
+                IsActive = true,
+                IsDeleted = false,
+                Description = entity.Description,
+                Title = entity.Title,
+            };
+            _context.UserRoles.Add(ur);
+            return new Result<User>
+            {
+                Data = entity,
+                Success = true,
+                Message = ""
+            };
+        }
+        public Result<User> UpdateWithRole(User entity, Role role)
+        {
+            _context.Users.AddOrUpdate(entity);
+            var ur = new UserRole
+            {
+                RoleID = role.ID,
+                UserID = entity.ID,
                 CreateDate = DateTime.Now,
                 IsActive = true,
                 IsDeleted = false,

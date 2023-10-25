@@ -28,30 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TabControl = new System.Windows.Forms.TabControl();
             this.UserTab = new System.Windows.Forms.TabPage();
             this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.MessageLbl = new System.Windows.Forms.Label();
+            this.NextBtn = new System.Windows.Forms.Button();
+            this.PreBtn = new System.Windows.Forms.Button();
             this.CountLBL = new System.Windows.Forms.Label();
             this.DataGridUsers = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.SearchBtnUsers = new System.Windows.Forms.Button();
             this.SearchTxtUsers = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.textBoxX7 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.textBoxX8 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.textBoxX9 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.textBoxX4 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.textBoxX5 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.textBoxX6 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.textBoxX3 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.textBoxX2 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.textBoxX1 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.DescUserTxt = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.TitleUserTxt = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.RoleIdUserCombo = new System.Windows.Forms.ComboBox();
+            this.SaveUserBtn = new System.Windows.Forms.Button();
+            this.IsActiveUserCheck = new System.Windows.Forms.CheckBox();
+            this.UsernameUserTxt = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.AddressUserTxt = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.RePasswordUserTxt = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.PasswordUserTxt = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.FamilyUserTxt = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.EmailUserTxt = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.PhoneUserTxt = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.NameUserTxt = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.RoleTab = new System.Windows.Forms.TabPage();
             this.groupPanel7 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.button1 = new System.Windows.Forms.Button();
@@ -93,6 +97,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.button10 = new System.Windows.Forms.Button();
             this.groupPanel10 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.ویرایشToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.حذفToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.حذفToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.ویرایشToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.تغییروضعیتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.حذفToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.TabControl.SuspendLayout();
             this.UserTab.SuspendLayout();
             this.groupPanel2.SuspendLayout();
@@ -109,6 +120,7 @@
             this.groupPanel6.SuspendLayout();
             this.ProSetting.SuspendLayout();
             this.groupPanel9.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // TabControl
@@ -126,6 +138,7 @@
             this.TabControl.ShowToolTips = true;
             this.TabControl.Size = new System.Drawing.Size(1252, 654);
             this.TabControl.TabIndex = 3;
+            this.TabControl.SelectedIndexChanged += new System.EventHandler(this.TabControl_SelectedIndexChanged);
             // 
             // UserTab
             // 
@@ -138,14 +151,14 @@
             this.UserTab.TabIndex = 0;
             this.UserTab.Text = "کاربران";
             this.UserTab.UseVisualStyleBackColor = true;
-            this.UserTab.Click += new System.EventHandler(this.UserTab_Click);
             // 
             // groupPanel2
             // 
             this.groupPanel2.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2013;
-            this.groupPanel2.Controls.Add(this.button6);
-            this.groupPanel2.Controls.Add(this.button7);
+            this.groupPanel2.Controls.Add(this.MessageLbl);
+            this.groupPanel2.Controls.Add(this.NextBtn);
+            this.groupPanel2.Controls.Add(this.PreBtn);
             this.groupPanel2.Controls.Add(this.CountLBL);
             this.groupPanel2.Controls.Add(this.DataGridUsers);
             this.groupPanel2.Controls.Add(this.SearchBtnUsers);
@@ -185,25 +198,40 @@
             this.groupPanel2.TabIndex = 5;
             this.groupPanel2.Text = "نمایش اطلاعات";
             // 
-            // button6
+            // MessageLbl
             // 
-            this.button6.Font = new System.Drawing.Font("IRANSansWeb", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(2, 407);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(39, 30);
-            this.button6.TabIndex = 17;
-            this.button6.Text = ">";
-            this.button6.UseVisualStyleBackColor = true;
+            this.MessageLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.MessageLbl.BackColor = System.Drawing.Color.Transparent;
+            this.MessageLbl.Font = new System.Drawing.Font("IRANSansWeb", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MessageLbl.ForeColor = System.Drawing.Color.Red;
+            this.MessageLbl.Location = new System.Drawing.Point(545, 15);
+            this.MessageLbl.Name = "MessageLbl";
+            this.MessageLbl.Size = new System.Drawing.Size(672, 20);
+            this.MessageLbl.TabIndex = 18;
+            this.MessageLbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.MessageLbl.UseMnemonic = false;
             // 
-            // button7
+            // NextBtn
             // 
-            this.button7.Font = new System.Drawing.Font("IRANSansWeb", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(1185, 407);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(39, 30);
-            this.button7.TabIndex = 16;
-            this.button7.Text = "<";
-            this.button7.UseVisualStyleBackColor = true;
+            this.NextBtn.Font = new System.Drawing.Font("IRANSansWeb", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NextBtn.Location = new System.Drawing.Point(3, 407);
+            this.NextBtn.Name = "NextBtn";
+            this.NextBtn.Size = new System.Drawing.Size(30, 30);
+            this.NextBtn.TabIndex = 17;
+            this.NextBtn.Text = ">";
+            this.NextBtn.UseVisualStyleBackColor = true;
+            this.NextBtn.Click += new System.EventHandler(this.NextBtn_Click);
+            // 
+            // PreBtn
+            // 
+            this.PreBtn.Font = new System.Drawing.Font("IRANSansWeb", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PreBtn.Location = new System.Drawing.Point(1193, 407);
+            this.PreBtn.Name = "PreBtn";
+            this.PreBtn.Size = new System.Drawing.Size(30, 30);
+            this.PreBtn.TabIndex = 16;
+            this.PreBtn.Text = "<";
+            this.PreBtn.UseVisualStyleBackColor = true;
+            this.PreBtn.Click += new System.EventHandler(this.PreBtn_Click);
             // 
             // CountLBL
             // 
@@ -211,9 +239,9 @@
             this.CountLBL.BackColor = System.Drawing.Color.Transparent;
             this.CountLBL.Font = new System.Drawing.Font("IRANSansWeb", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CountLBL.ForeColor = System.Drawing.Color.Black;
-            this.CountLBL.Location = new System.Drawing.Point(543, 411);
+            this.CountLBL.Location = new System.Drawing.Point(443, 421);
             this.CountLBL.Name = "CountLBL";
-            this.CountLBL.Size = new System.Drawing.Size(129, 29);
+            this.CountLBL.Size = new System.Drawing.Size(340, 29);
             this.CountLBL.TabIndex = 15;
             this.CountLBL.Text = "تعداد رکورد | صفحه 1";
             this.CountLBL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -221,32 +249,43 @@
             // 
             // DataGridUsers
             // 
+            this.DataGridUsers.AllowUserToAddRows = false;
+            this.DataGridUsers.AllowUserToOrderColumns = true;
+            this.DataGridUsers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DataGridUsers.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.DataGridUsers.BackgroundColor = System.Drawing.Color.White;
             this.DataGridUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("IRANSansWeb", 8.999999F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DataGridUsers.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("IRANSansWeb", 8.999999F);
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DataGridUsers.DefaultCellStyle = dataGridViewCellStyle16;
             this.DataGridUsers.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.DataGridUsers.Location = new System.Drawing.Point(3, 37);
             this.DataGridUsers.Name = "DataGridUsers";
+            this.DataGridUsers.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.DataGridUsers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DataGridUsers.Size = new System.Drawing.Size(1220, 368);
             this.DataGridUsers.TabIndex = 2;
+            this.DataGridUsers.VirtualMode = true;
+            this.DataGridUsers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridUsers_CellClick);
+            this.DataGridUsers.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DataGridUsers_CellMouseClick);
             // 
             // SearchBtnUsers
             // 
             this.SearchBtnUsers.BackColor = System.Drawing.Color.DodgerBlue;
+            this.SearchBtnUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SearchBtnUsers.ForeColor = System.Drawing.Color.White;
-            this.SearchBtnUsers.Location = new System.Drawing.Point(3, 3);
+            this.SearchBtnUsers.Location = new System.Drawing.Point(8, 3);
             this.SearchBtnUsers.Name = "SearchBtnUsers";
-            this.SearchBtnUsers.Size = new System.Drawing.Size(65, 30);
+            this.SearchBtnUsers.Size = new System.Drawing.Size(109, 30);
             this.SearchBtnUsers.TabIndex = 1;
             this.SearchBtnUsers.Text = "جستجو";
             this.SearchBtnUsers.UseVisualStyleBackColor = false;
+            this.SearchBtnUsers.Click += new System.EventHandler(this.SearchBtnUsers_Click);
             // 
             // SearchTxtUsers
             // 
@@ -254,10 +293,11 @@
             // 
             // 
             this.SearchTxtUsers.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.SearchTxtUsers.Location = new System.Drawing.Point(74, 4);
+            this.SearchTxtUsers.Font = new System.Drawing.Font("IRANSansWeb", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchTxtUsers.Location = new System.Drawing.Point(123, 5);
             this.SearchTxtUsers.Name = "SearchTxtUsers";
             this.SearchTxtUsers.PreventEnterBeep = true;
-            this.SearchTxtUsers.Size = new System.Drawing.Size(205, 21);
+            this.SearchTxtUsers.Size = new System.Drawing.Size(330, 26);
             this.SearchTxtUsers.TabIndex = 0;
             this.SearchTxtUsers.WatermarkText = "جستجو ...";
             // 
@@ -265,17 +305,19 @@
             // 
             this.groupPanel1.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2013;
-            this.groupPanel1.Controls.Add(this.button3);
-            this.groupPanel1.Controls.Add(this.checkBox1);
-            this.groupPanel1.Controls.Add(this.textBoxX7);
-            this.groupPanel1.Controls.Add(this.textBoxX8);
-            this.groupPanel1.Controls.Add(this.textBoxX9);
-            this.groupPanel1.Controls.Add(this.textBoxX4);
-            this.groupPanel1.Controls.Add(this.textBoxX5);
-            this.groupPanel1.Controls.Add(this.textBoxX6);
-            this.groupPanel1.Controls.Add(this.textBoxX3);
-            this.groupPanel1.Controls.Add(this.textBoxX2);
-            this.groupPanel1.Controls.Add(this.textBoxX1);
+            this.groupPanel1.Controls.Add(this.DescUserTxt);
+            this.groupPanel1.Controls.Add(this.TitleUserTxt);
+            this.groupPanel1.Controls.Add(this.RoleIdUserCombo);
+            this.groupPanel1.Controls.Add(this.SaveUserBtn);
+            this.groupPanel1.Controls.Add(this.IsActiveUserCheck);
+            this.groupPanel1.Controls.Add(this.UsernameUserTxt);
+            this.groupPanel1.Controls.Add(this.AddressUserTxt);
+            this.groupPanel1.Controls.Add(this.RePasswordUserTxt);
+            this.groupPanel1.Controls.Add(this.PasswordUserTxt);
+            this.groupPanel1.Controls.Add(this.FamilyUserTxt);
+            this.groupPanel1.Controls.Add(this.EmailUserTxt);
+            this.groupPanel1.Controls.Add(this.PhoneUserTxt);
+            this.groupPanel1.Controls.Add(this.NameUserTxt);
             this.groupPanel1.DisabledBackColor = System.Drawing.Color.Empty;
             this.groupPanel1.Location = new System.Drawing.Point(6, 6);
             this.groupPanel1.Name = "groupPanel1";
@@ -308,170 +350,212 @@
             // 
             // 
             this.groupPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.groupPanel1.TabIndex = 4;
+            this.groupPanel1.TabIndex = 0;
             this.groupPanel1.Text = "فرم اطلاعات";
             // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.LimeGreen;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(8, 74);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(125, 31);
-            this.button3.TabIndex = 70;
-            this.button3.Text = "ذخیره";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(1170, 75);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(50, 24);
-            this.checkBox1.TabIndex = 11;
-            this.checkBox1.Text = "فعال";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // textBoxX7
+            // DescUserTxt
             // 
             // 
             // 
             // 
-            this.textBoxX7.Border.Class = "TextBoxBorder";
-            this.textBoxX7.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX7.Location = new System.Drawing.Point(980, 42);
-            this.textBoxX7.MaxLength = 50;
-            this.textBoxX7.Name = "textBoxX7";
-            this.textBoxX7.PreventEnterBeep = true;
-            this.textBoxX7.Size = new System.Drawing.Size(240, 27);
-            this.textBoxX7.TabIndex = 9;
-            this.textBoxX7.WatermarkText = "نام کاربری";
+            this.DescUserTxt.Border.Class = "TextBoxBorder";
+            this.DescUserTxt.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.DescUserTxt.Font = new System.Drawing.Font("IRANSansWeb", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DescUserTxt.Location = new System.Drawing.Point(494, 72);
+            this.DescUserTxt.MaxLength = 50;
+            this.DescUserTxt.Name = "DescUserTxt";
+            this.DescUserTxt.PreventEnterBeep = true;
+            this.DescUserTxt.Size = new System.Drawing.Size(483, 29);
+            this.DescUserTxt.TabIndex = 9;
+            this.DescUserTxt.WatermarkText = "توضیحات";
             // 
-            // textBoxX8
-            // 
-            // 
-            // 
-            // 
-            this.textBoxX8.Border.Class = "TextBoxBorder";
-            this.textBoxX8.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX8.Location = new System.Drawing.Point(8, 42);
-            this.textBoxX8.MaxLength = 50;
-            this.textBoxX8.Name = "textBoxX8";
-            this.textBoxX8.PreventEnterBeep = true;
-            this.textBoxX8.Size = new System.Drawing.Size(483, 27);
-            this.textBoxX8.TabIndex = 8;
-            this.textBoxX8.WatermarkText = "آدرس";
-            // 
-            // textBoxX9
+            // TitleUserTxt
             // 
             // 
             // 
             // 
-            this.textBoxX9.Border.Class = "TextBoxBorder";
-            this.textBoxX9.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX9.Location = new System.Drawing.Point(8, 12);
-            this.textBoxX9.MaxLength = 50;
-            this.textBoxX9.Name = "textBoxX9";
-            this.textBoxX9.PreventEnterBeep = true;
-            this.textBoxX9.Size = new System.Drawing.Size(240, 27);
-            this.textBoxX9.TabIndex = 7;
-            this.textBoxX9.WatermarkText = "ایمیل";
+            this.TitleUserTxt.Border.Class = "TextBoxBorder";
+            this.TitleUserTxt.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.TitleUserTxt.Font = new System.Drawing.Font("IRANSansWeb", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TitleUserTxt.Location = new System.Drawing.Point(980, 72);
+            this.TitleUserTxt.MaxLength = 50;
+            this.TitleUserTxt.Name = "TitleUserTxt";
+            this.TitleUserTxt.PreventEnterBeep = true;
+            this.TitleUserTxt.Size = new System.Drawing.Size(240, 29);
+            this.TitleUserTxt.TabIndex = 8;
+            this.TitleUserTxt.WatermarkText = "عنوان";
             // 
-            // textBoxX4
+            // RoleIdUserCombo
             // 
+            this.RoleIdUserCombo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.RoleIdUserCombo.BackColor = System.Drawing.Color.White;
+            this.RoleIdUserCombo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.RoleIdUserCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.RoleIdUserCombo.Font = new System.Drawing.Font("IRANSansWeb", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RoleIdUserCombo.ForeColor = System.Drawing.Color.Black;
+            this.RoleIdUserCombo.FormattingEnabled = true;
+            this.RoleIdUserCombo.Location = new System.Drawing.Point(251, 84);
+            this.RoleIdUserCombo.Name = "RoleIdUserCombo";
+            this.RoleIdUserCombo.Size = new System.Drawing.Size(240, 30);
+            this.RoleIdUserCombo.TabIndex = 10;
             // 
+            // SaveUserBtn
             // 
+            this.SaveUserBtn.BackColor = System.Drawing.Color.LimeGreen;
+            this.SaveUserBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SaveUserBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveUserBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveUserBtn.ForeColor = System.Drawing.Color.White;
+            this.SaveUserBtn.Location = new System.Drawing.Point(8, 74);
+            this.SaveUserBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.SaveUserBtn.Name = "SaveUserBtn";
+            this.SaveUserBtn.Size = new System.Drawing.Size(125, 31);
+            this.SaveUserBtn.TabIndex = 12;
+            this.SaveUserBtn.Text = "ذخیره";
+            this.SaveUserBtn.UseVisualStyleBackColor = false;
+            this.SaveUserBtn.Click += new System.EventHandler(this.SaveUserBtn_Click);
             // 
-            this.textBoxX4.Border.Class = "TextBoxBorder";
-            this.textBoxX4.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX4.Location = new System.Drawing.Point(494, 42);
-            this.textBoxX4.MaxLength = 50;
-            this.textBoxX4.Name = "textBoxX4";
-            this.textBoxX4.PasswordChar = '*';
-            this.textBoxX4.PreventEnterBeep = true;
-            this.textBoxX4.Size = new System.Drawing.Size(240, 27);
-            this.textBoxX4.TabIndex = 6;
-            this.textBoxX4.WatermarkText = "تکرار رمز";
+            // IsActiveUserCheck
             // 
-            // textBoxX5
+            this.IsActiveUserCheck.AutoSize = true;
+            this.IsActiveUserCheck.Font = new System.Drawing.Font("IRANSansWeb", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IsActiveUserCheck.Location = new System.Drawing.Point(189, 74);
+            this.IsActiveUserCheck.Name = "IsActiveUserCheck";
+            this.IsActiveUserCheck.Size = new System.Drawing.Size(52, 26);
+            this.IsActiveUserCheck.TabIndex = 11;
+            this.IsActiveUserCheck.Text = "فعال";
+            this.IsActiveUserCheck.UseVisualStyleBackColor = true;
             // 
-            // 
-            // 
-            // 
-            this.textBoxX5.Border.Class = "TextBoxBorder";
-            this.textBoxX5.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX5.Location = new System.Drawing.Point(737, 42);
-            this.textBoxX5.MaxLength = 50;
-            this.textBoxX5.Name = "textBoxX5";
-            this.textBoxX5.PasswordChar = '*';
-            this.textBoxX5.PreventEnterBeep = true;
-            this.textBoxX5.Size = new System.Drawing.Size(240, 27);
-            this.textBoxX5.TabIndex = 5;
-            this.textBoxX5.WatermarkText = "رمز ورود";
-            // 
-            // textBoxX6
-            // 
-            // 
-            // 
-            // 
-            this.textBoxX6.Border.Class = "TextBoxBorder";
-            this.textBoxX6.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX6.Location = new System.Drawing.Point(737, 12);
-            this.textBoxX6.MaxLength = 50;
-            this.textBoxX6.Name = "textBoxX6";
-            this.textBoxX6.PreventEnterBeep = true;
-            this.textBoxX6.Size = new System.Drawing.Size(240, 27);
-            this.textBoxX6.TabIndex = 4;
-            this.textBoxX6.WatermarkText = "نام کاربری";
-            // 
-            // textBoxX3
+            // UsernameUserTxt
             // 
             // 
             // 
             // 
-            this.textBoxX3.Border.Class = "TextBoxBorder";
-            this.textBoxX3.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX3.Location = new System.Drawing.Point(251, 12);
-            this.textBoxX3.MaxLength = 50;
-            this.textBoxX3.Name = "textBoxX3";
-            this.textBoxX3.PreventEnterBeep = true;
-            this.textBoxX3.Size = new System.Drawing.Size(240, 27);
-            this.textBoxX3.TabIndex = 3;
-            this.textBoxX3.WatermarkText = "تلفن ....";
+            this.UsernameUserTxt.Border.Class = "TextBoxBorder";
+            this.UsernameUserTxt.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.UsernameUserTxt.Font = new System.Drawing.Font("IRANSansWeb", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsernameUserTxt.Location = new System.Drawing.Point(980, 42);
+            this.UsernameUserTxt.MaxLength = 50;
+            this.UsernameUserTxt.Name = "UsernameUserTxt";
+            this.UsernameUserTxt.PreventEnterBeep = true;
+            this.UsernameUserTxt.Size = new System.Drawing.Size(240, 29);
+            this.UsernameUserTxt.TabIndex = 4;
+            this.UsernameUserTxt.WatermarkText = "نام کاربری";
             // 
-            // textBoxX2
-            // 
-            // 
-            // 
-            // 
-            this.textBoxX2.Border.Class = "TextBoxBorder";
-            this.textBoxX2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX2.Location = new System.Drawing.Point(494, 12);
-            this.textBoxX2.MaxLength = 50;
-            this.textBoxX2.Name = "textBoxX2";
-            this.textBoxX2.PreventEnterBeep = true;
-            this.textBoxX2.Size = new System.Drawing.Size(240, 27);
-            this.textBoxX2.TabIndex = 2;
-            this.textBoxX2.WatermarkText = "فامیل";
-            // 
-            // textBoxX1
+            // AddressUserTxt
             // 
             // 
             // 
             // 
-            this.textBoxX1.Border.Class = "TextBoxBorder";
-            this.textBoxX1.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX1.Location = new System.Drawing.Point(980, 12);
-            this.textBoxX1.MaxLength = 50;
-            this.textBoxX1.Name = "textBoxX1";
-            this.textBoxX1.PreventEnterBeep = true;
-            this.textBoxX1.Size = new System.Drawing.Size(240, 27);
-            this.textBoxX1.TabIndex = 1;
-            this.textBoxX1.WatermarkText = "نام";
+            this.AddressUserTxt.Border.Class = "TextBoxBorder";
+            this.AddressUserTxt.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.AddressUserTxt.Font = new System.Drawing.Font("IRANSansWeb", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddressUserTxt.Location = new System.Drawing.Point(8, 42);
+            this.AddressUserTxt.MaxLength = 50;
+            this.AddressUserTxt.Name = "AddressUserTxt";
+            this.AddressUserTxt.PreventEnterBeep = true;
+            this.AddressUserTxt.Size = new System.Drawing.Size(483, 29);
+            this.AddressUserTxt.TabIndex = 7;
+            this.AddressUserTxt.WatermarkText = "آدرس";
+            // 
+            // RePasswordUserTxt
+            // 
+            // 
+            // 
+            // 
+            this.RePasswordUserTxt.Border.Class = "TextBoxBorder";
+            this.RePasswordUserTxt.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.RePasswordUserTxt.Font = new System.Drawing.Font("IRANSansWeb", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RePasswordUserTxt.Location = new System.Drawing.Point(494, 42);
+            this.RePasswordUserTxt.MaxLength = 50;
+            this.RePasswordUserTxt.Name = "RePasswordUserTxt";
+            this.RePasswordUserTxt.PasswordChar = '*';
+            this.RePasswordUserTxt.PreventEnterBeep = true;
+            this.RePasswordUserTxt.Size = new System.Drawing.Size(240, 29);
+            this.RePasswordUserTxt.TabIndex = 6;
+            this.RePasswordUserTxt.WatermarkText = "تکرار رمز";
+            // 
+            // PasswordUserTxt
+            // 
+            // 
+            // 
+            // 
+            this.PasswordUserTxt.Border.Class = "TextBoxBorder";
+            this.PasswordUserTxt.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.PasswordUserTxt.Font = new System.Drawing.Font("IRANSansWeb", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasswordUserTxt.Location = new System.Drawing.Point(737, 42);
+            this.PasswordUserTxt.MaxLength = 50;
+            this.PasswordUserTxt.Name = "PasswordUserTxt";
+            this.PasswordUserTxt.PasswordChar = '*';
+            this.PasswordUserTxt.PreventEnterBeep = true;
+            this.PasswordUserTxt.Size = new System.Drawing.Size(240, 29);
+            this.PasswordUserTxt.TabIndex = 5;
+            this.PasswordUserTxt.WatermarkText = "رمز ورود";
+            // 
+            // FamilyUserTxt
+            // 
+            // 
+            // 
+            // 
+            this.FamilyUserTxt.Border.Class = "TextBoxBorder";
+            this.FamilyUserTxt.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.FamilyUserTxt.Font = new System.Drawing.Font("IRANSansWeb", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FamilyUserTxt.Location = new System.Drawing.Point(737, 12);
+            this.FamilyUserTxt.MaxLength = 50;
+            this.FamilyUserTxt.Name = "FamilyUserTxt";
+            this.FamilyUserTxt.PreventEnterBeep = true;
+            this.FamilyUserTxt.Size = new System.Drawing.Size(240, 29);
+            this.FamilyUserTxt.TabIndex = 1;
+            this.FamilyUserTxt.WatermarkText = "فامیل";
+            // 
+            // EmailUserTxt
+            // 
+            // 
+            // 
+            // 
+            this.EmailUserTxt.Border.Class = "TextBoxBorder";
+            this.EmailUserTxt.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.EmailUserTxt.Font = new System.Drawing.Font("IRANSansWeb", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmailUserTxt.Location = new System.Drawing.Point(8, 12);
+            this.EmailUserTxt.MaxLength = 50;
+            this.EmailUserTxt.Name = "EmailUserTxt";
+            this.EmailUserTxt.PreventEnterBeep = true;
+            this.EmailUserTxt.Size = new System.Drawing.Size(483, 29);
+            this.EmailUserTxt.TabIndex = 3;
+            this.EmailUserTxt.WatermarkText = "ایمیل";
+            // 
+            // PhoneUserTxt
+            // 
+            // 
+            // 
+            // 
+            this.PhoneUserTxt.Border.Class = "TextBoxBorder";
+            this.PhoneUserTxt.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.PhoneUserTxt.Font = new System.Drawing.Font("IRANSansWeb", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PhoneUserTxt.Location = new System.Drawing.Point(494, 12);
+            this.PhoneUserTxt.MaxLength = 11;
+            this.PhoneUserTxt.Name = "PhoneUserTxt";
+            this.PhoneUserTxt.PreventEnterBeep = true;
+            this.PhoneUserTxt.Size = new System.Drawing.Size(240, 29);
+            this.PhoneUserTxt.TabIndex = 2;
+            this.PhoneUserTxt.WatermarkText = "تلفن";
+            this.PhoneUserTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PhoneUserTxt_KeyPress);
+            // 
+            // NameUserTxt
+            // 
+            // 
+            // 
+            // 
+            this.NameUserTxt.Border.Class = "TextBoxBorder";
+            this.NameUserTxt.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.NameUserTxt.Font = new System.Drawing.Font("IRANSansWeb", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NameUserTxt.Location = new System.Drawing.Point(980, 12);
+            this.NameUserTxt.MaxLength = 50;
+            this.NameUserTxt.Name = "NameUserTxt";
+            this.NameUserTxt.PreventEnterBeep = true;
+            this.NameUserTxt.Size = new System.Drawing.Size(240, 29);
+            this.NameUserTxt.TabIndex = 0;
+            this.NameUserTxt.WatermarkText = "نام";
             // 
             // RoleTab
             // 
@@ -592,7 +676,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("IRANSansWeb", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(543, 444);
+            this.label1.Location = new System.Drawing.Point(531, 400);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(129, 29);
             this.label1.TabIndex = 16;
@@ -624,14 +708,14 @@
             // 
             this.DataGridRoles.BackgroundColor = System.Drawing.Color.White;
             this.DataGridRoles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("IRANSansWeb", 8.999999F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DataGridRoles.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("IRANSansWeb", 8.999999F);
+            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DataGridRoles.DefaultCellStyle = dataGridViewCellStyle17;
             this.DataGridRoles.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.DataGridRoles.Location = new System.Drawing.Point(3, 39);
             this.DataGridRoles.Name = "DataGridRoles";
@@ -880,7 +964,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("IRANSansWeb", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(546, 359);
+            this.label2.Location = new System.Drawing.Point(534, 315);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(129, 29);
             this.label2.TabIndex = 19;
@@ -912,14 +996,14 @@
             // 
             this.dataGridViewX1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewX1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("IRANSansWeb", 8.999999F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewX1.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("IRANSansWeb", 8.999999F);
+            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewX1.DefaultCellStyle = dataGridViewCellStyle18;
             this.dataGridViewX1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dataGridViewX1.Location = new System.Drawing.Point(3, 31);
             this.dataGridViewX1.Name = "dataGridViewX1";
@@ -1204,7 +1288,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("IRANSansWeb", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(363, 553);
+            this.label3.Location = new System.Drawing.Point(351, 513);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(129, 29);
             this.label3.TabIndex = 19;
@@ -1261,6 +1345,54 @@
             this.groupPanel10.TabIndex = 8;
             this.groupPanel10.Text = "جستجو";
             // 
+            // ویرایشToolStripMenuItem
+            // 
+            this.ویرایشToolStripMenuItem.Name = "ویرایشToolStripMenuItem";
+            this.ویرایشToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
+            // 
+            // حذفToolStripMenuItem
+            // 
+            this.حذفToolStripMenuItem.Name = "حذفToolStripMenuItem";
+            this.حذفToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
+            // 
+            // حذفToolStripMenuItem1
+            // 
+            this.حذفToolStripMenuItem1.Name = "حذفToolStripMenuItem1";
+            this.حذفToolStripMenuItem1.Size = new System.Drawing.Size(32, 19);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ویرایشToolStripMenuItem1,
+            this.تغییروضعیتToolStripMenuItem,
+            this.حذفToolStripMenuItem2});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(142, 70);
+            // 
+            // ویرایشToolStripMenuItem1
+            // 
+            this.ویرایشToolStripMenuItem1.Image = global::TicketApplication.Properties.Resources._1486504369_change_edit_options_pencil_settings_tools_write_81307;
+            this.ویرایشToolStripMenuItem1.Name = "ویرایشToolStripMenuItem1";
+            this.ویرایشToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.ویرایشToolStripMenuItem1.Text = "ویرایش";
+            this.ویرایشToolStripMenuItem1.Click += new System.EventHandler(this.ویرایشToolStripMenuItem1_Click);
+            // 
+            // تغییروضعیتToolStripMenuItem
+            // 
+            this.تغییروضعیتToolStripMenuItem.Image = global::TicketApplication.Properties.Resources.twocirclingarrows_120593;
+            this.تغییروضعیتToolStripMenuItem.Name = "تغییروضعیتToolStripMenuItem";
+            this.تغییروضعیتToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.تغییروضعیتToolStripMenuItem.Text = "تغییر وضعیت";
+            this.تغییروضعیتToolStripMenuItem.Click += new System.EventHandler(this.تغییروضعیتToolStripMenuItem_Click);
+            // 
+            // حذفToolStripMenuItem2
+            // 
+            this.حذفToolStripMenuItem2.Image = global::TicketApplication.Properties.Resources.Gakuseisean_Ivista_2_Alarm_Error_256;
+            this.حذفToolStripMenuItem2.Name = "حذفToolStripMenuItem2";
+            this.حذفToolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.حذفToolStripMenuItem2.Text = "حذف";
+            this.حذفToolStripMenuItem2.Click += new System.EventHandler(this.حذفToolStripMenuItem2_Click);
+            // 
             // SettingPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 20F);
@@ -1272,6 +1404,7 @@
             this.Name = "SettingPanel";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Size = new System.Drawing.Size(1255, 660);
+            this.Load += new System.EventHandler(this.SettingPanel_Load);
             this.TabControl.ResumeLayout(false);
             this.UserTab.ResumeLayout(false);
             this.groupPanel2.ResumeLayout(false);
@@ -1291,6 +1424,7 @@
             this.groupPanel6.PerformLayout();
             this.ProSetting.ResumeLayout(false);
             this.groupPanel9.ResumeLayout(false);
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1315,16 +1449,15 @@
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel8;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel9;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel10;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX1;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX8;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX9;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX4;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX5;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX6;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX3;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX2;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX7;
+        private DevComponents.DotNetBar.Controls.TextBoxX NameUserTxt;
+        private DevComponents.DotNetBar.Controls.TextBoxX AddressUserTxt;
+        private DevComponents.DotNetBar.Controls.TextBoxX RePasswordUserTxt;
+        private DevComponents.DotNetBar.Controls.TextBoxX PasswordUserTxt;
+        private DevComponents.DotNetBar.Controls.TextBoxX FamilyUserTxt;
+        private DevComponents.DotNetBar.Controls.TextBoxX EmailUserTxt;
+        private DevComponents.DotNetBar.Controls.TextBoxX PhoneUserTxt;
+        private System.Windows.Forms.CheckBox IsActiveUserCheck;
+        private DevComponents.DotNetBar.Controls.TextBoxX UsernameUserTxt;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel5;
         private DevComponents.DotNetBar.Controls.DataGridViewX dataGridViewX1;
         private System.Windows.Forms.Button button2;
@@ -1334,7 +1467,7 @@
         private System.Windows.Forms.Button SettingBtn;
         private DevComponents.DotNetBar.Controls.TextBoxX textBoxX12;
         private DevComponents.DotNetBar.Controls.TextBoxX textBoxX11;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button SaveUserBtn;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel7;
         private System.Windows.Forms.Button button1;
         private DevComponents.DotNetBar.Controls.TextBoxX textBoxX13;
@@ -1348,8 +1481,8 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label CountLBL;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button NextBtn;
+        private System.Windows.Forms.Button PreBtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button8;
@@ -1359,5 +1492,17 @@
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button12;
         private DevComponents.DotNetBar.Controls.TextBoxX textBoxX14;
+        public System.Windows.Forms.ComboBox RoleIdUserCombo;
+        private DevComponents.DotNetBar.Controls.TextBoxX DescUserTxt;
+        private DevComponents.DotNetBar.Controls.TextBoxX TitleUserTxt;
+        private System.Windows.Forms.Label MessageLbl;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem ویرایشToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem حذفToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem حذفToolStripMenuItem1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem ویرایشToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem تغییروضعیتToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem حذفToolStripMenuItem2;
     }
 }

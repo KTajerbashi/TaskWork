@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using BusinessLogic.Library;
+using System.Data;
 using System.Data.SqlClient;
 
 namespace Infrastrucure.Library.DatabaseService

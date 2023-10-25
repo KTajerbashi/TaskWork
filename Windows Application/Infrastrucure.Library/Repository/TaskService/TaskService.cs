@@ -11,7 +11,10 @@ namespace Infrastrucure.Library.Repository.TaskService
     {
         public Result<List<TaskWork>> GetAllIncluded()
         {
-            var data = _context.Tasks.Include("Samaneh").Where(x => x.IsActive && !x.IsDeleted && !x.IsPassed).ToList();
+            var data = _context.Tasks.Include("Samaneh")
+                .Where(x => x.IsActive && !x.IsDeleted && !x.IsPassed)
+                .OrderBy(x => x.CreateDate).Take(14)
+                .ToList();
             return new Result<List<TaskWork>>
             {
                 Data = data,
