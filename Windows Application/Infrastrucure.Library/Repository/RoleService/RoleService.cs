@@ -14,7 +14,7 @@ namespace Infrastrucure.Library.Repository.RoleService
         {
             var res = _context.Roles.Where(x => !x.IsDeleted && x.IsActive).Select(r => new ComboboxItem<long>
             {
-                Text= r.Description,
+                Text= r.Title,
                 Value = r.ID,
             }).ToList();
             return new Result<List<ComboboxItem<long>>>

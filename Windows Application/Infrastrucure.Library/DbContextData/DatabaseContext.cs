@@ -1,6 +1,7 @@
 ﻿using BusinessLogic.Library.DatabaseService;
 using Domain.Library.Models.Entity;
 using Domain.Model;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 using System.Threading;
 using System.Threading.Tasks;
@@ -21,6 +22,9 @@ namespace Infrastructure.Library.DbContextData
         public DbSet<UserRole> UserRoles { get; set; }
         public DbSet<Backup> Backups { get; set; }
         public DbSet<Logger> Loggers { get; set; }
+        public DbSet<Privilege> Privileges { get; set; }
+
+
         public int SaveChanges(bool acceptAllChangesOnSuccess)
         {
             return base.SaveChanges();
@@ -37,6 +41,21 @@ namespace Infrastructure.Library.DbContextData
         {
             return base.SaveChangesAsync(cancellationToken);
         }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            //modelBuilder.Entity<Role>()
+            //    .HasOptional(x => x.Privilege)
+            //    .WithRequired(x => x.Role);
+
+            modelBuilder.Entity<Role>()
+               .HasRequired(s => s.Privilege)
+               .WithRequiredPrincipal(ad => ad.Role);
+
+            base.OnModelCreating(modelBuilder);
+        }
+
+
 
 
     }

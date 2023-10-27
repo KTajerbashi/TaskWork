@@ -5,7 +5,6 @@
     using Infrastructure.Library.Models;
     using System;
     using System.Collections.Generic;
-    using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
 
@@ -24,7 +23,8 @@
                  new Role
                 {
                     ID=1,
-                    Title = nameof(RolesSeed.ADMIN),
+                    Title = RolesSeed.ADMIN,
+                    Key = nameof(RolesSeed.ADMIN),
                     CreateDate = DateTime.Now,
                     Description = "ادمین",
                     IsActive = true,
@@ -34,7 +34,8 @@
                  new Role
                 {
                     ID=2,
-                    Title = nameof(RolesSeed.OPERATOR),
+                    Title = RolesSeed.OPERATOR,
+                    Key = nameof(RolesSeed.OPERATOR),
                     CreateDate = DateTime.Now,
                     Description = "کارشناس",
                     IsActive = true,
@@ -44,7 +45,8 @@
                  new Role
                 {
                     ID=3,
-                    Title = nameof(RolesSeed.USER),
+                    Title = RolesSeed.USER,
+                    Key = nameof(RolesSeed.USER),
                     CreateDate = DateTime.Now,
                     Description = "کاربر",
                     IsActive = true,

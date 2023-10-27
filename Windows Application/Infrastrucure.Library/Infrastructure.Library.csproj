@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseService\BaseService.cs" />
+    <Compile Include="DbContextData\Configuration\SEC\PrivilegeConfiguration.cs" />
     <Compile Include="DbContextData\DatabaseContext.cs" />
     <Compile Include="DbContextData\DatabaseSeedData.cs" />
     <Compile Include="DbContextData\Models\SamanaSeed.cs" />
@@ -81,11 +82,22 @@
     <Compile Include="Migrations\202310231915372__changeModels.designer.cs">
       <DependentUpon>202310231915372__changeModels.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202310270802101_RoleChanges.cs" />
+    <Compile Include="Migrations\202310270802101_RoleChanges.designer.cs">
+      <DependentUpon>202310270802101_RoleChanges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202310272134381_Add_Privilege.cs" />
+    <Compile Include="Migrations\202310272134381_Add_Privilege.designer.cs">
+      <DependentUpon>202310272134381_Add_Privilege.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\BackupService\BackupQueries.cs" />
     <Compile Include="Repository\BackupService\BackupService.cs" />
     <Compile Include="Repository\LoggerService\LoggerService.cs" />
+    <Compile Include="Repository\RoleService\PrivilegeQueries.cs" />
+    <Compile Include="Repository\RoleService\PrivilegeServices.cs" />
+    <Compile Include="Repository\RoleService\RoleQueries.cs" />
     <Compile Include="Repository\RoleService\RoleService.cs" />
     <Compile Include="Repository\SamanehService\SamanehQueries.cs" />
     <Compile Include="Repository\SamanehService\SamanehService.cs" />
@@ -118,6 +130,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202310231915372__changeModels.resx">
       <DependentUpon>202310231915372__changeModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202310270802101_RoleChanges.resx">
+      <DependentUpon>202310270802101_RoleChanges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202310272134381_Add_Privilege.resx">
+      <DependentUpon>202310272134381_Add_Privilege.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

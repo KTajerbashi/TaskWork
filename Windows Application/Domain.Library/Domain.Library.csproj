@@ -60,6 +60,7 @@
     <Compile Include="KeyValues\ComboboxItem.cs" />
     <Compile Include="Models\Entity\Backup.cs" />
     <Compile Include="Models\Entity\Logger.cs" />
+    <Compile Include="Models\Entity\Privilege.cs" />
     <Compile Include="Models\Entity\Samaneh.cs" />
     <Compile Include="Models\Entity\Role.cs" />
     <Compile Include="Models\Entity\TaskWork.cs" />

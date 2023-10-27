@@ -20,6 +20,8 @@ C:\Users\Tajer\Desktop\Visual Studio\Repository Project\Windows Application\Task
 C:\Users\Tajer\Desktop\Visual Studio\Repository Project\Windows Application\TaskWork\Windows Application\Infrastrucure.Library\obj\Debug\Infrastrucure.Library.Migrations._InitPassword.resources
 C:\Users\Tajer\Desktop\Visual Studio\Repository Project\Windows Application\TaskWork\Windows Application\Infrastrucure.Library\obj\Debug\Infrastrucure.Library.Migrations._BackupPanel.resources
 C:\Users\Tajer\Desktop\Visual Studio\Repository Project\Windows Application\TaskWork\Windows Application\Infrastrucure.Library\obj\Debug\Infrastrucure.Library.Migrations._changeModels.resources
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\Windows Application\TaskWork\Windows Application\Infrastrucure.Library\obj\Debug\Infrastrucure.Library.Migrations.RoleChanges.resources
+C:\Users\Tajer\Desktop\Visual Studio\Repository Project\Windows Application\TaskWork\Windows Application\Infrastrucure.Library\obj\Debug\Infrastrucure.Library.Migrations.Add_Privilege.resources
 C:\Users\Tajer\Desktop\Visual Studio\Repository Project\Windows Application\TaskWork\Windows Application\Infrastrucure.Library\obj\Debug\Infrastructure.Library.csproj.GenerateResource.cache
 C:\Users\Tajer\Desktop\Visual Studio\Repository Project\Windows Application\TaskWork\Windows Application\Infrastrucure.Library\obj\Debug\Infrastructure.Library.csproj.CoreCompileInputs.cache
 C:\Users\Tajer\Desktop\Visual Studio\Repository Project\Windows Application\TaskWork\Windows Application\Infrastrucure.Library\obj\Debug\Infrastructure.Library.csproj.CopyComplete

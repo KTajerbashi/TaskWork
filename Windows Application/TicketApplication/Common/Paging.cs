@@ -15,7 +15,7 @@
 
         public void Next(int max, int count)
         {
-            if (count <= max)
+            if (count == max)
             {
                 Page++;
             }

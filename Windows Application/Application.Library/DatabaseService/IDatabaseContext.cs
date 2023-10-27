@@ -16,6 +16,7 @@ namespace BusinessLogic.Library.DatabaseService
         DbSet<Samaneh> Samanehs { get; set; }
         DbSet<Backup> Backups { get; set; }
         DbSet<Logger> Loggers { get; set; }
+        DbSet<Privilege> Privileges { get; set; }
 
         int SaveChanges(bool acceptAllChangesOnSuccess);
         int SaveChanges();
