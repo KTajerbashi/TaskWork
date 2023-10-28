@@ -64,7 +64,7 @@ namespace Infrastrucure.Library.BaseService
         public async Task<int> InsertAsync(TEntity entity)
         {
             _context.Set<TEntity>().Add(entity);
-            return 1;
+            return await _context.SaveChangesAsync();
         }
 
         public async Task<int> Save()

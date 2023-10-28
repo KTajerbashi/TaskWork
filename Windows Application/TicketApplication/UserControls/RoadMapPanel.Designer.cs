@@ -28,28 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RoadMapPanel));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.PanelTools = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.textBoxX2 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.textBoxX1 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.SettingBtn = new System.Windows.Forms.Button();
-            this.textBoxX11 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.SaveBtn = new System.Windows.Forms.Button();
+            this.TitleTxt = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.PanelShow = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.CountLBL = new System.Windows.Forms.Label();
-            this.SearchBtnRoles = new System.Windows.Forms.Button();
-            this.SearchTxtRoles = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.MainPanel = new DevComponents.DotNetBar.PanelEx();
-            this.highlighter1 = new DevComponents.DotNetBar.Validator.Highlighter();
+            this.SearchBtn = new System.Windows.Forms.Button();
+            this.SearchTxt = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.NextBtn = new System.Windows.Forms.Button();
+            this.PrevBtn = new System.Windows.Forms.Button();
             this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.FileCheck = new System.Windows.Forms.CheckBox();
+            this.ImplementedCheck = new System.Windows.Forms.CheckBox();
+            this.InProgressCheck = new System.Windows.Forms.CheckBox();
+            this.FinishidCheck = new System.Windows.Forms.CheckBox();
+            this.StartCheck = new System.Windows.Forms.CheckBox();
+            this.DescTxt = new DevComponents.DotNetBar.Controls.RichTextBoxEx();
+            this.DataGridLesson = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.ParentIdCombo = new System.Windows.Forms.ComboBox();
+            this.RoadmapContext = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.ویرایشToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.حذفToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.شروعToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.اجراءToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.پایانToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.پیادهسازیToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.فایلToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PanelTools.SuspendLayout();
             this.PanelShow.SuspendLayout();
             this.groupPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridLesson)).BeginInit();
+            this.RoadmapContext.SuspendLayout();
             this.SuspendLayout();
             // 
             // PanelTools
@@ -57,10 +69,10 @@
             this.PanelTools.BackColor = System.Drawing.Color.Transparent;
             this.PanelTools.CanvasColor = System.Drawing.SystemColors.Control;
             this.PanelTools.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2013;
-            this.PanelTools.Controls.Add(this.textBoxX2);
-            this.PanelTools.Controls.Add(this.textBoxX1);
-            this.PanelTools.Controls.Add(this.SettingBtn);
-            this.PanelTools.Controls.Add(this.textBoxX11);
+            this.PanelTools.Controls.Add(this.ParentIdCombo);
+            this.PanelTools.Controls.Add(this.DescTxt);
+            this.PanelTools.Controls.Add(this.SaveBtn);
+            this.PanelTools.Controls.Add(this.TitleTxt);
             this.PanelTools.DisabledBackColor = System.Drawing.Color.Empty;
             this.PanelTools.Location = new System.Drawing.Point(881, 3);
             this.PanelTools.Name = "PanelTools";
@@ -94,77 +106,48 @@
             this.PanelTools.TabIndex = 0;
             this.PanelTools.Text = "مسیر راه";
             // 
-            // textBoxX2
+            // SaveBtn
+            // 
+            this.SaveBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.SaveBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SaveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveBtn.ForeColor = System.Drawing.Color.White;
+            this.SaveBtn.Location = new System.Drawing.Point(8, 419);
+            this.SaveBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.SaveBtn.Name = "SaveBtn";
+            this.SaveBtn.Size = new System.Drawing.Size(349, 31);
+            this.SaveBtn.TabIndex = 70;
+            this.SaveBtn.Text = "ذخیره";
+            this.SaveBtn.UseVisualStyleBackColor = false;
+            this.SaveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
+            // 
+            // TitleTxt
             // 
             // 
             // 
             // 
-            this.textBoxX2.Border.Class = "TextBoxBorder";
-            this.textBoxX2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX2.Location = new System.Drawing.Point(8, 81);
-            this.textBoxX2.MaxLength = 50;
-            this.textBoxX2.Name = "textBoxX2";
-            this.textBoxX2.PreventEnterBeep = true;
-            this.textBoxX2.Size = new System.Drawing.Size(350, 27);
-            this.textBoxX2.TabIndex = 72;
-            this.textBoxX2.WatermarkText = "عنوان";
-            // 
-            // textBoxX1
-            // 
-            // 
-            // 
-            // 
-            this.textBoxX1.Border.Class = "TextBoxBorder";
-            this.textBoxX1.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX1.Location = new System.Drawing.Point(7, 15);
-            this.textBoxX1.MaxLength = 50;
-            this.textBoxX1.Name = "textBoxX1";
-            this.textBoxX1.PreventEnterBeep = true;
-            this.textBoxX1.Size = new System.Drawing.Size(350, 27);
-            this.textBoxX1.TabIndex = 71;
-            this.textBoxX1.WatermarkText = "عنوان";
-            // 
-            // SettingBtn
-            // 
-            this.SettingBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.SettingBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SettingBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SettingBtn.Font = new System.Drawing.Font("IRANSansWeb(FaNum)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SettingBtn.ForeColor = System.Drawing.Color.White;
-            this.SettingBtn.Location = new System.Drawing.Point(8, 419);
-            this.SettingBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.SettingBtn.Name = "SettingBtn";
-            this.SettingBtn.Size = new System.Drawing.Size(125, 31);
-            this.SettingBtn.TabIndex = 70;
-            this.SettingBtn.Text = "ذخیره";
-            this.SettingBtn.UseVisualStyleBackColor = false;
-            // 
-            // textBoxX11
-            // 
-            // 
-            // 
-            // 
-            this.textBoxX11.Border.Class = "TextBoxBorder";
-            this.textBoxX11.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX11.Location = new System.Drawing.Point(7, 48);
-            this.textBoxX11.MaxLength = 50;
-            this.textBoxX11.Name = "textBoxX11";
-            this.textBoxX11.PreventEnterBeep = true;
-            this.textBoxX11.Size = new System.Drawing.Size(350, 27);
-            this.textBoxX11.TabIndex = 3;
-            this.textBoxX11.WatermarkText = "عنوان";
+            this.TitleTxt.Border.Class = "TextBoxBorder";
+            this.TitleTxt.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.TitleTxt.Location = new System.Drawing.Point(7, 48);
+            this.TitleTxt.MaxLength = 50;
+            this.TitleTxt.Name = "TitleTxt";
+            this.TitleTxt.PreventEnterBeep = true;
+            this.TitleTxt.Size = new System.Drawing.Size(350, 27);
+            this.TitleTxt.TabIndex = 3;
+            this.TitleTxt.WatermarkText = "عنوان";
             // 
             // PanelShow
             // 
             this.PanelShow.BackColor = System.Drawing.Color.Transparent;
             this.PanelShow.CanvasColor = System.Drawing.SystemColors.Control;
             this.PanelShow.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2013;
+            this.PanelShow.Controls.Add(this.DataGridLesson);
             this.PanelShow.Controls.Add(this.CountLBL);
-            this.PanelShow.Controls.Add(this.SearchBtnRoles);
-            this.PanelShow.Controls.Add(this.SearchTxtRoles);
-            this.PanelShow.Controls.Add(this.button2);
-            this.PanelShow.Controls.Add(this.button1);
-            this.PanelShow.Controls.Add(this.MainPanel);
+            this.PanelShow.Controls.Add(this.SearchBtn);
+            this.PanelShow.Controls.Add(this.SearchTxt);
+            this.PanelShow.Controls.Add(this.NextBtn);
+            this.PanelShow.Controls.Add(this.PrevBtn);
             this.PanelShow.DisabledBackColor = System.Drawing.Color.Empty;
             this.PanelShow.Location = new System.Drawing.Point(3, 3);
             this.PanelShow.Name = "PanelShow";
@@ -204,93 +187,77 @@
             this.CountLBL.BackColor = System.Drawing.Color.Transparent;
             this.CountLBL.Font = new System.Drawing.Font("IRANSansWeb", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CountLBL.ForeColor = System.Drawing.Color.Black;
-            this.CountLBL.Location = new System.Drawing.Point(369, 595);
+            this.CountLBL.Location = new System.Drawing.Point(257, 603);
             this.CountLBL.Name = "CountLBL";
-            this.CountLBL.Size = new System.Drawing.Size(129, 29);
+            this.CountLBL.Size = new System.Drawing.Size(352, 29);
             this.CountLBL.TabIndex = 14;
             this.CountLBL.Text = "تعداد رکورد | صفحه 1";
             this.CountLBL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.CountLBL.UseMnemonic = false;
             // 
-            // SearchBtnRoles
+            // SearchBtn
             // 
-            this.SearchBtnRoles.BackColor = System.Drawing.Color.DodgerBlue;
-            this.SearchBtnRoles.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SearchBtnRoles.ForeColor = System.Drawing.Color.White;
-            this.SearchBtnRoles.Location = new System.Drawing.Point(3, 6);
-            this.SearchBtnRoles.Name = "SearchBtnRoles";
-            this.SearchBtnRoles.Size = new System.Drawing.Size(65, 30);
-            this.SearchBtnRoles.TabIndex = 10;
-            this.SearchBtnRoles.Text = "جستجو";
-            this.SearchBtnRoles.UseVisualStyleBackColor = false;
+            this.SearchBtn.BackColor = System.Drawing.Color.DodgerBlue;
+            this.SearchBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SearchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SearchBtn.ForeColor = System.Drawing.Color.White;
+            this.SearchBtn.Location = new System.Drawing.Point(5, 3);
+            this.SearchBtn.Name = "SearchBtn";
+            this.SearchBtn.Size = new System.Drawing.Size(99, 30);
+            this.SearchBtn.TabIndex = 10;
+            this.SearchBtn.Text = "جستجو";
+            this.SearchBtn.UseVisualStyleBackColor = false;
+            this.SearchBtn.Click += new System.EventHandler(this.SearchBtn_Click);
             // 
-            // SearchTxtRoles
+            // SearchTxt
             // 
             // 
             // 
             // 
-            this.SearchTxtRoles.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.SearchTxtRoles.Location = new System.Drawing.Point(74, 11);
-            this.SearchTxtRoles.MaxLength = 35;
-            this.SearchTxtRoles.Name = "SearchTxtRoles";
-            this.SearchTxtRoles.PreventEnterBeep = true;
-            this.SearchTxtRoles.Size = new System.Drawing.Size(205, 21);
-            this.SearchTxtRoles.TabIndex = 9;
-            this.SearchTxtRoles.WatermarkText = "جستجو ...";
+            this.SearchTxt.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.SearchTxt.Font = new System.Drawing.Font("IRANSansWeb", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchTxt.Location = new System.Drawing.Point(110, 6);
+            this.SearchTxt.MaxLength = 35;
+            this.SearchTxt.Name = "SearchTxt";
+            this.SearchTxt.PreventEnterBeep = true;
+            this.SearchTxt.Size = new System.Drawing.Size(205, 23);
+            this.SearchTxt.TabIndex = 9;
+            this.SearchTxt.WatermarkText = "جستجو ...";
             // 
-            // button2
+            // NextBtn
             // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Font = new System.Drawing.Font("IRANSansWeb", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(3, 593);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(39, 30);
-            this.button2.TabIndex = 5;
-            this.button2.Text = ">";
-            this.button2.UseVisualStyleBackColor = true;
+            this.NextBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.NextBtn.Font = new System.Drawing.Font("IRANSansWeb", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NextBtn.Location = new System.Drawing.Point(3, 593);
+            this.NextBtn.Name = "NextBtn";
+            this.NextBtn.Size = new System.Drawing.Size(39, 30);
+            this.NextBtn.TabIndex = 5;
+            this.NextBtn.Text = ">";
+            this.NextBtn.UseVisualStyleBackColor = true;
+            this.NextBtn.Click += new System.EventHandler(this.NextBtn_Click);
             // 
-            // button1
+            // PrevBtn
             // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Font = new System.Drawing.Font("IRANSansWeb", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(824, 593);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(39, 30);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "<";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // MainPanel
-            // 
-            this.MainPanel.CanvasColor = System.Drawing.SystemColors.Control;
-            this.MainPanel.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2013;
-            this.MainPanel.DisabledBackColor = System.Drawing.Color.Empty;
-            this.MainPanel.Location = new System.Drawing.Point(5, 41);
-            this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(857, 546);
-            this.MainPanel.Style.Alignment = System.Drawing.StringAlignment.Center;
-            this.MainPanel.Style.BackColor1.Color = System.Drawing.Color.Transparent;
-            this.MainPanel.Style.BackColor2.Color = System.Drawing.Color.Transparent;
-            this.MainPanel.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
-            this.MainPanel.Style.BorderColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.MainPanel.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.MainPanel.Style.GradientAngle = 90;
-            this.MainPanel.TabIndex = 0;
-            // 
-            // highlighter1
-            // 
-            this.highlighter1.ContainerControl = this;
+            this.PrevBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PrevBtn.Font = new System.Drawing.Font("IRANSansWeb", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PrevBtn.Location = new System.Drawing.Point(824, 593);
+            this.PrevBtn.Name = "PrevBtn";
+            this.PrevBtn.Size = new System.Drawing.Size(39, 30);
+            this.PrevBtn.TabIndex = 4;
+            this.PrevBtn.Text = "<";
+            this.PrevBtn.UseVisualStyleBackColor = true;
+            this.PrevBtn.Click += new System.EventHandler(this.PrevBtn_Click);
             // 
             // groupPanel2
             // 
             this.groupPanel2.BackColor = System.Drawing.Color.Transparent;
             this.groupPanel2.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2013;
-            this.groupPanel2.Controls.Add(this.checkBox6);
-            this.groupPanel2.Controls.Add(this.checkBox4);
-            this.groupPanel2.Controls.Add(this.checkBox3);
-            this.groupPanel2.Controls.Add(this.checkBox1);
-            this.groupPanel2.Controls.Add(this.checkBox2);
+            this.groupPanel2.Controls.Add(this.FileCheck);
+            this.groupPanel2.Controls.Add(this.ImplementedCheck);
+            this.groupPanel2.Controls.Add(this.InProgressCheck);
+            this.groupPanel2.Controls.Add(this.FinishidCheck);
+            this.groupPanel2.Controls.Add(this.StartCheck);
             this.groupPanel2.DisabledBackColor = System.Drawing.Color.Empty;
             this.groupPanel2.Location = new System.Drawing.Point(881, 496);
             this.groupPanel2.Name = "groupPanel2";
@@ -324,61 +291,185 @@
             this.groupPanel2.TabIndex = 1;
             this.groupPanel2.Text = "تعیین وضعیت";
             // 
-            // checkBox6
+            // FileCheck
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(275, 102);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(82, 24);
-            this.checkBox6.TabIndex = 76;
-            this.checkBox6.Text = "فایل موجود";
-            this.checkBox6.UseVisualStyleBackColor = true;
+            this.FileCheck.AutoSize = true;
+            this.FileCheck.Location = new System.Drawing.Point(275, 102);
+            this.FileCheck.Name = "FileCheck";
+            this.FileCheck.Size = new System.Drawing.Size(82, 24);
+            this.FileCheck.TabIndex = 76;
+            this.FileCheck.Text = "فایل موجود";
+            this.FileCheck.UseVisualStyleBackColor = true;
             // 
-            // checkBox4
+            // ImplementedCheck
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(253, 78);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(104, 24);
-            this.checkBox4.TabIndex = 74;
-            this.checkBox4.Text = "پیاده سازی شده";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.ImplementedCheck.AutoSize = true;
+            this.ImplementedCheck.Location = new System.Drawing.Point(253, 78);
+            this.ImplementedCheck.Name = "ImplementedCheck";
+            this.ImplementedCheck.Size = new System.Drawing.Size(104, 24);
+            this.ImplementedCheck.TabIndex = 74;
+            this.ImplementedCheck.Text = "پیاده سازی شده";
+            this.ImplementedCheck.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // InProgressCheck
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(271, 30);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(86, 24);
-            this.checkBox3.TabIndex = 73;
-            this.checkBox3.Text = "در حال اجراء";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.InProgressCheck.AutoSize = true;
+            this.InProgressCheck.Location = new System.Drawing.Point(271, 30);
+            this.InProgressCheck.Name = "InProgressCheck";
+            this.InProgressCheck.Size = new System.Drawing.Size(86, 24);
+            this.InProgressCheck.TabIndex = 73;
+            this.InProgressCheck.Text = "در حال اجراء";
+            this.InProgressCheck.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // FinishidCheck
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(278, 54);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(79, 24);
-            this.checkBox1.TabIndex = 72;
-            this.checkBox1.Text = "پایان یافته";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.FinishidCheck.AutoSize = true;
+            this.FinishidCheck.Location = new System.Drawing.Point(278, 54);
+            this.FinishidCheck.Name = "FinishidCheck";
+            this.FinishidCheck.Size = new System.Drawing.Size(79, 24);
+            this.FinishidCheck.TabIndex = 72;
+            this.FinishidCheck.Text = "پایان یافته";
+            this.FinishidCheck.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // StartCheck
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(278, 6);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(79, 24);
-            this.checkBox2.TabIndex = 71;
-            this.checkBox2.Text = "شروع شده";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.StartCheck.AutoSize = true;
+            this.StartCheck.Location = new System.Drawing.Point(278, 6);
+            this.StartCheck.Name = "StartCheck";
+            this.StartCheck.Size = new System.Drawing.Size(79, 24);
+            this.StartCheck.TabIndex = 71;
+            this.StartCheck.Text = "شروع شده";
+            this.StartCheck.UseVisualStyleBackColor = true;
+            // 
+            // DescTxt
+            // 
+            // 
+            // 
+            // 
+            this.DescTxt.BackgroundStyle.Class = "RichTextBoxBorder";
+            this.DescTxt.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.DescTxt.Location = new System.Drawing.Point(8, 81);
+            this.DescTxt.Name = "DescTxt";
+            this.DescTxt.Rtf = resources.GetString("DescTxt.Rtf");
+            this.DescTxt.Size = new System.Drawing.Size(349, 330);
+            this.DescTxt.TabIndex = 72;
+            this.DescTxt.Text = "توضیحات";
+            // 
+            // DataGridLesson
+            // 
+            this.DataGridLesson.AllowUserToAddRows = false;
+            this.DataGridLesson.AllowUserToOrderColumns = true;
+            this.DataGridLesson.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DataGridLesson.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
+            this.DataGridLesson.BackgroundColor = System.Drawing.Color.White;
+            this.DataGridLesson.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("IRANSansWeb", 8.999999F);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DataGridLesson.DefaultCellStyle = dataGridViewCellStyle7;
+            this.DataGridLesson.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
+            this.DataGridLesson.Location = new System.Drawing.Point(3, 35);
+            this.DataGridLesson.Name = "DataGridLesson";
+            this.DataGridLesson.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.DataGridLesson.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DataGridLesson.Size = new System.Drawing.Size(860, 552);
+            this.DataGridLesson.TabIndex = 18;
+            this.DataGridLesson.VirtualMode = true;
+            this.DataGridLesson.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridLesson_CellClick);
+            this.DataGridLesson.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DataGridLesson_CellMouseClick);
+            // 
+            // ParentIdCombo
+            // 
+            this.ParentIdCombo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ParentIdCombo.BackColor = System.Drawing.Color.White;
+            this.ParentIdCombo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ParentIdCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ParentIdCombo.ForeColor = System.Drawing.Color.Black;
+            this.ParentIdCombo.FormattingEnabled = true;
+            this.ParentIdCombo.Location = new System.Drawing.Point(8, 19);
+            this.ParentIdCombo.Name = "ParentIdCombo";
+            this.ParentIdCombo.Size = new System.Drawing.Size(349, 28);
+            this.ParentIdCombo.TabIndex = 73;
+            // 
+            // RoadmapContext
+            // 
+            this.RoadmapContext.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ویرایشToolStripMenuItem,
+            this.حذفToolStripMenuItem,
+            this.شروعToolStripMenuItem,
+            this.اجراءToolStripMenuItem,
+            this.پایانToolStripMenuItem,
+            this.پیادهسازیToolStripMenuItem,
+            this.فایلToolStripMenuItem});
+            this.RoadmapContext.Name = "RoadmapContext";
+            this.RoadmapContext.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.RoadmapContext.Size = new System.Drawing.Size(181, 180);
+            // 
+            // ویرایشToolStripMenuItem
+            // 
+            this.ویرایشToolStripMenuItem.Image = global::TicketApplication.Properties.Resources._1486504369_change_edit_options_pencil_settings_tools_write_81307;
+            this.ویرایشToolStripMenuItem.Name = "ویرایشToolStripMenuItem";
+            this.ویرایشToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ویرایشToolStripMenuItem.Text = "ویرایش";
+            this.ویرایشToolStripMenuItem.Click += new System.EventHandler(this.ویرایشToolStripMenuItem_Click);
+            // 
+            // حذفToolStripMenuItem
+            // 
+            this.حذفToolStripMenuItem.Image = global::TicketApplication.Properties.Resources.Gakuseisean_Ivista_2_Alarm_Error_256;
+            this.حذفToolStripMenuItem.Name = "حذفToolStripMenuItem";
+            this.حذفToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.حذفToolStripMenuItem.Text = "حذف";
+            this.حذفToolStripMenuItem.Click += new System.EventHandler(this.حذفToolStripMenuItem_Click);
+            // 
+            // شروعToolStripMenuItem
+            // 
+            this.شروعToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("شروعToolStripMenuItem.Image")));
+            this.شروعToolStripMenuItem.Name = "شروعToolStripMenuItem";
+            this.شروعToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.شروعToolStripMenuItem.Text = "شروع";
+            this.شروعToolStripMenuItem.Click += new System.EventHandler(this.شروعToolStripMenuItem_Click);
+            // 
+            // اجراءToolStripMenuItem
+            // 
+            this.اجراءToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("اجراءToolStripMenuItem.Image")));
+            this.اجراءToolStripMenuItem.Name = "اجراءToolStripMenuItem";
+            this.اجراءToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.اجراءToolStripMenuItem.Text = "اجراء";
+            this.اجراءToolStripMenuItem.Click += new System.EventHandler(this.اجراءToolStripMenuItem_Click);
+            // 
+            // پایانToolStripMenuItem
+            // 
+            this.پایانToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("پایانToolStripMenuItem.Image")));
+            this.پایانToolStripMenuItem.Name = "پایانToolStripMenuItem";
+            this.پایانToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.پایانToolStripMenuItem.Text = "پایان";
+            this.پایانToolStripMenuItem.Click += new System.EventHandler(this.پایانToolStripMenuItem_Click);
+            // 
+            // پیادهسازیToolStripMenuItem
+            // 
+            this.پیادهسازیToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("پیادهسازیToolStripMenuItem.Image")));
+            this.پیادهسازیToolStripMenuItem.Name = "پیادهسازیToolStripMenuItem";
+            this.پیادهسازیToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.پیادهسازیToolStripMenuItem.Text = "پیاده سازی";
+            this.پیادهسازیToolStripMenuItem.Click += new System.EventHandler(this.پیادهسازیToolStripMenuItem_Click);
+            // 
+            // فایلToolStripMenuItem
+            // 
+            this.فایلToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("فایلToolStripMenuItem.Image")));
+            this.فایلToolStripMenuItem.Name = "فایلToolStripMenuItem";
+            this.فایلToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.فایلToolStripMenuItem.Text = "فایل";
+            this.فایلToolStripMenuItem.Click += new System.EventHandler(this.فایلToolStripMenuItem_Click);
             // 
             // RoadMapPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.groupPanel2);
             this.Controls.Add(this.PanelShow);
             this.Controls.Add(this.PanelTools);
@@ -387,10 +478,13 @@
             this.Name = "RoadMapPanel";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Size = new System.Drawing.Size(1255, 660);
+            this.Load += new System.EventHandler(this.RoadMapPanel_Load);
             this.PanelTools.ResumeLayout(false);
             this.PanelShow.ResumeLayout(false);
             this.groupPanel2.ResumeLayout(false);
             this.groupPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridLesson)).EndInit();
+            this.RoadmapContext.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -399,22 +493,29 @@
 
         private DevComponents.DotNetBar.Controls.GroupPanel PanelTools;
         private DevComponents.DotNetBar.Controls.GroupPanel PanelShow;
-        private DevComponents.DotNetBar.PanelEx MainPanel;
-        private DevComponents.DotNetBar.Validator.Highlighter highlighter1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button NextBtn;
+        private System.Windows.Forms.Button PrevBtn;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel2;
-        private System.Windows.Forms.Button SearchBtnRoles;
-        private DevComponents.DotNetBar.Controls.TextBoxX SearchTxtRoles;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX11;
-        private System.Windows.Forms.Button SettingBtn;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX2;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX1;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox6;
+        private System.Windows.Forms.Button SearchBtn;
+        private DevComponents.DotNetBar.Controls.TextBoxX SearchTxt;
+        private DevComponents.DotNetBar.Controls.TextBoxX TitleTxt;
+        private System.Windows.Forms.Button SaveBtn;
+        private System.Windows.Forms.CheckBox FinishidCheck;
+        private System.Windows.Forms.CheckBox StartCheck;
+        private System.Windows.Forms.CheckBox ImplementedCheck;
+        private System.Windows.Forms.CheckBox InProgressCheck;
+        private System.Windows.Forms.CheckBox FileCheck;
         private System.Windows.Forms.Label CountLBL;
+        private DevComponents.DotNetBar.Controls.RichTextBoxEx DescTxt;
+        private DevComponents.DotNetBar.Controls.DataGridViewX DataGridLesson;
+        public System.Windows.Forms.ComboBox ParentIdCombo;
+        private System.Windows.Forms.ContextMenuStrip RoadmapContext;
+        private System.Windows.Forms.ToolStripMenuItem ویرایشToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem حذفToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem شروعToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem اجراءToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem پایانToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem پیادهسازیToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem فایلToolStripMenuItem;
     }
 }

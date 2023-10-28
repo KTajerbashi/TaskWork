@@ -7,13 +7,13 @@ namespace Infrastrucure.Library.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class _changeModels : IMigrationMetadata
+    public sealed partial class _v1 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(_changeModels));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(_v1));
         
         string IMigrationMetadata.Id
         {
-            get { return "202310231915372__changeModels"; }
+            get { return "202310281725268__v1"; }
         }
         
         string IMigrationMetadata.Source

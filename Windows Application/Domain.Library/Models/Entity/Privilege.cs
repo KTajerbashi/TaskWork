@@ -11,6 +11,5 @@ namespace Domain.Model
         public bool Update { get; set; }
         public bool Delete { get; set; }
         public string Panel { get; set; }
-        public virtual Role Role { get; set; }
     }
 }

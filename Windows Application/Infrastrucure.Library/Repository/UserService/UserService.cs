@@ -1,4 +1,5 @@
 ﻿using BusinessLogic.Library;
+using BusinessLogic.Library.Extentions;
 using Domain.Library.KeyValues;
 using Domain.Model;
 using Infrastructure.Library.DbContextData;
@@ -24,12 +25,37 @@ namespace Infrastrucure.Library.Repository.UserService
         }
         public Result<User> IsExist(string username, string password)
         {
-            return new Result<User>
+            var user = _context.Users.Where(x => x.Username == username && !x.IsDeleted && x.IsActive).FirstOrDefault();
+            var has = PasswordHasher.VerifyPassword(password, user.Password);
+            if (has)
             {
-                Data = _context.Users.Where(x => (x.Username == username && x.Password == password) && !x.IsDeleted && x.IsActive).Single(),
-                Message = "اطلاعات واکشی شد",
-                Success = true
-            };
+                if (user != null)
+                {
+                    return new Result<User>
+                    {
+                        Data = user,
+                        Message = "اطلاعات واکشی شد",
+                        Success = true
+                    };
+                }
+                return new Result<User>
+                {
+
+                    Message = "اطلاعات واکشی نشد",
+                    Success = false,
+                    Data = null
+                };
+            }
+            else
+            {
+                return new Result<User>
+                {
+
+                    Message = "اطلاعات واکشی نشد",
+                    Success = false,
+                    Data = null
+                };
+            }
         }
         public Result<User> IsMatchAny(User entity)
         {

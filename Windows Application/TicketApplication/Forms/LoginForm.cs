@@ -36,7 +36,7 @@ namespace TicketApplication.Forms
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
-            _userService = new UserService() ;
+            _userService = new UserService();
             _roleService = new RoleService();
         }
 
@@ -62,9 +62,9 @@ namespace TicketApplication.Forms
                 if (res.Success)
                 {
                     AppUser.Username = res.Data.Username;
-                    AppUser.UserRoleID = res.Data.UserRoles.Where(x => x.UserID == res.Data.ID).FirstOrDefault().ID;
+                    //AppUser.UserRoleID = res.Data.UserRoles.Where(x => x.UserID == res.Data.ID).FirstOrDefault().ID;
                     AppUser.UserID = res.Data.ID;
-                    AppUser.RoleID = res.Data.UserRoles.Where(x => x.UserID == res.Data.ID).FirstOrDefault().RoleID;
+                    //AppUser.RoleID = res.Data.UserRoles.Where(x => x.UserID == res.Data.ID).FirstOrDefault().RoleID;
                     AppUser.DisplayName = res.Data.DisplayName;
                     AppUser.Email = res.Data.Email;
                     AppUser.Name = res.Data.Name;
@@ -315,8 +315,8 @@ namespace TicketApplication.Forms
             var user = _userService.GetByUserName(username);
             AppUser.Username = user.Data.Username.ToUpper();
             AppUser.UserID = user.Data.ID;
-            AppUser.UserRoleID = user.Data.UserRoles.FirstOrDefault(x => x.UserID == user.Data.ID).ID;
-            AppUser.RoleID = user.Data.UserRoles.FirstOrDefault(x => x.UserID == user.Data.ID).Role.ID;
+            //AppUser.UserRoleID = user.Data.UserRoles.FirstOrDefault(x => x.UserID == user.Data.ID).ID;
+            //AppUser.RoleID = user.Data.UserRoles.FirstOrDefault(x => x.UserID == user.Data.ID).Role.ID;
             Form frm = Application.OpenForms[0];
             frm.Controls[1].Controls[3].Text = AppUser.DisplayName;
         }
@@ -336,6 +336,15 @@ namespace TicketApplication.Forms
             LoginPanel.Location = new Point(535, 23);
             RecoverPanel.Location = new Point(475, 23);
 
+        }
+
+        private void LoginTitle_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                UsernameTxt.Text = "ADMIN";
+                PasswordTxt.Text = "ADMIN";
+            }
         }
     }
 }

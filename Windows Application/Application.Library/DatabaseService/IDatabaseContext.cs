@@ -17,7 +17,7 @@ namespace BusinessLogic.Library.DatabaseService
         DbSet<Backup> Backups { get; set; }
         DbSet<Logger> Loggers { get; set; }
         DbSet<Privilege> Privileges { get; set; }
-
+        DbSet<RoadmapLesson> RoadmapLessons { get; set; }
         int SaveChanges(bool acceptAllChangesOnSuccess);
         int SaveChanges();
         Task<int> SaveChangesAsync(bool acceptAllChangesOnSuccess, CancellationToken cancellationToken = new CancellationToken());

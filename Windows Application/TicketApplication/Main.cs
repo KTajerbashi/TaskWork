@@ -1,8 +1,10 @@
 ﻿using Infrastrucure.Library.Migrations;
 using MD.PersianDateTime;
 using System;
+using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using TicketApplication.Authentication;
 using TicketApplication.Forms;
 using TicketApplication.UserControls;
 
@@ -11,6 +13,7 @@ namespace TicketApplication
     public partial class Main : Form
     {
         #region Code
+        LoginForm loginForm;
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
@@ -29,7 +32,7 @@ namespace TicketApplication
         public static extern bool ReleaseCapture();
         public Main()
         {
-
+            loginForm = new LoginForm();
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
@@ -59,18 +62,14 @@ namespace TicketApplication
 
         private void Main_Load(object sender, EventArgs e)
         {
-            //loginForm.ShowDialog();
+            loginForm.ShowDialog();
             CartablePanel cartablePanel = new CartablePanel();
             if (MainPanel.Controls.Count > 0)
             {
                 MainPanel.Controls[0].Dispose();
             }
             MainPanel.Controls.Add(cartablePanel);
-#if DEBUG
-            UsernameLBL.Text = "محیط توسعه";
-#else
             UsernameLBL.Text = AppUser.DisplayName;
-#endif
 
         }
 
@@ -133,8 +132,7 @@ namespace TicketApplication
 
         private void LockScreenBtn_Click(object sender, EventArgs e)
         {
-            //loginForm.Location = new Point(535, 0);
-            LoginForm loginForm = new LoginForm();
+            loginForm.Location = new Point(535, 0);
             loginForm.UsernameTxt.Text = "";
             loginForm.PasswordTxt.Text = "";
             loginForm.LoginMsg.Text = "";
@@ -143,12 +141,12 @@ namespace TicketApplication
 
         private void DbBackupBtn_Click(object sender, EventArgs e)
         {
-            BackupPanel backupPanel = new BackupPanel();
-            if (MainPanel.Controls.Count > 0)
-            {
-                MainPanel.Controls[0].Dispose();
-            }
-            MainPanel.Controls.Add(backupPanel);
+            //BackupPanel backupPanel = new BackupPanel();
+            //if (MainPanel.Controls.Count > 0)
+            //{
+            //    MainPanel.Controls[0].Dispose();
+            //}
+            //MainPanel.Controls.Add(backupPanel);
         }
 
         private void SettingBtn_Click(object sender, EventArgs e)

@@ -23,6 +23,7 @@ namespace Infrastructure.Library.DbContextData
         public DbSet<Backup> Backups { get; set; }
         public DbSet<Logger> Loggers { get; set; }
         public DbSet<Privilege> Privileges { get; set; }
+        public DbSet<RoadmapLesson>  RoadmapLessons { get; set; }
 
 
         public int SaveChanges(bool acceptAllChangesOnSuccess)
@@ -44,14 +45,9 @@ namespace Infrastructure.Library.DbContextData
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            //modelBuilder.Entity<Role>()
-            //    .HasOptional(x => x.Privilege)
-            //    .WithRequired(x => x.Role);
-
             modelBuilder.Entity<Role>()
-               .HasRequired(s => s.Privilege)
-               .WithRequiredPrincipal(ad => ad.Role);
-
+                .HasIndex(x => new { x.ID, x.PrivilegeID })
+                .IsUnique();
             base.OnModelCreating(modelBuilder);
         }
 

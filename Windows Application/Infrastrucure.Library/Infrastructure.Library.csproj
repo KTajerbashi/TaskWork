@@ -58,43 +58,25 @@
     <Compile Include="DbContextData\Models\SamanaSeed.cs" />
     <Compile Include="DbContextData\Models\RolesSeed.cs" />
     <Compile Include="DatabaseService\BaseQuery.cs" />
-    <Compile Include="Migrations\202310151757108__init_1.cs" />
-    <Compile Include="Migrations\202310151757108__init_1.designer.cs">
-      <DependentUpon>202310151757108__init_1.cs</DependentUpon>
+    <Compile Include="Migrations\202310281725268__v1.cs" />
+    <Compile Include="Migrations\202310281725268__v1.designer.cs">
+      <DependentUpon>202310281725268__v1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202310151959201___Data.cs" />
-    <Compile Include="Migrations\202310151959201___Data.designer.cs">
-      <DependentUpon>202310151959201___Data.cs</DependentUpon>
+    <Compile Include="Migrations\202310281749441_Add_Privilege.cs" />
+    <Compile Include="Migrations\202310281749441_Add_Privilege.designer.cs">
+      <DependentUpon>202310281749441_Add_Privilege.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202310152005559__init_unique.cs" />
-    <Compile Include="Migrations\202310152005559__init_unique.designer.cs">
-      <DependentUpon>202310152005559__init_unique.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202310162153214__InitPassword.cs" />
-    <Compile Include="Migrations\202310162153214__InitPassword.designer.cs">
-      <DependentUpon>202310162153214__InitPassword.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202310162330084__BackupPanel.cs" />
-    <Compile Include="Migrations\202310162330084__BackupPanel.designer.cs">
-      <DependentUpon>202310162330084__BackupPanel.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202310231915372__changeModels.cs" />
-    <Compile Include="Migrations\202310231915372__changeModels.designer.cs">
-      <DependentUpon>202310231915372__changeModels.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202310270802101_RoleChanges.cs" />
-    <Compile Include="Migrations\202310270802101_RoleChanges.designer.cs">
-      <DependentUpon>202310270802101_RoleChanges.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202310272134381_Add_Privilege.cs" />
-    <Compile Include="Migrations\202310272134381_Add_Privilege.designer.cs">
-      <DependentUpon>202310272134381_Add_Privilege.cs</DependentUpon>
+    <Compile Include="Migrations\202310281933094_Add_RoadmapLesson.cs" />
+    <Compile Include="Migrations\202310281933094_Add_RoadmapLesson.designer.cs">
+      <DependentUpon>202310281933094_Add_RoadmapLesson.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\BackupService\BackupQueries.cs" />
     <Compile Include="Repository\BackupService\BackupService.cs" />
     <Compile Include="Repository\LoggerService\LoggerService.cs" />
+    <Compile Include="Repository\RoadMapPanel\RoadmapQueries.cs" />
+    <Compile Include="Repository\RoadMapPanel\RoadmapService.cs" />
     <Compile Include="Repository\RoleService\PrivilegeQueries.cs" />
     <Compile Include="Repository\RoleService\PrivilegeServices.cs" />
     <Compile Include="Repository\RoleService\RoleQueries.cs" />
@@ -113,32 +95,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202310151757108__init_1.resx">
-      <DependentUpon>202310151757108__init_1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202310151959201___Data.resx">
-      <DependentUpon>202310151959201___Data.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202310152005559__init_unique.resx">
-      <DependentUpon>202310152005559__init_unique.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202310162153214__InitPassword.resx">
-      <DependentUpon>202310162153214__InitPassword.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202310162330084__BackupPanel.resx">
-      <DependentUpon>202310162330084__BackupPanel.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202310231915372__changeModels.resx">
-      <DependentUpon>202310231915372__changeModels.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202310270802101_RoleChanges.resx">
-      <DependentUpon>202310270802101_RoleChanges.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202310272134381_Add_Privilege.resx">
-      <DependentUpon>202310272134381_Add_Privilege.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Application.Library\BusinessLogic.Library.csproj">
       <Project>{ef824a96-cbf0-4576-bcfd-be65e5e1a14c}</Project>
       <Name>BusinessLogic.Library</Name>
@@ -147,6 +103,17 @@
       <Project>{7c9e93bc-5043-43ef-9363-c8b0bcd7767b}</Project>
       <Name>Domain.Library</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202310281725268__v1.resx">
+      <DependentUpon>202310281725268__v1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202310281749441_Add_Privilege.resx">
+      <DependentUpon>202310281749441_Add_Privilege.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202310281933094_Add_RoadmapLesson.resx">
+      <DependentUpon>202310281933094_Add_RoadmapLesson.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

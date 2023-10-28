@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingPanel));
             this.TabControl = new System.Windows.Forms.TabControl();
             this.UserTab = new System.Windows.Forms.TabPage();
@@ -81,6 +81,10 @@
             this.SearchPriviBtn = new System.Windows.Forms.Button();
             this.SearchPriTxt = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.groupPanel6 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.PanelPrivilegeCombo = new System.Windows.Forms.ComboBox();
+            this.RolePrivilegeCombo = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SavePriBtn = new System.Windows.Forms.Button();
             this.DeletePriCheck = new System.Windows.Forms.CheckBox();
             this.UpdatePriCheck = new System.Windows.Forms.CheckBox();
@@ -99,10 +103,6 @@
             this.حذفToolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             this.نمایشغیرفعالهاToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.نمایشفعالهاToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.RolePrivilegeCombo = new System.Windows.Forms.ComboBox();
-            this.PanelPrivilegeCombo = new System.Windows.Forms.ComboBox();
             this.TabControl.SuspendLayout();
             this.UserTab.SuspendLayout();
             this.groupPanel2.SuspendLayout();
@@ -200,7 +200,7 @@
             this.MessageLbl.BackColor = System.Drawing.Color.Transparent;
             this.MessageLbl.Font = new System.Drawing.Font("IRANSansWeb", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MessageLbl.ForeColor = System.Drawing.Color.Red;
-            this.MessageLbl.Location = new System.Drawing.Point(544, 9);
+            this.MessageLbl.Location = new System.Drawing.Point(541, -1);
             this.MessageLbl.Name = "MessageLbl";
             this.MessageLbl.Size = new System.Drawing.Size(672, 20);
             this.MessageLbl.TabIndex = 18;
@@ -235,7 +235,7 @@
             this.CountLBL.BackColor = System.Drawing.Color.Transparent;
             this.CountLBL.Font = new System.Drawing.Font("IRANSansWeb", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CountLBL.ForeColor = System.Drawing.Color.Black;
-            this.CountLBL.Location = new System.Drawing.Point(440, 421);
+            this.CountLBL.Location = new System.Drawing.Point(437, 411);
             this.CountLBL.Name = "CountLBL";
             this.CountLBL.Size = new System.Drawing.Size(340, 29);
             this.CountLBL.TabIndex = 15;
@@ -251,14 +251,14 @@
             this.DataGridUsers.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.DataGridUsers.BackgroundColor = System.Drawing.Color.White;
             this.DataGridUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("IRANSansWeb", 8.999999F);
-            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DataGridUsers.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("IRANSansWeb", 8.999999F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DataGridUsers.DefaultCellStyle = dataGridViewCellStyle4;
             this.DataGridUsers.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.DataGridUsers.Location = new System.Drawing.Point(3, 37);
             this.DataGridUsers.Name = "DataGridUsers";
@@ -387,10 +387,11 @@
             this.RoleIdUserCombo.BackColor = System.Drawing.Color.White;
             this.RoleIdUserCombo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.RoleIdUserCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.RoleIdUserCombo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RoleIdUserCombo.Font = new System.Drawing.Font("IRANSansWeb", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RoleIdUserCombo.ForeColor = System.Drawing.Color.Black;
             this.RoleIdUserCombo.FormattingEnabled = true;
-            this.RoleIdUserCombo.Location = new System.Drawing.Point(248, 69);
+            this.RoleIdUserCombo.Location = new System.Drawing.Point(251, 90);
             this.RoleIdUserCombo.Name = "RoleIdUserCombo";
             this.RoleIdUserCombo.Size = new System.Drawing.Size(240, 30);
             this.RoleIdUserCombo.TabIndex = 10;
@@ -617,7 +618,7 @@
             this.MsgRoleLbl.BackColor = System.Drawing.Color.Transparent;
             this.MsgRoleLbl.Font = new System.Drawing.Font("IRANSansWeb", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MsgRoleLbl.ForeColor = System.Drawing.Color.Red;
-            this.MsgRoleLbl.Location = new System.Drawing.Point(546, 7);
+            this.MsgRoleLbl.Location = new System.Drawing.Point(543, -3);
             this.MsgRoleLbl.Name = "MsgRoleLbl";
             this.MsgRoleLbl.Size = new System.Drawing.Size(672, 20);
             this.MsgRoleLbl.TabIndex = 19;
@@ -630,7 +631,7 @@
             this.PageRoleLbl.BackColor = System.Drawing.Color.Transparent;
             this.PageRoleLbl.Font = new System.Drawing.Font("IRANSansWeb", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PageRoleLbl.ForeColor = System.Drawing.Color.Black;
-            this.PageRoleLbl.Location = new System.Drawing.Point(442, 483);
+            this.PageRoleLbl.Location = new System.Drawing.Point(439, 473);
             this.PageRoleLbl.Name = "PageRoleLbl";
             this.PageRoleLbl.Size = new System.Drawing.Size(342, 29);
             this.PageRoleLbl.TabIndex = 16;
@@ -668,14 +669,14 @@
             this.DataGridRoles.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.DataGridRoles.BackgroundColor = System.Drawing.Color.White;
             this.DataGridRoles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("IRANSansWeb", 8.999999F);
-            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DataGridRoles.DefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("IRANSansWeb", 8.999999F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DataGridRoles.DefaultCellStyle = dataGridViewCellStyle5;
             this.DataGridRoles.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.DataGridRoles.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.DataGridRoles.Location = new System.Drawing.Point(3, 39);
@@ -892,7 +893,7 @@
             this.PagingPriLbl.BackColor = System.Drawing.Color.Transparent;
             this.PagingPriLbl.Font = new System.Drawing.Font("IRANSansWeb", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PagingPriLbl.ForeColor = System.Drawing.Color.Black;
-            this.PagingPriLbl.Location = new System.Drawing.Point(466, 474);
+            this.PagingPriLbl.Location = new System.Drawing.Point(463, 463);
             this.PagingPriLbl.Name = "PagingPriLbl";
             this.PagingPriLbl.Size = new System.Drawing.Size(295, 29);
             this.PagingPriLbl.TabIndex = 19;
@@ -928,14 +929,14 @@
             this.DataGridPrivilege.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.DataGridPrivilege.BackgroundColor = System.Drawing.Color.White;
             this.DataGridPrivilege.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("IRANSansWeb", 8.999999F);
-            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DataGridPrivilege.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("IRANSansWeb", 8.999999F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DataGridPrivilege.DefaultCellStyle = dataGridViewCellStyle6;
             this.DataGridPrivilege.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.DataGridPrivilege.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.DataGridPrivilege.Location = new System.Drawing.Point(3, 37);
@@ -1017,6 +1018,62 @@
             this.groupPanel6.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.groupPanel6.TabIndex = 0;
             this.groupPanel6.Text = "فرم اطلاعات";
+            // 
+            // PanelPrivilegeCombo
+            // 
+            this.PanelPrivilegeCombo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PanelPrivilegeCombo.BackColor = System.Drawing.Color.White;
+            this.PanelPrivilegeCombo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PanelPrivilegeCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.PanelPrivilegeCombo.Font = new System.Drawing.Font("IRANSansWeb", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PanelPrivilegeCombo.ForeColor = System.Drawing.Color.Black;
+            this.PanelPrivilegeCombo.FormattingEnabled = true;
+            this.PanelPrivilegeCombo.Location = new System.Drawing.Point(604, 26);
+            this.PanelPrivilegeCombo.Name = "PanelPrivilegeCombo";
+            this.PanelPrivilegeCombo.Size = new System.Drawing.Size(305, 30);
+            this.PanelPrivilegeCombo.TabIndex = 76;
+            // 
+            // RolePrivilegeCombo
+            // 
+            this.RolePrivilegeCombo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.RolePrivilegeCombo.BackColor = System.Drawing.Color.White;
+            this.RolePrivilegeCombo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.RolePrivilegeCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.RolePrivilegeCombo.Font = new System.Drawing.Font("IRANSansWeb", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RolePrivilegeCombo.ForeColor = System.Drawing.Color.Black;
+            this.RolePrivilegeCombo.FormattingEnabled = true;
+            this.RolePrivilegeCombo.Location = new System.Drawing.Point(915, 26);
+            this.RolePrivilegeCombo.Name = "RolePrivilegeCombo";
+            this.RolePrivilegeCombo.Size = new System.Drawing.Size(305, 30);
+            this.RolePrivilegeCombo.TabIndex = 75;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("IRANSansWeb", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(873, 1);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(40, 29);
+            this.label4.TabIndex = 74;
+            this.label4.Text = "پنل";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label4.UseMnemonic = false;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("IRANSansWeb", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(1184, 1);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(40, 29);
+            this.label1.TabIndex = 73;
+            this.label1.Text = "نقش";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.UseMnemonic = false;
             // 
             // SavePriBtn
             // 
@@ -1173,62 +1230,6 @@
             this.نمایشفعالهاToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.نمایشفعالهاToolStripMenuItem.Text = "نمایش فعال ها";
             this.نمایشفعالهاToolStripMenuItem.Click += new System.EventHandler(this.نمایشفعالهاToolStripMenuItem_Click);
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("IRANSansWeb", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(1187, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 29);
-            this.label1.TabIndex = 73;
-            this.label1.Text = "نقش";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.UseMnemonic = false;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("IRANSansWeb", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(876, 11);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 29);
-            this.label4.TabIndex = 74;
-            this.label4.Text = "پنل";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label4.UseMnemonic = false;
-            // 
-            // RolePrivilegeCombo
-            // 
-            this.RolePrivilegeCombo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.RolePrivilegeCombo.BackColor = System.Drawing.Color.White;
-            this.RolePrivilegeCombo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RolePrivilegeCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.RolePrivilegeCombo.Font = new System.Drawing.Font("IRANSansWeb", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RolePrivilegeCombo.ForeColor = System.Drawing.Color.Black;
-            this.RolePrivilegeCombo.FormattingEnabled = true;
-            this.RolePrivilegeCombo.Location = new System.Drawing.Point(918, 36);
-            this.RolePrivilegeCombo.Name = "RolePrivilegeCombo";
-            this.RolePrivilegeCombo.Size = new System.Drawing.Size(305, 30);
-            this.RolePrivilegeCombo.TabIndex = 75;
-            // 
-            // PanelPrivilegeCombo
-            // 
-            this.PanelPrivilegeCombo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.PanelPrivilegeCombo.BackColor = System.Drawing.Color.White;
-            this.PanelPrivilegeCombo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PanelPrivilegeCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.PanelPrivilegeCombo.Font = new System.Drawing.Font("IRANSansWeb", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PanelPrivilegeCombo.ForeColor = System.Drawing.Color.Black;
-            this.PanelPrivilegeCombo.FormattingEnabled = true;
-            this.PanelPrivilegeCombo.Location = new System.Drawing.Point(607, 36);
-            this.PanelPrivilegeCombo.Name = "PanelPrivilegeCombo";
-            this.PanelPrivilegeCombo.Size = new System.Drawing.Size(305, 30);
-            this.PanelPrivilegeCombo.TabIndex = 76;
             // 
             // SettingPanel
             // 

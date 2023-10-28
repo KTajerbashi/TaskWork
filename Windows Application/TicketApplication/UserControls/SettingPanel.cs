@@ -525,12 +525,12 @@ namespace TicketApplication.UserControls
                 Panel = ((ComboboxItem<int>)PanelPrivilegeCombo.SelectedItem).Text
             };
             await privilegeServices.InsertAsync(privilege);
-            await privilegeServices.Save();
 
             var role = await roleService.GetById(((ComboboxItem<long>)RolePrivilegeCombo.SelectedItem).Value);
-            role.PrivilegID = privilege.ID;
-            await roleService.SaveAsync();
+            role.PrivilegeID = privilege.ID;
+            await roleService.Update(role);
             ShowDataGridView(2, 0);
+            FormExtentions.ClearTextBoxes(this.Controls);
         }
     }
 }

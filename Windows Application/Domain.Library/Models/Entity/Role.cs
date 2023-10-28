@@ -11,8 +11,9 @@ namespace Domain.Model
         public virtual ICollection<UserRole> UserRoles { get; set; }
         public virtual ICollection<TaskWork> TaskWorks { get; set; }
 
-        [ForeignKey("Privilege")]
-        public long PrivilegID { get; set; }
-        public virtual Privilege Privilege { get; set; }
+        //[ForeignKey("Privilege")]
+        public long PrivilegeID { get; set; }
+        //public virtual Privilege Privilege { get; set; }
+
     }
 }

@@ -7,13 +7,13 @@ namespace Infrastrucure.Library.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class RoleChanges : IMigrationMetadata
+    public sealed partial class Add_RoadmapLesson : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(RoleChanges));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Add_RoadmapLesson));
         
         string IMigrationMetadata.Id
         {
-            get { return "202310270802101_RoleChanges"; }
+            get { return "202310281933094_Add_RoadmapLesson"; }
         }
         
         string IMigrationMetadata.Source

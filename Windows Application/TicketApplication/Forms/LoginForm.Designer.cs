@@ -42,6 +42,8 @@
             this.SignInBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.SignInPanel = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.AccessXCode = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.Sign_RePass = new DevComponents.DotNetBar.Controls.TextBoxX();
@@ -81,8 +83,6 @@
             this.label20 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.RCV_CheckBtn = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
-            this.AccessXCode = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.LoginPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SignInPanel.SuspendLayout();
@@ -102,6 +102,7 @@
             this.LoginTitle.TabIndex = 2;
             this.LoginTitle.Text = "ورود به حساب";
             this.LoginTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoginTitle.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.LoginTitle_MouseDoubleClick);
             // 
             // LoginPanel
             // 
@@ -307,6 +308,46 @@
             this.SignInPanel.Size = new System.Drawing.Size(495, 627);
             this.SignInPanel.TabIndex = 0;
             this.SignInPanel.Visible = false;
+            // 
+            // label13
+            // 
+            this.label13.Font = new System.Drawing.Font("IRANSansWeb", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(132, 454);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(107, 29);
+            this.label13.TabIndex = 24;
+            this.label13.Text = "کد دسترسی";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // AccessXCode
+            // 
+            this.AccessXCode.BackColor = System.Drawing.Color.White;
+            // 
+            // 
+            // 
+            this.AccessXCode.Border.BackColor = System.Drawing.Color.White;
+            this.AccessXCode.Border.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarCaptionInactiveText;
+            this.AccessXCode.Border.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.AccessXCode.Border.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.DockSiteBackColor2;
+            this.AccessXCode.Border.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.AccessXCode.Border.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.AccessXCode.Border.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.AccessXCode.Border.Class = "TextBoxBorder";
+            this.AccessXCode.Border.CornerDiameter = 5;
+            this.AccessXCode.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.AccessXCode.Border.HideMnemonic = true;
+            this.AccessXCode.Border.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
+            this.AccessXCode.Border.UseMnemonic = true;
+            this.AccessXCode.Location = new System.Drawing.Point(20, 486);
+            this.AccessXCode.MaxLength = 50;
+            this.AccessXCode.Name = "AccessXCode";
+            this.AccessXCode.PasswordChar = '+';
+            this.AccessXCode.PreventEnterBeep = true;
+            this.AccessXCode.Size = new System.Drawing.Size(213, 27);
+            this.AccessXCode.TabIndex = 23;
+            this.AccessXCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label5
             // 
@@ -1010,46 +1051,6 @@
             this.RCV_CheckBtn.UseVisualStyleBackColor = true;
             this.RCV_CheckBtn.Click += new System.EventHandler(this.RCV_CheckBtn_Click);
             // 
-            // label13
-            // 
-            this.label13.Font = new System.Drawing.Font("IRANSansWeb", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(132, 454);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(107, 29);
-            this.label13.TabIndex = 24;
-            this.label13.Text = "کد دسترسی";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // AccessXCode
-            // 
-            this.AccessXCode.BackColor = System.Drawing.Color.White;
-            // 
-            // 
-            // 
-            this.AccessXCode.Border.BackColor = System.Drawing.Color.White;
-            this.AccessXCode.Border.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.BarCaptionInactiveText;
-            this.AccessXCode.Border.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.AccessXCode.Border.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.DockSiteBackColor2;
-            this.AccessXCode.Border.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.AccessXCode.Border.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.AccessXCode.Border.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.AccessXCode.Border.Class = "TextBoxBorder";
-            this.AccessXCode.Border.CornerDiameter = 5;
-            this.AccessXCode.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.AccessXCode.Border.HideMnemonic = true;
-            this.AccessXCode.Border.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
-            this.AccessXCode.Border.UseMnemonic = true;
-            this.AccessXCode.Location = new System.Drawing.Point(20, 486);
-            this.AccessXCode.MaxLength = 50;
-            this.AccessXCode.Name = "AccessXCode";
-            this.AccessXCode.PasswordChar = '+';
-            this.AccessXCode.PreventEnterBeep = true;
-            this.AccessXCode.Size = new System.Drawing.Size(213, 27);
-            this.AccessXCode.TabIndex = 23;
-            this.AccessXCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 20F);
@@ -1057,9 +1058,9 @@
             this.BackColor = System.Drawing.Color.CornflowerBlue;
             this.ClientSize = new System.Drawing.Size(1445, 679);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.SignInPanel);
             this.Controls.Add(this.LoginPanel);
             this.Controls.Add(this.RecoverPanel);
+            this.Controls.Add(this.SignInPanel);
             this.Font = new System.Drawing.Font("IRANSansWeb", 8.999999F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

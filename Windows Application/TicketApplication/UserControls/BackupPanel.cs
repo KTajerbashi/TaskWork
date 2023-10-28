@@ -14,8 +14,6 @@ namespace TicketApplication.UserControls
     {
         Paging Paging;
         private readonly BackupQueries Show;
-        private PersianDateTime persianDateTime = new PersianDateTime(DateTime.Now);
-        private readonly BackupService _backupService;
         private readonly IBaseQuery _baseQuery;
         public BackupPanel()
         {
