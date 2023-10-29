@@ -43,11 +43,12 @@ SELECT
 	format(BUS.TaskWorks.CreateDate,'yyyy/MM/dd hh:mm','fa-ir') AS [تاریخ ثبت], 
 	format(BUS.TaskWorks.UpdateDate,'yyyy/MM/dd hh:mm','fa-ir') AS [آخرین ویرایش]
 FROM BUS.TaskWorks 
-INNER JOIN BUS.Samanehs ON BUS.TaskWorks.SamanaID = BUS.Samanehs.ID
+INNER JOIN BUS.Samanehs ON BUS.TaskWorks.SamanaID = BUS.Samanehs.ID 
 INNER JOIN SEC.Users ON BUS.TaskWorks.UserID = SEC.Users.ID 
 INNER JOIN SEC.Roles ON BUS.TaskWorks.RoleId = SEC.Roles.ID
 WHERE 
-(BUS.TaskWorks.IsActive = 1) AND (BUS.TaskWorks.IsDeleted = 0)
+(BUS.TaskWorks.IsActive = 1) 
+AND (BUS.TaskWorks.IsDeleted = 0)
 ORDER BY BUS.TaskWorks.CreateDate DESC
 {paging}
 ");

@@ -212,7 +212,7 @@
             this.CountLBL.BackColor = System.Drawing.Color.Transparent;
             this.CountLBL.Font = new System.Drawing.Font("IRANSansWeb", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CountLBL.ForeColor = System.Drawing.Color.Black;
-            this.CountLBL.Location = new System.Drawing.Point(571, 504);
+            this.CountLBL.Location = new System.Drawing.Point(571, 510);
             this.CountLBL.Name = "CountLBL";
             this.CountLBL.Size = new System.Drawing.Size(100, 29);
             this.CountLBL.TabIndex = 17;

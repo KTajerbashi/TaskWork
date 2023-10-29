@@ -186,7 +186,6 @@
             this.PasswordTxt.PreventEnterBeep = true;
             this.PasswordTxt.Size = new System.Drawing.Size(339, 27);
             this.PasswordTxt.TabIndex = 8;
-            this.PasswordTxt.Text = "ADMINADMIN";
             this.PasswordTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // UsernameTxt
@@ -214,7 +213,6 @@
             this.UsernameTxt.PreventEnterBeep = true;
             this.UsernameTxt.Size = new System.Drawing.Size(339, 27);
             this.UsernameTxt.TabIndex = 7;
-            this.UsernameTxt.Text = "ADMIN";
             this.UsernameTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label4

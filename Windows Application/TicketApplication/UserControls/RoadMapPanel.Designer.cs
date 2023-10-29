@@ -30,11 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RoadMapPanel));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.PanelTools = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.ParentIdCombo = new System.Windows.Forms.ComboBox();
+            this.DescTxt = new DevComponents.DotNetBar.Controls.RichTextBoxEx();
             this.SaveBtn = new System.Windows.Forms.Button();
             this.TitleTxt = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.PanelShow = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.DataGridLesson = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.CountLBL = new System.Windows.Forms.Label();
             this.SearchBtn = new System.Windows.Forms.Button();
             this.SearchTxt = new DevComponents.DotNetBar.Controls.TextBoxX();
@@ -46,9 +49,6 @@
             this.InProgressCheck = new System.Windows.Forms.CheckBox();
             this.FinishidCheck = new System.Windows.Forms.CheckBox();
             this.StartCheck = new System.Windows.Forms.CheckBox();
-            this.DescTxt = new DevComponents.DotNetBar.Controls.RichTextBoxEx();
-            this.DataGridLesson = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.ParentIdCombo = new System.Windows.Forms.ComboBox();
             this.RoadmapContext = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.ویرایشToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.حذفToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,8 +59,8 @@
             this.فایلToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PanelTools.SuspendLayout();
             this.PanelShow.SuspendLayout();
-            this.groupPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridLesson)).BeginInit();
+            this.groupPanel2.SuspendLayout();
             this.RoadmapContext.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -105,6 +105,34 @@
             this.PanelTools.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.PanelTools.TabIndex = 0;
             this.PanelTools.Text = "مسیر راه";
+            // 
+            // ParentIdCombo
+            // 
+            this.ParentIdCombo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ParentIdCombo.BackColor = System.Drawing.Color.White;
+            this.ParentIdCombo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ParentIdCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ParentIdCombo.ForeColor = System.Drawing.Color.Black;
+            this.ParentIdCombo.FormattingEnabled = true;
+            this.ParentIdCombo.Location = new System.Drawing.Point(8, 19);
+            this.ParentIdCombo.Name = "ParentIdCombo";
+            this.ParentIdCombo.Size = new System.Drawing.Size(349, 28);
+            this.ParentIdCombo.TabIndex = 73;
+            // 
+            // DescTxt
+            // 
+            // 
+            // 
+            // 
+            this.DescTxt.BackgroundStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.DescTxt.BackgroundStyle.BackColor2 = System.Drawing.Color.CornflowerBlue;
+            this.DescTxt.BackgroundStyle.Class = "RichTextBoxBorder";
+            this.DescTxt.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.DescTxt.Location = new System.Drawing.Point(8, 81);
+            this.DescTxt.Name = "DescTxt";
+            this.DescTxt.Rtf = resources.GetString("DescTxt.Rtf");
+            this.DescTxt.Size = new System.Drawing.Size(349, 330);
+            this.DescTxt.TabIndex = 72;
             // 
             // SaveBtn
             // 
@@ -180,6 +208,35 @@
             this.PanelShow.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.PanelShow.TabIndex = 1;
             this.PanelShow.Text = "نمایش راه";
+            // 
+            // DataGridLesson
+            // 
+            this.DataGridLesson.AllowDrop = true;
+            this.DataGridLesson.AllowUserToAddRows = false;
+            this.DataGridLesson.AllowUserToOrderColumns = true;
+            this.DataGridLesson.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DataGridLesson.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
+            this.DataGridLesson.BackgroundColor = System.Drawing.Color.White;
+            this.DataGridLesson.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("IRANSansWeb", 8.999999F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DataGridLesson.DefaultCellStyle = dataGridViewCellStyle1;
+            this.DataGridLesson.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.DataGridLesson.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
+            this.DataGridLesson.Location = new System.Drawing.Point(3, 35);
+            this.DataGridLesson.Name = "DataGridLesson";
+            this.DataGridLesson.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.DataGridLesson.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DataGridLesson.Size = new System.Drawing.Size(860, 552);
+            this.DataGridLesson.TabIndex = 18;
+            this.DataGridLesson.VirtualMode = true;
+            this.DataGridLesson.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridLesson_CellClick);
+            this.DataGridLesson.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DataGridLesson_CellMouseClick);
             // 
             // CountLBL
             // 
@@ -341,60 +398,6 @@
             this.StartCheck.Text = "شروع شده";
             this.StartCheck.UseVisualStyleBackColor = true;
             // 
-            // DescTxt
-            // 
-            // 
-            // 
-            // 
-            this.DescTxt.BackgroundStyle.Class = "RichTextBoxBorder";
-            this.DescTxt.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.DescTxt.Location = new System.Drawing.Point(8, 81);
-            this.DescTxt.Name = "DescTxt";
-            this.DescTxt.Rtf = resources.GetString("DescTxt.Rtf");
-            this.DescTxt.Size = new System.Drawing.Size(349, 330);
-            this.DescTxt.TabIndex = 72;
-            this.DescTxt.Text = "توضیحات";
-            // 
-            // DataGridLesson
-            // 
-            this.DataGridLesson.AllowUserToAddRows = false;
-            this.DataGridLesson.AllowUserToOrderColumns = true;
-            this.DataGridLesson.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DataGridLesson.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
-            this.DataGridLesson.BackgroundColor = System.Drawing.Color.White;
-            this.DataGridLesson.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("IRANSansWeb", 8.999999F);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DataGridLesson.DefaultCellStyle = dataGridViewCellStyle7;
-            this.DataGridLesson.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.DataGridLesson.Location = new System.Drawing.Point(3, 35);
-            this.DataGridLesson.Name = "DataGridLesson";
-            this.DataGridLesson.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.DataGridLesson.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DataGridLesson.Size = new System.Drawing.Size(860, 552);
-            this.DataGridLesson.TabIndex = 18;
-            this.DataGridLesson.VirtualMode = true;
-            this.DataGridLesson.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridLesson_CellClick);
-            this.DataGridLesson.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DataGridLesson_CellMouseClick);
-            // 
-            // ParentIdCombo
-            // 
-            this.ParentIdCombo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ParentIdCombo.BackColor = System.Drawing.Color.White;
-            this.ParentIdCombo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ParentIdCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ParentIdCombo.ForeColor = System.Drawing.Color.Black;
-            this.ParentIdCombo.FormattingEnabled = true;
-            this.ParentIdCombo.Location = new System.Drawing.Point(8, 19);
-            this.ParentIdCombo.Name = "ParentIdCombo";
-            this.ParentIdCombo.Size = new System.Drawing.Size(349, 28);
-            this.ParentIdCombo.TabIndex = 73;
-            // 
             // RoadmapContext
             // 
             this.RoadmapContext.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -407,13 +410,13 @@
             this.فایلToolStripMenuItem});
             this.RoadmapContext.Name = "RoadmapContext";
             this.RoadmapContext.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.RoadmapContext.Size = new System.Drawing.Size(181, 180);
+            this.RoadmapContext.Size = new System.Drawing.Size(127, 158);
             // 
             // ویرایشToolStripMenuItem
             // 
             this.ویرایشToolStripMenuItem.Image = global::TicketApplication.Properties.Resources._1486504369_change_edit_options_pencil_settings_tools_write_81307;
             this.ویرایشToolStripMenuItem.Name = "ویرایشToolStripMenuItem";
-            this.ویرایشToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ویرایشToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.ویرایشToolStripMenuItem.Text = "ویرایش";
             this.ویرایشToolStripMenuItem.Click += new System.EventHandler(this.ویرایشToolStripMenuItem_Click);
             // 
@@ -421,7 +424,7 @@
             // 
             this.حذفToolStripMenuItem.Image = global::TicketApplication.Properties.Resources.Gakuseisean_Ivista_2_Alarm_Error_256;
             this.حذفToolStripMenuItem.Name = "حذفToolStripMenuItem";
-            this.حذفToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.حذفToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.حذفToolStripMenuItem.Text = "حذف";
             this.حذفToolStripMenuItem.Click += new System.EventHandler(this.حذفToolStripMenuItem_Click);
             // 
@@ -429,7 +432,7 @@
             // 
             this.شروعToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("شروعToolStripMenuItem.Image")));
             this.شروعToolStripMenuItem.Name = "شروعToolStripMenuItem";
-            this.شروعToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.شروعToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.شروعToolStripMenuItem.Text = "شروع";
             this.شروعToolStripMenuItem.Click += new System.EventHandler(this.شروعToolStripMenuItem_Click);
             // 
@@ -437,7 +440,7 @@
             // 
             this.اجراءToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("اجراءToolStripMenuItem.Image")));
             this.اجراءToolStripMenuItem.Name = "اجراءToolStripMenuItem";
-            this.اجراءToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.اجراءToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.اجراءToolStripMenuItem.Text = "اجراء";
             this.اجراءToolStripMenuItem.Click += new System.EventHandler(this.اجراءToolStripMenuItem_Click);
             // 
@@ -445,7 +448,7 @@
             // 
             this.پایانToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("پایانToolStripMenuItem.Image")));
             this.پایانToolStripMenuItem.Name = "پایانToolStripMenuItem";
-            this.پایانToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.پایانToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.پایانToolStripMenuItem.Text = "پایان";
             this.پایانToolStripMenuItem.Click += new System.EventHandler(this.پایانToolStripMenuItem_Click);
             // 
@@ -453,7 +456,7 @@
             // 
             this.پیادهسازیToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("پیادهسازیToolStripMenuItem.Image")));
             this.پیادهسازیToolStripMenuItem.Name = "پیادهسازیToolStripMenuItem";
-            this.پیادهسازیToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.پیادهسازیToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.پیادهسازیToolStripMenuItem.Text = "پیاده سازی";
             this.پیادهسازیToolStripMenuItem.Click += new System.EventHandler(this.پیادهسازیToolStripMenuItem_Click);
             // 
@@ -461,7 +464,7 @@
             // 
             this.فایلToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("فایلToolStripMenuItem.Image")));
             this.فایلToolStripMenuItem.Name = "فایلToolStripMenuItem";
-            this.فایلToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.فایلToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.فایلToolStripMenuItem.Text = "فایل";
             this.فایلToolStripMenuItem.Click += new System.EventHandler(this.فایلToolStripMenuItem_Click);
             // 
@@ -481,9 +484,9 @@
             this.Load += new System.EventHandler(this.RoadMapPanel_Load);
             this.PanelTools.ResumeLayout(false);
             this.PanelShow.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridLesson)).EndInit();
             this.groupPanel2.ResumeLayout(false);
             this.groupPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridLesson)).EndInit();
             this.RoadmapContext.ResumeLayout(false);
             this.ResumeLayout(false);
 

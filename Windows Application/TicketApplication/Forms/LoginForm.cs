@@ -343,7 +343,7 @@ namespace TicketApplication.Forms
             if (e.Button == MouseButtons.Right)
             {
                 UsernameTxt.Text = "ADMIN";
-                PasswordTxt.Text = "ADMIN";
+                PasswordTxt.Text = "123123123";
             }
         }
     }

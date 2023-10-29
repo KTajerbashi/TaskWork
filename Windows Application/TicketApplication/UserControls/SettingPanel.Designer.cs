@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingPanel));
             this.TabControl = new System.Windows.Forms.TabControl();
             this.UserTab = new System.Windows.Forms.TabPage();
@@ -200,7 +200,7 @@
             this.MessageLbl.BackColor = System.Drawing.Color.Transparent;
             this.MessageLbl.Font = new System.Drawing.Font("IRANSansWeb", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MessageLbl.ForeColor = System.Drawing.Color.Red;
-            this.MessageLbl.Location = new System.Drawing.Point(541, -1);
+            this.MessageLbl.Location = new System.Drawing.Point(552, 14);
             this.MessageLbl.Name = "MessageLbl";
             this.MessageLbl.Size = new System.Drawing.Size(672, 20);
             this.MessageLbl.TabIndex = 18;
@@ -235,7 +235,7 @@
             this.CountLBL.BackColor = System.Drawing.Color.Transparent;
             this.CountLBL.Font = new System.Drawing.Font("IRANSansWeb", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CountLBL.ForeColor = System.Drawing.Color.Black;
-            this.CountLBL.Location = new System.Drawing.Point(437, 411);
+            this.CountLBL.Location = new System.Drawing.Point(443, 421);
             this.CountLBL.Name = "CountLBL";
             this.CountLBL.Size = new System.Drawing.Size(340, 29);
             this.CountLBL.TabIndex = 15;
@@ -251,14 +251,14 @@
             this.DataGridUsers.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.DataGridUsers.BackgroundColor = System.Drawing.Color.White;
             this.DataGridUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("IRANSansWeb", 8.999999F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DataGridUsers.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("IRANSansWeb", 8.999999F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DataGridUsers.DefaultCellStyle = dataGridViewCellStyle8;
             this.DataGridUsers.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.DataGridUsers.Location = new System.Drawing.Point(3, 37);
             this.DataGridUsers.Name = "DataGridUsers";
@@ -391,7 +391,7 @@
             this.RoleIdUserCombo.Font = new System.Drawing.Font("IRANSansWeb", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RoleIdUserCombo.ForeColor = System.Drawing.Color.Black;
             this.RoleIdUserCombo.FormattingEnabled = true;
-            this.RoleIdUserCombo.Location = new System.Drawing.Point(251, 90);
+            this.RoleIdUserCombo.Location = new System.Drawing.Point(249, 82);
             this.RoleIdUserCombo.Name = "RoleIdUserCombo";
             this.RoleIdUserCombo.Size = new System.Drawing.Size(240, 30);
             this.RoleIdUserCombo.TabIndex = 10;
@@ -570,8 +570,8 @@
             // 
             this.groupPanel3.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2013;
-            this.groupPanel3.Controls.Add(this.MsgRoleLbl);
             this.groupPanel3.Controls.Add(this.PageRoleLbl);
+            this.groupPanel3.Controls.Add(this.MsgRoleLbl);
             this.groupPanel3.Controls.Add(this.NextRoleBtn);
             this.groupPanel3.Controls.Add(this.PrevRoleBtn);
             this.groupPanel3.Controls.Add(this.DataGridRoles);
@@ -618,7 +618,7 @@
             this.MsgRoleLbl.BackColor = System.Drawing.Color.Transparent;
             this.MsgRoleLbl.Font = new System.Drawing.Font("IRANSansWeb", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MsgRoleLbl.ForeColor = System.Drawing.Color.Red;
-            this.MsgRoleLbl.Location = new System.Drawing.Point(543, -3);
+            this.MsgRoleLbl.Location = new System.Drawing.Point(537, -23);
             this.MsgRoleLbl.Name = "MsgRoleLbl";
             this.MsgRoleLbl.Size = new System.Drawing.Size(672, 20);
             this.MsgRoleLbl.TabIndex = 19;
@@ -629,9 +629,9 @@
             // 
             this.PageRoleLbl.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.PageRoleLbl.BackColor = System.Drawing.Color.Transparent;
-            this.PageRoleLbl.Font = new System.Drawing.Font("IRANSansWeb", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PageRoleLbl.Font = new System.Drawing.Font("IRANSansWeb", 9.75F);
             this.PageRoleLbl.ForeColor = System.Drawing.Color.Black;
-            this.PageRoleLbl.Location = new System.Drawing.Point(439, 473);
+            this.PageRoleLbl.Location = new System.Drawing.Point(442, 486);
             this.PageRoleLbl.Name = "PageRoleLbl";
             this.PageRoleLbl.Size = new System.Drawing.Size(342, 29);
             this.PageRoleLbl.TabIndex = 16;
@@ -669,14 +669,14 @@
             this.DataGridRoles.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.DataGridRoles.BackgroundColor = System.Drawing.Color.White;
             this.DataGridRoles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("IRANSansWeb", 8.999999F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DataGridRoles.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("IRANSansWeb", 8.999999F);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DataGridRoles.DefaultCellStyle = dataGridViewCellStyle7;
             this.DataGridRoles.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.DataGridRoles.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.DataGridRoles.Location = new System.Drawing.Point(3, 39);
@@ -893,7 +893,7 @@
             this.PagingPriLbl.BackColor = System.Drawing.Color.Transparent;
             this.PagingPriLbl.Font = new System.Drawing.Font("IRANSansWeb", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PagingPriLbl.ForeColor = System.Drawing.Color.Black;
-            this.PagingPriLbl.Location = new System.Drawing.Point(463, 463);
+            this.PagingPriLbl.Location = new System.Drawing.Point(466, 472);
             this.PagingPriLbl.Name = "PagingPriLbl";
             this.PagingPriLbl.Size = new System.Drawing.Size(295, 29);
             this.PagingPriLbl.TabIndex = 19;
@@ -929,14 +929,14 @@
             this.DataGridPrivilege.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.DataGridPrivilege.BackgroundColor = System.Drawing.Color.White;
             this.DataGridPrivilege.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("IRANSansWeb", 8.999999F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DataGridPrivilege.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("IRANSansWeb", 8.999999F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DataGridPrivilege.DefaultCellStyle = dataGridViewCellStyle9;
             this.DataGridPrivilege.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.DataGridPrivilege.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.DataGridPrivilege.Location = new System.Drawing.Point(3, 37);
@@ -1028,7 +1028,7 @@
             this.PanelPrivilegeCombo.Font = new System.Drawing.Font("IRANSansWeb", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PanelPrivilegeCombo.ForeColor = System.Drawing.Color.Black;
             this.PanelPrivilegeCombo.FormattingEnabled = true;
-            this.PanelPrivilegeCombo.Location = new System.Drawing.Point(604, 26);
+            this.PanelPrivilegeCombo.Location = new System.Drawing.Point(596, 30);
             this.PanelPrivilegeCombo.Name = "PanelPrivilegeCombo";
             this.PanelPrivilegeCombo.Size = new System.Drawing.Size(305, 30);
             this.PanelPrivilegeCombo.TabIndex = 76;
@@ -1042,7 +1042,7 @@
             this.RolePrivilegeCombo.Font = new System.Drawing.Font("IRANSansWeb", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RolePrivilegeCombo.ForeColor = System.Drawing.Color.Black;
             this.RolePrivilegeCombo.FormattingEnabled = true;
-            this.RolePrivilegeCombo.Location = new System.Drawing.Point(915, 26);
+            this.RolePrivilegeCombo.Location = new System.Drawing.Point(907, 30);
             this.RolePrivilegeCombo.Name = "RolePrivilegeCombo";
             this.RolePrivilegeCombo.Size = new System.Drawing.Size(305, 30);
             this.RolePrivilegeCombo.TabIndex = 75;
@@ -1053,7 +1053,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("IRANSansWeb", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(873, 1);
+            this.label4.Location = new System.Drawing.Point(865, 5);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(40, 29);
             this.label4.TabIndex = 74;
@@ -1067,7 +1067,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("IRANSansWeb", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(1184, 1);
+            this.label1.Location = new System.Drawing.Point(1176, 5);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(40, 29);
             this.label1.TabIndex = 73;
@@ -1094,7 +1094,7 @@
             // DeletePriCheck
             // 
             this.DeletePriCheck.AutoSize = true;
-            this.DeletePriCheck.Location = new System.Drawing.Point(338, 27);
+            this.DeletePriCheck.Location = new System.Drawing.Point(175, 27);
             this.DeletePriCheck.Name = "DeletePriCheck";
             this.DeletePriCheck.Size = new System.Drawing.Size(53, 24);
             this.DeletePriCheck.TabIndex = 5;
@@ -1104,7 +1104,7 @@
             // UpdatePriCheck
             // 
             this.UpdatePriCheck.AutoSize = true;
-            this.UpdatePriCheck.Location = new System.Drawing.Point(398, 27);
+            this.UpdatePriCheck.Location = new System.Drawing.Point(235, 27);
             this.UpdatePriCheck.Name = "UpdatePriCheck";
             this.UpdatePriCheck.Size = new System.Drawing.Size(66, 24);
             this.UpdatePriCheck.TabIndex = 4;
@@ -1114,7 +1114,7 @@
             // ReadPriCheck
             // 
             this.ReadPriCheck.AutoSize = true;
-            this.ReadPriCheck.Location = new System.Drawing.Point(538, 27);
+            this.ReadPriCheck.Location = new System.Drawing.Point(375, 27);
             this.ReadPriCheck.Name = "ReadPriCheck";
             this.ReadPriCheck.Size = new System.Drawing.Size(63, 24);
             this.ReadPriCheck.TabIndex = 2;
@@ -1124,7 +1124,7 @@
             // WritePriCheck
             // 
             this.WritePriCheck.AutoSize = true;
-            this.WritePriCheck.Location = new System.Drawing.Point(471, 27);
+            this.WritePriCheck.Location = new System.Drawing.Point(308, 27);
             this.WritePriCheck.Name = "WritePriCheck";
             this.WritePriCheck.Size = new System.Drawing.Size(60, 24);
             this.WritePriCheck.TabIndex = 3;

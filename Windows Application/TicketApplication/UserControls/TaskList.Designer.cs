@@ -35,6 +35,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TaskList));
             this.ListTasks = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.SearchTxt = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.SortDateBtn = new System.Windows.Forms.Button();
             this.NotDeliverBtn = new System.Windows.Forms.Button();
             this.DeliverBtn = new System.Windows.Forms.Button();
@@ -53,7 +54,6 @@
             this.Reloding = new Glass.GlassButton();
             this.label1 = new System.Windows.Forms.Label();
             this.CountLBL = new System.Windows.Forms.Label();
-            this.SearchTxt = new DevComponents.DotNetBar.Controls.TextBoxX();
             ((System.ComponentModel.ISupportInitialize)(this.ListTasks)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.StripMenu.SuspendLayout();
@@ -116,6 +116,21 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "فیلتر";
+            // 
+            // SearchTxt
+            // 
+            // 
+            // 
+            // 
+            this.SearchTxt.Border.Class = "TextBoxBorder";
+            this.SearchTxt.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.SearchTxt.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.SearchTxt.Location = new System.Drawing.Point(129, 24);
+            this.SearchTxt.Name = "SearchTxt";
+            this.SearchTxt.PreventEnterBeep = true;
+            this.SearchTxt.Size = new System.Drawing.Size(218, 27);
+            this.SearchTxt.TabIndex = 17;
+            this.SearchTxt.WatermarkText = "جستجو ...";
             // 
             // SortDateBtn
             // 
@@ -329,9 +344,9 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("IRANSansWeb", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("IRANSansWeb", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(208, 622);
+            this.label1.Location = new System.Drawing.Point(203, 631);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 29);
             this.label1.TabIndex = 10;
@@ -343,30 +358,15 @@
             // 
             this.CountLBL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.CountLBL.BackColor = System.Drawing.Color.Transparent;
-            this.CountLBL.Font = new System.Drawing.Font("IRANSansWeb", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CountLBL.Font = new System.Drawing.Font("IRANSansWeb", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CountLBL.ForeColor = System.Drawing.Color.Black;
-            this.CountLBL.Location = new System.Drawing.Point(102, 622);
+            this.CountLBL.Location = new System.Drawing.Point(97, 631);
             this.CountLBL.Name = "CountLBL";
             this.CountLBL.Size = new System.Drawing.Size(100, 29);
             this.CountLBL.TabIndex = 11;
             this.CountLBL.Text = "تعداد رکورد";
             this.CountLBL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.CountLBL.UseMnemonic = false;
-            // 
-            // SearchTxt
-            // 
-            // 
-            // 
-            // 
-            this.SearchTxt.Border.Class = "TextBoxBorder";
-            this.SearchTxt.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.SearchTxt.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.SearchTxt.Location = new System.Drawing.Point(129, 24);
-            this.SearchTxt.Name = "SearchTxt";
-            this.SearchTxt.PreventEnterBeep = true;
-            this.SearchTxt.Size = new System.Drawing.Size(218, 27);
-            this.SearchTxt.TabIndex = 17;
-            this.SearchTxt.WatermarkText = "جستجو ...";
             // 
             // TaskList
             // 

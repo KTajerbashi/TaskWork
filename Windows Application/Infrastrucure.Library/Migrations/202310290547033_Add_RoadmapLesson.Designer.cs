@@ -13,7 +13,7 @@ namespace Infrastrucure.Library.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202310281933094_Add_RoadmapLesson"; }
+            get { return "202310290547033_Add_RoadmapLesson"; }
         }
         
         string IMigrationMetadata.Source

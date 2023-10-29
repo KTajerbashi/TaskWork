@@ -66,9 +66,9 @@
     <Compile Include="Migrations\202310281749441_Add_Privilege.designer.cs">
       <DependentUpon>202310281749441_Add_Privilege.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202310281933094_Add_RoadmapLesson.cs" />
-    <Compile Include="Migrations\202310281933094_Add_RoadmapLesson.designer.cs">
-      <DependentUpon>202310281933094_Add_RoadmapLesson.cs</DependentUpon>
+    <Compile Include="Migrations\202310290547033_Add_RoadmapLesson.cs" />
+    <Compile Include="Migrations\202310290547033_Add_RoadmapLesson.designer.cs">
+      <DependentUpon>202310290547033_Add_RoadmapLesson.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -111,8 +111,8 @@
     <EmbeddedResource Include="Migrations\202310281749441_Add_Privilege.resx">
       <DependentUpon>202310281749441_Add_Privilege.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202310281933094_Add_RoadmapLesson.resx">
-      <DependentUpon>202310281933094_Add_RoadmapLesson.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202310290547033_Add_RoadmapLesson.resx">
+      <DependentUpon>202310290547033_Add_RoadmapLesson.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
