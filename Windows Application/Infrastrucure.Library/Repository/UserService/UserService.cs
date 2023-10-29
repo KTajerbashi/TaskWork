@@ -27,6 +27,7 @@ namespace Infrastrucure.Library.Repository.UserService
         {
             var user = _context.Users.Where(x => x.Username == username && !x.IsDeleted && x.IsActive).FirstOrDefault();
             var has = PasswordHasher.VerifyPassword(password, user.Password);
+            //var s = CryptoPassword.VerifyPassword(password,user.Hash,user.Salt);
             if (has)
             {
                 if (user != null)
@@ -41,7 +42,7 @@ namespace Infrastrucure.Library.Repository.UserService
                 return new Result<User>
                 {
 
-                    Message = "اطلاعات واکشی نشد",
+                    Message = "اطلاعی ندارم",
                     Success = false,
                     Data = null
                 };
@@ -51,7 +52,7 @@ namespace Infrastrucure.Library.Repository.UserService
                 return new Result<User>
                 {
 
-                    Message = "اطلاعات واکشی نشد",
+                    Message = "اطلاعات درست نیست",
                     Success = false,
                     Data = null
                 };

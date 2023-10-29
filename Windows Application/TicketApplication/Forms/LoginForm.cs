@@ -62,9 +62,9 @@ namespace TicketApplication.Forms
                 if (res.Success)
                 {
                     AppUser.Username = res.Data.Username;
-                    //AppUser.UserRoleID = res.Data.UserRoles.Where(x => x.UserID == res.Data.ID).FirstOrDefault().ID;
+                    //  AppUser.UserRoleID = res.Data.UserRoles.Where(x => x.UserID == res.Data.ID).FirstOrDefault().ID;
                     AppUser.UserID = res.Data.ID;
-                    //AppUser.RoleID = res.Data.UserRoles.Where(x => x.UserID == res.Data.ID).FirstOrDefault().RoleID;
+                    //  AppUser.RoleID = res.Data.UserRoles.Where(x => x.UserID == res.Data.ID).FirstOrDefault().RoleID;
                     AppUser.DisplayName = res.Data.DisplayName;
                     AppUser.Email = res.Data.Email;
                     AppUser.Name = res.Data.Name;
@@ -182,7 +182,7 @@ namespace TicketApplication.Forms
             SetPanelLocation();
         }
 
-        private void RCV_CheckBtn_Click(object sender, EventArgs e)
+        private async void RCV_CheckBtn_Click(object sender, EventArgs e)
         {
             var userModel = new User
             {
@@ -218,7 +218,7 @@ namespace TicketApplication.Forms
                 {
                     if (RCV_Pass.Text == RCV_RePas.Text)
                     {
-                        _userService.UpdateRecoveryPass(userModel);
+                        await _userService.UpdateRecoveryPass(userModel);
                         RCV_CheckBtn.Text = "بررسی اطلاعات";
                         RCV_LBL_Pass1.Visible = false;
                         RCV_LBL_Pass2.Visible = false;

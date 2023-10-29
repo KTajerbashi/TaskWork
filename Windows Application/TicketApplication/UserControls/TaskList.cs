@@ -132,7 +132,6 @@ namespace TicketApplication.UserControls
         private void تغییروضعیتپاسToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //string query = $@"Update BUS.TaskWorks SET IsPassed = 0 WHERE ID = 1";
-            tab = 99;
             if (ID > 0)
             {
                 TaskWork entity=  _taskService.GetById(ID).Data;
@@ -148,7 +147,6 @@ namespace TicketApplication.UserControls
             {
                 TaskWork entity=  _taskService.GetById(ID).Data;
                 entity.IsDeliver = entity.IsDeliver ? false : true;
-                tab = 99;
                 _taskService.Save();
                 ShowDataGridView(tab);
             }
@@ -158,7 +156,6 @@ namespace TicketApplication.UserControls
         {
             TaskWork entity =  _taskService.GetById(ID).Data;
             entity.IsDeleted = true;
-            tab = 99;
              _taskService.Save();
             ShowDataGridView(tab);
         }
