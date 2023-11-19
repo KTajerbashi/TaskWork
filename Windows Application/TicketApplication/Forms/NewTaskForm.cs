@@ -177,7 +177,7 @@ namespace TicketApplication.Forms
                 SaamanehCombo.Items.Add(new ComboboxItem<long>()
                 {
                     Text = item.Title,
-                    Value = Convert.ToByte(item.ID)
+                    Value = item.ID
                 });
             }
             if (SaamanehCombo.Tag != null)
@@ -187,7 +187,7 @@ namespace TicketApplication.Forms
                 foreach (var i in SaamanehCombo.Items)
                 {
                     var t = (ComboboxItem<long>)i;
-                    if (t.Value == Convert.ToByte(id))
+                    if (t.Value == Convert.ToInt64(id))
                     {
                         SaamanehCombo.SelectedIndex = index;
                     }

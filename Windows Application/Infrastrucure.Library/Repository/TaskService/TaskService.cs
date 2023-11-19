@@ -4,11 +4,15 @@ using Infrastructure.Library.DbContextData;
 using Infrastrucure.Library.BaseService;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace Infrastrucure.Library.Repository.TaskService
 {
     public class TaskService : BaseService<TaskWork, DatabaseContext>
     {
+        private readonly TaskHistoryService _taskHistoryService = new TaskHistoryService();
+
+
         public Result<List<TaskWork>> GetAllIncluded()
         {
             var data = _context.Tasks.Include("Samaneh")
@@ -32,6 +36,15 @@ namespace Infrastrucure.Library.Repository.TaskService
                 Message= "",
                 Success = true,
             };
+        }
+        public override async Task<int> AddOrUpdate(TaskWork entity)
+        {
+            //var his = new TaskWorkHistory
+            //{
+                
+            //};
+            //await _taskHistoryService.Insert(his);
+            return await base.AddOrUpdate(entity);
         }
     }
 }

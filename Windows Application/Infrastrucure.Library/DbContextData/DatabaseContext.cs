@@ -16,6 +16,7 @@ namespace Infrastructure.Library.DbContextData
         }
 
         public DbSet<TaskWork> Tasks { get; set; }
+        public DbSet<TaskWorkHistory> TaskWorkHistories { get; set; }
         public DbSet<Samaneh> Samanehs { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Role> Roles { get; set; }

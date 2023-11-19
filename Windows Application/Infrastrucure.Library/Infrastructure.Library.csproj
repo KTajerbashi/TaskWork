@@ -70,6 +70,14 @@
     <Compile Include="Migrations\202310290547033_Add_RoadmapLesson.designer.cs">
       <DependentUpon>202310290547033_Add_RoadmapLesson.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202311190746529_Change_Lenght.cs" />
+    <Compile Include="Migrations\202311190746529_Change_Lenght.designer.cs">
+      <DependentUpon>202311190746529_Change_Lenght.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202311190807582__history.cs" />
+    <Compile Include="Migrations\202311190807582__history.designer.cs">
+      <DependentUpon>202311190807582__history.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\BackupService\BackupQueries.cs" />
@@ -83,6 +91,7 @@
     <Compile Include="Repository\RoleService\RoleService.cs" />
     <Compile Include="Repository\SamanehService\SamanehQueries.cs" />
     <Compile Include="Repository\SamanehService\SamanehService.cs" />
+    <Compile Include="Repository\TaskService\TaskHistoryService.cs" />
     <Compile Include="Repository\TaskService\TaskQueries.cs" />
     <Compile Include="Repository\TaskService\TaskService.cs" />
     <Compile Include="Repository\UserService\UserQueries.cs" />
@@ -113,6 +122,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202310290547033_Add_RoadmapLesson.resx">
       <DependentUpon>202310290547033_Add_RoadmapLesson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202311190746529_Change_Lenght.resx">
+      <DependentUpon>202311190746529_Change_Lenght.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202311190807582__history.resx">
+      <DependentUpon>202311190807582__history.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

@@ -13,6 +13,7 @@ namespace BusinessLogic.Library.DatabaseService
         DbSet<Role> Roles { get; set; }
         DbSet<UserRole> UserRoles { get; set; }
         DbSet<TaskWork> Tasks { get; set; }
+        DbSet<TaskWorkHistory> TaskWorkHistories { get; set; }
         DbSet<Samaneh> Samanehs { get; set; }
         DbSet<Backup> Backups { get; set; }
         DbSet<Logger> Loggers { get; set; }

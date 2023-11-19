@@ -19,72 +19,69 @@ namespace Infrastrucure.Library.BaseService
             _context = new DatabaseContext();
         }
 
-        public async Task<int> AddOrUpdate(TEntity entity)
+        public virtual async Task<int> AddOrUpdate(TEntity entity)
         {
             _context.Set<TEntity>().AddOrUpdate(entity);
             await _context.SaveChangesAsync();
             return 1;
         }
 
-        public async Task<int> Delete(TEntity entity)
+        public virtual async Task<int> Delete(TEntity entity)
         {
             _context.Set<TEntity>().Remove(entity);
             await _context.SaveChangesAsync();
             return 1;
         }
 
-        public async Task<TEntity> Delete(object Id)
+        public virtual async Task<TEntity> Delete(object Id)
         {
             return await _context.Set<TEntity>().FindAsync(Id);
         }
 
-        public async Task<int> DisActive(object Id)
+        public virtual async Task<int> DisActive(object Id)
         {
             var entity = await _context.Set<TEntity>().FindAsync(Id);
             entity.IsActive = false;
             return 1;
         }
 
-        public async Task<IEnumerable<TEntity>> GetAll()
+        public virtual async Task<IEnumerable<TEntity>> GetAll()
         {
             return await _context.Set<TEntity>().Where(x => !x.IsDeleted && x.IsActive).ToListAsync();
         }
 
-        public async Task<TEntity> GetById(object Id)
+        public virtual async Task<TEntity> GetById(object Id)
         {
             return await _context.Set<TEntity>().FindAsync(Id);
         }
 
-        public async Task<int> Insert(TEntity entity)
+        public virtual async Task<int> Insert(TEntity entity)
         {
             _context.Set<TEntity>().Add(entity);
             return await _context.SaveChangesAsync();
         }
 
-        public async Task<int> InsertAsync(TEntity entity)
+        public virtual async Task<int> InsertAsync(TEntity entity)
         {
             _context.Set<TEntity>().Add(entity);
             return await _context.SaveChangesAsync();
         }
 
-        public async Task<int> Save()
+        public virtual async Task<int> Save()
         {
             return _context.SaveChanges();
         }
 
-        public async Task<int> SaveAsync()
+        public virtual async Task<int> SaveAsync()
         {
             return await _context.SaveChangesAsync();
         }
 
-        public async Task<int> Update(TEntity entity)
+        public virtual async Task<int> Update(TEntity entity)
         {
             _context.Entry(entity).State = EntityState.Modified;
             await _context.SaveChangesAsync();
             return 1;
         }
-
     }
-
-
 }

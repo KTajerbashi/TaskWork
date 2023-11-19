@@ -19,4 +19,22 @@ namespace Domain.Library.Enums
         [Description("بازگردانی")]
         Restore = 2,
     }
+    public enum TaskActionType : byte
+    {
+        [Description("پشتیبان گیری")]
+        Create = 1,
+        [Description("ویرایش")]
+        Update = 2,
+        [Description("پاس")]
+        Passed = 3,
+        [Description("لغو")]
+        Canceled = 4,
+        [Description("تحویل")]
+        Delivered = 5,
+        [Description("حذف")]
+        Deleted = 6,
+        [Description("زمان اضافه")]
+        UpdateTime = 7,
+
+    }
 }

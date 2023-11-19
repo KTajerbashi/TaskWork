@@ -1,6 +1,7 @@
 ﻿using Domain.Base;
 using Domain.Library.Enums;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -17,7 +18,7 @@ namespace Domain.Model
 
         public string Answer { get; set; }
 
-        public TaskImportanceType  ImportanceType { get; set; }
+        public TaskImportanceType ImportanceType { get; set; }
         public TaskType Type { get; set; }
 
         [ForeignKey(nameof(Samaneh))]
@@ -31,5 +32,23 @@ namespace Domain.Model
         [ForeignKey(nameof(Role))]
         public long? RoleId { get; set; }
         public Role Role { get; set; }
+
+        public virtual ICollection<TaskWorkHistory> TaskWorkHistories { get; set; }
+
+    }
+    [Table("TaskWorkHistories", Schema = "BUS")]
+    public class TaskWorkHistory : GeneralEntity
+    {
+        [ForeignKey("TaskWork")]
+        public long TaskWorkId { get; set; }
+        public TaskWork TaskWork { get; set; }
+
+
+        public string Message { get; set; }
+        public TaskActionType TaskActionType { get; set; }
+        public long FromUser { get; set; }
+        public long ToUser { get; set; }
+        public long ByUser { get; set; }
+        public DateTime CreateTime { get; set; }
     }
 }

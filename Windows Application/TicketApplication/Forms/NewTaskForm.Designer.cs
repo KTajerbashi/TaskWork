@@ -99,6 +99,7 @@
             this.DetailsTaskTxt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DetailsTaskTxt.ForeColor = System.Drawing.Color.Black;
             this.DetailsTaskTxt.Location = new System.Drawing.Point(22, 46);
+            this.DetailsTaskTxt.MaxLength = 2500;
             this.DetailsTaskTxt.Name = "DetailsTaskTxt";
             this.DetailsTaskTxt.Size = new System.Drawing.Size(605, 212);
             this.DetailsTaskTxt.TabIndex = 6;
@@ -185,6 +186,7 @@
             this.AnswerTaskTxt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AnswerTaskTxt.ForeColor = System.Drawing.Color.Black;
             this.AnswerTaskTxt.Location = new System.Drawing.Point(22, 296);
+            this.AnswerTaskTxt.MaxLength = 2500;
             this.AnswerTaskTxt.Name = "AnswerTaskTxt";
             this.AnswerTaskTxt.Size = new System.Drawing.Size(605, 212);
             this.AnswerTaskTxt.TabIndex = 7;

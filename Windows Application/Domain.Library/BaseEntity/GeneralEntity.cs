@@ -16,7 +16,7 @@ namespace Domain.Base
         /// توضیحات
         /// </summary>
         [Description("توضیحات")]
-        [StringLength(500, ErrorMessage = "برای توضیحات حداکثر {1} کاراکتر مجاز میباشد")]
+        //[StringLength(500, ErrorMessage = "برای توضیحات حداکثر {1} کاراکتر مجاز میباشد")]
         public string Description { get; set; }
 
         public override string ToString()
