@@ -2,6 +2,17 @@
 {
     public sealed class UserQueries
     {
+        public string Count()
+        {
+            return $@"
+SELECT
+COUNT(*) AS [Count]
+FROM SEC.Users
+WHERE 
+	(IsActive = 1) 
+AND (IsDeleted = 0)
+            ";
+        }
         public string ShowAll(string paging)
         {
             return $@"

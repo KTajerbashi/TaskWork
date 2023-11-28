@@ -9,6 +9,20 @@ namespace Infrastrucure.Library.Repository.TaskService
 {
     public class TaskQueries
     {
+		public string Count()
+		{
+			return (@"
+SELECT
+COUNT(*) AS [Count]
+FROM BUS.TaskWorks 
+INNER JOIN BUS.Samanehs ON BUS.TaskWorks.SamanaID = BUS.Samanehs.ID 
+INNER JOIN SEC.Users ON BUS.TaskWorks.UserID = SEC.Users.ID 
+INNER JOIN SEC.Roles ON BUS.TaskWorks.RoleId = SEC.Roles.ID
+WHERE 
+(BUS.TaskWorks.IsActive = 1) 
+AND (BUS.TaskWorks.IsDeleted = 0)
+");
+		}
         public string ShowAll(string paging)
         {
             return ($@"

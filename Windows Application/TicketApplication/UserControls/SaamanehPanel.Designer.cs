@@ -54,7 +54,6 @@
             this.group2 = new System.Windows.Forms.GroupBox();
             this.SaamanehDG = new System.Windows.Forms.DataGridView();
             this.CountLBL = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.Reloding = new Glass.GlassButton();
             this.NextBtn = new Glass.GlassButton();
             this.PrevBtn = new Glass.GlassButton();
@@ -318,7 +317,6 @@
             // 
             this.group2.Controls.Add(this.SaamanehDG);
             this.group2.Controls.Add(this.CountLBL);
-            this.group2.Controls.Add(this.label6);
             this.group2.Controls.Add(this.Reloding);
             this.group2.Controls.Add(this.NextBtn);
             this.group2.Controls.Add(this.PrevBtn);
@@ -374,27 +372,13 @@
             this.CountLBL.BackColor = System.Drawing.Color.Transparent;
             this.CountLBL.Font = new System.Drawing.Font("IRANSansWeb", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CountLBL.ForeColor = System.Drawing.Color.Black;
-            this.CountLBL.Location = new System.Drawing.Point(98, 613);
+            this.CountLBL.Location = new System.Drawing.Point(277, 619);
             this.CountLBL.Name = "CountLBL";
-            this.CountLBL.Size = new System.Drawing.Size(100, 29);
+            this.CountLBL.Size = new System.Drawing.Size(390, 29);
             this.CountLBL.TabIndex = 13;
             this.CountLBL.Text = "تعداد رکورد";
             this.CountLBL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.CountLBL.UseMnemonic = false;
-            // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("IRANSansWeb", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(204, 613);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(100, 29);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "تعداد رکورد";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label6.UseMnemonic = false;
             // 
             // Reloding
             // 
@@ -514,7 +498,6 @@
         private System.Windows.Forms.ToolStripMenuItem تغییروضعیتToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem حذفToolStripMenuItem;
         private System.Windows.Forms.Label CountLBL;
-        private System.Windows.Forms.Label label6;
         private DevComponents.DotNetBar.Controls.TextBoxX SearchTxt;
         public System.Windows.Forms.DataGridView SaamanehDG;
     }

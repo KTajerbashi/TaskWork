@@ -5,6 +5,8 @@ using Infrastrucure.Library.DatabaseService;
 using Infrastrucure.Library.Repository.RoleService;
 using Infrastrucure.Library.Repository.UserService;
 using System;
+using System.Data;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Windows.Forms;
 using TicketApplication.Authentication;
@@ -33,50 +35,50 @@ namespace TicketApplication.UserControls
                 if (type == 0)
                 {
                     DataGridUsers.DataSource = baseQuery.Execute(userQueries.ShowAll(Paging.Order(Paging.Page, 20)));
-                    CountLBL.Text = $"تعداد رکورد {DataGridUsers.Rows.Count} | صفحه {Paging.Page + 1}";
                 }
                 else
                 {
                     DataGridUsers.DataSource = baseQuery.Execute(userQueries.SearchResult(SearchTxtUsers.Text));
-                    CountLBL.Text = $"تعداد رکورد {DataGridUsers.Rows.Count} | صفحه {Paging.Page + 1}";
                 }
+                var count = baseQuery.Execute(userQueries.Count()).Rows[0].Field<int>(0);
+                CountLBL.Text = $"تعداد کل رکورد {count} | رکورد های نمایشی {DataGridUsers.Rows.Count} | صفحه {Paging.Page + 1}";
             }
             else if (tab == 1)
             {
                 if (type == 0)
                 {
                     DataGridRoles.DataSource = baseQuery.Execute(roleQueries.ShowAll(Paging.Order(Paging.Page, 20)));
-                    PageRoleLbl.Text = $"تعداد رکورد {DataGridRoles.Rows.Count} | صفحه {Paging.Page + 1}";
                 }
                 else if (type == 1)
                 {
                     DataGridRoles.DataSource = baseQuery.Execute(roleQueries.ShowAllActives(Paging.Order(Paging.Page, 20)));
-                    PageRoleLbl.Text = $"تعداد رکورد {DataGridRoles.Rows.Count} | صفحه {Paging.Page + 1}";
                 }
                 else if (type == 2)
                 {
                     DataGridRoles.DataSource = baseQuery.Execute(roleQueries.ShowAllDisActives(Paging.Order(Paging.Page, 20)));
-                    PageRoleLbl.Text = $"تعداد رکورد {DataGridRoles.Rows.Count} | صفحه {Paging.Page + 1}";
                 }
                 else
                 {
                     DataGridRoles.DataSource = baseQuery.Execute(roleQueries.SearchData(SearchRoleTxt.Text));
-                    PageRoleLbl.Text = $"تعداد رکورد {DataGridRoles.Rows.Count} | صفحه {Paging.Page + 1}";
                 }
+                var count = baseQuery.Execute(roleQueries.Count()).Rows[0].Field<int>(0);
+                PageRoleLbl.Text = $"تعداد کل رکورد {count} | رکورد های نمایشی {DataGridRoles.Rows.Count} | صفحه {Paging.Page + 1}";
             }
             else if (tab == 2)
             {
                 if (type == 0)
                 {
                     DataGridPrivilege.DataSource = baseQuery.Execute(privilegeQueries.ShowAll(Paging.Order(Paging.Page, 20)));
-                    PagingPriLbl.Text = $"تعداد رکورد {DataGridPrivilege.Rows.Count} | صفحه {Paging.Page + 1}";
                 }
                 else
                 {
                     DataGridPrivilege.DataSource = baseQuery.Execute(privilegeQueries.SearchData(SearchPriTxt.Text));
-                    PagingPriLbl.Text = $"تعداد رکورد {DataGridPrivilege.Rows.Count} | صفحه {Paging.Page + 1}";
                 }
+                var count = baseQuery.Execute(privilegeQueries.Count()).Rows[0].Field<int>(0);
+                PagingPriLbl.Text = $"تعداد کل رکورد {count} | رکورد های نمایشی {DataGridPrivilege.Rows.Count} | صفحه {Paging.Page + 1}";
             }
+
+
         }
 
         private void TabControl_SelectedIndexChanged(object sender, EventArgs e)

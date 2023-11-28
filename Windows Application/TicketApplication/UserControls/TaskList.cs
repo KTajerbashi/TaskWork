@@ -4,6 +4,7 @@ using Domain.Model;
 using Infrastrucure.Library.DatabaseService;
 using Infrastrucure.Library.Repository.TaskService;
 using System;
+using System.Data;
 using System.Windows.Forms;
 using TicketApplication.Common;
 using TicketApplication.Forms;
@@ -76,7 +77,8 @@ namespace TicketApplication.UserControls
             }
             ListTasks.DataSource = null;
             ListTasks.DataSource = _baseQuery.Execute(QUERY);
-            CountLBL.Text = ListTasks.Rows.Count.ToString();
+            var count = _baseQuery.Execute(_query.Count()).Rows[0].Field<int>(0);
+            CountLBL.Text = $"تعداد کل رکورد {count} | رکورد های نمایشی {ListTasks.Rows.Count} | صفحه {Paging.Page + 1}";
         }
 
         private void TaskList_Load(object sender, EventArgs e)
@@ -157,6 +159,7 @@ namespace TicketApplication.UserControls
             TaskWork entity =  _taskService.GetById(ID).Data;
             entity.IsDeleted = true;
              _taskService.Save();
+
             ShowDataGridView(tab);
         }
 

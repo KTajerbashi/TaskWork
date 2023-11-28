@@ -2,6 +2,20 @@
 {
     public class RoadmapQueries
     {
+
+        public string Count()
+        {
+            return $@"
+SELECT
+COUNT(*)
+FROM 
+	BUS.RoadmapLessons M
+WHERE
+	(M.IsActive = 1)
+AND (M.IsDeleted = 0)
+            ";
+        }
+
         public string ShowAll(string paging)
         {
             return $@"

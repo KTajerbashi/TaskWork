@@ -2,6 +2,15 @@
 {
     public class PrivilegeQueries
     {
+        public string Count()
+        {
+            return $@"
+SELECT       
+	Count(*) AS [Count]
+FROM SEC.Roles 
+INNER JOIN SEC.[Privileges] ON SEC.Roles.ID = SEC.[Privileges].ID
+";
+        }
         public string ShowAll(string paging)
         {
             return $@"

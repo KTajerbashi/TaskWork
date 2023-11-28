@@ -2,6 +2,8 @@
 using Infrastrucure.Library.DatabaseService;
 using Infrastrucure.Library.Repository.SamanehService;
 using System;
+using System.Data;
+using System.Data.Entity.Infrastructure;
 using System.Windows.Forms;
 using TicketApplication.Common;
 using TicketApplication.Extentions;
@@ -56,8 +58,8 @@ namespace TicketApplication.UserControls
                     }
             }
             SaamanehDG.DataSource = _baseQuery.Execute(QUERY);
-            CountLBL.Text = SaamanehDG.Rows.Count.ToString();
-
+            var count = _baseQuery.Execute(Show.Count()).Rows[0].Field<int>(0);
+            CountLBL.Text = $"تعداد کل رکورد {count} | رکورد های نمایشی {SaamanehDG.Rows.Count} | صفحه {Paging.Page + 1}";
         }
 
 

@@ -2,8 +2,10 @@
 using Domain.Library.Models.Entity;
 using Infrastrucure.Library.DatabaseService;
 using Infrastrucure.Library.Repository.BackupService;
+using Infrastrucure.Library.Repository.TaskService;
 using MD.PersianDateTime;
 using System;
+using System.Data;
 using System.Windows.Forms;
 using TicketApplication.Authentication;
 using TicketApplication.Common;
@@ -36,7 +38,8 @@ namespace TicketApplication.UserControls
             }
 
             Datagrid.DataSource = _baseQuery.Execute(QUERY);
-            CountLBL.Text = Datagrid.Rows.Count.ToString();
+            var count = _baseQuery.Execute(Show.Count()).Rows[0].Field<int>(0);
+            CountLBL.Text = $"تعداد کل رکورد {count} | رکورد های نمایشی {Datagrid.Rows.Count} | صفحه {Paging.Page + 1}";
         }
 
         private void BackupBtn_Click(object sender, EventArgs e)

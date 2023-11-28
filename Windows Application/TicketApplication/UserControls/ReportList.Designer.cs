@@ -42,7 +42,6 @@
             this.Reloding = new Glass.GlassButton();
             this.ListTasks = new System.Windows.Forms.DataGridView();
             this.CountLBL = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ListTasks)).BeginInit();
             this.SuspendLayout();
@@ -228,27 +227,13 @@
             this.CountLBL.BackColor = System.Drawing.Color.Transparent;
             this.CountLBL.Font = new System.Drawing.Font("IRANSansWeb", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CountLBL.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.CountLBL.Location = new System.Drawing.Point(98, 620);
+            this.CountLBL.Location = new System.Drawing.Point(422, 626);
             this.CountLBL.Name = "CountLBL";
-            this.CountLBL.Size = new System.Drawing.Size(100, 29);
+            this.CountLBL.Size = new System.Drawing.Size(432, 29);
             this.CountLBL.TabIndex = 13;
             this.CountLBL.Text = "تعداد رکورد";
             this.CountLBL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.CountLBL.UseMnemonic = false;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("IRANSansWeb", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label4.Location = new System.Drawing.Point(204, 620);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 29);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "تعداد رکورد";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label4.UseMnemonic = false;
             // 
             // ReportList
             // 
@@ -256,7 +241,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.CountLBL);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.ListTasks);
             this.Controls.Add(this.Reloding);
             this.Controls.Add(this.NextBtn);
@@ -288,7 +272,6 @@
         private Glass.GlassButton Reloding;
         public System.Windows.Forms.DataGridView ListTasks;
         private System.Windows.Forms.Label CountLBL;
-        private System.Windows.Forms.Label label4;
         private DevComponents.DotNetBar.Controls.TextBoxX SearchTxt;
     }
 }

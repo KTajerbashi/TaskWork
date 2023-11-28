@@ -8,6 +8,16 @@ namespace Infrastrucure.Library.Repository.RoleService
 {
     public class RoleQueries
     {
+
+        public string Count()
+        {
+            return ($@"
+SELECT
+	COUNT(*) AS [Count]
+FROM SEC.Roles 
+WHERE (IsDeleted = 0) 
+");
+        }
         public string ShowAll(string paging)
         {
             return ($@"

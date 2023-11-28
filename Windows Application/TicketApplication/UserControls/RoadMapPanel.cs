@@ -3,6 +3,7 @@ using Domain.Library.Models.Entity;
 using Infrastrucure.Library.DatabaseService;
 using Infrastrucure.Library.Repository.RoadMapPanel;
 using System;
+using System.Data;
 using System.Windows.Forms;
 using TicketApplication.Common;
 using TicketApplication.Extentions;
@@ -33,7 +34,9 @@ namespace TicketApplication.UserControls
             }
 
             DataGridLesson.DataSource = _baseDatabase.Execute(Query);
-            CountLBL.Text = $"تعداد رکورد {DataGridLesson.Rows.Count} | صفحه {Paging.Page+1}";
+            var count = _baseDatabase.Execute(roadmapQueries.Count()).Rows[0].Field<int>(0);
+            CountLBL.Text = $"تعداد کل رکورد {count} | رکورد های نمایشی {DataGridLesson.Rows.Count} | صفحه {Paging.Page + 1}";
+
         }
         private long ID = 0;
         private void RoadMapPanel_Load(object sender, EventArgs e)

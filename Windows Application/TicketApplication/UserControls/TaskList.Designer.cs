@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TaskList));
             this.ListTasks = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -52,7 +52,6 @@
             this.NextBtn = new Glass.GlassButton();
             this.PrevBtn = new Glass.GlassButton();
             this.Reloding = new Glass.GlassButton();
-            this.label1 = new System.Windows.Forms.Label();
             this.CountLBL = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ListTasks)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -62,30 +61,30 @@
             // ListTasks
             // 
             this.ListTasks.AllowUserToAddRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.ListTasks.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.ListTasks.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.ListTasks.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ListTasks.BackgroundColor = System.Drawing.Color.White;
             this.ListTasks.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("IRANSansWeb", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ListTasks.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("IRANSansWeb", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ListTasks.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.ListTasks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ListTasks.Cursor = System.Windows.Forms.Cursors.PanWest;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("IRANSansWeb", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.ListTasks.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("IRANSansWeb", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ListTasks.DefaultCellStyle = dataGridViewCellStyle6;
             this.ListTasks.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.ListTasks.GridColor = System.Drawing.SystemColors.MenuHighlight;
             this.ListTasks.Location = new System.Drawing.Point(3, 70);
@@ -340,30 +339,16 @@
             this.Reloding.Text = "تازه";
             this.Reloding.Click += new System.EventHandler(this.Reloding_Click);
             // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("IRANSansWeb", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(203, 631);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 29);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "تعداد رکورد";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.UseMnemonic = false;
-            // 
             // CountLBL
             // 
             this.CountLBL.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.CountLBL.BackColor = System.Drawing.Color.Transparent;
             this.CountLBL.Font = new System.Drawing.Font("IRANSansWeb", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CountLBL.ForeColor = System.Drawing.Color.Black;
-            this.CountLBL.Location = new System.Drawing.Point(97, 631);
+            this.CountLBL.Location = new System.Drawing.Point(487, 623);
             this.CountLBL.Name = "CountLBL";
-            this.CountLBL.Size = new System.Drawing.Size(100, 29);
-            this.CountLBL.TabIndex = 11;
+            this.CountLBL.Size = new System.Drawing.Size(333, 29);
+            this.CountLBL.TabIndex = 12;
             this.CountLBL.Text = "تعداد رکورد";
             this.CountLBL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.CountLBL.UseMnemonic = false;
@@ -374,7 +359,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.CountLBL);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.Reloding);
             this.Controls.Add(this.NextBtn);
             this.Controls.Add(this.PrevBtn);
@@ -411,8 +395,7 @@
         private System.Windows.Forms.Button DeliverBtn;
         private System.Windows.Forms.Button SortDateBtn;
         private System.Windows.Forms.Button NotDeliverBtn;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label CountLBL;
         private DevComponents.DotNetBar.Controls.TextBoxX SearchTxt;
+        private System.Windows.Forms.Label CountLBL;
     }
 }

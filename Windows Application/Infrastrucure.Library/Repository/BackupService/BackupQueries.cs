@@ -8,6 +8,19 @@ namespace Infrastrucure.Library.Repository.BackupService
 {
     public class BackupQueries
     {
+
+        public string Count()
+        {
+            return $@"
+SELECT 
+COUNT(*) AS [Count]
+FROM    [LOG].BackupLogs B
+INNER JOIN SEC.UserRoles UR ON UR.ID = B.CreatedByUserRoleID
+INNER JOIN SEC.Users U ON U.ID = UR.UserID
+WHERE   
+(B.IsDeleted = 0) AND (B.IsActive = 1)
+";
+        }
         public string ShowAll(string paging)
         {
             return $@"

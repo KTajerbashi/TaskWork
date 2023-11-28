@@ -1,6 +1,8 @@
 ﻿using Infrastrucure.Library.DatabaseService;
+using Infrastrucure.Library.Repository.RoadMapPanel;
 using Infrastrucure.Library.Repository.TaskService;
 using System;
+using System.Data;
 using System.Windows.Forms;
 using TicketApplication.Common;
 
@@ -22,10 +24,7 @@ namespace TicketApplication.UserControls
             TaskQueries _taskQueries = new TaskQueries();
             if (type == 0)  //  From Date To Date
             {
-                QUERY = _taskQueries.ShowFDateT(
-                                                Convert.ToDateTime(FromDate.Value).ToString("yyyy-MM-dd HH:mm:ss"), 
-                                                Convert.ToDateTime(ToDate.Value).ToString("yyyy-MM-dd HH:mm:ss")
-                                               );
+                QUERY = _taskQueries.ShowFDateT(FromDate.Value.ToString(), ToDate.Value.ToString());
             }
             else if (type == 1)  //  Search Result
             {
@@ -36,7 +35,8 @@ namespace TicketApplication.UserControls
                 QUERY = _taskQueries.ShowAll(Paging.Order(Paging.Page));
             }
             ListTasks.DataSource = _baseDatabase.Execute(QUERY);
-            CountLBL.Text = ListTasks.Rows.Count.ToString();
+            var count = _baseDatabase.Execute(_taskQueries.Count()).Rows[0].Field<int>(0);
+            CountLBL.Text = $"تعداد کل رکورد {count} | رکورد های نمایشی {ListTasks.Rows.Count} | صفحه {Paging.Page + 1}";
         }
 
         private void SearchBtn_Click(object sender, EventArgs e)
