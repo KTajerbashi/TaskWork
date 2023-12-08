@@ -10,8 +10,8 @@ namespace Infrastructure.Library.DbContextData
 {
     public class DatabaseContext : DbContext, IDatabaseContext
     {
-        public DatabaseContext() : base("Data Source=172.20.1.20\\DEV;Initial Catalog=RG_TaskWorkDB; User ID=sa; Password=soft157703ware;")
-        //public DatabaseContext() : base("Data Source=TAJERBASHI;Initial Catalog=RG_TaskWorkDB; User ID=sa; Password=123123;")
+        //public DatabaseContext() : base("Data Source=172.20.1.20\\DEV;Initial Catalog=RG_TaskWorkDB; User ID=sa; Password=soft157703ware;")
+        public DatabaseContext() : base("Data Source=TAJERBASHI;Initial Catalog=RG_TaskWorkDB; User ID=sa; Password=123123;")
         {
         }
 

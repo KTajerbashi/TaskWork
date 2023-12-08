@@ -1,5 +1,4 @@
-﻿using Infrastrucure.Library.Migrations;
-using MD.PersianDateTime;
+﻿using MD.PersianDateTime;
 using System;
 using System.Drawing;
 using System.Runtime.InteropServices;

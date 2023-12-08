@@ -58,25 +58,9 @@
     <Compile Include="DbContextData\Models\SamanaSeed.cs" />
     <Compile Include="DbContextData\Models\RolesSeed.cs" />
     <Compile Include="DatabaseService\BaseQuery.cs" />
-    <Compile Include="Migrations\202310281725268__v1.cs" />
-    <Compile Include="Migrations\202310281725268__v1.designer.cs">
-      <DependentUpon>202310281725268__v1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202310281749441_Add_Privilege.cs" />
-    <Compile Include="Migrations\202310281749441_Add_Privilege.designer.cs">
-      <DependentUpon>202310281749441_Add_Privilege.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202310290547033_Add_RoadmapLesson.cs" />
-    <Compile Include="Migrations\202310290547033_Add_RoadmapLesson.designer.cs">
-      <DependentUpon>202310290547033_Add_RoadmapLesson.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202311190746529_Change_Lenght.cs" />
-    <Compile Include="Migrations\202311190746529_Change_Lenght.designer.cs">
-      <DependentUpon>202311190746529_Change_Lenght.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202311190807582__history.cs" />
-    <Compile Include="Migrations\202311190807582__history.designer.cs">
-      <DependentUpon>202311190807582__history.cs</DependentUpon>
+    <Compile Include="Migrations\202312080930517_Initial.cs" />
+    <Compile Include="Migrations\202312080930517_Initial.designer.cs">
+      <DependentUpon>202312080930517_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -114,23 +98,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202310281725268__v1.resx">
-      <DependentUpon>202310281725268__v1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202310281749441_Add_Privilege.resx">
-      <DependentUpon>202310281749441_Add_Privilege.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202310290547033_Add_RoadmapLesson.resx">
-      <DependentUpon>202310290547033_Add_RoadmapLesson.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202311190746529_Change_Lenght.resx">
-      <DependentUpon>202311190746529_Change_Lenght.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202311190807582__history.resx">
-      <DependentUpon>202311190807582__history.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202312080930517_Initial.resx">
+      <DependentUpon>202312080930517_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
